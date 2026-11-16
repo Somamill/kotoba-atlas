@@ -34,3 +34,8 @@ The old personal ZIP expanded to 769.4 MB. Language selection, overlap removal, 
 ## 1.0.1 importer and usage research
 
 See [the dated investigation, primary sources and applied changes](migaku-1.0.1.md). The result is one ZIP per language/tool, identical word coverage across profiles, exact-body deduplication, portable POS/register tags and nine bilingual usage records. Current Migaku Early Access live import awaits user testing. Forum advice is treated as anecdotal; scanner/Anki/audio functions remain host responsibilities.
+
+
+## 1.0.2: simplify the recommendation
+
+The split profiles in 1.0.1 added a confusing choice. The canonical recommendation is now one complete language edition for every supporting Yomichan-format host. The pinned public legacy Migaku importer ignores native-bank families while reading the ordinary word banks; tests now use the complete 1.0.2 ZIPs. Native data stays available to Yomitan and other supporting hosts. Current Migaku Early Access still awaits live verification; the original source investigation and its limits remain above and in `migaku-1.0.1.md`.

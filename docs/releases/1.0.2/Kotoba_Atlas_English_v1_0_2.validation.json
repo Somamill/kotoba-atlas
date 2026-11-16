@@ -1,0 +1,211 @@
+{
+  "archive": "Kotoba_Atlas_English_v1_0_2.zip",
+  "entries": 1080167,
+  "banks": 219,
+  "sha256": "fee1364aa094b8f222f7089263cf7d1ed0327431c190da3bc6f4b0e430e6097d",
+  "upstream_schema_ref": "ce1b1bffa0e8819716317f3717932a7fe91e8d52",
+  "schema_validation": "all included index, word, metadata, kanji and tag banks passed",
+  "examples": {
+    "羅睺": [
+      {
+        "reading": "らご",
+        "rules": "",
+        "sources": [
+          "[EN • Jitendex]",
+          "[Frequency • Jiten global]",
+          "[Frequency • Jiten global]"
+        ]
+      },
+      {
+        "reading": "らごう",
+        "rules": "",
+        "sources": [
+          "[EN • Jitendex]",
+          "[Frequency • Jiten global]",
+          "[Frequency • Jiten global]"
+        ]
+      }
+    ],
+    "物ノ怪": [
+      {
+        "reading": "もののけ",
+        "rules": "",
+        "sources": [
+          "[EN • Jitendex]",
+          "[DE/EN • verified spelling/phrase supplement]"
+        ]
+      }
+    ],
+    "鎌かけて": [
+      {
+        "reading": "かまかけて",
+        "rules": "",
+        "sources": [
+          "[DE/EN • verified spelling/phrase supplement]"
+        ]
+      }
+    ],
+    "鎌かける": [
+      {
+        "reading": "かまかける",
+        "rules": "v1",
+        "sources": [
+          "[DE/EN • verified spelling/phrase supplement]"
+        ]
+      }
+    ],
+    "鎌を掛ける": [
+      {
+        "reading": "かまをかける",
+        "rules": "v1",
+        "sources": [
+          "[EN • Jitendex]",
+          "[Pitch • WaDoku]",
+          "[Frequency • Jiten global]",
+          "[Frequency • Jiten global]"
+        ]
+      }
+    ],
+    "食べる": [
+      {
+        "reading": "たべる",
+        "rules": "v1",
+        "sources": [
+          "[EN • Jitendex]",
+          "[Pitch • WaDoku]",
+          "[Frequency • Jiten global]",
+          "[Frequency • Jiten global]"
+        ]
+      }
+    ],
+    "天驅ける": [
+      {
+        "reading": "",
+        "rules": "v1 v5",
+        "sources": [
+          "[EN • Jitendex]"
+        ]
+      }
+    ],
+    "驅ける": [
+      {
+        "reading": "",
+        "rules": "v1 v5",
+        "sources": [
+          "[EN • Jitendex]"
+        ]
+      }
+    ],
+    "濕氣る": [
+      {
+        "reading": "",
+        "rules": "v1 v5",
+        "sources": [
+          "[EN • Jitendex]"
+        ]
+      }
+    ],
+    "湿氣る": [
+      {
+        "reading": "",
+        "rules": "v1 v5",
+        "sources": [
+          "[EN • Jitendex]"
+        ]
+      }
+    ],
+    "濕気る": [
+      {
+        "reading": "",
+        "rules": "v1 v5",
+        "sources": [
+          "[EN • Jitendex]"
+        ]
+      }
+    ],
+    "てぇてぇ": [
+      {
+        "reading": "てぇてぇ",
+        "rules": "",
+        "sources": [
+          "[EN • Atlas usage]"
+        ]
+      }
+    ],
+    "ぬまる": [
+      {
+        "reading": "ぬまる",
+        "rules": "v5",
+        "sources": [
+          "[EN • Atlas usage]"
+        ]
+      }
+    ],
+    "沼る": [
+      {
+        "reading": "ぬまる",
+        "rules": "v5",
+        "sources": [
+          "[EN • Jitendex]",
+          "[EN • Atlas usage]",
+          "[Frequency • Jiten global]",
+          "[Frequency • Jiten global]"
+        ]
+      }
+    ],
+    "推し活する": [
+      {
+        "reading": "おしかつする",
+        "rules": "vs",
+        "sources": [
+          "[EN • Atlas usage]"
+        ]
+      }
+    ],
+    "ワンチャン": [
+      {
+        "reading": "",
+        "rules": "",
+        "sources": [
+          "[EN • JMdict]",
+          "[Frequency • Jiten global]"
+        ]
+      },
+      {
+        "reading": "わんちゃん",
+        "rules": "",
+        "sources": [
+          "[EN • Atlas usage]",
+          "[Pitch • WaDoku]",
+          "[Frequency • Jiten global]"
+        ]
+      },
+      {
+        "reading": "ワンチャン",
+        "rules": "",
+        "sources": [
+          "[EN • Jitendex]",
+          "[EN • Jitendex]",
+          "[Frequency • Jiten global]"
+        ]
+      }
+    ],
+    "蛙化現象": [
+      {
+        "reading": "かえるかげんしょう",
+        "rules": "",
+        "sources": [
+          "[EN • Jitendex]",
+          "[EN • Atlas usage]",
+          "[Pitch • WaDoku]",
+          "[Frequency • Jiten global]"
+        ]
+      }
+    ]
+  },
+  "browser_import_tested": false,
+  "edition": "en",
+  "profile": "full",
+  "edition_policy_validation": true,
+  "limitation": "Schema and lexical tests do not verify host tokenization or browser import."
+}

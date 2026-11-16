@@ -1,0 +1,39 @@
+{
+  "archive": "Kotoba_Atlas_German_v1_0_2.zip",
+  "revision": "1.0.2",
+  "upstream_revision": "ce1b1bffa0e8819716317f3717932a7fe91e8d52",
+  "scope": "Full upstream parser/schema/import pipeline with a counting storage facade; no persistent IndexedDB writes",
+  "counts": {
+    "terms": {
+      "total": 1566695
+    },
+    "termMeta": {
+      "total": 1006753,
+      "pitch": 409568,
+      "freq": 597185
+    },
+    "kanji": {
+      "total": 10384
+    },
+    "kanjiMeta": {
+      "total": 0
+    },
+    "tagMeta": {
+      "total": 74
+    },
+    "media": {
+      "total": 0
+    }
+  },
+  "storedCounts": {
+    "terms": 1566695,
+    "termMeta": 1006753,
+    "kanji": 10384,
+    "tagMeta": 74
+  },
+  "deinflection_cases": 14,
+  "elapsed_seconds": 6.18,
+  "peak_rss_bytes": 418709504,
+  "archive_sha256": "565860f5f8b1b4bcbdb49339be49eee1aae687249ec9237b461624f0bfa4538d",
+  "live_extension_tested": false
+}

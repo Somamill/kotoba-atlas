@@ -1,5 +1,12 @@
 # Changelog
 
+## Kotoba Atlas 1.0.2 — 2026-11-17
+
+- Simplify to exactly one complete ZIP per definition language, with all word, pitch/frequency, kanji and tag data. Remove tool-specific build variants; no feature packs are required.
+- Use consistent `Kotoba_Atlas_German_v1_0_2.zip` / `Kotoba_Atlas_English_v1_0_2.zip` names. German includes English fallback. Preserve the established full-edition internal titles and update manifests.
+- Retain all 1.0.1 word and native data banks byte-for-byte. Verify both complete files through the public legacy Migaku importer and upstream Yomitan importer paths.
+- Current Migaku Early Access live import remains unverified. Native feature presentation, scanning, audio and Anki mining depend on the host application.
+
 ## Kotoba Atlas 1.0.1 — 2026-11-16
 
 - Add one-file Migaku word exports in English and German. All word banks and readable reference notes are identical to their full exports; only native Yomitan bank families are omitted from the Migaku profile.

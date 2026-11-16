@@ -34,7 +34,7 @@
   {
     "file": "Wiktionary-Japanese-English-Glossary.zip",
     "label": "EN • Wiktionary",
-    "download_url": "https://huggingface.co/datasets/daxida/wty-release/resolve/main/latest/dict/ja/en/wty-ja-en-gloss.zip",
+    "download_url": "https://huggingface.co/datasets/daxida/wty-release/resolve/de7ed9cd558acce3423ccf6e17dc690f8a839bf2/latest/dict/ja/en/wty-ja-en-gloss.zip",
     "license": "Wiktionary / CC BY-SA 4.0",
     "kind": "words",
     "sha256": "72a1073fce2a32289256986fd9f295c086f426e9bd0b1587e953dd79915852cf"
@@ -103,5 +103,14 @@
     "license": "Commercial dictionary. Local personal build only. No redistribution permitted by this project.",
     "kind": "words",
     "personal_only": true
+  },
+  {
+    "file": "jiten_freq_global.zip",
+    "label": "Frequency • Jiten global",
+    "download_url": "https://raw.githubusercontent.com/Somamill/kotoba-atlas/atlas-v1.0.0/data/source-snapshots/Jiten-Frequency-2026-11-16.zip",
+    "license": "CC BY-SA 4.0; Jiten / Jitensoft; https://jiten.moe/guides/yomitan-frequency-dictionaries",
+    "kind": "metadata",
+    "sha256": "72a9cb3e53189a75cad8320f12178d5aee5dda991b1e2734098401e1951a3f1f",
+    "upstream_url": "https://api.jiten.moe/api/frequency-list/download?downloadType=yomitan"
   }
 ]

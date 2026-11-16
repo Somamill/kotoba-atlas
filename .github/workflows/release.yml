@@ -15,13 +15,12 @@ jobs:
       - run: python -m unittest discover -s tests
       - run: python branding/dot/check.py
       - run: python scripts/build.py
-      - run: python scripts/validate.py dist/dict-master.zip
+      - run: python scripts/validate.py dist/Kotoba-Atlas-English-v1.0.0.zip
+      - run: python scripts/validate.py dist/Kotoba-Atlas-German-v1.0.0.zip
       - name: Keep public build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: dict-public
+          name: kotoba-atlas-public
           path: |
-            dist/dict-master.zip
-            dist/public-report.json
-            dist/dict-master.validation.json
+            dist/Kotoba-Atlas-*
           retention-days: 30

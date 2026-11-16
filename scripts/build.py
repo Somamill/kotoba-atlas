@@ -222,7 +222,13 @@ def main():
         db.commit()
         print('Metadata:', spec['label'], counts['metadata_rows'], flush=True)
 
-    # Lexical sorting keeps builds deterministic; source numbers keep German definitions first.
+    if not args.personal:
+        from editions import package_editions
+        package_editions(db, args.output, sources, notices, args.cache)
+        db.close()
+        return
+
+    # The earlier personal build stays local and is not part of the public editions.
     output = args.output / ('dict-personal.zip' if args.personal else 'dict-master.zip')
     pending = output.with_suffix('.zip.part')
     total, banks, sample_hits = 0, 0, {}

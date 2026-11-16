@@ -1,0 +1,13 @@
+{
+  "archive": "dict-personal.zip",
+  "entries": 2418443,
+  "compressed_bytes": 148540987,
+  "expanded_bytes": 769387663,
+  "dictionary_banks": 484,
+  "largest_bank_bytes": 5551833,
+  "native_metadata_records": 0,
+  "native_kanji_records": 0,
+  "offline_sequential_parse_seconds": 4.557,
+  "process_peak_rss_bytes": 267812864,
+  "scope": "Python sequential decompression and JSON parsing on this machine. Not Migaku/Yomitan import time, lookup latency, or browser memory."
+}

@@ -1,0 +1,131 @@
+{
+  "archive": "Kotoba-Atlas-English-v1.0.0.zip",
+  "entries": 1080161,
+  "banks": 219,
+  "sha256": "eb82b9f74510bad7849c0b9688ade31082a5702016d6e03bfc539b6f3099475f",
+  "upstream_schema_ref": "ce1b1bffa0e8819716317f3717932a7fe91e8d52",
+  "schema_validation": "all index and term-bank JSON passed",
+  "examples": {
+    "羅睺": [
+      {
+        "reading": "らご",
+        "rules": "",
+        "sources": [
+          "[EN • Jitendex]",
+          "[Frequency • Jiten global]",
+          "[Frequency • Jiten global]"
+        ]
+      },
+      {
+        "reading": "らごう",
+        "rules": "",
+        "sources": [
+          "[EN • Jitendex]",
+          "[Frequency • Jiten global]",
+          "[Frequency • Jiten global]"
+        ]
+      }
+    ],
+    "物ノ怪": [
+      {
+        "reading": "もののけ",
+        "rules": "",
+        "sources": [
+          "[EN • Jitendex]",
+          "[DE/EN • verified spelling/phrase supplement]"
+        ]
+      }
+    ],
+    "鎌かけて": [
+      {
+        "reading": "かまかけて",
+        "rules": "",
+        "sources": [
+          "[DE/EN • verified spelling/phrase supplement]"
+        ]
+      }
+    ],
+    "鎌かける": [
+      {
+        "reading": "かまかける",
+        "rules": "v1",
+        "sources": [
+          "[DE/EN • verified spelling/phrase supplement]"
+        ]
+      }
+    ],
+    "鎌を掛ける": [
+      {
+        "reading": "かまをかける",
+        "rules": "v1",
+        "sources": [
+          "[EN • Jitendex]",
+          "[Pitch • WaDoku]",
+          "[Frequency • Jiten global]",
+          "[Frequency • Jiten global]"
+        ]
+      }
+    ],
+    "食べる": [
+      {
+        "reading": "たべる",
+        "rules": "v1",
+        "sources": [
+          "[EN • Jitendex]",
+          "[Pitch • WaDoku]",
+          "[Frequency • Jiten global]",
+          "[Frequency • Jiten global]"
+        ]
+      }
+    ],
+    "天驅ける": [
+      {
+        "reading": "",
+        "rules": "v1 v5",
+        "sources": [
+          "[EN • Jitendex]"
+        ]
+      }
+    ],
+    "驅ける": [
+      {
+        "reading": "",
+        "rules": "v1 v5",
+        "sources": [
+          "[EN • Jitendex]"
+        ]
+      }
+    ],
+    "濕氣る": [
+      {
+        "reading": "",
+        "rules": "v1 v5",
+        "sources": [
+          "[EN • Jitendex]"
+        ]
+      }
+    ],
+    "湿氣る": [
+      {
+        "reading": "",
+        "rules": "v1 v5",
+        "sources": [
+          "[EN • Jitendex]"
+        ]
+      }
+    ],
+    "濕気る": [
+      {
+        "reading": "",
+        "rules": "v1 v5",
+        "sources": [
+          "[EN • Jitendex]"
+        ]
+      }
+    ]
+  },
+  "browser_import_tested": false,
+  "edition": "en",
+  "edition_policy_validation": true,
+  "limitation": "Schema and lexical tests do not verify host tokenization or browser import."
+}

@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-labelledby="title desc">
-<title id="title">dict. — Japanese, with more context.</title><desc id="desc">Part of dot. German first, English alongside. Words, phrases and reference material in one dictionary download.</desc>
+<title id="title">Kotoba Atlas — Japanese words, more context.</title><desc id="desc">Part of dot. One self-contained Japanese dictionary per definition language. English and German editions, version 1.0.0.</desc>
 <rect width="1280" height="440" rx="24" fill="#151815"/>
 <circle cx="1138" cy="105" r="164" fill="#20251F"/>
 <circle cx="1138" cy="105" r="112" fill="none" stroke="#414B3E" stroke-width="1"/>
 <g font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif">
 <text x="64" y="75" fill="#ADB6A7" font-size="17" letter-spacing="3">PART OF DOT.</text>
-<text x="60" y="193" fill="#F4F3EC" font-size="112" font-weight="650" letter-spacing="-6">dict<tspan fill="#D7B685">.</tspan></text>
-<text x="66" y="249" fill="#F4F3EC" font-size="30">Japanese, with more context.</text>
+<text x="60" y="193" fill="#F4F3EC" font-size="84" font-weight="650" letter-spacing="-6">kotoba atlas<tspan fill="#D7B685">.</tspan></text>
+<text x="66" y="249" fill="#F4F3EC" font-size="30">Japanese words. More context.</text>
 <path d="M66 284H1214" stroke="#414B3E"/>
-<text x="66" y="332" fill="#D7B685" font-size="17">DEUTSCH FIRST</text>
-<text x="66" y="367" fill="#ADB6A7" font-size="17">English alongside. Japanese when useful.</text>
+<text x="66" y="332" fill="#D7B685" font-size="17">ONE FILE. YOUR LANGUAGE.</text>
+<text x="66" y="367" fill="#ADB6A7" font-size="17">English edition · Deutsche Ausgabe</text>
 <text x="822" y="331" fill="#F4F3EC" font-size="25">言葉 · 表現 · 文脈</text>
-<text x="824" y="367" fill="#ADB6A7" font-size="17">One ZIP. Keep reading.</text>
+<text x="824" y="367" fill="#ADB6A7" font-size="17">Version 1.0.0 · Part of dot.</text>
 </g></svg>

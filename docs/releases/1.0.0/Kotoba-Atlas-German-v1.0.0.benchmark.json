@@ -1,0 +1,13 @@
+{
+  "archive": "Kotoba-Atlas-German-v1.0.0.zip",
+  "entries": 1566691,
+  "compressed_bytes": 61256059,
+  "expanded_bytes": 408255798,
+  "dictionary_banks": 522,
+  "largest_bank_bytes": 2097120,
+  "native_metadata_records": 1006753,
+  "native_kanji_records": 10384,
+  "offline_sequential_parse_seconds": 2.889,
+  "process_peak_rss_bytes": 227819520,
+  "scope": "Python sequential decompression and JSON parsing on this machine. Not Migaku/Yomitan import time, lookup latency, or browser memory."
+}

@@ -1,8 +1,8 @@
 {
-  "archive": "dict-master.zip",
+  "archive": "Kotoba-Atlas-German-v1.0.0.zip",
   "entries": 1566691,
-  "banks": 314,
-  "sha256": "3882f7ede205a409b069b37cc548c3d78d74de08bd5a12e03aef8c2f18279503",
+  "banks": 316,
+  "sha256": "334fa5b9dc2a24be97ab9a72a9d3de8ed856a96e8bf6d20050b9a2c74356afca",
   "upstream_schema_ref": "ce1b1bffa0e8819716317f3717932a7fe91e8d52",
   "schema_validation": "all index and term-bank JSON passed",
   "examples": {
@@ -12,8 +12,8 @@
         "rules": "",
         "sources": [
           "[DE • WaDoku]",
-          "[EN • Jitendex]",
-          "[EN • JMdict]"
+          "[Frequency • Jiten global]",
+          "[Frequency • Jiten global]"
         ]
       },
       {
@@ -21,7 +21,8 @@
         "rules": "",
         "sources": [
           "[EN • Jitendex]",
-          "[EN • JMdict]"
+          "[Frequency • Jiten global]",
+          "[Frequency • Jiten global]"
         ]
       }
     ],
@@ -32,8 +33,6 @@
         "sources": [
           "[DE • WaDoku]",
           "[DE • JMdict]",
-          "[EN • Jitendex]",
-          "[EN • JMdict]",
           "[DE/EN • verified spelling/phrase supplement]"
         ]
       }
@@ -63,9 +62,9 @@
         "sources": [
           "[DE • WaDoku]",
           "[DE • JMdict]",
-          "[EN • Jitendex]",
-          "[EN • JMdict]",
-          "[Pitch • WaDoku]"
+          "[Pitch • WaDoku]",
+          "[Frequency • Jiten global]",
+          "[Frequency • Jiten global]"
         ]
       }
     ],
@@ -77,14 +76,60 @@
           "[DE • WaDoku]",
           "[DE • JMdict]",
           "[DE • JMdict]",
-          "[EN • Jitendex]",
-          "[EN • JMdict]",
-          "[EN • JMdict]",
-          "[Pitch • WaDoku]"
+          "[Pitch • WaDoku]",
+          "[Frequency • Jiten global]",
+          "[Frequency • Jiten global]"
+        ]
+      }
+    ],
+    "天驅ける": [
+      {
+        "reading": "",
+        "rules": "v1 v5",
+        "sources": [
+          "[EN • Jitendex]"
+        ]
+      }
+    ],
+    "驅ける": [
+      {
+        "reading": "",
+        "rules": "v1 v5",
+        "sources": [
+          "[EN • Jitendex]"
+        ]
+      }
+    ],
+    "濕氣る": [
+      {
+        "reading": "",
+        "rules": "v1 v5",
+        "sources": [
+          "[EN • Jitendex]"
+        ]
+      }
+    ],
+    "湿氣る": [
+      {
+        "reading": "",
+        "rules": "v1 v5",
+        "sources": [
+          "[EN • Jitendex]"
+        ]
+      }
+    ],
+    "濕気る": [
+      {
+        "reading": "",
+        "rules": "v1 v5",
+        "sources": [
+          "[EN • Jitendex]"
         ]
       }
     ]
   },
   "browser_import_tested": false,
+  "edition": "de",
+  "edition_policy_validation": true,
   "limitation": "Schema and lexical tests do not verify host tokenization or browser import."
 }

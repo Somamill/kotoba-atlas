@@ -55,6 +55,8 @@ For an update, keep the old dictionary until the replacement has imported and th
 | `鎌かけて` | Explicit colloquial phrase entry linked to `鎌を掛ける` |
 | `鎌かける` | Dictionary form carrying the `v1` deinflection rule |
 
+A [22-item lexical spot check](docs/coverage-spot-check.json) also found exact entries for slang and phrases including `エモい`, `ワンチャン`, `それな`, `ぴえん`, `蛙化現象`, `知らんけど`, and `腹が立つ` in both builds. These are dictionary-content checks, not browser-recognition tests.
+
 Other source verb/adjective rules are preserved during merging. Orthographic aliases copy the source meaning and show the original spelling. The builder does **not** invent a definition for every possible string or delete particles from arbitrary expressions.
 
 Slang changes, names are open-ended, and context can change a phrase's meaning. This is a growing reference collection rather than a guarantee of every word or every nuance. [Report a missed word](https://github.com/Somamill/dict/issues/new?template=missing-word.yml) with a short, non-private context snippet; distinguish “manual search has no entry” from “hover did not recognize it.”

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-labelledby="title desc">
-<title id="title">Kotoba Atlas — Japanese words, more context.</title><desc id="desc">Part of dot. One self-contained Japanese dictionary per definition language. English and German editions, version 1.0.0.</desc>
+<title id="title">Kotoba Atlas — Japanese words, more context.</title><desc id="desc">Part of dot. One self-contained Japanese dictionary per definition language. English and German editions, version 1.0.1.</desc>
 <rect width="1280" height="440" rx="24" fill="#151815"/>
 <circle cx="1138" cy="105" r="164" fill="#20251F"/>
 <circle cx="1138" cy="105" r="112" fill="none" stroke="#414B3E" stroke-width="1"/>
@@ -11,5 +11,5 @@
 <text x="66" y="332" fill="#D7B685" font-size="17">ONE FILE. YOUR LANGUAGE.</text>
 <text x="66" y="367" fill="#ADB6A7" font-size="17">English edition · Deutsche Ausgabe</text>
 <text x="822" y="331" fill="#F4F3EC" font-size="25">言葉 · 表現 · 文脈</text>
-<text x="824" y="367" fill="#ADB6A7" font-size="17">Version 1.0.0 · Part of dot.</text>
+<text x="824" y="367" fill="#ADB6A7" font-size="17">Version 1.0.1 · Part of dot.</text>
 </g></svg>

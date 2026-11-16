@@ -29,3 +29,8 @@ An [Anki forum report about Yomitan glossary formatting](https://forums.ankiweb.
 ## Performance checked on the actual files
 
 The old personal ZIP expanded to 769.4 MB. Language selection, overlap removal, omission of metadata-only results, compact rank/pitch notes and bounded word and native-metadata banks reduce the payload without splitting features into separate installations. [Performance report](performance.md) contains exact sizes and scoped offline preparation measurements. It does not claim to benchmark the Migaku browser importer.
+
+
+## 1.0.1 importer and usage research
+
+See [the dated investigation, primary sources and applied changes](migaku-1.0.1.md). The result is one ZIP per language/tool, identical word coverage across profiles, exact-body deduplication, portable POS/register tags and nine bilingual usage records. Current Migaku Early Access live import awaits user testing. Forum advice is treated as anecdotal; scanner/Anki/audio functions remain host responsibilities.

@@ -96,6 +96,17 @@ def alias_rows():
                entry['definitions'] + ['Canonical expression: ' + entry['canonical']], -1, '']
 
 
+
+def usage_rows():
+    for entry in json.loads((ROOT / 'data/usage-notes.json').read_text()):
+        for language in ['de', 'en']:
+            gloss = [entry[language], entry['register_' + language],
+                     'Example: ' + entry['example']['ja'],
+                     entry['example'][language],
+                     'Sources: ' + ' '.join(entry['sources'])]
+            yield language.upper() + ' • Atlas usage', [entry['term'], entry['reading'], entry['tags'], entry['rules'], 0, gloss, -1, '']
+
+
 def store(db, values):
     db.execute('''INSERT INTO definitions VALUES(?,?,?,?,?,?)
         ON CONFLICT(term,reading,source,gloss) DO UPDATE SET
@@ -186,6 +197,12 @@ def main():
     alias_number = len(sources)
     for row in alias_rows():
         add(row, alias_number, 'DE/EN • verified spelling/phrase supplement')
+    for label, row in usage_rows():
+        add(row, alias_number + (1 if label.startswith('DE') else 2), label)
+    notices.append({'label': 'Atlas usage notes', 'file': 'data/usage-notes.json',
+                    'license': 'CC BY-SA 4.0; original examples and German adaptations by Kotoba Atlas contributors',
+                    'references': sorted({url for entry in json.loads((ROOT / 'data/usage-notes.json').read_text()) for url in entry['sources']})})
+
     # Stylistic ノ between kanji is an orthographic alias, not a new meaning.
     variant = re.compile(r'(?<=[\u3400-\u9fff々])の(?=[\u3400-\u9fff々])')
     original_rows = db.execute("SELECT term,reading,source,gloss,rules,score FROM definitions WHERE term LIKE '%の%'").fetchall()

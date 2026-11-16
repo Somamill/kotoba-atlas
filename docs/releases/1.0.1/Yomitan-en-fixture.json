@@ -1,0 +1,34 @@
+{
+  "archive": "atlas-v101-en-fixture.zip",
+  "revision": "1.0.1",
+  "upstream_revision": "ce1b1bffa0e8819716317f3717932a7fe91e8d52",
+  "scope": "Upstream importer and database adapter with fake-indexeddb on a representative fixture",
+  "counts": {
+    "terms": {
+      "total": 14
+    },
+    "termMeta": {
+      "total": 23,
+      "pitch": 4,
+      "freq": 19
+    },
+    "kanji": {
+      "total": 4
+    },
+    "kanjiMeta": {
+      "total": 0
+    },
+    "tagMeta": {
+      "total": 74
+    },
+    "media": {
+      "total": 0
+    }
+  },
+  "storedCounts": {},
+  "deinflection_cases": 14,
+  "elapsed_seconds": 0.05,
+  "peak_rss_bytes": 71909376,
+  "archive_sha256": "a0f17ab762abe863c9010e4332cb0b2a8c8817a363ebdf4a79480d8a8cbc7af3",
+  "live_extension_tested": false
+}

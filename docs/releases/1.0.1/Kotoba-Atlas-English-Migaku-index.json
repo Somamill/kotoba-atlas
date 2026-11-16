@@ -1,0 +1,16 @@
+{
+  "title": "Kotoba_Atlas_English_Migaku",
+  "format": 3,
+  "revision": "1.0.1",
+  "sequenced": false,
+  "author": "Somamill; source dictionary contributors",
+  "url": "https://github.com/Somamill/kotoba-atlas",
+  "sourceLanguage": "ja",
+  "targetLanguage": "en",
+  "description": "Migaku word-dictionary profile. All word, name, grammar, kanji-reference, pitch and frequency text remains in ordinary Yomichan word banks. Native Yomitan metadata banks are available in the full export. Current Migaku Early Access live import is not certified.",
+  "frequencyMode": "rank-based",
+  "attribution": "Source-specific licences apply. Original source metadata and notices are in SOURCES.json and NOTICES.txt.",
+  "isUpdatable": true,
+  "indexUrl": "https://github.com/Somamill/kotoba-atlas/releases/latest/download/Kotoba-Atlas-English-Migaku-index.json",
+  "downloadUrl": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.0.1/Kotoba_Atlas_English_Migaku_v1_0_1.zip"
+}

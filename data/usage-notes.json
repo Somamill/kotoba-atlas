@@ -1,0 +1,165 @@
+[
+  {
+    "term": "てぇてぇ",
+    "reading": "てぇてぇ",
+    "rules": "",
+    "tags": "sl",
+    "de": "Slangform von 尊い: kostbar; verehrungswürdig.",
+    "en": "Slang form of 尊い: precious; worthy of admiration.",
+    "register_de": "Netz-/Fandomsprache; ausdrucksvolle Begeisterung.",
+    "register_en": "Expressive internet/fandom admiration.",
+    "example": {
+      "ja": "この二人、てぇてぇ。",
+      "de": "Die beiden sind einfach hinreißend.",
+      "en": "These two are precious."
+    },
+    "sources": [
+      "https://en.wiktionary.org/wiki/%E3%81%A6%E3%81%87%E3%81%A6%E3%81%87"
+    ]
+  },
+  {
+    "term": "ぬまる",
+    "reading": "ぬまる",
+    "rules": "v5",
+    "tags": "v5 sl",
+    "de": "Von etwas völlig eingenommen sein; tief in ein Hobby hineinrutschen.",
+    "en": "To become deeply hooked on something.",
+    "register_de": "Umgangs- oder Netzsprache.",
+    "register_en": "Informal or internet usage.",
+    "example": {
+      "ja": "この作品にぬまった。",
+      "de": "Ich bin dieser Serie völlig verfallen.",
+      "en": "I got completely hooked on this series."
+    },
+    "sources": [
+      "https://en.wiktionary.org/wiki/%E3%81%AC%E3%81%BE%E3%82%8B"
+    ]
+  },
+  {
+    "term": "沼る",
+    "reading": "ぬまる",
+    "rules": "v5",
+    "tags": "v5 sl",
+    "de": "Von etwas völlig eingenommen sein; tief in ein Hobby hineinrutschen.",
+    "en": "To become deeply hooked on something.",
+    "register_de": "Umgangs- oder Netzsprache.",
+    "register_en": "Informal or internet usage.",
+    "example": {
+      "ja": "この作品に沼った。",
+      "de": "Ich bin dieser Serie völlig verfallen.",
+      "en": "I got completely hooked on this series."
+    },
+    "sources": [
+      "https://en.wiktionary.org/wiki/%E3%81%AC%E3%81%BE%E3%82%8B"
+    ]
+  },
+  {
+    "term": "推し活",
+    "reading": "おしかつ",
+    "rules": "",
+    "tags": "n vs",
+    "de": "Aktivitäten zur Unterstützung des eigenen Lieblingsidols.",
+    "en": "Activities supporting one’s favorite idol.",
+    "register_de": "Fandombegriff; beschreibt Aktivitäten, nicht eine bestimmte Art von Beziehung.",
+    "register_en": "Fandom activity; does not itself specify a romantic relationship.",
+    "example": {
+      "ja": "週末は推し活をする。",
+      "de": "Am Wochenende widme ich mich meinen Fanaktivitäten.",
+      "en": "I spend weekends supporting my favorite idol."
+    },
+    "sources": [
+      "https://en.wiktionary.org/wiki/%E6%8E%A8%E3%81%97%E6%B4%BB"
+    ]
+  },
+  {
+    "term": "ワンチャン",
+    "reading": "わんちゃん",
+    "rules": "",
+    "tags": "n sl",
+    "de": "Eine kleine Chance; vielleicht klappt es.",
+    "en": "A small possibility; maybe it could work.",
+    "register_de": "Umgangssprachlich: vielleicht; eventuell möglich. Nicht mit ワンちゃん (Hündchen) verwechseln.",
+    "register_en": "Casual possibility or maybe. Distinct from ワンちゃん (doggy).",
+    "example": {
+      "ja": "ワンチャン間に合う。",
+      "de": "Vielleicht schaffe ich es noch rechtzeitig.",
+      "en": "I might still make it in time."
+    },
+    "sources": [
+      "https://en.wiktionary.org/wiki/%E3%83%AF%E3%83%B3%E3%83%81%E3%83%A3%E3%83%B3"
+    ]
+  },
+  {
+    "term": "ガチ恋",
+    "reading": "がちこい",
+    "rules": "vs",
+    "tags": "n vs sl",
+    "de": "Ernsthafte Verliebtheit in ein Idol oder eine öffentliche Person.",
+    "en": "Serious romantic feelings for an idol or public figure.",
+    "register_de": "Fandomsprache; mehr als bloße Begeisterung.",
+    "register_en": "Fandom usage; stronger than ordinary admiration.",
+    "example": {
+      "ja": "推しにガチ恋している。",
+      "de": "Ich bin wirklich in mein Idol verliebt.",
+      "en": "I have genuine romantic feelings for my favorite idol."
+    },
+    "sources": [
+      "https://en.wiktionary.org/wiki/%E3%82%AC%E3%83%81%E6%81%8B"
+    ]
+  },
+  {
+    "term": "リアコ",
+    "reading": "りあこ",
+    "rules": "",
+    "tags": "n sl",
+    "de": "Ernsthaft in ein Idol verliebter Fan; auch diese Verliebtheit.",
+    "en": "A fan seriously in love with an idol, or those feelings.",
+    "register_de": "Fandom-/Netzsprache; mit ガチ恋 verwandt.",
+    "register_en": "Fandom/internet usage; related to ガチ恋.",
+    "example": {
+      "ja": "あの人のファンにはリアコが多い。",
+      "de": "Viele Fans dieser Person sind wirklich in sie verliebt.",
+      "en": "Many of that person’s fans have genuine romantic feelings."
+    },
+    "sources": [
+      "https://en.wiktionary.org/wiki/%E3%83%AA%E3%82%A2%E3%82%B3"
+    ]
+  },
+  {
+    "term": "蛙化現象",
+    "reading": "かえるかげんしょう",
+    "rules": "",
+    "tags": "n sl",
+    "de": "Abneigung gegen eine Person, sobald diese die Verliebtheit erwidert.",
+    "en": "Losing attraction when the other person returns one’s romantic feelings.",
+    "register_de": "Enger: Abneigung bei erwiderter Zuneigung. Weiter: Ernüchterung durch eine unangenehme Seite des Gegenübers.",
+    "register_en": "Narrower: aversion to reciprocated affection. Broader: becoming disenchanted after seeing an unpleasant side of someone.",
+    "example": {
+      "ja": "好意を返されると蛙化現象が起きる。",
+      "de": "Sobald die Gefühle erwidert werden, schlägt die Zuneigung um.",
+      "en": "When the affection is returned, the attraction disappears."
+    },
+    "sources": [
+      "https://en.wiktionary.org/wiki/%E8%9B%99%E5%8C%96%E7%8F%BE%E8%B1%A1",
+      "https://ja.wiktionary.org/w/index.php?title=蛙化現象&oldid=1964483"
+    ]
+  },
+  {
+    "term": "推し活する",
+    "reading": "おしかつする",
+    "rules": "vs",
+    "tags": "vs sl",
+    "de": "Sich als Fan für den eigenen Favoriten engagieren.",
+    "en": "To engage in fan activities supporting one’s favorite.",
+    "register_de": "Fandombegriff; beschreibt Aktivitäten, nicht eine bestimmte Art von Beziehung.",
+    "register_en": "Fandom activity; does not itself specify a romantic relationship.",
+    "example": {
+      "ja": "週末は推し活していた。",
+      "de": "Am Wochenende war ich mit meinen Fanaktivitäten beschäftigt.",
+      "en": "I was doing fan activities over the weekend."
+    },
+    "sources": [
+      "https://en.wiktionary.org/wiki/%E6%8E%A8%E3%81%97%E6%B4%BB"
+    ]
+  }
+]

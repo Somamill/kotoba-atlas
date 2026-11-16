@@ -16,3 +16,7 @@ The public archive contains only the sources marked for public inclusion. Materi
 Full original index metadata, source URLs, hashes, and embedded source notices are retained inside each dictionary archive in `SOURCES.json`. Pitch and frequency are included as readable text and as native Yomichan metadata; scalar WaDoku devoicing positions are normalized to arrays. KANJIDIC native character/tag banks are also retained. Formatting, images, fonts, and audio are omitted. The original meaning text is not deliberately paraphrased or shortened.
 
 Creative Commons licence texts: https://creativecommons.org/licenses/by-sa/4.0/legalcode and https://creativecommons.org/licenses/by/4.0/legalcode. Source-specific obligations remain in force for any further distribution.
+
+## Atlas usage notes (1.0.1)
+
+`data/usage-notes.json` supplies short English/German usage adaptations and original Japanese example sentences. Its lexical references are Wiktionary contributors, linked individually in that file and each exported entry. Lexical adaptations, German translations and examples are distributed under CC BY-SA 4.0. Changes include paraphrasing, translation, register notes and examples written for Kotoba Atlas. The narrower and broader senses of 蛙化現象 are distinguished using the English and Japanese Wiktionary entries. Source histories and contributor lists are available from those linked pages. These notes supplement the existing sources and do not replace their notices.

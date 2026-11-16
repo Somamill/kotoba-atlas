@@ -1,0 +1,91 @@
+{
+  "archive": "Kotoba_Atlas_German_Migaku_v1_0_1.zip",
+  "revision": "1.0.1",
+  "upstream_revision": "0bc88ae46fbdc1df4d23752b3056cb25a2fd3ca0",
+  "scope": "Public legacy Anki importer core and actual SQLite table/index/insertion functions; GUI/language registry facade; no external frequency list",
+  "entries_imported": 1566695,
+  "elapsed_seconds": 15.149,
+  "peak_rss_bytes": 1369751552,
+  "archive_sha256": "6ddc0aad316565e9afab17f6f6825a837268e326406218831fbc782a2632e3cb",
+  "regressions": {
+    "羅睺": [
+      {
+        "reading": "らご",
+        "pos": "n",
+        "definition": "[DE • WaDoku]<br>Rahueiner der beiden dunklen Wandelsterne in der altindischen, vedischen Astrologie<br>Rāhu<br>RāhulaSohn des Siddhartha Gautama und Jünger des Buddha Shakyamuni; ca. 6. Jhd. v. Chr.,"
+      },
+      {
+        "reading": "らごう",
+        "pos": "n",
+        "definition": "[EN • Jitendex]<br>noun<br>Rago<br>Explanation<br>mythological celestial body and/or evil spirit (asura) said to cause eclipses<br>forms<br>羅睺<br>らご<br>らごう<br>JMdict (https://www.edrdg.org/jmwsgi/entr"
+      }
+    ],
+    "物ノ怪": [
+      {
+        "reading": "もののけ",
+        "pos": "n",
+        "definition": "[DE • WaDoku | DE • JMdict]<br>Tags: n<br>Dämon<br>böser Geist<br>Gespenst<br>Orthographic alias of 物の怪 (の → ノ between kanji)., [DE/EN • verified spelling/phrase supplement]<br>DE: übernatürliches Wes"
+      }
+    ],
+    "鎌かけて": [
+      {
+        "reading": "かまかけて",
+        "pos": "",
+        "definition": "[DE/EN • verified spelling/phrase supplement]<br>DE: Te-Form von 鎌かける: jemandem eine Fangfrage stellen / jemanden aushorchen.<br>Canonical expression: 鎌を掛ける"
+      }
+    ],
+    "鎌かける": [
+      {
+        "reading": "かまかける",
+        "pos": "v1",
+        "definition": "[DE/EN • verified spelling/phrase supplement]<br>DE: jemandem eine Fangfrage stellen; versuchen, jemandem etwas zu entlocken.<br>Colloquial particle omission: 鎌を掛ける → 鎌かける. Figurative, not literally u"
+      }
+    ],
+    "てぇてぇ": [
+      {
+        "reading": "てぇてぇ",
+        "pos": "sl",
+        "definition": "[DE • Atlas usage]<br>Tags: sl<br>Slangform von 尊い: kostbar; verehrungswürdig.<br>Netz-/Fandomsprache; ausdrucksvolle Begeisterung.<br>Example: この二人、てぇてぇ。<br>Die beiden sind einfach hinreißend.<br>Sou"
+      }
+    ],
+    "ぬまる": [
+      {
+        "reading": "ぬまる",
+        "pos": "sl v5",
+        "definition": "[DE • Atlas usage]<br>Tags: v5 sl<br>Von etwas völlig eingenommen sein; tief in ein Hobby hineinrutschen.<br>Umgangs- oder Netzsprache.<br>Example: この作品にぬまった。<br>Ich bin dieser Serie völlig verfallen."
+      }
+    ],
+    "沼る": [
+      {
+        "reading": "ぬまる",
+        "pos": "sl v5 vi",
+        "definition": "[DE • WaDoku]<br>sich in etw. versenken<br>sich in etw. vertiefen<br>von etw. gefesselt werden<br>in etw. feststecken<br>nicht von etw. loskommen; insbes. einem Hobby usw., [DE • Atlas usage]<br>Tags:"
+      }
+    ],
+    "推し活": [
+      {
+        "reading": "おしかつ",
+        "pos": "n sl vs",
+        "definition": "[DE • WaDoku]<br>vielfältige Betätigung, um seinen persönlichen Favoriten zu unterstützen, [DE • Atlas usage]<br>Tags: n vs<br>Aktivitäten zur Unterstützung des eigenen Lieblingsidols.<br>Fandombegrif"
+      }
+    ],
+    "ワンチャン": [
+      {
+        "reading": "わんちゃん",
+        "pos": "n sl",
+        "definition": "[DE • WaDoku]<br>einzige Chance<br>einmalige Gelegenheit<br>One-Night-Stand, [DE • Atlas usage]<br>Tags: n sl<br>Eine kleine Chance; vielleicht klappt es.<br>Umgangssprachlich: vielleicht; eventuell m"
+      },
+      {
+        "reading": "ワンチャン",
+        "pos": "",
+        "definition": "[EN • JMdict]<br>⟶ワンちゃん (?query=ワンちゃん&wildcards=off), [Frequency • Jiten global]<br>Rank: 28743㋕ (lower = more common)"
+      },
+      {
+        "reading": "ワンチャン",
+        "pos": "n sl",
+        "definition": "[DE • JMdict]<br>Tags: n<br>One-Night-Stand, [DE • JMdict]<br>Tags: n<br>einzige Chance<br>einmalige Gelegenheit, [Frequency • Jiten global]<br>Rank: 28743㋕ (lower = more common)"
+      }
+    ]
+  },
+  "current_migaku_browser_tested": false
+}

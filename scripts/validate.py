@@ -26,7 +26,8 @@ def main():
         if not path.exists():
             urllib.request.urlretrieve('https://raw.githubusercontent.com/yomidevs/yomitan/' + REF + '/ext/data/schemas/' + name, path)
         validators[kind] = fastjsonschema.compile(json.loads(path.read_text()))
-    examples = {term: [] for term in ['羅睺', '物ノ怪', '鎌かけて', '鎌かける', '鎌を掛ける', '食べる']}
+    examples = {term: [] for term in ['羅睺', '物ノ怪', '鎌かけて', '鎌かける', '鎌を掛ける', '食べる',
+                                    '天驅ける', '驅ける', '濕氣る', '湿氣る', '濕気る']}
     entries = banks = 0
     with zipfile.ZipFile(args.archive) as archive:
         assert archive.testzip() is None, 'Corrupt archive'
@@ -48,6 +49,8 @@ def main():
     assert all(examples.values()), 'Missing regression term'
     assert any('v1' in row['rules'].split() for row in examples['鎌かける']), 'Lost phrase deinflection rule'
     assert any('v1' in row['rules'].split() for row in examples['食べる']), 'Lost source deinflection rule'
+    for term, rule in [('天驅ける', 'v1'), ('驅ける', 'v1'), ('濕氣る', 'v5'), ('湿氣る', 'v5'), ('濕気る', 'v5')]:
+        assert any(rule in row['rules'].split() for row in examples[term]), 'Lost alternate-spelling verb rule: ' + term
     assert any('EN' in s for row in examples['羅睺'] for s in row['sources']), 'Missing English definition'
     report = {'archive': args.archive.name, 'entries': entries, 'banks': banks,
               'sha256': hashlib.sha256(args.archive.read_bytes()).hexdigest(),

@@ -1,6 +1,7 @@
 import importlib.util
 from pathlib import Path
 import unittest
+import sqlite3
 
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('build', ROOT / 'scripts/build.py')
@@ -9,6 +10,17 @@ spec.loader.exec_module(build)
 
 
 class BuildTests(unittest.TestCase):
+    def test_duplicate_gloss_keeps_all_verb_rules(self):
+        db = sqlite3.connect(':memory:')
+        db.execute('CREATE TABLE definitions(term TEXT, reading TEXT, source INTEGER, gloss TEXT, rules TEXT, score INTEGER, UNIQUE(term,reading,source,gloss))')
+        build.store(db, ('濕氣る', '', 0, 'same meaning', 'v1', -2))
+        build.store(db, ('濕氣る', '', 0, 'same meaning', 'v5', 0))
+        rows = db.execute('SELECT rules,score FROM definitions').fetchall()
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(set(rows[0][0].split()), {'v1', 'v5'})
+        self.assertEqual(rows[0][1], 0)
+        db.close()
+
     def test_rich_text_preserves_boundaries_and_links(self):
         text = build.clean({'type': 'structured-content', 'content': [
             {'tag': 'div', 'content': 'one'}, {'tag': 'div', 'content': [

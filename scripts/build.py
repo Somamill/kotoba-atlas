@@ -96,6 +96,13 @@ def alias_rows():
                entry['definitions'] + ['Canonical expression: ' + entry['canonical']], -1, '']
 
 
+def store(db, values):
+    db.execute('''INSERT INTO definitions VALUES(?,?,?,?,?,?)
+        ON CONFLICT(term,reading,source,gloss) DO UPDATE SET
+        rules=trim(definitions.rules || ' ' || excluded.rules),
+        score=max(definitions.score,excluded.score)''', values)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--cache', type=Path, default=ROOT / '.cache')
@@ -126,9 +133,8 @@ def main():
         if not gloss:
             gloss = 'Source entry contains only non-text content; see original dictionary.'
         assert isinstance(row[4], (int, float))
-        db.execute('INSERT OR IGNORE INTO definitions VALUES(?,?,?,?,?,?)',
-                   (row[0], row[1], source, '[' + label + ']\n' + gloss,
-                    row[3], int(row[4])))
+        store(db, (row[0], row[1], source, '[' + label + ']\n' + gloss,
+                   row[3], int(row[4])))
 
     for number, spec in enumerate(sources):
         if spec.get('personal_only') and not args.personal:
@@ -148,7 +154,7 @@ def main():
         digest = hashlib.sha256(path.read_bytes()).hexdigest()
         if spec.get('sha256') and digest != spec['sha256']:
             raise ValueError('Source checksum mismatch: ' + path.name)
-        before = db.total_changes
+        before = db.execute('SELECT count(*) FROM definitions').fetchone()[0]
         notice = dict(spec, sha256=digest)
         label = spec['label']
         if spec.get('kind') == 'wadoku':
@@ -174,7 +180,7 @@ def main():
                             counts['kanji_rows'] += 1
         db.commit()
         notices.append(notice)
-        stats.append({'source': label, 'rows_added': db.total_changes - before})
+        stats.append({'source': label, 'rows_added': db.execute('SELECT count(*) FROM definitions').fetchone()[0] - before})
         print(label, stats[-1]['rows_added'], flush=True)
 
     alias_number = len(sources)
@@ -241,7 +247,7 @@ def main():
             banks += 1
             archive.writestr(f'term_bank_{banks}.json', json.dumps(batch, ensure_ascii=False, separators=(',', ':')))
         index = {'title': 'dict. Japanese Master' + (' — Personal' if args.personal else ''),
-                 'format': 3, 'revision': '2026.11.16.1', 'sequenced': False,
+                 'format': 3, 'revision': '2026.11.16.2', 'sequenced': False,
                  'author': 'Somamill; source dictionary contributors',
                  'url': 'https://github.com/Somamill/dict',
                  'description': 'German-first Japanese collection with English backup and Japanese reference material. Text-only Yomichan v3. Source-specific licences apply. Browser imports are not verified.',

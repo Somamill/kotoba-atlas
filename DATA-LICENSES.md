@@ -1,0 +1,17 @@
+# Dictionary data and attribution
+
+This is a collection of independently labeled dictionary contributions. **There is no single blanket licence for its data.** The MIT licence covers the builder and project-authored documentation only. It does not relicense any source dictionaries or brand assets.
+
+- **WaDoku / WaDoku pitch:** Copyright Ulrich Apel and WaDoku contributors. The WaDoku data/file licence permits specified free-of-charge distribution and format conversion subject to its conditions. Keep the complete supplied licence with the data. See `licenses/wadoku.txt` and https://www.wadoku.de/wiki/display/WAD/Wadoku.de-Daten+Lizenz. Do not sell a copy of this collection in disregard of those terms. WaDoku paragraphs remain separately identified; their terms do not relicense other sources.
+- **JMdict, JMnedict, KANJIDIC:** Electronic Dictionaries Research Group. This publication includes material from the EDRDG dictionary files under their licence provisions. https://www.edrdg.org/edrdg/licence.html and https://creativecommons.org/licenses/by-sa/4.0/.
+- **Jitendex:** Stephen Kraus and contributors, CC BY-SA 4.0, https://jitendex.org/pages/legal.html. This build changes rich glossary markup into plain text and groups contributions under source labels. Adapted Jitendex text retains CC BY-SA 4.0. Its source attribution and links are retained in `SOURCES.json`.
+- **Wiktionary:** Wiktionary contributors, via Kaikki and wty, CC BY-SA 4.0. https://en.wiktionary.org/ and https://kaikki.org/. Converted to plain glossary text with source labels. Original entry provenance available from the corresponding Wiktionary headword; wty metadata is retained in `SOURCES.json`.
+- **NINJAL grammar-pattern data:** National Institute for Japanese Language and Linguistics, Prashant Pardeshi, Yuriko Sunakawa. 日本語文型データベース version 2026.01, DOI https://doi.org/10.15084/0002000610, CC BY 4.0. Plain-text adaptation; no claim of endorsement. Converter: https://github.com/W1ght/ninjal-bunkei-yomitan.
+- **Yōkai reference:** Wikidata contributors (CC0), Japanese Wikipedia contributors (CC BY-SA 4.0), conversion by Bee's Yomitan Dictionaries. Original source attribution is embedded in `SOURCES.json`. Images are not included. Changes: plain-text adaptation with source labels.
+- **Project spelling and phrase supplement:** project-authored explanations under CC BY-SA 4.0. Explicitly reviewed spellings and phrases; not generated dictionary meanings.
+
+The public archive contains only the sources marked for public inclusion. Material without verified redistribution terms is excluded from that archive. A **personal** build may also contain Pixiv summaries, JPDB frequency notes, and the user's locally supplied commercial Daijirin. No public redistribution rights to these sources are granted or asserted. Do not upload a personal archive or cache to GitHub.
+
+Full original index metadata, source URLs, hashes, and embedded source notices are retained inside each dictionary archive in `SOURCES.json`. Pitch and frequency are rendered as text, not native metadata. Formatting, images, fonts, and audio are omitted. The original meaning text is not deliberately paraphrased or shortened.
+
+Creative Commons licence texts: https://creativecommons.org/licenses/by-sa/4.0/legalcode and https://creativecommons.org/licenses/by/4.0/legalcode. Source-specific obligations remain in force for any further distribution.

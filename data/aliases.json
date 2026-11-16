@@ -1,0 +1,9 @@
+[
+  {"term":"物ノ怪","reading":"もののけ","canonical":"物の怪","rules":"","definitions":["DE: übernatürliches Wesen; Geist; Gespenst.","EN: supernatural being; spirit; ghost.","Orthographic variant: katakana ノ replaces hiragana の."]},
+  {"term":"鎌かける","reading":"かまかける","canonical":"鎌を掛ける","rules":"v1","definitions":["DE: jemandem eine Fangfrage stellen; versuchen, jemandem etwas zu entlocken.","EN: to ask a leading or trick question to draw someone out; to fish for information.","Colloquial particle omission: 鎌を掛ける → 鎌かける. Figurative, not literally using a sickle."]},
+  {"term":"鎌掛ける","reading":"かまかける","canonical":"鎌を掛ける","rules":"v1","definitions":["DE: jemandem eine Fangfrage stellen; jemanden aushorchen.","EN: to fish for information with a leading or trick question."]},
+  {"term":"鎌かけて","reading":"かまかけて","canonical":"鎌を掛ける","rules":"","definitions":["DE: Te-Form von 鎌かける: jemandem eine Fangfrage stellen / jemanden aushorchen.","EN: te-form of 鎌かける: asking a leading question to fish for information. The sentence determines tense and intent."]},
+  {"term":"鎌掛けて","reading":"かまかけて","canonical":"鎌を掛ける","rules":"","definitions":["DE: Te-Form: jemandem eine Fangfrage stellen / jemanden aushorchen.","EN: te-form: asking a leading or trick question to draw someone out."]},
+  {"term":"鎌をかけて","reading":"かまをかけて","canonical":"鎌を掛ける","rules":"","definitions":["DE: Te-Form von 鎌をかける: jemandem eine Fangfrage stellen.","EN: te-form of 鎌をかける: asking a leading question to draw someone out."]},
+  {"term":"鎌を掛けて","reading":"かまをかけて","canonical":"鎌を掛ける","rules":"","definitions":["DE: Te-Form von 鎌を掛ける: jemandem eine Fangfrage stellen.","EN: te-form of 鎌を掛ける: asking a leading question to draw someone out."]}
+]

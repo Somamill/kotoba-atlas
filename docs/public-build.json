@@ -1,0 +1,110 @@
+{
+  "mode": "public",
+  "lookup_entries": 1566691,
+  "banks": 314,
+  "bytes": 61479589,
+  "sha256": "3882f7ede205a409b069b37cc548c3d78d74de08bd5a12e03aef8c2f18279503",
+  "sources": [
+    {
+      "source": "DE • WaDoku",
+      "rows_added": 623926
+    },
+    {
+      "source": "DE • JMdict",
+      "rows_added": 242609
+    },
+    {
+      "source": "EN • Jitendex",
+      "rows_added": 436515
+    },
+    {
+      "source": "EN • JMdict",
+      "rows_added": 380433
+    },
+    {
+      "source": "EN • Wiktionary",
+      "rows_added": 16640
+    },
+    {
+      "source": "JA • NINJAL grammar patterns",
+      "rows_added": 2394
+    },
+    {
+      "source": "JA • Yokai reference",
+      "rows_added": 715
+    },
+    {
+      "source": "Names • JMnedict",
+      "rows_added": 668033
+    },
+    {
+      "source": "Kanji • KANJIDIC",
+      "rows_added": 10384
+    },
+    {
+      "source": "Pitch • WaDoku",
+      "rows_added": 0
+    }
+  ],
+  "input_counts": {
+    "word_rows": 2372511,
+    "kanji_rows": 10384,
+    "metadata_rows": 409568
+  },
+  "example_hits": {
+    "物の怪": [
+      {
+        "reading": "もののけ",
+        "rules": ""
+      }
+    ],
+    "物ノ怪": [
+      {
+        "reading": "もののけ",
+        "rules": ""
+      }
+    ],
+    "羅睺": [
+      {
+        "reading": "らご",
+        "rules": ""
+      },
+      {
+        "reading": "らごう",
+        "rules": ""
+      }
+    ],
+    "読む": [
+      {
+        "reading": "よむ",
+        "rules": "v5"
+      }
+    ],
+    "鎌かけて": [
+      {
+        "reading": "かまかけて",
+        "rules": ""
+      }
+    ],
+    "鎌かける": [
+      {
+        "reading": "かまかける",
+        "rules": "v1"
+      }
+    ],
+    "鎌を掛ける": [
+      {
+        "reading": "かまをかける",
+        "rules": "v1"
+      }
+    ],
+    "食べる": [
+      {
+        "reading": "たべる",
+        "rules": "v1"
+      }
+    ]
+  },
+  "browser_import_tested": false,
+  "native_metadata": false
+}

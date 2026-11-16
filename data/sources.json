@@ -1,0 +1,107 @@
+[
+  {
+    "file": "wadokudict_20260705.tar.xz",
+    "label": "DE • WaDoku",
+    "download_url": "https://www.wadoku.de/downloads/edict-export/wadokudict_20260705.tar.xz",
+    "license": "WaDoku data licence: free-of-charge distribution; see licenses/wadoku.txt",
+    "kind": "wadoku",
+    "sha256": "6308adfa4fbbeb35da8529d2acf44d3551e5f51084da08eb001cdc104344b3bb"
+  },
+  {
+    "file": "JMdict_german.zip",
+    "label": "DE • JMdict",
+    "download_url": "https://github.com/yomidevs/jmdict-yomitan/releases/download/2026-11-15/JMdict_german.zip",
+    "license": "EDRDG / CC BY-SA 4.0",
+    "kind": "words",
+    "sha256": "d82c7388fdda47c814e5b75857cb7136c5848989516fd4b83122130a7bd25c75"
+  },
+  {
+    "file": "Jitendex-Yomitan.zip",
+    "label": "EN • Jitendex",
+    "download_url": "https://github.com/stephenmk/stephenmk.github.io/releases/download/2026.10.03.0/jitendex-yomitan.zip",
+    "license": "CC BY-SA 4.0",
+    "kind": "words",
+    "sha256": "e914c76596220dffc6ee0c069cd05992f03adb2988c12c3cebe817a3ac271356"
+  },
+  {
+    "file": "JMdict_english_legacy.zip",
+    "label": "EN • JMdict",
+    "download_url": "https://github.com/yomidevs/jmdict-yomitan/releases/download/2026-11-15/JMdict_english_legacy.zip",
+    "license": "EDRDG / CC BY-SA 4.0",
+    "kind": "words",
+    "sha256": "e2a811c7023888b84036c6f6f978525de2fdfbea1233aec81ecef5b6c6ebd69e"
+  },
+  {
+    "file": "Wiktionary-Japanese-English-Glossary.zip",
+    "label": "EN • Wiktionary",
+    "download_url": "https://huggingface.co/datasets/daxida/wty-release/resolve/main/latest/dict/ja/en/wty-ja-en-gloss.zip",
+    "license": "Wiktionary / CC BY-SA 4.0",
+    "kind": "words",
+    "sha256": "72a1073fce2a32289256986fd9f295c086f426e9bd0b1587e953dd79915852cf"
+  },
+  {
+    "file": "ninjal-bunkei-yomitan-2026.01.33.zip",
+    "label": "JA • NINJAL grammar patterns",
+    "download_url": "https://github.com/bee-san/yomitan-dictionaries/releases/download/2026.09.01/ninjal-bunkei-yomitan-2026.01.33.zip",
+    "license": "CC BY 4.0; NINJAL, Prashant Pardeshi, Yuriko Sunakawa; DOI 10.15084/0002000610",
+    "kind": "words",
+    "sha256": "c55469eaad15495012b05afb28817db50a96b6225ebf8f834428a78910c9c9ae"
+  },
+  {
+    "file": "japanese-yokai-encyclopedia-yomitan.zip",
+    "label": "JA • Yokai reference",
+    "download_url": "https://github.com/bee-san/yomitan-dictionaries/releases/download/2026.09.01/japanese-yokai-encyclopedia-yomitan.zip",
+    "license": "Wikidata CC0; Japanese Wikipedia text CC BY-SA 4.0; images omitted",
+    "kind": "words",
+    "sha256": "a5cfe3e548cec5a625c49fa791f91e6c64a5045daf22fc3768b7f47115e12a8f"
+  },
+  {
+    "file": "JMnedict.zip",
+    "label": "Names • JMnedict",
+    "download_url": "https://github.com/yomidevs/jmdict-yomitan/releases/download/2026-11-15/JMnedict.zip",
+    "license": "EDRDG / CC BY-SA 4.0",
+    "kind": "words",
+    "sha256": "ba4bb2169b8ba877d2dd4c81ce6a5e2e7b37a982b66af2efc86c575f57a9cb2c"
+  },
+  {
+    "file": "KANJIDIC_english.zip",
+    "label": "Kanji • KANJIDIC",
+    "download_url": "https://github.com/yomidevs/jmdict-yomitan/releases/download/2026-11-15/KANJIDIC_english.zip",
+    "license": "EDRDG / CC BY-SA 4.0",
+    "kind": "words",
+    "sha256": "2ab50abdc136c59160280d353da0e21f1818da79337b9da90c1407f5b49af578"
+  },
+  {
+    "file": "wadoku-pitch.zip",
+    "label": "Pitch • WaDoku",
+    "download_url": "https://github.com/classicsc/wadoku-pitch-dictionary-for-yomitan/releases/download/v20260705.01/wadoku-pitch.zip",
+    "license": "WaDoku data licence: free-of-charge distribution; see licenses/wadoku.txt",
+    "kind": "metadata",
+    "sha256": "9b2d5430df0bfab81d2af7e32ede1bcfd57bb9c0015203038e53f219c07bc082"
+  },
+  {
+    "file": "PixivLight_2026-11-16.zip",
+    "label": "JA • Pixiv internet/pop-culture",
+    "download_url": "https://github.com/MarvNC/pixiv-yomitan/releases/download/2026-11-16/PixivLight_2026-11-16.zip",
+    "license": "No explicit redistribution licence found; personal use only in this project",
+    "kind": "words",
+    "personal_only": true,
+    "sha256": "91126036da14a2979da7056c6c5e7f34b0539675e28e554aadde4c67b8a4df58"
+  },
+  {
+    "file": "JPDB_v2.2_Frequency_Kana_Display_Only_2024-10-13.zip",
+    "label": "Frequency • JPDB",
+    "download_url": "https://raw.githubusercontent.com/Kuuuube/yomitan-dictionaries/main/dictionaries/JPDB_v2.2_Frequency_Kana_Display_Only_2024-10-13.zip",
+    "license": "No explicit redistribution licence found; personal use only in this project",
+    "kind": "metadata",
+    "personal_only": true,
+    "sha256": "9179a81a054b6719af0248fc08cd3eb1cc60078d8a1cd2261268d2c499730d34"
+  },
+  {
+    "local_file": "三省堂　スーパー大辞林.zip",
+    "label": "JA • Daijirin (private local source)",
+    "license": "Commercial dictionary. Local personal build only. No redistribution permitted by this project.",
+    "kind": "words",
+    "personal_only": true
+  }
+]

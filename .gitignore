@@ -1,0 +1,7 @@
+.cache/
+dist/
+__pycache__/
+*.sqlite
+*.part
+*.zip
+.DS_Store

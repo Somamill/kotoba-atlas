@@ -47,6 +47,9 @@ def main():
                 assert __import__('re').fullmatch(r'[A-Za-z_][A-Za-z0-9_]*', args.archive.stem), 'Unsafe legacy Migaku dictionary name'
                 assert all(not name.endswith('.json') or name == 'index.json' or __import__('re').fullmatch(r'term_bank_\d+\.json', name) for name in check.namelist()), 'Unexpected JSON bank in Migaku export'
                 assert check.read('SOURCES.txt'), 'Missing source manifest'
+        if edition_index['revision'] not in {'1.0.0', '1.0.1'}:
+            assert profile == 'full', 'Only complete language editions are released'
+            assert __import__('re').fullmatch(r'Kotoba_Atlas_(German|English)_v[0-9_]+', args.archive.stem), 'Unexpected edition filename'
         for term in ['てぇてぇ', 'ぬまる', '沼る', '推し活する', 'ワンチャン', '蛙化現象']:
             examples[term] = []
     entries = banks = 0

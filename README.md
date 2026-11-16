@@ -1,7 +1,7 @@
 <p align="center"><img src="docs/banner.svg" alt="Kotoba Atlas — Japanese words, more context. English and German editions. Part of dot." width="100%"></p>
 
 <p align="center">
-  <a href="https://github.com/Somamill/kotoba-atlas/releases/latest"><strong>Kotoba Atlas 1.0.1</strong></a>
+  <a href="https://github.com/Somamill/kotoba-atlas/releases/latest"><strong>Kotoba Atlas 1.0.2</strong></a>
   &nbsp; · &nbsp; <a href="#install">Install</a>
   &nbsp; · &nbsp; <a href="docs/compatibility.md">Compatibility</a>
   &nbsp; · &nbsp; <a href="docs/research.md">Research</a>
@@ -9,16 +9,22 @@
 
 **One complete dictionary file for your definition language.** Read Japanese with vocabulary, phrases, usage notes, names, kanji, grammar references, folklore, and pitch/frequency information in the same ZIP.
 
-## Choose your edition
+## Download one complete dictionary
 
-| Edition | Definitions | Entries¹ | Migaku word export | Full Yomitan export |
-|---|---|---:|---|---|
-| **Deutsch** | German first; English fallback for uncovered term/readings | **1,566,695** | **[v1.0.1 · 47.9 MB ↓](https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.0.1/Kotoba_Atlas_German_Migaku_v1_0_1.zip)** | [v1.0.1 · 61.2 MB ↓](https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.0.1/Kotoba-Atlas-German-v1.0.1.zip) |
-| **English** | English, plus Japanese reference material | **1,080,167** | **[v1.0.1 · 38.3 MB ↓](https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.0.1/Kotoba_Atlas_English_Migaku_v1_0_1.zip)** | [v1.0.1 · 51.6 MB ↓](https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.0.1/Kotoba-Atlas-English-v1.0.1.zip) |
+| Japanese definitions | Download | Lookup pairs¹ |
+|---|---|---:|
+| **German, with English fallback** | **[Kotoba Atlas German · v1.0.2 ↓](https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.0.2/Kotoba_Atlas_German_v1_0_2.zip)** | **1,566,695** |
+| **English** | **[Kotoba Atlas English · v1.0.2 ↓](https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.0.2/Kotoba_Atlas_English_v1_0_2.zip)** | **1,080,167** |
 
-**Choose one ZIP for your tool and definition language. There are no required feature packs.** German already includes English fallback. Both exports have byte-identical word banks containing all words, names, grammar, kanji references and readable pitch/frequency notes. The full Yomitan export additionally supplies native character, pitch, frequency and POS/tag banks. The Migaku export uses ordinary word banks only, following the public word-import format; native graphs/sorting are host features. Its underscore filename (`v1_0_1`) also avoids the legacy importer's SQL-name restrictions.
+**One ZIP per definition language. Use the same file in Migaku, Yomitan or another compatible Yomichan-format importer.** There are no separate tool editions, feature packs or required extras. German already includes English fallback; you do not need the English edition alongside it.
 
-¹ Entries are term-and-reading pairs, including names, spellings and reference entries—not that many distinct words. All data retains its source-specific licence. No claim of every Japanese word or every possible nuance is made.
+Every file includes the complete word banks, readable pitch/frequency/kanji references and native metadata/kanji/tag banks. Supporting apps display the native features; word-only importers can use the reference text. Audio, scanning, pitch graphs and Anki mining require support from the app. **Current Migaku Early Access live import is still awaiting user testing.**
+
+¹ Counts are term-and-reading pairs, including names, spellings and reference entries, rather than distinct words. Sources retain their licences; coverage of every Japanese expression or nuance is not guaranteed.
+
+### Clear names
+
+`Kotoba_Atlas_German_v1_0_2.zip` = product + definition language + version **1.0.2**. The English filename follows the same pattern. Underscores avoid legacy Migaku filename/SQL restrictions. The established internal titles, **Kotoba Atlas — German** and **Kotoba Atlas — English**, stay stable so full-edition updates retain their identity.
 
 ## What is inside each file
 
@@ -33,31 +39,24 @@
 | Frequency | **Jiten global** native frequency data plus rank notes, built from multiple kinds of Japanese media |
 | Written variants | Explicit aliases for forms such as **物ノ怪**; labeled の → ノ aliases between kanji |
 
-Pitch, frequency and kanji references are readable word notes in **both exports**. The full Yomitan export also includes native banks for supporting graphs/ranks/kanji views; the Migaku export omits those extra banks. Audio playback, OCR and card export remain host features; audio/images are not bundled. [Feature matrix →](docs/compatibility.md)
+Pitch, frequency and kanji are supplied as **native Yomichan banks and readable word notes in the same ZIP**. No audio, images, scripts or fonts are bundled. [Feature matrix →](docs/compatibility.md)
 
-## Smaller preparation, broad coverage
+## Verified content and import paths
 
-The Migaku exports expand to **245.3 MB** for English and **301.5 MB** for German. Each avoids about **96 MB** of native-bank preparation compared with its full Yomitan export, while retaining byte-identical word banks and all readable references. Full exports expand to **341.3 MB** and **397.4 MB** respectively.
+All 1.0.1 word, native metadata, kanji and tag banks are retained byte-for-byte. The only packaging changes are the version, filename and explanatory text. German uses German meanings when available for a term/reading pair, with English fallback for gaps. Names rank below ordinary vocabulary; metadata alone never creates a fake definition. Each data bank stays within 2 MiB, although an importer may hold many banks in memory.
 
-- One primary English explanation per overlapping Jitendex/JMdict pair.
-- English fallback appears in the German edition only when German definitions are absent for that term/reading.
-- Names have lower result scores than ordinary vocabulary.
-- Pitch/frequency data never creates a misleading result with no definition.
-- Word, native metadata and character JSON banks are capped at **2 MiB** to limit individual parsing allocations.
-- Plain text avoids rich-layout dependencies and keeps source labels visible.
+Both complete editions pass upstream schemas and edition checks. The pinned public legacy Migaku importer is exercised with real SQLite, and the pinned upstream Yomitan parser checks the complete archives. Representative Yomitan database fixtures cover native data and 14 deinflection cases. [Release evidence →](docs/releases/1.0.2/) · [Measurements and limits →](docs/performance.md)
 
-All word, native metadata, kanji, tag and index banks passed the pinned upstream Yomitan v3 schemas. Edition-policy checks verify language selection, deduplication, bank limits, real definitions, and preserved inflection rules. [Measured preparation results →](docs/performance.md)
-
-These are archive/format checks and offline preparation measurements. **Current Migaku Early Access and installed Yomitan extension UIs are not live-certified.** The pinned public legacy Migaku importer core imported both complete editions into SQLite. The current upstream Yomitan parser processed both full archives; representative fixtures also passed its IndexedDB adapter and 14 deinflection checks. [Exact test scopes and results →](docs/migaku-1.0.1.md) A million-entry initial import can still take time; the payload is smaller, not a guarantee of an instant browser import.
+**These checks do not certify the installed current Migaku Early Access or Yomitan extension UI.** The reported browser preparation stall remains unverified. Keep a working dictionary until the replacement imports successfully.
 
 ## Install
 
-1. Download **English** or **Deutsch** for the tool you use. Keep the ZIP compressed.
+1. Download **German** or **English**. German already includes English fallback. Keep the ZIP compressed.
 2. **Yomitan:** Settings → Dictionaries → Configure installed and enabled dictionaries → Import.
-3. **Migaku:** use the dictionary settings' import-from-file action. Exact labels vary by version. The archive uses plain Yomichan v3 word banks; current Early Access runtime compatibility remains unverified.
+3. **Migaku:** use the dictionary settings' import-from-file action. Exact labels vary by version. Use the same complete ZIP. Its ordinary word banks carry readable references; apps with native-bank support can use those features. Current Early Access runtime compatibility remains unverified.
 4. Enable the imported edition and try a manual lookup for **羅睺**, **物ノ怪**, and **鎌かけて**. Then test hover or selected-phrase lookup.
 
-If the old **Dict Personal** import is still preparing, cancel that operation before starting a new one. Keep an already-installed dictionary until the replacement works. Use the host's normal replacement/removal controls if it rejects a duplicate title. Source update manifests are supplied for Yomitan-compatible update checking; actual update behavior depends on the host.
+If the old **Dict Personal** import is still preparing, cancel that operation before starting a new one. Keep an already-installed dictionary until the replacement works. Use the host's normal replacement/removal controls if it rejects a duplicate title. If you installed a 1.0.1 edition whose name ends in `_Migaku`, install this complete edition through the normal importer, then disable/remove the older edition after success. Earlier full editions retain their update identity. Source update manifests are supplied for supporting hosts; actual update behavior depends on the host.
 
 ## Built around reading examples
 
@@ -74,20 +73,18 @@ For Anki mining, save the sentence you actually encountered and the relevant sen
 
 ## Build and verify
 
-Python 3.11+ builds both language editions and their tool-specific exports with standard-library code. Inputs are pinned by hash. The changing Jiten resource is kept as an attributed, immutable source snapshot; users do not install it separately.
+Python 3.11+ builds both complete language editions with standard-library code. Inputs are pinned by hash. The changing Jiten resource is kept as an attributed, immutable source snapshot; users do not install it separately.
 
 ```sh
 python3 scripts/build.py
 python3 -m pip install -r requirements-dev.txt
 python3 -m unittest discover -s tests
-python3 scripts/validate.py dist/Kotoba-Atlas-English-v1.0.1.zip
-python3 scripts/validate.py dist/Kotoba-Atlas-German-v1.0.1.zip
-python3 scripts/validate.py dist/Kotoba_Atlas_German_Migaku_v1_0_1.zip
-python3 scripts/validate.py dist/Kotoba_Atlas_English_Migaku_v1_0_1.zip
+python3 scripts/validate.py dist/Kotoba_Atlas_English_v1_0_2.zip
+python3 scripts/validate.py dist/Kotoba_Atlas_German_v1_0_2.zip
 python3 branding/dot/check.py
 ```
 
-The release includes SHA-256 checksums and reports for both editions. [Source licences](DATA-LICENSES.md) · [Local-folder audit](docs/folder-audit.md) · [Release reports](docs/releases/1.0.1)
+The release includes SHA-256 checksums and reports for both editions. [Source licences](DATA-LICENSES.md) · [Local-folder audit](docs/folder-audit.md) · [Release reports](docs/releases/1.0.2)
 
 The old personal build remains local and can include commercial or unclear-licence material; it is not a public edition. Earlier `dict.` prototype tags remain in release history. **Kotoba Atlas starts at version 1.0.0.**
 

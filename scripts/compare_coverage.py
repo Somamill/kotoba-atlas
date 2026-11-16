@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stream-check that a release retains every old lookup pair and both exports share words."""
+"""Stream-check that a release retains every old lookup pair and all complete data banks remain unchanged."""
 import argparse
 import hashlib
 import json
@@ -19,10 +19,10 @@ def keys(archive):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    for name in ['previous', 'current', 'migaku', 'report']:
+    for name in ['previous', 'current', 'report']:
         parser.add_argument(name)
     args = parser.parse_args()
-    with zipfile.ZipFile(args.previous) as previous, zipfile.ZipFile(args.current) as current, zipfile.ZipFile(args.migaku) as migaku:
+    with zipfile.ZipFile(args.previous) as previous, zipfile.ZipFile(args.current) as current:
         assert json.loads(previous.read('index.json'))['title'] == json.loads(current.read('index.json'))['title'], 'Changed update identity'
         old = iter(keys(previous))
         sentinel = object()
@@ -37,14 +37,14 @@ def main():
             else:
                 additions += 1
         assert expected is sentinel, 'Old lookup pairs disappeared at the end'
-        names = word_files(current)
-        assert names == word_files(migaku), 'Migaku export changed word banks'
+        names = [name for name in previous.namelist() if re.fullmatch(r'(term|term_meta|kanji|tag)_bank_\d+\.json', name)]
+        assert set(names) == {name for name in current.namelist() if re.fullmatch(r'(term|term_meta|kanji|tag)_bank_\d+\.json', name)}, 'Changed complete data bank list'
         for name in names:
-            assert hashlib.sha256(current.read(name)).digest() == hashlib.sha256(migaku.read(name)).digest(), name
+            assert hashlib.sha256(previous.read(name)).digest() == hashlib.sha256(current.read(name)).digest(), name
         report = {'previous': args.previous.split('/')[-1], 'current': args.current.split('/')[-1],
-                  'migaku': args.migaku.split('/')[-1], 'retained_lookup_pairs': retained,
+                  'retained_lookup_pairs': retained,
                   'added_lookup_pairs': additions, 'removed_lookup_pairs': 0,
-                  'word_banks_identical_between_exports': True}
+                  'all_word_metadata_kanji_tag_banks_identical_to_previous': True}
         with open(args.report, 'w') as out:
             json.dump(report, out, ensure_ascii=False, indent=2)
             out.write('\n')

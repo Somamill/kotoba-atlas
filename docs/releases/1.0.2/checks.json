@@ -1,0 +1,9 @@
+{
+  "unit_tests": 15,
+  "unit_tests_passed": true,
+  "brand_check_passed": true,
+  "private_input_tracking_check_passed": true,
+  "cloud_ci_executed": false,
+  "cloud_ci_reason": "GitHub Actions is disabled in repository settings; setting left unchanged",
+  "current_migaku_ea_live_import_tested": false
+}

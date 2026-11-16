@@ -1,0 +1,91 @@
+{
+  "archive": "Kotoba_Atlas_English_v1_0_2.zip",
+  "revision": "1.0.2",
+  "upstream_revision": "0bc88ae46fbdc1df4d23752b3056cb25a2fd3ca0",
+  "scope": "Public legacy Anki importer core and actual SQLite table/index/insertion functions; GUI/language registry facade; no external frequency list",
+  "entries_imported": 1080167,
+  "elapsed_seconds": 10.846,
+  "peak_rss_bytes": 1214431232,
+  "archive_sha256": "fee1364aa094b8f222f7089263cf7d1ed0327431c190da3bc6f4b0e430e6097d",
+  "regressions": {
+    "羅睺": [
+      {
+        "reading": "らご",
+        "pos": "n",
+        "definition": "[EN • Jitendex]<br>noun<br>Rago<br>Explanation<br>mythological celestial body and/or evil spirit (asura) said to cause eclipses<br>forms<br>羅睺<br>らご<br>らごう<br>JMdict (https://www.edrdg.org/jmwsgi/entr"
+      },
+      {
+        "reading": "らごう",
+        "pos": "n",
+        "definition": "[EN • Jitendex]<br>noun<br>Rago<br>Explanation<br>mythological celestial body and/or evil spirit (asura) said to cause eclipses<br>forms<br>羅睺<br>らご<br>らごう<br>JMdict (https://www.edrdg.org/jmwsgi/entr"
+      }
+    ],
+    "物ノ怪": [
+      {
+        "reading": "もののけ",
+        "pos": "n",
+        "definition": "[EN • Jitendex]<br>noun<br>evil spirit<br>(vengeful) ghost<br>specter<br>spectre<br>forms<br>物の怪<br>物の気<br>もののけ<br>JMdict (https://www.edrdg.org/jmwsgi/entr.py?svc=jmdict&q=1502400)<br>Orthographic al"
+      }
+    ],
+    "鎌かけて": [
+      {
+        "reading": "かまかけて",
+        "pos": "",
+        "definition": "[DE/EN • verified spelling/phrase supplement]<br>EN: te-form of 鎌かける: asking a leading question to fish for information. The sentence determines tense and intent.<br>Canonical expression: 鎌を掛ける"
+      }
+    ],
+    "鎌かける": [
+      {
+        "reading": "かまかける",
+        "pos": "v1",
+        "definition": "[DE/EN • verified spelling/phrase supplement]<br>EN: to ask a leading or trick question to draw someone out; to fish for information.<br>Colloquial particle omission: 鎌を掛ける → 鎌かける. Figurative, not lit"
+      }
+    ],
+    "てぇてぇ": [
+      {
+        "reading": "てぇてぇ",
+        "pos": "sl",
+        "definition": "[EN • Atlas usage]<br>Tags: sl<br>Slang form of 尊い: precious; worthy of admiration.<br>Expressive internet/fandom admiration.<br>Example: この二人、てぇてぇ。<br>These two are precious.<br>Sources: https://en.w"
+      }
+    ],
+    "ぬまる": [
+      {
+        "reading": "ぬまる",
+        "pos": "sl v5",
+        "definition": "[EN • Atlas usage]<br>Tags: v5 sl<br>To become deeply hooked on something.<br>Informal or internet usage.<br>Example: この作品にぬまった。<br>I got completely hooked on this series.<br>Sources: https://en.wikti"
+      }
+    ],
+    "沼る": [
+      {
+        "reading": "ぬまる",
+        "pos": "sl v5 vi",
+        "definition": "[EN • Jitendex]<br>5-danintransitivenet slang<br>to get hooked (on a video game, TV show, etc.)<br>to become addicted (to)<br>to become obsessed (with)<br>video games<br>to be in a slump<br>to struggl"
+      }
+    ],
+    "推し活": [
+      {
+        "reading": "おしかつ",
+        "pos": "n sl vs",
+        "definition": "[EN • Jitendex]<br>nounslang<br>(doing) various things to support one's favourite member of a boy band, girl group, etc.<br>See also推(お)し (?query=%E6%8E%A8%E3%81%97&wildcards=off&primary_reading=%E3%8"
+      }
+    ],
+    "ワンチャン": [
+      {
+        "reading": "わんちゃん",
+        "pos": "n sl",
+        "definition": "[EN • Atlas usage]<br>Tags: n sl<br>A small possibility; maybe it could work.<br>Casual possibility or maybe. Distinct from ワンちゃん (doggy).<br>Example: ワンチャン間に合う。<br>I might still make it in time.<br>S"
+      },
+      {
+        "reading": "ワンチャン",
+        "pos": "",
+        "definition": "[EN • JMdict]<br>⟶ワンちゃん (?query=ワンちゃん&wildcards=off), [Frequency • Jiten global]<br>Rank: 28743㋕ (lower = more common)"
+      },
+      {
+        "reading": "ワンチャン",
+        "pos": "n sl",
+        "definition": "[EN • Jitendex]<br>noun<br>abbr.<br>one chance<br>only opportunity<br>See alsoワンチャンス (?query=%E3%83%AF%E3%83%B3%E3%83%81%E3%83%A3%E3%83%B3%E3%82%B9&wildcards=off)<br>one chance; only opportunity<br>sl"
+      }
+    ]
+  },
+  "current_migaku_browser_tested": false
+}

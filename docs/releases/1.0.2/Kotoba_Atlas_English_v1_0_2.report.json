@@ -1,0 +1,59 @@
+{
+  "name": "Kotoba Atlas",
+  "version": "1.0.2",
+  "language": "en",
+  "archive": "Kotoba_Atlas_English_v1_0_2.zip",
+  "lookup_entries": 1080167,
+  "compressed_bytes": 51600758,
+  "expanded_bytes": 341287021,
+  "banks": 219,
+  "largest_bank_bytes": 2097030,
+  "largest_data_bank_bytes": 2097030,
+  "sha256": "fee1364aa094b8f222f7089263cf7d1ed0327431c190da3bc6f4b0e430e6097d",
+  "features": {
+    "names": 618386,
+    "kanji": 10384,
+    "grammar": 2185,
+    "folklore": 749,
+    "pitch_notes": 128428,
+    "frequency_notes": 279920
+  },
+  "regression_hits": {
+    "天驅ける": [
+      ""
+    ],
+    "湿氣る": [
+      ""
+    ],
+    "濕気る": [
+      ""
+    ],
+    "濕氣る": [
+      ""
+    ],
+    "物ノ怪": [
+      "もののけ"
+    ],
+    "羅睺": [
+      "らご",
+      "らごう"
+    ],
+    "鎌かけて": [
+      "かまかけて"
+    ],
+    "鎌かける": [
+      "かまかける"
+    ],
+    "驅ける": [
+      ""
+    ]
+  },
+  "browser_import_tested": false,
+  "format": "Yomichan v3: plain term banks plus native kanji and term metadata banks",
+  "native_metadata_records": 1006753,
+  "native_kanji_records": 10384,
+  "english_primary": "Jitendex; JMdict fills missing term/reading pairs; Wiktionary supplements",
+  "german_policy": "German meanings when present; English fallback for uncovered term/reading pairs",
+  "metadata_only_results_omitted": true,
+  "profile": "complete"
+}

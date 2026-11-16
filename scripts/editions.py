@@ -131,7 +131,7 @@ def package_editions(db, output, sources, notices, cache):
     product = json.loads((ROOT / 'data/product.json').read_text())
     results = []
     for language, english_name in [('en', 'English'), ('de', 'German')]:
-        stem = 'Kotoba-Atlas-' + english_name + '-v' + product['version']
+        stem = 'Kotoba_Atlas_' + english_name + '_v' + product['version'].replace('.', '_')
         dest = output / (stem + '.zip')
         partial = dest.with_suffix('.zip.part')
         index = {'title': product['name'] + ' — ' + english_name,
@@ -226,7 +226,7 @@ def package_editions(db, output, sources, notices, cache):
             write('NOTICES.txt', (ROOT / 'DATA-LICENSES.md').read_text())
             for licence in (ROOT / 'licenses').glob('*'):
                 write('licenses/' + licence.name, licence.read_bytes())
-            write('README.txt', 'Kotoba Atlas ' + product['version'] + ' — ' + english_name + '\nImport this single ZIP without extracting. Plain word banks include readable reference notes. Native kanji/pitch/frequency banks are also included for supporting importers such as Yomitan. Word-only importers may ignore those extra banks. Audio and images are not bundled. Live import compatibility remains untested.\n')
+            write('README.txt', 'Kotoba Atlas ' + product['version'] + ' — ' + english_name + '\nImport this single ZIP without extracting. Plain word banks include readable reference notes. Native kanji/pitch/frequency banks are also included for supporting importers such as Yomitan. Use this same ZIP in each supporting Yomichan-format tool; no separate feature packs or tool profiles are required. Word-only importers use the reference text and may ignore the native banks. Audio and images are not bundled. Current Migaku Early Access live import remains untested.\n')
         assert all(term in hits for term in ['羅睺', '物ノ怪', '鎌かけて', '鎌かける'])
         assert all(features.values()), 'An expected feature layer is empty: ' + str(features)
         partial.replace(dest)
@@ -247,40 +247,5 @@ def package_editions(db, output, sources, notices, cache):
         (output / (stem + '.report.json')).write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
         (output / ('Kotoba-Atlas-' + english_name + '-index.json')).write_text(json.dumps(index, ensure_ascii=False, indent=2) + '\n')
         results.append(report)
-        results.append(package_migaku(dest, output, product, language, english_name, report))
         print(json.dumps({'archive': dest.name, 'entries': total, 'bytes': dest.stat().st_size}), flush=True)
     return results
-
-
-def package_migaku(master, output, product, language, english_name, master_report):
-    """One word-only archive for Migaku; reference notes stay in the word entries."""
-    stem = 'Kotoba_Atlas_' + english_name + '_Migaku_v' + product['version'].replace('.', '_')
-    destination = output / (stem + '.zip')
-    pending = destination.with_suffix('.zip.part')
-    with zipfile.ZipFile(master) as source, zipfile.ZipFile(pending, 'w', zipfile.ZIP_DEFLATED, compresslevel=6) as target:
-        index = json.loads(source.read('index.json'))
-        index.update(title='Kotoba_Atlas_' + english_name + '_Migaku',
-                     indexUrl=product['repository'] + '/releases/latest/download/Kotoba-Atlas-' + english_name + '-Migaku-index.json',
-                     downloadUrl=product['repository'] + '/releases/download/' + product['release_tag'] + '/' + stem + '.zip',
-                     description='Migaku word-dictionary profile. All word, name, grammar, kanji-reference, pitch and frequency text remains in ordinary Yomichan word banks. Native Yomitan metadata banks are available in the full export. Current Migaku Early Access live import is not certified.')
-        def write(name, value):
-            info = zipfile.ZipInfo(name, (2026, 11, 16, 0, 0, 0))
-            info.compress_type = zipfile.ZIP_DEFLATED
-            target.writestr(info, value, compresslevel=6)
-        write('index.json', json.dumps(index, ensure_ascii=False, indent=2))
-        for name in source.namelist():
-            if re.fullmatch(r'term_bank_\d+\.json', name) or name.startswith('licenses/') or name == 'NOTICES.txt':
-                write(name, source.read(name))
-        write('SOURCES.txt', source.read('SOURCES.json'))
-        write('README.txt', 'Kotoba Atlas ' + product['version'] + ' — ' + english_name + ' — Migaku\nImport this single ZIP without extracting. Use the filename-derived name or the ASCII index title; older Migaku Anki importers use dictionary names in SQL identifiers. Words, names, grammar, kanji references, pitch and frequency notes are included. Native Yomitan metadata and character banks are omitted from this tool-specific export; install the full export in Yomitan for native features. Current Migaku Early Access live import is not certified. Keep the previous working dictionary until import finishes.\n')
-    pending.replace(destination)
-    with zipfile.ZipFile(destination) as archive:
-        expanded = sum(item.file_size for item in archive.infolist())
-    report = {**master_report, 'archive': destination.name, 'profile': 'migaku-word-banks',
-              'compressed_bytes': destination.stat().st_size, 'expanded_bytes': expanded,
-              'native_metadata_records': 0, 'native_kanji_records': 0,
-              'sha256': hashlib.sha256(destination.read_bytes()).hexdigest(),
-              'format': 'Yomichan v3 ordinary word banks; complete text references, no native metadata banks'}
-    destination.with_suffix('.report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
-    (output / ('Kotoba-Atlas-' + english_name + '-Migaku-index.json')).write_text(json.dumps(index, ensure_ascii=False, indent=2) + '\n')
-    return report

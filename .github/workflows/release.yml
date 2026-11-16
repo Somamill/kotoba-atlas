@@ -15,12 +15,16 @@ jobs:
       - run: python -m unittest discover -s tests
       - run: python branding/dot/check.py
       - run: python scripts/build.py
-      - run: python scripts/validate.py dist/Kotoba-Atlas-English-v1.0.0.zip
-      - run: python scripts/validate.py dist/Kotoba-Atlas-German-v1.0.0.zip
+      - name: Validate complete language editions
+        run: |
+          for archive in dist/Kotoba_Atlas_*.zip; do
+            python scripts/validate.py "$archive"
+          done
       - name: Keep public build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: kotoba-atlas-public
           path: |
-            dist/Kotoba-Atlas-*
+            dist/Kotoba_Atlas_*
+            dist/Kotoba-Atlas-*-index.json
           retention-days: 30

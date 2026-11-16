@@ -1,27 +1,29 @@
-# Compatibility and included features — 1.0.1
+# One complete edition per definition language — 1.0.2
 
-Choose **one ZIP per definition language and tool**. The English and German editions each have two alternative exports. Their word banks are byte-for-byte identical; installing both exports in one tool duplicates the words.
+Download **German** (with English fallback) or **English**, then use that same ZIP in each supporting tool. No separate Migaku version or feature packs are required. Each includes ordinary Yomichan v3 word banks, native pitch/frequency metadata, kanji/tag banks, source notices and licences. Readable references are also included as ordinary word content.
 
-| Export / tool | Included | Verification |
+| Capability | Supplied in the ZIP | Host requirement / verification |
 |---|---|---|
-| Yomitan full export | Plain eight-field Yomichan v3 words, native pitch/frequency, kanji and tags | All banks schema-validated; complete upstream importer parser tested; representative IndexedDB fixtures tested |
-| Migaku word export | Same words, definitions, usage examples and plain-text pitch/frequency/kanji references; index and word-bank JSON only | Complete pinned public **legacy** Migaku importer core tested with real SQLite; current browser Early Access import awaits user test |
-| Other Yomichan v3 importers | Standard plain-string word banks | No blanket runtime guarantee; test the host |
-| Anki | Selected words/senses through the host integration | Not a native Anki deck |
-| MDict, StarDict, Kobo / proprietary formats | Conversion required | Not native exports |
+| Words, readings, source-covered slang, phrases, examples, grammar, names and folklore | Complete plain-string word banks | Both full editions tested through the public legacy Migaku importer into SQLite and upstream Yomitan parser |
+| Pitch, frequency, kanji | Native banks **and** readable references | Native graphs, rank columns and character panels require app support; word-only importers use the text |
+| Inflected forms | Source rules and explicit phrase aliases | Upstream Yomitan deinflection tests cover 14 cases; exact hover/scan boundaries remain host-dependent |
+| Anki | Lookup content for host mining integration | Not an Anki deck; app/add-on integration required |
+| Audio, OCR and sentence analysis | Not bundled | Host feature or service |
+| MDict, StarDict, Kobo and proprietary formats | Not native exports | Conversion required |
 
-The full export includes 1,006,753 native term metadata records (409,568 pitch and 597,185 frequency), 10,384 kanji records and 74 tag definitions. Native pitch graphs, frequency sorting, kanji panels, audio, scanning, deinflection, OCR and Anki integration depend on the host. The Migaku word export preserves readable reference notes but does not supply native metadata-bank features.
+Each data bank is at most 2 MiB, but some importers load many banks together. No images, SVG, fonts or executable code are bundled. German selects German lexical definitions for an exact term/reading pair when available, otherwise English; both editions retain Japanese reference text and attribution.
 
-Both editions include vocabulary, source-covered slang, phrases, grammar patterns, names, kanji references and folklore. German uses German definitions for an exact term/reading pair when available, with English gap fallback. English excludes German lexical sources. Both retain Japanese-only reference text and source names. Newer JMdict fills pairs absent from Jitendex; it does not replace every overlapping sense.
+## Verification limits
 
-Archives contain no images, SVG, fonts, audio, executable code or nested dictionary ZIPs. Individual word banks are at most 2 MiB; this does **not** cap an importer's total memory. Sources and licence notices accompany both exports. A dictionary cannot control every application's tokenizer, selected phrase boundary or contextual interpretation.
+The public legacy Migaku importer identifies word banks and ignores native Yomichan bank families. Both **complete** 1.0.2 ZIPs are tested against that path, not merely word-only variants. That source is the legacy Anki importer, not current browser Early Access. The upstream Yomitan parser checks all full-archive banks; representative fixtures exercise its actual database adapter with fake IndexedDB. Installed extension UIs, full persistent browser imports and current Migaku Early Access remain untested. Reports and hashes: [1.0.2 evidence](releases/1.0.2/).
 
-## If preparation seems stuck
+A complete ZIP supplies every included data layer, but cannot force an app to implement native graphs, sorting, audio or scanners. It also does not guarantee every Japanese expression/context.
 
-1. Cancel the old operation before starting another. Keep working installed dictionaries.
-2. Use the versioned **Migaku** ZIP, leave it compressed and verify its checksum.
-3. Allow space for expanded data plus database/index and temporary copies. Download size is not memory usage.
-4. Update through Migaku's normal extension controls. Its official changelog documents past fixes for stalled custom imports and large-dictionary memory use; the installed version here is unknown.
-5. If it still stalls, record the exact filename, extension version, elapsed time and error/report code; compare a small ordinary dictionary import. Do not delete the browser profile or learning database.
+## Upgrade and troubleshooting
 
-See [investigation and test scopes](migaku-1.0.1.md) and [measurements](performance.md). The reported current Early Access stall was not reproduced or observed live; protected extension UI access was unavailable.
+1. Keep the ZIP compressed and verify its published checksum. Use **one** edition per definition language; German already contains English fallback.
+2. Cancel a stalled earlier import before trying the replacement. Keep working installed dictionaries until success.
+3. A 1.0.0/1.0.1 full edition retains the same internal title for updates. A 1.0.1 `_Migaku` profile has a different title: import the complete edition normally, then disable/remove the old profile after success. Do not install both together as permanent dictionaries.
+4. Allow room for expanded data, database/index and temporary copies. If preparation still stalls, record filename, extension version, elapsed time and any error/report code. Use the app's normal update/retry controls; do not delete a browser profile or learning database.
+
+The original stall investigation is retained as [1.0.1 history](migaku-1.0.1.md). The earlier split-export recommendation is superseded by this single-file release.

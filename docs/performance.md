@@ -1,27 +1,22 @@
-# Import measurements — 1.0.1
+# Complete-edition preparation — 1.0.2
 
-Decimal MB below describe the frozen release files. One ZIP per tool/language retains every 1.0.0 lookup pair.
+There is exactly **one complete ZIP per definition language**. The smaller word-only profiles from 1.0.1 are retired. Full native data is included alongside readable reference notes; no extra packs are needed.
 
-| Edition / export | Lookup pairs | Download MB | Expanded MB |
+| Edition | Lookup pairs | Download | Expanded |
 |---|---:|---:|---:|
-| German / Migaku | 1,566,695 | 47.91 | 301.46 |
-| German / full Yomitan | 1,566,695 | 61.19 | 397.44 |
-| English / Migaku | 1,080,167 | 38.32 | 245.31 |
-| English / full Yomitan | 1,080,167 | 51.60 | 341.29 |
+| German, with English gap fallback | 1,566,695 | 61.19 MB | 397.44 MB |
+| English | 1,080,167 | 51.60 MB | 341.29 MB |
 
-The Migaku profile removes approximately **95.97 MB** of expanded native-bank data from each full export. Every word bank is byte-identical between profiles. Plain-text pitch, frequency and kanji references remain. This reduces preparation work for word-only importers; it does not guarantee the current browser extension will complete.
+Every 1.0.1 word, metadata, kanji and tag bank is byte-identical. New filenames use underscores and an explicit version; existing full-edition internal titles remain stable. Sources, licences and examples remain included.
 
-## Measured importer paths
+## Import evidence
 
-Single local runs on a 16 GB Mac; reports record source commits, input hashes and scope. Timings exclude dependency setup.
+Both complete archives were imported through the pinned public legacy Migaku Anki importer core using real SQLite table/index creation and insertion. German imported all 1,566,695 records in 14.724 seconds; English imported all 1,080,167 in 10.846 seconds. Process peak RSS was approximately 1,767 MB and 1,214 MB respectively. The legacy importer selects ordinary word banks and ignores native metadata/kanji/tag banks. GUI/language registry behavior is represented by a façade; optional external frequency lists are outside scope.
 
-| Path | German | English | What was exercised |
-|---|---:|---:|---|
-| Public legacy Migaku core + SQLite | 15.149 s / 1,369.75 MB peak RSS | 9.556 s / 1,202.85 MB | All word records converted and inserted using reviewed upstream functions; GUI/language registry façade |
-| Current upstream Yomitan importer parser | 5.51 s / 408.75 MB peak RSS | 4.72 s / 363.69 MB | Every full-archive bank parsed and validated; counting storage façade |
+The pinned upstream Yomitan parser checks complete archives with a counting storage façade. Representative fixtures exercise the actual database adapter with fake IndexedDB and 14 deinflection cases. All data banks also pass upstream schemas. Exact scopes and input hashes are in [release evidence](releases/1.0.2/).
 
-Representative fixtures also exercised Yomitan's actual DictionaryDatabase adapter using fake IndexedDB: 14 words, 23 metadata records, 4 kanji and 74 tags per language. Both passed 14 Japanese deinflection cases. This is narrower than importing the complete archives into a persistent browser database.
+These verification runs are **not installed extension UI, browser indexing or lookup-latency benchmarks**. Other checks ran on the same Mac, so elapsed times are observations rather than a controlled comparison with earlier versions. Full persistent browser imports, native UI presentation and current Migaku Early Access remain unverified.
 
-**These are not live current Migaku Early Access or installed Yomitan UI benchmarks.** Memory includes the local harness process, not a browser's full overhead; hardware, extension version, storage, indexing and simultaneous operations affect actual performance. The legacy Migaku source accumulates all word records, so a 2 MiB bank limit does not mean a 2 MiB import memory limit. Lookup latency after browser installation has not been measured.
+Each data bank is at most 2 MiB, but that does not cap importer memory. Allow room for expanded data plus temporary copies, indexes and databases. The complete ZIP is larger than the retired word-only profile because native feature data is included. Hosts determine which native features they can display; readable reference notes remain available to word-only importers.
 
-Reports: [release evidence](releases/1.0.1/). Older sequential JSON parsing measurements remain in [1.0.0 reports](releases/1.0.0/); those measured a different path and are not importer timings.
+Historical split-profile measurements and the original stalled-import investigation are retained in [1.0.1 evidence](releases/1.0.1/) and [the investigation](migaku-1.0.1.md). They do not establish that the current browser preparation stall is fixed.

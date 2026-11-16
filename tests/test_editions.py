@@ -3,9 +3,6 @@ from pathlib import Path
 import unittest
 from unittest.mock import patch
 import json
-import tempfile
-import zipfile
-import re
 
 spec = importlib.util.spec_from_file_location('editions', Path(__file__).resolve().parents[1] / 'scripts/editions.py')
 editions = importlib.util.module_from_spec(spec)
@@ -80,38 +77,12 @@ class EditionTests(unittest.TestCase):
         self.assertEqual(editions.select_definitions(rows, 'en', self.sources)[5], ['[EN • Atlas usage]\nword'])
         self.assertEqual(editions.select_definitions(rows, 'de', self.sources)[5], ['[DE • Atlas usage]\nWort'])
 
-
     def test_phrase_supplements_remain_lexical_and_language_filtered(self):
         rows = [('鎌かける', 'かまかける', len(self.sources), '[DE/EN • supplement]\nDE: Fangfrage\nEN: trick question', 'v1', 0)]
         row = editions.select_definitions(rows, 'en', self.sources)
         self.assertGreaterEqual(row[4], 0)
         self.assertNotIn('DE:', row[5][0])
         self.assertIn('EN: trick question', row[5][0])
-
-
-    def test_migaku_profile_keeps_every_word_and_notice_in_one_safe_archive(self):
-        with tempfile.TemporaryDirectory() as folder:
-            folder = Path(folder)
-            master = folder / 'master.zip'
-            words = b'[["word","","n","",100,["meaning"],-1,""]]'
-            index = {'title': 'Kotoba Atlas English', 'format': 3, 'revision': '1.0.1'}
-            with zipfile.ZipFile(master, 'w') as archive:
-                for name, value in [('index.json', json.dumps(index)), ('term_bank_1.json', words),
-                                    ('term_meta_bank_1.json', '[]'), ('kanji_bank_1.json', '[]'),
-                                    ('tag_bank_1.json', '[]'), ('SOURCES.json', '[]'),
-                                    ('NOTICES.txt', 'credits'), ('licenses/wadoku.txt', 'terms')]:
-                    archive.writestr(name, value)
-            product = {'version': '1.0.1', 'release_tag': 'atlas-v1.0.1', 'repository': 'https://example.org/atlas'}
-            report = editions.package_migaku(master, folder, product, 'en', 'English', {'lookup_entries': 1})
-            filename = report['archive']
-            self.assertRegex(Path(filename).stem, r'^[A-Za-z_][A-Za-z0-9_]*$')
-            with zipfile.ZipFile(folder / filename) as archive:
-                self.assertEqual(archive.namelist()[0], 'index.json')
-                self.assertEqual(archive.read('term_bank_1.json'), words)
-                self.assertEqual(archive.read('SOURCES.txt'), b'[]')
-                self.assertEqual(archive.read('licenses/wadoku.txt'), b'terms')
-                self.assertFalse(any(name.startswith(('term_meta_', 'kanji_', 'tag_')) for name in archive.namelist()))
-
 
 if __name__ == '__main__':
     unittest.main()

@@ -10,6 +10,45 @@ ROOT = Path(__file__).resolve().parents[1]
 BANK_BYTES = 2 * 1024 * 1024
 BANK_ENTRIES = 5000
 
+# Only portable JMdict meanings are recognized; dictionary-specific tags stay in text.
+POS_TAGS = {'n': 'noun', 'v1': 'ichidan verb', 'v5': 'godan verb', 'vs': 'suru verb',
+            'vk': 'kuru verb', 'vz': 'zuru verb', 'adj-i': 'i-adjective', 'adj-na': 'na-adjective',
+            'adj-no': 'no-adjective', 'adv': 'adverb', 'exp': 'expression', 'int': 'interjection',
+            'prt': 'particle', 'conj': 'conjunction', 'pn': 'pronoun', 'aux': 'auxiliary',
+            'aux-v': 'auxiliary verb', 'aux-adj': 'auxiliary adjective', 'cop': 'copula',
+            'ctr': 'counter', 'num': 'number', 'pref': 'prefix', 'suf': 'suffix',
+            'vt': 'transitive verb', 'vi': 'intransitive verb', 'sl': 'slang', 'col': 'colloquial',
+            'vulg': 'vulgar', 'arch': 'archaic', 'obs': 'obsolete', 'hon': 'honorific',
+            'hum': 'humble', 'pol': 'polite', 'derog': 'derogatory', 'joc': 'jocular'}
+
+
+def merge_glosses(texts):
+    """Merge identical lexical bodies, keeping source credit and original tag text."""
+    merged, positions = [], {}
+    for text in texts:
+        header, separator, body = text.partition('\n')
+        tags = ''
+        if body.startswith('Tags: '):
+            tags, _, body = body.partition('\n')
+        language = header[1:3] if header.startswith(('[DE •', '[EN •')) else ''
+        sense_flags = tuple(sorted(set(tags[6:].split()) - (POS_TAGS.keys() - {'sl', 'col', 'vulg', 'arch'}))) if tags else ()
+        key = (language, body, sense_flags) if language and separator else None
+        if key is not None and key in positions:
+            index = positions[key]
+            previous_header, previous_body = merged[index].split('\n', 1)
+            labels = list(dict.fromkeys([*previous_header[1:-1].split(' | '), header[1:-1]]))
+            if tags and not previous_body.startswith('Tags: '):
+                previous_body = tags + '\n' + previous_body
+            elif tags and previous_body.startswith('Tags: '):
+                previous_tags, _, previous_body = previous_body.partition('\n')
+                previous_body = 'Tags: ' + ' '.join(sorted(set(previous_tags[6:].split() + tags[6:].split()))) + '\n' + previous_body
+            merged[index] = '[' + ' | '.join(labels) + ']\n' + previous_body
+        else:
+            if key is not None:
+                positions[key] = len(merged)
+            merged.append(header + '\n' + (tags + '\n' if tags else '') + body if separator else text)
+    return list(dict.fromkeys(merged))
+
 
 def bounded_banks(records):
     batch, size = [], 0
@@ -29,7 +68,7 @@ def bounded_banks(records):
 def select_definitions(rows, language, sources):
     """Choose a primary English source, or German with English coverage fallback."""
     def spec(row):
-        return sources[row[2]] if row[2] < len(sources) else {'label': 'Atlas supplement', 'kind': 'words'}
+        return sources[row[2]] if row[2] < len(sources) else {'label': (row[3].split('\n', 1)[0].strip('[]') if row[3].startswith(('[DE •', '[EN •')) else 'Atlas supplement'), 'kind': 'words'}
 
     meanings = [row for row in rows if spec(row).get('kind') != 'metadata']
     german = [row for row in meanings if spec(row)['label'].startswith('DE •')]
@@ -49,14 +88,20 @@ def select_definitions(rows, language, sources):
             text = '\n'.join(line for line in text.splitlines() if not line.startswith(excluded))
         if text not in glosses:
             glosses.append(text)
+    glosses = merge_glosses(glosses)
     for row in rows:
         if spec(row).get('kind') == 'metadata':
             glosses.append(compact_note(row[3]))
     rules = ' '.join(sorted({rule for row in rows for rule in row[4].split()}))
+    tags = set(rules.split()) & POS_TAGS.keys()
+    for row in rows:
+        lines = row[3].splitlines()
+        if len(lines) > 1 and lines[1].startswith('Tags: '):
+            tags.update(set(lines[1][6:].split()) & POS_TAGS.keys())
     labels = [spec(row)['label'] for row in selected]
     lexical = any(label.startswith(('DE •', 'EN •', 'Atlas')) for label in labels)
     score = 100 if lexical else (-1000 if all(label.startswith('Names •') for label in labels) else -100)
-    return [rows[0][0], rows[0][1], '', rules, score, list(dict.fromkeys(glosses)), -1, '']
+    return [rows[0][0], rows[0][1], ' '.join(sorted(tags)), rules, score, list(dict.fromkeys(glosses)), -1, '']
 
 
 def compact_note(text):
@@ -77,7 +122,8 @@ def compact_note(text):
                 devoice = pitch['devoice']
                 note += '; devoiced morae: ' + (', '.join(map(str, devoice)) if isinstance(devoice, list) else str(devoice))
             pitches.append(note)
-        return label + '\nPitch: ' + ' / '.join(pitches) + ' (0 = heiban; other numbers mark the downstep)'
+        description = 'heiban' if pitches == ['0'] else 'downstep mora; 0 = heiban'
+        return label + '\nPitch: ' + ' / '.join(pitches) + ' (' + description + ')'
     return text
 
 
@@ -108,6 +154,10 @@ def package_editions(db, output, sources, notices, cache):
                 info.compress_type = zipfile.ZIP_DEFLATED
                 archive.writestr(info, data, compresslevel=6)
 
+            write('index.json', json.dumps(index, ensure_ascii=False, indent=2))
+            write('tag_bank_1.json', json.dumps([[name, 'register' if name in {'sl', 'col', 'vulg', 'arch'} else 'partOfSpeech', 0, detail, 0] for name, detail in POS_TAGS.items()], ensure_ascii=False))
+            tag_bank = 1
+
             def flush():
                 nonlocal batch, used_bytes, banks, maximum_bank
                 if batch:
@@ -123,6 +173,8 @@ def package_editions(db, output, sources, notices, cache):
                 if row is None:
                     continue
                 encoded = json.dumps(row, ensure_ascii=False, separators=(',', ':')).encode()
+                if len(encoded) + 2 > BANK_BYTES:
+                    raise ValueError('One word record exceeds the import bank limit: ' + term)
                 if batch and (used_bytes + len(encoded) + len(batch) + 2 > BANK_BYTES or len(batch) >= BANK_ENTRIES):
                     flush()
                 batch.append(encoded)
@@ -145,7 +197,8 @@ def package_editions(db, output, sources, notices, cache):
                     if native_kind == 'kanji':
                         for tag_file in original.namelist():
                             if re.fullmatch(r'tag_bank_\d+\.json', tag_file):
-                                write(tag_file, original.read(tag_file))
+                                tag_bank += 1
+                                write(f'tag_bank_{tag_bank}.json', original.read(tag_file))
                     pattern = r'term_meta_bank_\d+\.json' if native_kind == 'meta' else r'kanji_bank_\d+\.json'
                     for name in original.namelist():
                         if not re.fullmatch(pattern, name):
@@ -169,7 +222,6 @@ def package_editions(db, output, sources, notices, cache):
                                 kanji_bank += 1
                                 target = f'kanji_bank_{kanji_bank}.json'
                             write(target, payload)
-            write('index.json', json.dumps(index, ensure_ascii=False, indent=2))
             write('SOURCES.json', json.dumps(notices, ensure_ascii=False, indent=2))
             write('NOTICES.txt', (ROOT / 'DATA-LICENSES.md').read_text())
             for licence in (ROOT / 'licenses').glob('*'):
@@ -195,5 +247,40 @@ def package_editions(db, output, sources, notices, cache):
         (output / (stem + '.report.json')).write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
         (output / ('Kotoba-Atlas-' + english_name + '-index.json')).write_text(json.dumps(index, ensure_ascii=False, indent=2) + '\n')
         results.append(report)
+        results.append(package_migaku(dest, output, product, language, english_name, report))
         print(json.dumps({'archive': dest.name, 'entries': total, 'bytes': dest.stat().st_size}), flush=True)
     return results
+
+
+def package_migaku(master, output, product, language, english_name, master_report):
+    """One word-only archive for Migaku; reference notes stay in the word entries."""
+    stem = 'Kotoba_Atlas_' + english_name + '_Migaku_v' + product['version'].replace('.', '_')
+    destination = output / (stem + '.zip')
+    pending = destination.with_suffix('.zip.part')
+    with zipfile.ZipFile(master) as source, zipfile.ZipFile(pending, 'w', zipfile.ZIP_DEFLATED, compresslevel=6) as target:
+        index = json.loads(source.read('index.json'))
+        index.update(title='Kotoba_Atlas_' + english_name + '_Migaku',
+                     indexUrl=product['repository'] + '/releases/latest/download/Kotoba-Atlas-' + english_name + '-Migaku-index.json',
+                     downloadUrl=product['repository'] + '/releases/download/' + product['release_tag'] + '/' + stem + '.zip',
+                     description='Migaku word-dictionary profile. All word, name, grammar, kanji-reference, pitch and frequency text remains in ordinary Yomichan word banks. Native Yomitan metadata banks are available in the full export. Current Migaku Early Access live import is not certified.')
+        def write(name, value):
+            info = zipfile.ZipInfo(name, (2026, 11, 16, 0, 0, 0))
+            info.compress_type = zipfile.ZIP_DEFLATED
+            target.writestr(info, value, compresslevel=6)
+        write('index.json', json.dumps(index, ensure_ascii=False, indent=2))
+        for name in source.namelist():
+            if re.fullmatch(r'term_bank_\d+\.json', name) or name.startswith('licenses/') or name == 'NOTICES.txt':
+                write(name, source.read(name))
+        write('SOURCES.txt', source.read('SOURCES.json'))
+        write('README.txt', 'Kotoba Atlas ' + product['version'] + ' — ' + english_name + ' — Migaku\nImport this single ZIP without extracting. Use the filename-derived name or the ASCII index title; older Migaku Anki importers use dictionary names in SQL identifiers. Words, names, grammar, kanji references, pitch and frequency notes are included. Native Yomitan metadata and character banks are omitted from this tool-specific export; install the full export in Yomitan for native features. Current Migaku Early Access live import is not certified. Keep the previous working dictionary until import finishes.\n')
+    pending.replace(destination)
+    with zipfile.ZipFile(destination) as archive:
+        expanded = sum(item.file_size for item in archive.infolist())
+    report = {**master_report, 'archive': destination.name, 'profile': 'migaku-word-banks',
+              'compressed_bytes': destination.stat().st_size, 'expanded_bytes': expanded,
+              'native_metadata_records': 0, 'native_kanji_records': 0,
+              'sha256': hashlib.sha256(destination.read_bytes()).hexdigest(),
+              'format': 'Yomichan v3 ordinary word banks; complete text references, no native metadata banks'}
+    destination.with_suffix('.report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
+    (output / ('Kotoba-Atlas-' + english_name + '-Migaku-index.json')).write_text(json.dumps(index, ensure_ascii=False, indent=2) + '\n')
+    return report

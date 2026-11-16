@@ -36,7 +36,19 @@ def main():
     with zipfile.ZipFile(args.archive) as archive:
         edition_index = json.loads(archive.read('index.json'))
     edition = edition_index.get('targetLanguage')
-    edition_archive = edition_index['title'].startswith('Kotoba Atlas')
+    edition_archive = edition_index['title'].replace('_', ' ').startswith('Kotoba Atlas')
+    profile = 'migaku-word-banks' if edition_index['title'].endswith('_Migaku') else 'full'
+    if edition_archive and edition_index['revision'] != '1.0.0':
+        with zipfile.ZipFile(args.archive) as check:
+            assert check.namelist()[0] == 'index.json', 'Index must be the first archive member'
+            assert len(check.namelist()) == len(set(check.namelist())), 'Duplicate ZIP members'
+            assert all(not name.startswith('/') and '..' not in name.split('/') and '\\' not in name for name in check.namelist()), 'Unsafe archive path'
+            if profile == 'migaku-word-banks':
+                assert __import__('re').fullmatch(r'[A-Za-z_][A-Za-z0-9_]*', args.archive.stem), 'Unsafe legacy Migaku dictionary name'
+                assert all(not name.endswith('.json') or name == 'index.json' or __import__('re').fullmatch(r'term_bank_\d+\.json', name) for name in check.namelist()), 'Unexpected JSON bank in Migaku export'
+                assert check.read('SOURCES.txt'), 'Missing source manifest'
+        for term in ['てぇてぇ', 'ぬまる', '沼る', '推し活する', 'ワンチャン', '蛙化現象']:
+            examples[term] = []
     entries = banks = 0
     with zipfile.ZipFile(args.archive) as archive:
         assert archive.testzip() is None, 'Corrupt archive'
@@ -83,9 +95,9 @@ def main():
     assert any('EN' in s for row in examples['羅睺'] for s in row['sources']), 'Missing English definition'
     report = {'archive': args.archive.name, 'entries': entries, 'banks': banks,
               'sha256': hashlib.sha256(args.archive.read_bytes()).hexdigest(),
-              'upstream_schema_ref': REF, 'schema_validation': 'all index and term-bank JSON passed',
+              'upstream_schema_ref': REF, 'schema_validation': 'all included index, word, metadata, kanji and tag banks passed',
               'examples': examples, 'browser_import_tested': False,
-              'edition': edition, 'edition_policy_validation': edition_archive,
+              'edition': edition, 'profile': profile, 'edition_policy_validation': edition_archive,
               'limitation': 'Schema and lexical tests do not verify host tokenization or browser import.'}
     dest = args.archive.with_suffix('.validation.json')
     dest.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')

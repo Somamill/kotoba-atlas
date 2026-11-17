@@ -1,75 +1,89 @@
-<p align="center"><img src="docs/banner.svg" alt="Kotoba Atlas — Japanese words, more context. English and German editions. Part of dot." width="100%"></p>
+<p align="center"><img src="docs/media/hero.svg" alt="Kotoba Atlas. More Japanese. One dictionary. German with English fallback or English. Part of dot." width="100%"></p>
 
 <p align="center">
-  <a href="https://github.com/Somamill/kotoba-atlas/releases/latest"><strong>Kotoba Atlas 1.0.3</strong></a>
-  &nbsp; · &nbsp; <a href="#install">Install</a>
-  &nbsp; · &nbsp; <a href="docs/compatibility.md">Compatibility</a>
-  &nbsp; · &nbsp; <a href="docs/research.md">Research</a>
+<a href="#download"><strong>Download 1.0.3</strong></a> &nbsp; / &nbsp;
+<a href="#full-feature-set">Features</a> &nbsp; / &nbsp;
+<a href="#install">Install</a> &nbsp; / &nbsp;
+<a href="docs/compatibility.md">Compatibility</a> &nbsp; / &nbsp;
+<a href="docs/releases/1.0.3/">Test evidence</a>
 </p>
 
-**One complete dictionary file for your definition language.** Read Japanese with vocabulary, phrases, usage notes, names, kanji, grammar references, folklore, and pitch/frequency information in the same ZIP.
+**Your Japanese lookup library, in one file.** Everyday vocabulary, source-covered slang, phrases, names, grammar, folklore and kanji—plus pitch and frequency references. Choose your definition language and bring the same complete ZIP to your compatible reading tools.
 
-## Download one complete dictionary
+## Download
 
-| Japanese definitions | Download | Lookup pairs¹ |
-|---|---|---:|
-| **German, with English fallback** | **[Kotoba Atlas German · v1.0.3 ↓](https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.0.3/Kotoba_Atlas_German_v1_0_3.zip)** | **1,566,695** |
-| **English** | **[Kotoba Atlas English · v1.0.3 ↓](https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.0.3/Kotoba_Atlas_English_v1_0_3.zip)** | **1,080,167** |
+| Definition language | Complete versioned ZIP | Lookup pairs | Download size |
+|---|---|---:|---:|
+| **German with English fallback** | **[Kotoba_Atlas_German_v1_0_3.zip](https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.0.3/Kotoba_Atlas_German_v1_0_3.zip)** | 1,566,695 | 50.3 MB |
+| **English** | **[Kotoba_Atlas_English_v1_0_3.zip](https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.0.3/Kotoba_Atlas_English_v1_0_3.zip)** | 1,080,167 | 42.5 MB |
 
-**One ZIP per definition language. Use the same file in Migaku, Yomitan or another compatible Yomichan-format importer.** There are no separate tool editions, feature packs or required extras. German already includes English fallback; you do not need the English edition alongside it.
+**One ZIP per definition language. No separate tool editions or feature packs.** German already includes English fallback; you do not need both. Keep the ZIP compressed for import. [Checksums](https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.0.3/SHA256SUMS) · [Release notes](https://github.com/Somamill/kotoba-atlas/releases/tag/atlas-v1.0.3)
 
-Every file includes the complete word banks, readable pitch/frequency/kanji references and native metadata/kanji/tag banks. Supporting apps display the native features; word-only importers can use the reference text. Audio, scanning, pitch graphs and Anki mining require support from the app. **The user confirms that the German archive installs in Migaku 1.33.0-earlyaccess.2 and returns a definition for 物ノ怪. This is user-reported verification; the installed extension was not independently inspected.**
+<picture>
+<source media="(prefers-reduced-motion: reduce)" srcset="docs/media/one-file.svg">
+<img src="docs/media/one-file.gif" alt="Source layers flow into one complete ZIP per definition language, for Migaku, Yomitan and compatible format importers. Native features depend on the host." width="100%">
+</picture>
 
-¹ Counts are term-and-reading pairs, including names, spellings and reference entries, rather than distinct words. Sources retain their licences; coverage of every Japanese expression or nuance is not guaranteed.
+## Look inside
 
-### Clear names
+<img src="docs/media/entry-preview.png" alt="Real German-edition entries: 物ノ怪 with German definitions; 木漏れ日 with meaning, pitch and frequency notes; 鎌かけて phrase explanation; 羅睺 with English fallback." width="100%">
 
-`Kotoba_Atlas_German_v1_0_3.zip` = product + definition language + version **1.0.3**. The English filename follows the same pattern. Underscores avoid legacy Migaku filename/SQL restrictions. The established internal titles, **Kotoba Atlas — German** and **Kotoba Atlas — English**, stay stable so full-edition updates retain their identity.
+*Rendered from actual 1.0.3 release entries. This is an editorial content preview, not a screenshot of Migaku or Yomitan. Definition wording and source attribution are retained; labels are formatted for the preview.*
 
-## What is inside each file
+## Full feature set
 
-| Layer | Included sources and handling |
+| Feature | What you get in the complete ZIP |
 |---|---|
-| Vocabulary and slang | **Jitendex**, with newer **JMdict** filling missing term/reading pairs, plus **Wiktionary**; German edition adds **WaDoku** and **JMdict German** |
-| Phrases and nuance | Source usage labels, notes and supplied examples; **NINJAL grammar-pattern bank**; reviewed phrase supplements |
-| Names | **JMnedict**, ranked below ordinary vocabulary |
-| Kanji | **KANJIDIC** meanings and on/kun readings |
-| Folklore | Attributed Japanese yōkai reference text |
-| Pronunciation | **WaDoku** native pitch data plus readable pitch/devoicing notes |
-| Frequency | **Jiten global** native frequency data plus rank notes, built from multiple kinds of Japanese media |
-| Written variants | Explicit aliases for forms such as **物ノ怪**; labeled の → ノ aliases between kanji |
+| **Core vocabulary** | Jitendex, newer JMdict term/reading gaps and Wiktionary supplements. |
+| **German definitions** | WaDoku and JMdict German meanings where the term/reading pair is covered; English fallback elsewhere. |
+| **Slang and register** | Source-covered colloquial vocabulary, slang, register and usage labels. Coverage follows the included sources. |
+| **Phrases and nuance** | Idioms, supplied usage notes and examples; reviewed phrase supplements. Examples are included where supplied, not for every entry. |
+| **Grammar** | NINJAL grammar-pattern bank and source grammar references. |
+| **Inflected forms** | Preserved verb/adjective rules for supporting deinflection engines; 14 upstream Yomitan regression cases checked. |
+| **Spellings and aliases** | Explicit fixes such as 物ノ怪 and colloquial 鎌かけて; labeled の → ノ aliases between kanji. |
+| **Names** | JMnedict names, ranked below ordinary vocabulary. |
+| **Kanji** | 10,384 native kanji records with meanings and on/kun readings, plus readable references. |
+| **Pitch and pronunciation notes** | WaDoku native pitch data and readable pitch/devoicing notes. |
+| **Frequency** | Jiten global native frequency data and readable rank notes from multiple kinds of Japanese media. |
+| **Folklore** | Attributed Japanese yōkai reference material. |
+| **Native data + text fallback** | 1,006,753 native frequency/pitch records and 74 tags per edition. Readable references travel in the same ZIP. |
+| **Import packaging** | Standard Yomichan v3 JSON banks in a Deflate ZIP; each data bank capped at 2 MiB; Base64 transfer-size guard. |
+| **Updates and provenance** | Stable edition titles, versioned filenames, update manifests for supporting hosts, SHA-256 checksums and retained source licences. |
 
-Pitch, frequency and kanji are supplied as **native Yomichan banks and readable word notes in the same ZIP**. No audio, images, scripts or fonts are bundled. [Feature matrix →](docs/compatibility.md)
+<img src="docs/media/coverage.svg" alt="German: 1,566,695 lookup pairs. English: 1,080,167. Each edition: 1,006,753 native metadata and 10,384 native kanji records." width="100%">
 
-## Verified content and import paths
+Counts are **term-and-reading pairs and record counts, not unique Japanese words**. Names, spellings and reference entries contribute to lookup totals. The chart compares independent record families; do not add them together. [Coverage details](docs/coverage.md)
 
-Every decoded word, native metadata, kanji and tag record from 1.0.2 is retained, including duplicate records. Similar records are grouped for stronger standard ZIP compression; bank ordering and compressed bytes change. Source notices and licences remain intact. German uses German meanings when available for a term/reading pair, with English fallback for gaps. Names rank below ordinary vocabulary; metadata alone never creates a fake definition. Each data bank stays within 2 MiB, although an importer may hold many banks in memory.
+## One file, clear compatibility
 
-Both complete editions pass upstream schemas and edition checks. The complete archives pass the pinned upstream Yomitan parser and 14 deinflection cases. Earlier releases exercised the public legacy Migaku-to-SQLite path and representative Yomitan database fixtures; the new content-parity checks verify every decoded field is unchanged. [Release evidence →](docs/releases/1.0.3/) · [Measurements and limits →](docs/performance.md)
+| Tool or capability | Status |
+|---|---|
+| **Migaku Early Access** | German installation and 物ノ怪 lookup confirmed by the user on 1.33.0-earlyaccess.2. Installed UI was not independently inspected. |
+| **Yomitan** | Both full archives pass the pinned upstream importer/parser, schemas and deinflection checks. Full persistent browser installation remains untested. |
+| **Other Yomichan-format importers** | Standard word banks plus native metadata/kanji banks. Supported banks and feature displays vary by importer. |
+| **Pitch graphs, frequency sorting, kanji panels** | Native data is supplied; app support and settings determine presentation. Installed presentation is not fully verified. |
+| **Anki mining** | Use your host's mining integration to save the relevant sense and encountered sentence. This is a dictionary, not an Anki deck. |
+| **Audio, OCR, scanning and AI sentence analysis** | Provided by your app or service; not bundled in the dictionary. |
+| **MDict, StarDict, Kobo or proprietary formats** | Require conversion; this ZIP is not a native export for those formats. |
 
-**These checks do not certify the installed current Migaku Early Access or Yomitan extension UI.** The supplied Chrome error identifies the 64 MiB message limit: v1.0.3 fits after Base64 encoding with 64 KiB reserved for message overhead. [Transfer-limit investigation →](docs/transfer-limit.md) Keep a working dictionary until the replacement imports successfully.
+No dictionary guarantees every Japanese expression or every contextual nuance. Kotoba Atlas combines complementary sources and documented fixes; interpretation and phrase selection still depend on the text and host. [Full compatibility matrix](docs/compatibility.md) · [Source licences](DATA-LICENSES.md) · [Community research](docs/research.md)
+
+## Smaller transfer. Complete content.
+
+<img src="docs/media/transfer.svg" alt="German Base64 transfer reduced 17.9%, from 81.59 to 67.01 million bytes, retaining every decoded record. The build fits Chrome's 64 MiB limit with reserved message overhead." width="100%">
+
+Version 1.0.3 fixes the previous Chrome/Migaku oversized-message failure through lossless record grouping and stronger standard ZIP compression. **Every decoded 1.0.2 word, metadata, kanji and tag record survives, including duplicates.** Source notices remain byte-identical.
+
+Both complete archives pass schemas, exact content-parity checks and the upstream Yomitan parser. **19 local tests pass.** Checksums match GitHub's uploaded assets. These verify packaging and content—not universal app behavior or lookup speed. GitHub Actions is disabled; cloud CI was not run. [Measurements](docs/performance.md) · [Transfer investigation](docs/transfer-limit.md)
 
 ## Install
 
-1. Download **German** or **English**. German already includes English fallback. Keep the ZIP compressed.
-2. **Yomitan:** Settings → Dictionaries → Configure installed and enabled dictionaries → Import.
-3. **Migaku:** use the dictionary settings' import-from-file action. Exact labels vary by version. Use the same complete ZIP. Its ordinary word banks carry readable references; apps with native-bank support can use those features. Current Early Access runtime compatibility remains unverified.
-4. Enable the imported edition and try a manual lookup for **羅睺**, **物ノ怪**, and **鎌かけて**. Then test hover or selected-phrase lookup.
+1. Download **German** or **English** above. Do not unzip it.
+2. **Migaku:** open dictionary settings and choose import from file. **Yomitan:** Settings → Dictionaries → Configure installed and enabled dictionaries → Import.
+3. Enable the imported edition. Try **物ノ怪**, **羅睺** and **鎌かけて** with manual lookup, then test scanning in your normal reading tool.
+4. Confirm the replacement works before removing an older dictionary. Allow working disk space for expanded data, temporary copies and the host database.
 
-If the old **Dict Personal** import is still preparing, cancel that operation before starting a new one. Keep an already-installed dictionary until the replacement works. Use the host's normal replacement/removal controls if it rejects a duplicate title. If you installed a 1.0.1 edition whose name ends in `_Migaku`, install this complete edition through the normal importer, then disable/remove the older edition after success. Earlier full editions retain their update identity. Source update manifests are supplied for supporting hosts; actual update behavior depends on the host.
-
-## Built around reading examples
-
-| Encountered text | Handling |
-|---|---|
-| `羅睺` | English definitions and readings `らご` / `らごう` |
-| `物ノ怪` | Exact alias for `物の怪` / `もののけ` |
-| `鎌かけて` | Colloquial phrase entry linked to `鎌を掛ける` |
-| `鎌かける` | Base form with the `v1` inflection rule |
-
-Source verb/adjective rules are retained even where duplicate explanations are removed. Explicit phrase fixes do not generalize particle deletion to arbitrary Japanese. Different spellings/readings can remain separate results because merging them indiscriminately can erase distinctions.
-
-For Anki mining, save the sentence you actually encountered and the relevant sense, rather than treating a dictionary's whole entry as one fact. This is a lookup resource, **not a million-card Anki deck**. [Community lessons and source notes →](docs/research.md)
+Keep your working dictionary until the replacement finishes. If an old import is stalled, cancel it before retrying. Use normal host controls for duplicate titles and replacement; do not delete your browser profile or learning database. [Upgrade guidance](docs/compatibility.md#upgrading)
 
 ## Build and verify
 

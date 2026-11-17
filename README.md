@@ -18,7 +18,7 @@
 
 **One ZIP per definition language. Use the same file in Migaku, Yomitan or another compatible Yomichan-format importer.** There are no separate tool editions, feature packs or required extras. German already includes English fallback; you do not need the English edition alongside it.
 
-Every file includes the complete word banks, readable pitch/frequency/kanji references and native metadata/kanji/tag banks. Supporting apps display the native features; word-only importers can use the reference text. Audio, scanning, pitch graphs and Anki mining require support from the app. **Migaku 1.33.0-earlyaccess.2 now progresses beyond preparation with this archive; full completion is awaiting user confirmation.**
+Every file includes the complete word banks, readable pitch/frequency/kanji references and native metadata/kanji/tag banks. Supporting apps display the native features; word-only importers can use the reference text. Audio, scanning, pitch graphs and Anki mining require support from the app. **The user confirms that the German archive installs in Migaku 1.33.0-earlyaccess.2 and returns a definition for 物ノ怪. This is user-reported verification; the installed extension was not independently inspected.**
 
 ¹ Counts are term-and-reading pairs, including names, spellings and reference entries, rather than distinct words. Sources retain their licences; coverage of every Japanese expression or nuance is not guaranteed.
 

@@ -6,7 +6,7 @@
 - Losslessly cluster word and native metadata records, then apply stronger standard Deflate ZIP compression. German is 50.26 MB; English is 42.46 MB. Keep exactly one complete ZIP per definition language.
 - Retain every decoded word, reading, glossary, inflection rule, score, native metadata, kanji and tag record, including duplicates. Preserve source notices and licences. Bank ordering changes; no feature packs are required.
 - Add a mandatory encoded-size guard reserving 64 KiB for the message envelope, regression tests for the oversized 1.0.2 archive, complete-record parity checks and a pinned CI compressor.
-- The user confirms that German now progresses beyond 0% in Migaku; full completion is pending. Both editions pass upstream schemas, the full upstream Yomitan parser and 14 deinflection cases.
+- The user confirms completed German installation and a working 物ノ怪 lookup in Migaku 1.33.0-earlyaccess.2; the installed extension was not independently inspected. Both editions pass upstream schemas, the full upstream Yomitan parser and 14 deinflection cases.
 
 ## Kotoba Atlas 1.0.2 — 2026-11-17
 

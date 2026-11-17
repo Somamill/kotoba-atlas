@@ -23,7 +23,7 @@ The builder requires [7-Zip](https://www.7-zip.org/download.html), and CI downlo
 
 ## Runtime evidence and limits
 
-The small representative same-format diagnostic installs. With the complete 1.0.3 German archive, the user reports progress beyond 0% on Migaku 1.33.0-earlyaccess.2. Full completion is still awaiting confirmation. The precise error is addressed; database/indexing work can still take time after transfer succeeds.
+The small representative same-format diagnostic installs. With the complete 1.0.3 German archive, the user confirms completed installation and a working 物ノ怪 lookup on Migaku 1.33.0-earlyaccess.2. This is user-reported verification, not independent inspection of the installed extension. Browser tool URL policy blocked direct extension-page access. English live import, native feature presentation and restart persistence remain unverified. The precise error is addressed; database/indexing work can still take time after transfer succeeds.
 
 Both complete archives pass pinned upstream schemas, the upstream Yomitan importer/parser with a counting storage façade and 14 deinflection cases. These do not certify installed browser UIs or full persistent IndexedDB installation. Native graph/sorting/audio/scanning behavior depends on the host. [Machine-readable evidence](releases/1.0.3/) records exact scopes and hashes.
 

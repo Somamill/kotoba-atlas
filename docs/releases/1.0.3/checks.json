@@ -7,5 +7,5 @@
   "complete_yomitan_parser_tested": true,
   "github_actions_enabled": false,
   "cloud_ci_executed": false,
-  "migaku_user_report": "German progresses beyond 0% on 1.33.0-earlyaccess.2; completion pending"
+  "migaku_user_report": "User confirms completed German installation and a working 物ノ怪 lookup on 1.33.0-earlyaccess.2. Installed extension not independently inspected; direct access blocked by browser tool URL policy."
 }

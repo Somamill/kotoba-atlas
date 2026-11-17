@@ -15,3 +15,8 @@ Every 1.0.0 lookup pair is retained: German 1,566,695 pairs (+4), English 1,080,
 ## 1.0.2: one complete file
 
 German and English retain every 1.0.1 lookup pair and byte-identical word, metadata, kanji and tag banks. Only packaging/version/name change; tool-specific profiles are retired. Each language edition carries every included data layer in one ZIP.
+
+
+## 1.0.3 transfer fix
+
+All decoded 1.0.2 records and source notices are retained. Lossless clustering and stronger standard Deflate keep the complete language editions below Chrome/Migaku's Base64 message budget. See [the confirmed failure, remedy and evidence](transfer-limit.md).

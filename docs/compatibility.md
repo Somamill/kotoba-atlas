@@ -1,4 +1,4 @@
-# One complete edition per definition language — 1.0.2
+# One complete edition per definition language — 1.0.3
 
 Download **German** (with English fallback) or **English**, then use that same ZIP in each supporting tool. No separate Migaku version or feature packs are required. Each includes ordinary Yomichan v3 word banks, native pitch/frequency metadata, kanji/tag banks, source notices and licences. Readable references are also included as ordinary word content.
 
@@ -15,7 +15,7 @@ Each data bank is at most 2 MiB, but some importers load many banks together. No
 
 ## Verification limits
 
-The public legacy Migaku importer identifies word banks and ignores native Yomichan bank families. Both **complete** 1.0.2 ZIPs are tested against that path, not merely word-only variants. That source is the legacy Anki importer, not current browser Early Access. The upstream Yomitan parser checks all full-archive banks; representative fixtures exercise its actual database adapter with fake IndexedDB. Installed extension UIs, full persistent browser imports and current Migaku Early Access remain untested. Reports and hashes: [1.0.2 evidence](releases/1.0.2/).
+The public legacy Migaku importer identifies word banks and ignores native Yomichan bank families. Earlier complete 1.0.2 archives were tested against that legacy path. Version 1.0.3 retains every decoded record and passes new complete-archive schema, content-parity and upstream Yomitan parser checks. That source is the legacy Anki importer, not current browser Early Access. The upstream Yomitan parser checks all full-archive banks; representative fixtures exercise its actual database adapter with fake IndexedDB. The current Migaku console identified a Base64 message-size failure. Version 1.0.3 passes an encoded-size guard and the user reports progress beyond 0%; full completion is pending. Full persistent Yomitan browser installation and native UI presentation remain untested. See [the transfer fix](transfer-limit.md). Reports and hashes: [1.0.3 evidence](releases/1.0.3/).
 
 A complete ZIP supplies every included data layer, but cannot force an app to implement native graphs, sorting, audio or scanners. It also does not guarantee every Japanese expression/context.
 

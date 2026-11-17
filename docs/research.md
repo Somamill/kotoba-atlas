@@ -39,3 +39,8 @@ See [the dated investigation, primary sources and applied changes](migaku-1.0.1.
 ## 1.0.2: simplify the recommendation
 
 The split profiles in 1.0.1 added a confusing choice. The canonical recommendation is now one complete language edition for every supporting Yomichan-format host. The pinned public legacy Migaku importer ignores native-bank families while reading the ordinary word banks; tests now use the complete 1.0.2 ZIPs. Native data stays available to Yomitan and other supporting hosts. Current Migaku Early Access still awaits live verification; the original source investigation and its limits remain above and in `migaku-1.0.1.md`.
+
+
+## 1.0.3 transfer fix
+
+All decoded 1.0.2 records and source notices are retained. Lossless clustering and stronger standard Deflate keep the complete language editions below Chrome/Migaku's Base64 message budget. See [the confirmed failure, remedy and evidence](transfer-limit.md).

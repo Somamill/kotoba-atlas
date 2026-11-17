@@ -1,0 +1,15 @@
+{
+  "previous": "input-German.zip",
+  "current": "Kotoba_Atlas_German_v1_0_3.zip",
+  "retained_lookup_pairs": 1566695,
+  "added_lookup_pairs": 0,
+  "removed_lookup_pairs": 0,
+  "decoded_records_identical_including_duplicates": true,
+  "records": {
+    "term": 1566695,
+    "term_meta": 1006753,
+    "kanji": 10384,
+    "tag": 74
+  },
+  "source_notices_retained": true
+}

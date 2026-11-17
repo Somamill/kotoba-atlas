@@ -40,7 +40,7 @@ def main():
     profile = 'migaku-word-banks' if edition_index['title'].endswith('_Migaku') else 'full'
     if edition_archive and edition_index['revision'] != '1.0.0':
         with zipfile.ZipFile(args.archive) as check:
-            assert check.namelist()[0] == 'index.json', 'Index must be the first archive member'
+            assert 'index.json' in check.namelist(), 'Missing root index'
             assert len(check.namelist()) == len(set(check.namelist())), 'Duplicate ZIP members'
             assert all(not name.startswith('/') and '..' not in name.split('/') and '\\' not in name for name in check.namelist()), 'Unsafe archive path'
             if profile == 'migaku-word-banks':
@@ -50,6 +50,9 @@ def main():
         if edition_index['revision'] not in {'1.0.0', '1.0.1'}:
             assert profile == 'full', 'Only complete language editions are released'
             assert __import__('re').fullmatch(r'Kotoba_Atlas_(German|English)_v[0-9_]+', args.archive.stem), 'Unexpected edition filename'
+        if edition_index['revision'] not in {'1.0.0', '1.0.1', '1.0.2'}:
+            from editions import check_transfer_budget
+            check_transfer_budget(args.archive.stat().st_size)
         for term in ['てぇてぇ', 'ぬまる', '沼る', '推し活する', 'ワンチャン', '蛙化現象']:
             examples[term] = []
     entries = banks = 0

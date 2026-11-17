@@ -1,54 +1,58 @@
 #!/usr/bin/env python3
-"""Stream-check that a release retains every old lookup pair and all complete data banks remain unchanged."""
+"""Verify a packaging-only update retains every decoded record and source notice."""
 import argparse
+from collections import Counter
 import hashlib
 import json
+from pathlib import Path
 import re
 import zipfile
 
 
-def word_files(archive):
-    return sorted((name for name in archive.namelist() if re.fullmatch(r'term_bank_\d+\.json', name)), key=lambda name: int(re.search(r'\d+', name)[0]))
+def records(archive, family):
+    for name in archive.namelist():
+        if re.fullmatch(family + r'_bank_\d+\.json', name):
+            yield from json.loads(archive.read(name))
 
 
-def keys(archive):
-    for name in word_files(archive):
-        for row in json.loads(archive.read(name)):
-            yield row[0], row[1]
+def digest(row):
+    return hashlib.sha256(json.dumps(row, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode()).digest()
+
+
+def compare(previous_path, current_path):
+    counts = {}
+    with zipfile.ZipFile(previous_path) as previous, zipfile.ZipFile(current_path) as current:
+        old_index = json.loads(previous.read('index.json'))
+        new_index = json.loads(current.read('index.json'))
+        for key in ['title', 'sourceLanguage', 'targetLanguage']:
+            assert old_index.get(key) == new_index.get(key), 'Changed edition identity: ' + key
+        for family in ['term', 'term_meta', 'kanji', 'tag']:
+            remaining = Counter(digest(row) for row in records(previous, family))
+            count = sum(remaining.values())
+            for row in records(current, family):
+                key = digest(row)
+                assert remaining[key] > 0, 'Changed or extra ' + family + ' record'
+                remaining[key] -= 1
+                if remaining[key] == 0:
+                    del remaining[key]
+            assert not remaining, 'Lost ' + family + ' records'
+            counts[family] = count
+        for name in previous.namelist():
+            if name in {'SOURCES.json', 'NOTICES.txt'} or name.startswith('licenses/') and not name.endswith('/'):
+                assert previous.read(name) == current.read(name), 'Changed source notice: ' + name
+    return {'previous': Path(previous_path).name, 'current': Path(current_path).name,
+            'retained_lookup_pairs': counts['term'], 'added_lookup_pairs': 0, 'removed_lookup_pairs': 0,
+            'decoded_records_identical_including_duplicates': True, 'records': counts, 'source_notices_retained': True}
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ['previous', 'current', 'report']:
-        parser.add_argument(name)
+        parser.add_argument(name, type=Path)
     args = parser.parse_args()
-    with zipfile.ZipFile(args.previous) as previous, zipfile.ZipFile(args.current) as current:
-        assert json.loads(previous.read('index.json'))['title'] == json.loads(current.read('index.json'))['title'], 'Changed update identity'
-        old = iter(keys(previous))
-        sentinel = object()
-        expected = next(old, sentinel)
-        retained = additions = 0
-        for actual in keys(current):
-            if expected is not sentinel and expected < actual:
-                raise AssertionError('Lost lookup pair: ' + repr(expected))
-            if expected == actual:
-                retained += 1
-                expected = next(old, sentinel)
-            else:
-                additions += 1
-        assert expected is sentinel, 'Old lookup pairs disappeared at the end'
-        names = [name for name in previous.namelist() if re.fullmatch(r'(term|term_meta|kanji|tag)_bank_\d+\.json', name)]
-        assert set(names) == {name for name in current.namelist() if re.fullmatch(r'(term|term_meta|kanji|tag)_bank_\d+\.json', name)}, 'Changed complete data bank list'
-        for name in names:
-            assert hashlib.sha256(previous.read(name)).digest() == hashlib.sha256(current.read(name)).digest(), name
-        report = {'previous': args.previous.split('/')[-1], 'current': args.current.split('/')[-1],
-                  'retained_lookup_pairs': retained,
-                  'added_lookup_pairs': additions, 'removed_lookup_pairs': 0,
-                  'all_word_metadata_kanji_tag_banks_identical_to_previous': True}
-        with open(args.report, 'w') as out:
-            json.dump(report, out, ensure_ascii=False, indent=2)
-            out.write('\n')
-        print(json.dumps(report))
+    report = compare(args.previous, args.current)
+    args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
+    print(json.dumps(report))
 
 
 if __name__ == '__main__':

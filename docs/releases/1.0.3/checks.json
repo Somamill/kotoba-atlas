@@ -1,0 +1,11 @@
+{
+  "unit_tests": 19,
+  "unit_tests_passed": true,
+  "brand_check_passed": true,
+  "all_decoded_content_retained": true,
+  "both_archives_under_base64_transfer_budget": true,
+  "complete_yomitan_parser_tested": true,
+  "github_actions_enabled": false,
+  "cloud_ci_executed": false,
+  "migaku_user_report": "German progresses beyond 0% on 1.33.0-earlyaccess.2; completion pending"
+}

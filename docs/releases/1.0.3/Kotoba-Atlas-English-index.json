@@ -1,0 +1,16 @@
+{
+  "title": "Kotoba Atlas — English",
+  "format": 3,
+  "revision": "1.0.3",
+  "sequenced": false,
+  "author": "Somamill; source dictionary contributors",
+  "url": "https://github.com/Somamill/kotoba-atlas",
+  "sourceLanguage": "ja",
+  "targetLanguage": "en",
+  "description": "One self-contained Japanese dictionary with plain word glossaries, native kanji/pitch/frequency banks for supporting importers, and readable reference notes for word-only importers. German uses English fallback for coverage gaps. Runtime support depends on the host.",
+  "frequencyMode": "rank-based",
+  "attribution": "Source-specific licences apply. Original source metadata and notices are in SOURCES.json and NOTICES.txt.",
+  "isUpdatable": true,
+  "indexUrl": "https://github.com/Somamill/kotoba-atlas/releases/latest/download/Kotoba-Atlas-English-index.json",
+  "downloadUrl": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.0.3/Kotoba_Atlas_English_v1_0_3.zip"
+}

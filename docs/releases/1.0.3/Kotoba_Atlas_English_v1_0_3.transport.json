@@ -1,0 +1,6 @@
+{
+  "archive_bytes": 42461611,
+  "base64_bytes": 56615484,
+  "representative_wire_bytes_with_64KiB_reserve": 56681214,
+  "chrome_message_limit_bytes": 67108864
+}

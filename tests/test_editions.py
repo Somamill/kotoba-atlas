@@ -3,6 +3,8 @@ from pathlib import Path
 import unittest
 from unittest.mock import patch
 import json
+import tempfile
+import zipfile
 
 spec = importlib.util.spec_from_file_location('editions', Path(__file__).resolve().parents[1] / 'scripts/editions.py')
 editions = importlib.util.module_from_spec(spec)
@@ -83,6 +85,40 @@ class EditionTests(unittest.TestCase):
         self.assertGreaterEqual(row[4], 0)
         self.assertNotIn('DE:', row[5][0])
         self.assertIn('EN: trick question', row[5][0])
+
+    def test_v102_fails_chrome_base64_budget(self):
+        with self.assertRaisesRegex(ValueError, 'Base64'):
+            editions.check_transfer_budget(61191287)
+        encoded = editions.check_transfer_budget(50255640)
+        self.assertLess(encoded + editions.MIGAKU_ENVELOPE_BYTES, editions.MIGAKU_MESSAGE_BYTES)
+
+    def test_optimizer_preserves_complete_unicode_records_and_notices(self):
+        words = [['物ノ怪', 'もののけ', 'n', '', 100, ['Dämon; böser Geist'], -1, ''],
+                 ['羅睺', 'らごう', 'n', '', 100, ['mythological spirit'], -1, '']]
+        metadata = [['物ノ怪', 'freq', {'reading': 'もののけ', 'frequency': 123}]]
+        with tempfile.TemporaryDirectory() as folder:
+            archive = Path(folder) / 'test.zip'
+            with zipfile.ZipFile(archive, 'w') as out:
+                out.writestr('index.json', '{"format":3,"revision":"test","title":"test"}')
+                out.writestr('term_bank_1.json', json.dumps(words, ensure_ascii=False))
+                out.writestr('term_meta_bank_1.json', json.dumps(metadata, ensure_ascii=False))
+                out.writestr('licenses/notice.txt', 'source credit')
+            report = editions.optimize_archive(archive)
+            with zipfile.ZipFile(archive) as out:
+                self.assertEqual(sorted(json.loads(out.read('term_bank_1.json'))), sorted(words))
+                self.assertEqual(json.loads(out.read('term_meta_bank_1.json')), metadata)
+                self.assertEqual(out.read('licenses/notice.txt'), b'source credit')
+            self.assertEqual(report['optimized_word_records'], 2)
+            self.assertEqual(report['optimized_metadata_records'], 1)
+
+    def test_optimizer_rejects_path_escape(self):
+        with tempfile.TemporaryDirectory() as folder:
+            archive = Path(folder) / 'bad.zip'
+            with zipfile.ZipFile(archive, 'w') as out:
+                out.writestr('../outside.txt', 'invalid')
+            with self.assertRaisesRegex(ValueError, 'Unsafe archive path'):
+                editions.optimize_archive(archive)
+
 
 if __name__ == '__main__':
     unittest.main()

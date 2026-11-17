@@ -12,6 +12,13 @@ jobs:
         with:
           python-version: '3.13'
       - run: python -m pip install -r requirements-dev.txt
+      - name: Install tested ZIP compressor
+        run: |
+          mkdir -p "$RUNNER_TEMP/kotoba-7zip"
+          curl -fsSL https://github.com/ip7z/7zip/releases/download/26.06/7z2606-linux-x64.tar.xz -o "$RUNNER_TEMP/kotoba-7zip.tar.xz"
+          echo "2b539cf067b2ad48e1baa5093dbaa8818b73542d1222a0ffde9dc5f2922ea62e  $RUNNER_TEMP/kotoba-7zip.tar.xz" | sha256sum -c -
+          tar -xJf "$RUNNER_TEMP/kotoba-7zip.tar.xz" -C "$RUNNER_TEMP/kotoba-7zip" 7zz
+          echo "$RUNNER_TEMP/kotoba-7zip" >> "$GITHUB_PATH"
       - run: python -m unittest discover -s tests
       - run: python branding/dot/check.py
       - run: python scripts/build.py

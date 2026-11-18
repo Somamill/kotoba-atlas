@@ -70,6 +70,13 @@ def bounded_banks(records):
         yield b'[' + b','.join(batch) + b']'
 
 
+def edition_stem(language, version):
+    names = {'de': 'German', 'en': 'English'}
+    if language not in names or not re.fullmatch(r'\d+\.\d+\.\d+(?:-beta\.\d+)?', version):
+        raise ValueError('Unsupported edition language or version')
+    return 'Kotoba_Atlas_' + names[language] + '_v' + version.replace('.', '_').replace('-', '_')
+
+
 MIGAKU_MESSAGE_BYTES = 64 * 1024 * 1024
 MIGAKU_ENVELOPE_BYTES = 64 * 1024
 
@@ -215,7 +222,7 @@ def package_editions(db, output, sources, notices, cache):
     product = json.loads((ROOT / 'data/product.json').read_text())
     results = []
     for language, english_name in [('en', 'English'), ('de', 'German')]:
-        stem = 'Kotoba_Atlas_' + english_name + '_v' + product['version'].replace('.', '_')
+        stem = edition_stem(language, product['version'])
         dest = output / (stem + '.zip')
         partial = dest.with_suffix('.zip.part')
         index = {'title': product['name'] + ' — ' + english_name,

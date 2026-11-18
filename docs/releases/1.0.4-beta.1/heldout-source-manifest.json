@@ -1,0 +1,264 @@
+{
+  "source": "https://jimaku.cc",
+  "raw_subtitles_published": false,
+  "skipped": [
+    {
+      "title": "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen",
+      "reason": "No exact title match"
+    }
+  ],
+  "files": [
+    {
+      "title": "Violet Evergarden",
+      "entry_id": 2066,
+      "anime": true,
+      "url": "https://jimaku.cc/entry/2066/download/%5BErai-raws%5D%20Violet%20Evergarden%20-%2001%20%5B1080p%5D%5BJPN%5D%5BD195D1CC%5D.ass",
+      "original_name": "[Erai-raws] Violet Evergarden - 01 [1080p][JPN][D195D1CC].ass",
+      "bytes": 36419,
+      "sha256": "e02ebcedd8dd0481a305fe042750833d525ebcab3b3332022e9f7c7b66847358"
+    },
+    {
+      "title": "Violet Evergarden",
+      "entry_id": 2066,
+      "anime": true,
+      "url": "https://jimaku.cc/entry/2066/download/%5BErai-raws%5D%20Violet%20Evergarden%20-%2002%20%5B1080p%5D%5BJPN%5D%5B6E76A447%5D.ass",
+      "original_name": "[Erai-raws] Violet Evergarden - 02 [1080p][JPN][6E76A447].ass",
+      "bytes": 40510,
+      "sha256": "7a504262178d66713d7adc11723619f1b0d54352fecfc36e49d92190f48ab4b7"
+    },
+    {
+      "title": "Violet Evergarden",
+      "entry_id": 2066,
+      "anime": true,
+      "url": "https://jimaku.cc/entry/2066/download/%5BErai-raws%5D%20Violet%20Evergarden%20-%2003%20%5B1080p%5D%5BJPN%5D%5BBC57D7FE%5D.ass",
+      "original_name": "[Erai-raws] Violet Evergarden - 03 [1080p][JPN][BC57D7FE].ass",
+      "bytes": 34066,
+      "sha256": "6c29850de76e73503ae5d7969f219e4ec4de608823bf160c487d36b7e881ed5b"
+    },
+    {
+      "title": "Violet Evergarden",
+      "entry_id": 2066,
+      "anime": true,
+      "url": "https://jimaku.cc/entry/2066/download/%5BErai-raws%5D%20Violet%20Evergarden%20-%2004%20%5B1080p%5D%5BJPN%5D%5BF3AB38C0%5D.ass",
+      "original_name": "[Erai-raws] Violet Evergarden - 04 [1080p][JPN][F3AB38C0].ass",
+      "bytes": 36103,
+      "sha256": "75c05482ec3288dcaaea1de7d6ad29825f00944a4b95030fb14c1a85a4d816b6"
+    },
+    {
+      "title": "Natsume Yuujinchou",
+      "entry_id": 1961,
+      "anime": true,
+      "url": "https://jimaku.cc/entry/1961/download/%5BCleo%5DNatsume%20Yuujinchou%20-%2001%20(BD720p%20x265).ja.ass",
+      "original_name": "[Cleo]Natsume Yuujinchou - 01 (BD720p x265).ja.ass",
+      "bytes": 30609,
+      "sha256": "cfc4cf71cc58117307a98ff1611e0a60363cd7fc4cc48cc5d6ebee4689d8444c"
+    },
+    {
+      "title": "Natsume Yuujinchou",
+      "entry_id": 1961,
+      "anime": true,
+      "url": "https://jimaku.cc/entry/1961/download/%5BCleo%5DNatsume%20Yuujinchou%20-%2002%20(BD720p%20x265).ja.ass",
+      "original_name": "[Cleo]Natsume Yuujinchou - 02 (BD720p x265).ja.ass",
+      "bytes": 32125,
+      "sha256": "6d5bee23661c80ffe6e3d0044364b847094f143b9ab78de96387bdbc7639ba8b"
+    },
+    {
+      "title": "Natsume Yuujinchou",
+      "entry_id": 1961,
+      "anime": true,
+      "url": "https://jimaku.cc/entry/1961/download/%5BCleo%5DNatsume%20Yuujinchou%20-%2003%20(BD720p%20x265).ja.ass",
+      "original_name": "[Cleo]Natsume Yuujinchou - 03 (BD720p x265).ja.ass",
+      "bytes": 34374,
+      "sha256": "445bedf8ccb3db895f20c05450cd2e283a283d220be6c5ef6aa8d7f68056d475"
+    },
+    {
+      "title": "Natsume Yuujinchou",
+      "entry_id": 1961,
+      "anime": true,
+      "url": "https://jimaku.cc/entry/1961/download/%5BCleo%5DNatsume%20Yuujinchou%20-%2004%20(BD720p%20x265).ja.ass",
+      "original_name": "[Cleo]Natsume Yuujinchou - 04 (BD720p x265).ja.ass",
+      "bytes": 27127,
+      "sha256": "04eff28c7f33d1ac5a4277b7565a9f6275851db7755d8b594dd0718db1c914c8"
+    },
+    {
+      "title": "Mob Psycho 100",
+      "entry_id": 893,
+      "anime": true,
+      "url": "https://jimaku.cc/entry/893/download/%5BAkatomba-kBaraka%5D%20Mob%20Psycho%20100%20-%2001%20(BD%201920x1080%20x264%20FLAC)%20%5BBE59821E%5D.jpn.ass",
+      "original_name": "[Akatomba-kBaraka] Mob Psycho 100 - 01 (BD 1920x1080 x264 FLAC) [BE59821E].jpn.ass",
+      "bytes": 38032,
+      "sha256": "ef62448cb62a1dcebb5ca01ad17853397a51c1dc948545a3d02bc15ca5b517db"
+    },
+    {
+      "title": "Mob Psycho 100",
+      "entry_id": 893,
+      "anime": true,
+      "url": "https://jimaku.cc/entry/893/download/%E3%83%A2%E3%83%96%E3%82%B5%E3%82%A4%E3%82%B3100.S01E01.%E8%87%AA%E7%A7%B0%E9%9C%8A%E8%83%BD%E5%8A%9B%E8%80%85%E3%83%BB%E9%9C%8A%E5%B9%BB%E6%96%B0%E9%9A%86%EF%BD%9E%E3%81%A8%E3%83%A2%E3%83%96%EF%BD%9E.WEBRip.Netflix.ja%5Bcc%5D.srt",
+      "original_name": "モブサイコ100.S01E01.自称霊能力者・霊幻新隆～とモブ～.WEBRip.Netflix.ja[cc].srt",
+      "bytes": 32609,
+      "sha256": "be25ffc5277fe4aa68ca2e3b1e091fa1ddd08174a30f0c463424eae189017f60"
+    },
+    {
+      "title": "Mob Psycho 100",
+      "entry_id": 893,
+      "anime": true,
+      "url": "https://jimaku.cc/entry/893/download/%E3%83%A2%E3%83%96%E3%82%B5%E3%82%A4%E3%82%B3100.S01E02.%E9%9D%92%E3%81%84%E6%98%A5%E3%81%AE%E7%96%91%E5%95%8F%EF%BD%9E%E8%84%B3%E6%84%9F%E9%9B%BB%E6%B3%A2%E9%83%A8%E7%99%BB%E5%A0%B4%EF%BD%9E.WEBRip.Netflix.ja%5Bcc%5D.srt",
+      "original_name": "モブサイコ100.S01E02.青い春の疑問～脳感電波部登場～.WEBRip.Netflix.ja[cc].srt",
+      "bytes": 39670,
+      "sha256": "07138c1d68c94f9294eab7ee0ab25ffb9585abd8b4549a0bee94b3c77b7d7be9"
+    },
+    {
+      "title": "Mob Psycho 100",
+      "entry_id": 893,
+      "anime": true,
+      "url": "https://jimaku.cc/entry/893/download/%E3%83%A2%E3%83%96%E3%82%B5%E3%82%A4%E3%82%B3100.S01E03.%E9%9B%86%E3%81%84%E3%81%B8%E3%81%AE%E8%AA%98%E3%81%84%EF%BD%9E%E7%B0%A1%E5%8D%98%E3%81%AB%E8%A8%80%E3%81%86%E3%81%A8%E3%83%A2%E3%83%86%E3%81%9F%E3%81%84%EF%BD%9E.WEBRip.Netflix.ja%5Bcc%5D.srt",
+      "original_name": "モブサイコ100.S01E03.集いへの誘い～簡単に言うとモテたい～.WEBRip.Netflix.ja[cc].srt",
+      "bytes": 37493,
+      "sha256": "8d6982a1d57b04960a3e6a720441a321d3fcbe3b2afb47b9aba59e459b7cf0ad"
+    },
+    {
+      "title": "Yuru Camp△",
+      "entry_id": 681,
+      "anime": true,
+      "url": "https://jimaku.cc/entry/681/download/%5BZoro%5D%20Yuru%20Camp%20-%2001.srt",
+      "original_name": "[Zoro] Yuru Camp - 01.srt",
+      "bytes": 22396,
+      "sha256": "e414328b8ba8b2a8d8e480fb7774ecc7986fa101b3bf172726491906c8563c7f"
+    },
+    {
+      "title": "Yuru Camp△",
+      "entry_id": 681,
+      "anime": true,
+      "url": "https://jimaku.cc/entry/681/download/%5BZoro%5D%20Yuru%20Camp%20-%2002.srt",
+      "original_name": "[Zoro] Yuru Camp - 02.srt",
+      "bytes": 24865,
+      "sha256": "49ec30a7343efd68fd5219188eddaed2a474abd1613e96818512847c586610d7"
+    },
+    {
+      "title": "Yuru Camp△",
+      "entry_id": 681,
+      "anime": true,
+      "url": "https://jimaku.cc/entry/681/download/%5BZoro%5D%20Yuru%20Camp%20-%2003.srt",
+      "original_name": "[Zoro] Yuru Camp - 03.srt",
+      "bytes": 21279,
+      "sha256": "758b76a41c3140529e125f6ed00b2ffe66658f6a5b521b344440185034051c47"
+    },
+    {
+      "title": "Yuru Camp△",
+      "entry_id": 681,
+      "anime": true,
+      "url": "https://jimaku.cc/entry/681/download/%5BZoro%5D%20Yuru%20Camp%20-%2004.srt",
+      "original_name": "[Zoro] Yuru Camp - 04.srt",
+      "bytes": 25971,
+      "sha256": "bf7c16b7d63ff5a70b7d67698962c10b972181a0385796721de5af5e23e80955"
+    },
+    {
+      "title": "MIU404",
+      "entry_id": 4519,
+      "anime": false,
+      "url": "https://jimaku.cc/entry/4519/download/MIU.404.EP01.1080p.NF.WEB-DL.AAC2.0.H.264-MagicStar.Jpn.srt",
+      "original_name": "MIU.404.EP01.1080p.NF.WEB-DL.AAC2.0.H.264-MagicStar.Jpn.srt",
+      "bytes": 103879,
+      "sha256": "ab12062244ab7dd6926f93d0d73bff233a5673f297984162bb0100566f4003ca"
+    },
+    {
+      "title": "MIU404",
+      "entry_id": 4519,
+      "anime": false,
+      "url": "https://jimaku.cc/entry/4519/download/MIU404.S01E01.%2301.%E6%BF%80%E7%AA%81.WEBRip.Netflix.ja%5Bcc%5D.srt",
+      "original_name": "MIU404.S01E01.#01.激突.WEBRip.Netflix.ja[cc].srt",
+      "bytes": 104269,
+      "sha256": "2f470348cb289d8240aebe7ab887f7c60a170687cfa63790c3526b2571acad60"
+    },
+    {
+      "title": "MIU404",
+      "entry_id": 4519,
+      "anime": false,
+      "url": "https://jimaku.cc/entry/4519/download/MIU404.S01E02.%2302.%E5%88%87%E3%81%AA%E3%82%8B%E9%A1%98%E3%81%84.WEBRip.Netflix.ja%5Bcc%5D.srt",
+      "original_name": "MIU404.S01E02.#02.切なる願い.WEBRip.Netflix.ja[cc].srt",
+      "bytes": 70484,
+      "sha256": "8b7f40b5ac280856c9449d4f24116a080bb071efb778cd193a9e7d080dc96b11"
+    },
+    {
+      "title": "MIU404",
+      "entry_id": 4519,
+      "anime": false,
+      "url": "https://jimaku.cc/entry/4519/download/MIU404.S01E03.%2303.%E5%88%86%E5%B2%90%E7%82%B9.WEBRip.Netflix.ja%5Bcc%5D.srt",
+      "original_name": "MIU404.S01E03.#03.分岐点.WEBRip.Netflix.ja[cc].srt",
+      "bytes": 82680,
+      "sha256": "391f4ad9ed8a56bceb6168ea55db9e9ad13ec38f9be7cd96703f188e30fa32a3"
+    },
+    {
+      "title": "Brush Up Life",
+      "entry_id": 343,
+      "anime": false,
+      "url": "https://jimaku.cc/entry/343/download/Brush.Up.Life.S01E01.1080p.HULU.WEB-DL.AAC2.0.H.264-MagicStar.srt",
+      "original_name": "Brush.Up.Life.S01E01.1080p.HULU.WEB-DL.AAC2.0.H.264-MagicStar.srt",
+      "bytes": 68704,
+      "sha256": "92f21c209886bcd2cef4dcb1b78b348690e87170df4f39833fc9bdc4fb8827da"
+    },
+    {
+      "title": "Brush Up Life",
+      "entry_id": 343,
+      "anime": false,
+      "url": "https://jimaku.cc/entry/343/download/Brush.Up.Life.S01E02.1080p.HULU.WEB-DL.AAC2.0.H.264-MagicStar.srt",
+      "original_name": "Brush.Up.Life.S01E02.1080p.HULU.WEB-DL.AAC2.0.H.264-MagicStar.srt",
+      "bytes": 73889,
+      "sha256": "dcc3051b5584f8aa81cce5f834fce6cf8f63a53fe584da0afe1af9e921370ca2"
+    },
+    {
+      "title": "Brush Up Life",
+      "entry_id": 343,
+      "anime": false,
+      "url": "https://jimaku.cc/entry/343/download/Brush.Up.Life.S01E03.1080p.HULU.WEB-DL.AAC2.0.H.264-MagicStar.srt",
+      "original_name": "Brush.Up.Life.S01E03.1080p.HULU.WEB-DL.AAC2.0.H.264-MagicStar.srt",
+      "bytes": 74666,
+      "sha256": "b3c4ea68dcd5ac8b6d02056583bfac1fbe244c5771106334c30bb0fedd6095de"
+    },
+    {
+      "title": "Brush Up Life",
+      "entry_id": 343,
+      "anime": false,
+      "url": "https://jimaku.cc/entry/343/download/Brush.Up.Life.S01E04.1080p.HULU.WEB-DL.AAC2.0.H.264-MagicStar.srt",
+      "original_name": "Brush.Up.Life.S01E04.1080p.HULU.WEB-DL.AAC2.0.H.264-MagicStar.srt",
+      "bytes": 74073,
+      "sha256": "3f90c704cb9ac3a44c515ca1f783ff435d76d7687d54639f6910c959a22b398d"
+    },
+    {
+      "title": "JIN",
+      "entry_id": 2277,
+      "anime": false,
+      "url": "https://jimaku.cc/entry/2277/download/JIN.-%E4%BB%81-.S01E01.%E7%AC%AC%E4%B8%80%E8%A9%B1.%E6%99%82%E7%A9%BA%E3%82%92%E8%B6%85%E3%81%88%E3%81%9F%E6%84%9B%E3%81%A8%E5%91%BD%E3%81%AE%E6%84%9F%E5%8B%95%E7%89%A9%E8%AA%9E%EF%BD%9E%E7%8F%BE%E4%BB%A3%E3%81%AE%E8%84%B3%E5%A4%96%E7%A7%91%E5%8C%BB%E3%81%8C%E6%BF%80%E5%8B%95%E3%81%AE%E5%B9%95%E6%9C%AB%E3%81%B8...%E6%AD%B4%E5%8F%B2%E3%81%AE%E9%87%9D%E3%81%8C%E4%BB%8A%EF%BD%A4%E5%8B%95%E3%81%8D%E5%87%BA%E3%81%99!.%E4%BA%BA%E3%81%AF%E4%BA%BA%E3%81%A7%E3%81%97%E3%81%8B%E6%95%91%E3%81%88%E3%81%AA%E3%81%84!!.WEBRip.Netflix.ja%5Bcc%5D.srt",
+      "original_name": "JIN.-仁-.S01E01.第一話.時空を超えた愛と命の感動物語～現代の脳外科医が激動の幕末へ...歴史の針が今､動き出す!.人は人でしか救えない!!.WEBRip.Netflix.ja[cc].srt",
+      "bytes": 87795,
+      "sha256": "0b1fcb0aaeb451cc772b0d311d0af91e3f0ee4751853c5436cd9d7c73673ef77"
+    },
+    {
+      "title": "JIN",
+      "entry_id": 2277,
+      "anime": false,
+      "url": "https://jimaku.cc/entry/2277/download/JIN.-%E4%BB%81-.S01E02.%E7%AC%AC%E4%BA%8C%E8%A9%B1.%E5%91%BD%E3%82%92%E6%95%91%E3%81%86%E4%BA%8B%E3%81%AE%E6%82%B2%E5%8A%87.WEBRip.Netflix.ja%5Bcc%5D.srt",
+      "original_name": "JIN.-仁-.S01E02.第二話.命を救う事の悲劇.WEBRip.Netflix.ja[cc].srt",
+      "bytes": 53041,
+      "sha256": "1319c5985c869e60045de2a1dc2194f4897cd833c84462996ced4b37d6f7e00d"
+    },
+    {
+      "title": "JIN",
+      "entry_id": 2277,
+      "anime": false,
+      "url": "https://jimaku.cc/entry/2277/download/JIN.-%E4%BB%81-.S01E03.%E7%AC%AC%E4%B8%89%E8%A9%B1.%E6%9C%AA%E6%9D%A5%E3%81%A8%E3%81%AE%E6%B1%BA%E5%88%A5....WEBRip.Netflix.ja%5Bcc%5D.srt",
+      "original_name": "JIN.-仁-.S01E03.第三話.未来との決別....WEBRip.Netflix.ja[cc].srt",
+      "bytes": 46094,
+      "sha256": "ff003617dfe412aee514a5ae71e230abb0c79133d0c6c5f205d53a234afceb4f"
+    },
+    {
+      "title": "JIN",
+      "entry_id": 2277,
+      "anime": false,
+      "url": "https://jimaku.cc/entry/2277/download/JIN.-%E4%BB%81-.S01E04.%E7%AC%AC%E5%9B%9B%E8%A9%B1.%E9%81%8B%E5%91%BD%E3%81%A8%E6%82%B2%E5%8A%87%E3%81%AE%E5%86%8D%E4%BC%9A.WEBRip.Netflix.ja%5Bcc%5D.srt",
+      "original_name": "JIN.-仁-.S01E04.第四話.運命と悲劇の再会.WEBRip.Netflix.ja[cc].srt",
+      "bytes": 45174,
+      "sha256": "f0e7caa842edd1e969a282bae40353ff11b06d05220e50b6ff716725a74d95a8"
+    }
+  ]
+}

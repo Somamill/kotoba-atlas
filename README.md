@@ -85,9 +85,11 @@ Both complete archives pass schemas, exact content-parity checks and the upstrea
 
 Keep your working dictionary until the replacement finishes. If an old import is stalled, cancel it before retrying. Use normal host controls for duplicate titles and replacement; do not delete your browser profile or learning database. [Upgrade guidance](docs/compatibility.md#upgrading)
 
-## Next-release lookup research
+## 1.0.4 beta: lookup verification and dict.
 
-We are testing phrase-aware, reading-aware Japanese lookup against a local anime/drama subtitle sample. The experimental helper explains its matches and recovers dictionary forms and source-checked contractions. It runs separately from the ZIP and is not installed into Migaku or Yomitan. [Method, results and next-release review](docs/subtitle-lookup.md)
+**[Download 1.0.4 beta 1](https://github.com/Somamill/kotoba-atlas/releases/tag/atlas-v1.0.4-beta.1).** The frozen helper retrieves candidate entries for **98.40% (German)** and **95.78% (English)** of Japanese content tokens in a fresh seven-title sample. These are retrieval rates, not selected-sense accuracy. [Newest verification results](docs/accuracy.md)
+
+The beta adds the optional Lookup Lab toolkit and checked native SQLite exports for **[dict.](https://github.com/Somamill/dict)**, the native offline Apple app. The complete import ZIPs retain every non-index member from 1.0.3. Importing a ZIP does not install the helper into Migaku/Yomitan. [Beta package guide](docs/releases/1.0.4-beta.1/)
 
 ## Build and verify
 

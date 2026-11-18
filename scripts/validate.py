@@ -49,7 +49,8 @@ def main():
                 assert check.read('SOURCES.txt'), 'Missing source manifest'
         if edition_index['revision'] not in {'1.0.0', '1.0.1'}:
             assert profile == 'full', 'Only complete language editions are released'
-            assert __import__('re').fullmatch(r'Kotoba_Atlas_(German|English)_v[0-9_]+', args.archive.stem), 'Unexpected edition filename'
+            from editions import edition_stem
+            assert args.archive.stem == edition_stem(edition, edition_index['revision']), 'Unexpected edition filename'
         if edition_index['revision'] not in {'1.0.0', '1.0.1', '1.0.2'}:
             from editions import check_transfer_budget
             check_transfer_budget(args.archive.stat().st_size)

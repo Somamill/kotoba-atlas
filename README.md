@@ -85,6 +85,10 @@ Both complete archives pass schemas, exact content-parity checks and the upstrea
 
 Keep your working dictionary until the replacement finishes. If an old import is stalled, cancel it before retrying. Use normal host controls for duplicate titles and replacement; do not delete your browser profile or learning database. [Upgrade guidance](docs/compatibility.md#upgrading)
 
+## Next-release lookup research
+
+We are testing phrase-aware, reading-aware Japanese lookup against a local anime/drama subtitle sample. The experimental helper explains its matches and recovers dictionary forms and source-checked contractions. It runs separately from the ZIP and is not installed into Migaku or Yomitan. [Method, results and next-release review](docs/subtitle-lookup.md)
+
 ## Build and verify
 
 Python 3.11+ and **7-Zip 26.06** build both complete language editions. The output is a standard Deflate ZIP readable by supporting dictionary apps. Temporary sorting databases are cleaned automatically; high compression can take several minutes. Builds fail if the Base64 transfer budget would be exceeded. Inputs are pinned by hash. The changing Jiten resource is kept as an attributed, immutable source snapshot; users do not install it separately.

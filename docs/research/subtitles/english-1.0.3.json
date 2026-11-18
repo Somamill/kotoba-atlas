@@ -1,0 +1,1026 @@
+{
+  "status": "measured",
+  "dictionary_sha256": "6c72623b31a202710a74dcea65633ae013c207b4aa3db3aaa6270db51168ea8e",
+  "tokenizer": {
+    "SudachiPy": "0.6.11",
+    "SudachiDict-core": "20250129"
+  },
+  "counts": {
+    "parsed_cues": 72582,
+    "non_japanese_cues_skipped": 2205,
+    "unique_cues": 63635,
+    "content_tokens": 230082,
+    "surface_hits": 194365,
+    "smart_hits": 217983,
+    "unresolved_oov_tokens": 1518,
+    "multi_token_matches": 67483,
+    "duplicate_cues_skipped": 6742
+  },
+  "match_methods": {
+    "exact": 323828,
+    "dictionary-form": 47948,
+    "exact+reading": 16509,
+    "analyzer-normalized": 4711,
+    "source-checked-contraction": 1909,
+    "dictionary-form+reading": 810,
+    "source-checked-contraction+reading": 128,
+    "analyzer-normalized+reading": 183,
+    "width-normalized": 469
+  },
+  "surface_candidate_rate": 0.844764,
+  "smart_candidate_rate": 0.947414,
+  "elapsed_seconds": 26.86,
+  "titles": {
+    "Sousou no Frieren": {
+      "anime": true,
+      "files": 8,
+      "unique_cues": 2111,
+      "content_tokens": 7332,
+      "surface_hits": 6198,
+      "smart_hits": 6958
+    },
+    "SPY×FAMILY": {
+      "anime": true,
+      "files": 8,
+      "unique_cues": 3131,
+      "content_tokens": 10980,
+      "surface_hits": 9171,
+      "smart_hits": 10278
+    },
+    "Bocchi the Rock!": {
+      "anime": true,
+      "files": 8,
+      "unique_cues": 3346,
+      "content_tokens": 10387,
+      "surface_hits": 8974,
+      "smart_hits": 10075
+    },
+    "DEATH NOTE": {
+      "anime": true,
+      "files": 8,
+      "unique_cues": 2400,
+      "content_tokens": 9542,
+      "surface_hits": 8317,
+      "smart_hits": 9358
+    },
+    "K-ON!": {
+      "anime": true,
+      "files": 8,
+      "unique_cues": 2701,
+      "content_tokens": 7485,
+      "surface_hits": 6460,
+      "smart_hits": 7310
+    },
+    "Haikyuu!!": {
+      "anime": true,
+      "files": 8,
+      "unique_cues": 2673,
+      "content_tokens": 9672,
+      "surface_hits": 7967,
+      "smart_hits": 8701
+    },
+    "Jujutsu Kaisen": {
+      "anime": true,
+      "files": 8,
+      "unique_cues": 2566,
+      "content_tokens": 8284,
+      "surface_hits": 6875,
+      "smart_hits": 7894
+    },
+    "Steins;Gate": {
+      "anime": true,
+      "files": 8,
+      "unique_cues": 2675,
+      "content_tokens": 9505,
+      "surface_hits": 8022,
+      "smart_hits": 8955
+    },
+    "Shingeki no Kyojin": {
+      "anime": true,
+      "files": 8,
+      "unique_cues": 1997,
+      "content_tokens": 7163,
+      "surface_hits": 5968,
+      "smart_hits": 6846
+    },
+    "Dungeon Meshi": {
+      "anime": true,
+      "files": 8,
+      "unique_cues": 3024,
+      "content_tokens": 10219,
+      "surface_hits": 8603,
+      "smart_hits": 9868
+    },
+    "Hanzawa Naoki": {
+      "anime": false,
+      "files": 8,
+      "unique_cues": 5921,
+      "content_tokens": 24412,
+      "surface_hits": 20487,
+      "smart_hits": 22723
+    },
+    "Nigeru wa Haji da ga Yaku ni Tatsu": {
+      "anime": false,
+      "files": 8,
+      "unique_cues": 4442,
+      "content_tokens": 16626,
+      "surface_hits": 14388,
+      "smart_hits": 16167
+    },
+    "Shinya Shokudou": {
+      "anime": false,
+      "files": 8,
+      "unique_cues": 1675,
+      "content_tokens": 5163,
+      "surface_hits": 4392,
+      "smart_hits": 4985
+    },
+    "Unnatural": {
+      "anime": false,
+      "files": 8,
+      "unique_cues": 6461,
+      "content_tokens": 23352,
+      "surface_hits": 19600,
+      "smart_hits": 22007
+    },
+    "Kekkon Dekinai Otoko": {
+      "anime": false,
+      "files": 8,
+      "unique_cues": 4406,
+      "content_tokens": 17351,
+      "surface_hits": 14704,
+      "smart_hits": 16386
+    },
+    "Kodoku no Gourmet": {
+      "anime": false,
+      "files": 8,
+      "unique_cues": 1905,
+      "content_tokens": 5993,
+      "surface_hits": 5204,
+      "smart_hits": 5823
+    },
+    "Legal High": {
+      "anime": false,
+      "files": 8,
+      "unique_cues": 5725,
+      "content_tokens": 23658,
+      "surface_hits": 19897,
+      "smart_hits": 22300
+    },
+    "Vivant": {
+      "anime": false,
+      "files": 8,
+      "unique_cues": 6476,
+      "content_tokens": 22958,
+      "surface_hits": 19138,
+      "smart_hits": 21349
+    }
+  },
+  "unresolved_lexical_candidates": [
+    [
+      "フリーレン",
+      99
+    ],
+    [
+      "マルシル",
+      97
+    ],
+    [
+      "5億",
+      82
+    ],
+    [
+      "ジャミーン",
+      72
+    ],
+    [
+      "オカリン",
+      67
+    ],
+    [
+      "シンシー",
+      61
+    ],
+    [
+      "別班",
+      60
+    ],
+    [
+      "ヒンメル",
+      49
+    ],
+    [
+      "ッ",
+      46
+    ],
+    [
+      "ハハッ",
+      45
+    ],
+    [
+      "ミカサ",
+      44
+    ],
+    [
+      "フェルン",
+      40
+    ],
+    [
+      "デスノート",
+      40
+    ],
+    [
+      "宿儺",
+      39
+    ],
+    [
+      "120億",
+      38
+    ],
+    [
+      "ファリン",
+      36
+    ],
+    [
+      "ハイター",
+      34
+    ],
+    [
+      "フォージャー",
+      34
+    ],
+    [
+      "ブロク",
+      33
+    ],
+    [
+      "チルチャック",
+      33
+    ],
+    [
+      "臨",
+      32
+    ],
+    [
+      "ハハハッ",
+      31
+    ],
+    [
+      "アルミン",
+      30
+    ],
+    [
+      "フェイリス",
+      29
+    ],
+    [
+      "ぐっ",
+      24
+    ],
+    [
+      "ピ",
+      24
+    ],
+    [
+      "レシブ",
+      24
+    ],
+    [
+      "ヴィヴァン",
+      23
+    ],
+    [
+      "タイター",
+      22
+    ],
+    [
+      "ハハハハ",
+      21
+    ],
+    [
+      "ちょちょ",
+      20
+    ],
+    [
+      "ラボメン",
+      20
+    ],
+    [
+      "5千万",
+      19
+    ],
+    [
+      "ナルセン",
+      19
+    ],
+    [
+      "五郎",
+      18
+    ],
+    [
+      "ペンバー",
+      17
+    ],
+    [
+      "スパイカ",
+      17
+    ],
+    [
+      "フランメ",
+      16
+    ],
+    [
+      "200億",
+      16
+    ],
+    [
+      "ボニータ",
+      16
+    ],
+    [
+      "ロイドマン",
+      15
+    ],
+    [
+      "アディエル",
+      15
+    ],
+    [
+      "アハハッ",
+      14
+    ],
+    [
+      "むっ",
+      14
+    ],
+    [
+      "9千万",
+      14
+    ],
+    [
+      "セドル",
+      13
+    ],
+    [
+      "リュグナー",
+      12
+    ],
+    [
+      "アハッ",
+      12
+    ],
+    [
+      "バレボル",
+      12
+    ],
+    [
+      "ミンシュエン",
+      12
+    ],
+    [
+      "クーダン",
+      12
+    ],
+    [
+      "ナジュム",
+      11
+    ],
+    [
+      "ほっ",
+      10
+    ],
+    [
+      "クヴァール",
+      10
+    ],
+    [
+      "グラナト",
+      10
+    ],
+    [
+      "フフフフッ",
+      10
+    ],
+    [
+      "フンッ",
+      10
+    ],
+    [
+      "ヘヘッ",
+      10
+    ],
+    [
+      "戻",
+      10
+    ],
+    [
+      "3千万",
+      10
+    ],
+    [
+      "5万",
+      10
+    ],
+    [
+      "ホーショー",
+      10
+    ],
+    [
+      "よっ",
+      9
+    ],
+    [
+      "さっ",
+      9
+    ],
+    [
+      "はははは",
+      9
+    ],
+    [
+      "クイク",
+      9
+    ],
+    [
+      "トゥットゥルー",
+      9
+    ],
+    [
+      "シガンシナ",
+      9
+    ],
+    [
+      "10万",
+      9
+    ],
+    [
+      "小池",
+      9
+    ],
+    [
+      "20万",
+      9
+    ],
+    [
+      "ルモー",
+      9
+    ],
+    [
+      "フフフフ",
+      8
+    ],
+    [
+      "ゾルトラーク",
+      8
+    ],
+    [
+      "ヘヘヘ",
+      8
+    ],
+    [
+      "ウェスタリス",
+      8
+    ],
+    [
+      "ぐわっ",
+      8
+    ],
+    [
+      "ブライア",
+      8
+    ],
+    [
+      "けけ",
+      8
+    ],
+    [
+      "ボンドマン",
+      8
+    ],
+    [
+      "100万",
+      8
+    ],
+    [
+      "ヘヘヘッ",
+      8
+    ],
+    [
+      "ぬっ",
+      8
+    ],
+    [
+      "ナイサ",
+      8
+    ],
+    [
+      "チムメイト",
+      8
+    ],
+    [
+      "入行",
+      8
+    ],
+    [
+      "ゴルバド",
+      8
+    ],
+    [
+      "ヴィカァン",
+      8
+    ],
+    [
+      "ストリクス",
+      7
+    ],
+    [
+      "プッ",
+      7
+    ],
+    [
+      "魚人",
+      7
+    ],
+    [
+      "3億",
+      7
+    ],
+    [
+      "行内",
+      7
+    ],
+    [
+      "1,000万",
+      7
+    ],
+    [
+      "ドラート",
+      6
+    ],
+    [
+      "オスタニア",
+      6
+    ],
+    [
+      "ウフフッ",
+      6
+    ],
+    [
+      "エヘッ",
+      6
+    ],
+    [
+      "3万",
+      6
+    ],
+    [
+      "ウオーッ",
+      6
+    ],
+    [
+      "ネト",
+      6
+    ],
+    [
+      "スピド",
+      6
+    ],
+    [
+      "漏",
+      6
+    ],
+    [
+      "瑚",
+      6
+    ],
+    [
+      "セレセブ",
+      6
+    ],
+    [
+      "綯",
+      6
+    ],
+    [
+      "デルガル",
+      6
+    ],
+    [
+      "ぺろ",
+      6
+    ],
+    [
+      "エーラ",
+      5
+    ],
+    [
+      "ぐあっ",
+      5
+    ],
+    [
+      "300万",
+      5
+    ],
+    [
+      "ブラックベル",
+      5
+    ],
+    [
+      "イソスタ",
+      5
+    ],
+    [
+      "ひゃあ",
+      5
+    ],
+    [
+      "イヤーッ",
+      5
+    ],
+    [
+      "国見",
+      5
+    ],
+    [
+      "びくり",
+      5
+    ],
+    [
+      "城西",
+      5
+    ],
+    [
+      "チャンスボル",
+      5
+    ],
+    [
+      "ドクペ",
+      5
+    ],
+    [
+      "2億",
+      5
+    ],
+    [
+      "だっ",
+      5
+    ],
+    [
+      "トロスト",
+      5
+    ],
+    [
+      "げほ",
+      5
+    ],
+    [
+      "カブルー",
+      5
+    ],
+    [
+      "100億",
+      5
+    ],
+    [
+      "50億",
+      5
+    ],
+    [
+      "5000万",
+      5
+    ],
+    [
+      "1500億",
+      5
+    ],
+    [
+      "ハハハハッ",
+      5
+    ],
+    [
+      "むん",
+      5
+    ],
+    [
+      "3,000万",
+      5
+    ],
+    [
+      "2,000万",
+      5
+    ],
+    [
+      "50万",
+      5
+    ],
+    [
+      "ゲッツ",
+      5
+    ],
+    [
+      "140億",
+      5
+    ],
+    [
+      "ぐわ",
+      4
+    ],
+    [
+      "ヒヒッ",
+      4
+    ],
+    [
+      "だあ",
+      4
+    ],
+    [
+      "エヘヘヘ",
+      4
+    ],
+    [
+      "スターリー",
+      4
+    ],
+    [
+      "神界",
+      4
+    ],
+    [
+      "イズミン",
+      4
+    ],
+    [
+      "違",
+      4
+    ],
+    [
+      "イータドリ",
+      4
+    ],
+    [
+      "疆",
+      4
+    ],
+    [
+      "フハハハハ",
+      4
+    ],
+    [
+      "スーパーハカー",
+      4
+    ],
+    [
+      "ゲルバナ",
+      4
+    ],
+    [
+      "ッハッハッハ",
+      4
+    ]
+  ],
+  "unresolved_proper_names": [
+    [
+      "野崎",
+      279
+    ],
+    [
+      "半沢",
+      246
+    ],
+    [
+      "乃木",
+      220
+    ],
+    [
+      "アーニャ",
+      215
+    ],
+    [
+      "東海林",
+      184
+    ],
+    [
+      "久部",
+      173
+    ],
+    [
+      "信介",
+      159
+    ],
+    [
+      "東田",
+      151
+    ],
+    [
+      "夏美",
+      144
+    ],
+    [
+      "津崎",
+      133
+    ],
+    [
+      "伊勢島",
+      130
+    ],
+    [
+      "英治",
+      115
+    ],
+    [
+      "古美門",
+      114
+    ],
+    [
+      "田中",
+      112
+    ],
+    [
+      "影山",
+      106
+    ],
+    [
+      "桑野",
+      102
+    ],
+    [
+      "平匡",
+      98
+    ],
+    [
+      "後藤",
+      91
+    ],
+    [
+      "浅野",
+      88
+    ],
+    [
+      "三澄",
+      82
+    ],
+    [
+      "ロイド",
+      80
+    ],
+    [
+      "エレン",
+      80
+    ],
+    [
+      "バルカ",
+      80
+    ],
+    [
+      "服部",
+      75
+    ],
+    [
+      "鈴木",
+      67
+    ],
+    [
+      "三木",
+      67
+    ],
+    [
+      "神倉",
+      60
+    ],
+    [
+      "太田",
+      59
+    ],
+    [
+      "烏野",
+      54
+    ],
+    [
+      "葛西",
+      52
+    ],
+    [
+      "安奈",
+      52
+    ],
+    [
+      "伏黒",
+      51
+    ],
+    [
+      "ライオス",
+      51
+    ],
+    [
+      "富樫",
+      50
+    ],
+    [
+      "喜多",
+      49
+    ],
+    [
+      "佐野",
+      48
+    ],
+    [
+      "直樹",
+      47
+    ],
+    [
+      "摩耶",
+      47
+    ],
+    [
+      "湯浅",
+      45
+    ],
+    [
+      "神林",
+      45
+    ],
+    [
+      "徳松",
+      45
+    ],
+    [
+      "リューク",
+      44
+    ],
+    [
+      "毛利",
+      44
+    ],
+    [
+      "セタ",
+      43
+    ],
+    [
+      "高野",
+      43
+    ],
+    [
+      "東条",
+      43
+    ],
+    [
+      "月島",
+      40
+    ],
+    [
+      "近藤",
+      40
+    ],
+    [
+      "中西",
+      40
+    ],
+    [
+      "大和田",
+      40
+    ],
+    [
+      "果歩",
+      40
+    ],
+    [
+      "劉",
+      40
+    ],
+    [
+      "澤村",
+      38
+    ],
+    [
+      "竹下",
+      38
+    ],
+    [
+      "留美子",
+      38
+    ],
+    [
+      "千春",
+      37
+    ],
+    [
+      "白井",
+      36
+    ],
+    [
+      "中川",
+      36
+    ],
+    [
+      "圭子",
+      36
+    ],
+    [
+      "沙織",
+      35
+    ]
+  ],
+  "errors": [],
+  "scope": "Surface baseline includes exact headwords and kana readings. Deduplicated Japanese cues. Content POS tokens only. Candidate retrieval, not human-verified senses or comprehension. Names excluded from lexical hits. No subtitle dialogue in report.",
+  "lookup_index_version": "3"
+}

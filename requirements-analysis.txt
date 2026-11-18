@@ -1,0 +1,3 @@
+# Optional local subtitle audit/lookup tooling; never bundled into dictionary ZIPs.
+SudachiPy==0.6.11
+SudachiDict-core==20250129

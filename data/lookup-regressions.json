@@ -1,0 +1,42 @@
+[
+  {
+    "text": "物ノ怪を見ていた。",
+    "expected_headword": "物ノ怪"
+  },
+  {
+    "text": "鎌かけてるんじゃねえよ。",
+    "expected_headword": "鎌かける"
+  },
+  {
+    "text": "食べちゃった。",
+    "expected_headword": "食べる"
+  },
+  {
+    "text": "学校に行かなきゃ。",
+    "expected_headword": "行く"
+  },
+  {
+    "text": "凄かったね。",
+    "expected_headword": "凄い"
+  },
+  {
+    "text": "知らねえよ。",
+    "expected_headword": "知る"
+  },
+  {
+    "text": "推し活していた。",
+    "expected_headword": "推し活する"
+  },
+  {
+    "text": "沼ってる。",
+    "expected_headword": "沼る"
+  },
+  {
+    "text": "羅睺が見える。",
+    "expected_headword": "羅睺"
+  },
+  {
+    "text": "走らなかった。",
+    "expected_headword": "走る"
+  }
+]

@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.4-beta.1
+- Freeze and test the local helper on 28 files from seven additional anime/drama titles. Report candidate retrieval separately from sense accuracy.
+- Add an optional Lookup Lab source toolkit and native SQLite/gzip editions for dict.; retain all source word fields, duplicate metadata, kanji, tags and notices.
+- Keep one complete compatible ZIP per definition language, with beta version metadata and unchanged data banks. Stable latest remains 1.0.3.
+- Add a checksum-bound native beta catalogue for language downloads and safe offline dictionary updates.
+
 ## Kotoba Atlas 1.0.3 — 2026-11-17
 
 - Fix the file-transfer blocker reported by Migaku 1.33.0-earlyaccess.2: its Base64-encoded archive exceeded Chrome's 64 MiB message ceiling.

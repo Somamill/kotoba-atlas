@@ -1,0 +1,11 @@
+{
+  "python_unit_tests": 34,
+  "unit_tests_passed": true,
+  "helper_regressions_per_edition": 10,
+  "schema_validation_both_zip_editions": true,
+  "all_non_index_zip_members_byte_identical_to_1_0_3": true,
+  "native_all_source_fields_retained": true,
+  "cloud_ci_executed": false,
+  "installed_migaku_beta_tested": false,
+  "native_swift_engine_accuracy_not_measured_by_python_reports": true
+}

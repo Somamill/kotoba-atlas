@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "channel": "beta",
+  "editions": [
+    {
+      "id": "en",
+      "name": "English",
+      "version": "1.0.4-beta.1",
+      "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.0.4-beta.1/Kotoba_Atlas_English_v1_0_4_beta_1.sqlite.gz",
+      "sha256": "fc6042ef202e5c5e75f3c9f76d8526b6d6c3de27cbbd15195e0c7720ecc9110f",
+      "expandedSHA256": "1175222a42861e3eb0c6867ed8321bb903e5809d46a3ae755269c5a5921421d7",
+      "compressedBytes": 142376427,
+      "expandedBytes": 596086784,
+      "entries": 1080167
+    },
+    {
+      "id": "de",
+      "name": "Deutsch",
+      "version": "1.0.4-beta.1",
+      "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.0.4-beta.1/Kotoba_Atlas_German_v1_0_4_beta_1.sqlite.gz",
+      "sha256": "9ca6bb5f9c94ed54d22be8123fe2bbab01ece5ce50550d333b3b3d245a3f3665",
+      "expandedSHA256": "1684134aaa94f27499efa99836602159ea75a70868549389ff9cb5c35d82bbf8",
+      "compressedBytes": 178509922,
+      "expandedBytes": 730820608,
+      "entries": 1566695
+    }
+  ]
+}

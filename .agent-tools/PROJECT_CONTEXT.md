@@ -21,3 +21,6 @@ Dictionary contents/definitions are explicitly exempt from the UI twelve-languag
 ## Maintenance and releases
 
 Update the cited design docs and this context in the same change when the design/architecture/stack or acceptance gates change. Review shared requirements through the local updater; do not edit managed policy files directly. Keep unresolved gaps in the task/release evidence. Actions remain disabled; no new Apple publication is authorized by these documentation changes.
+
+## 1.0.4 beta 2 release verification
+Rebuilt complete beta ZIPs from stable 1.0.3, verified all non-index members identical. Built both native packages and compared all source fields/notices row-for-row. Re-ran 34 Python tests with Sudachi and 10 helper regressions per full edition. Updated native-beta catalogue and immutable SHA-256 release evidence. Stable latest remains 1.0.3; Actions remain disabled.

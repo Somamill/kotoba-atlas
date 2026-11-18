@@ -1,0 +1,11 @@
+{
+  "id": "en",
+  "name": "English",
+  "version": "1.0.4-beta.2",
+  "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.0.4-beta.2/Kotoba_Atlas_English_v1_0_4_beta_2.sqlite.gz",
+  "sha256": "6bdf7efe61bcac2c246a577043c359a4db733bb248097fb4a72a73ae3ea0d5f8",
+  "expandedSHA256": "02921bea34bab11a9ac90ba0778a2f30b85f5badbcb426b00a56e41ed2def921",
+  "compressedBytes": 142376431,
+  "expandedBytes": 596086784,
+  "entries": 1080167
+}

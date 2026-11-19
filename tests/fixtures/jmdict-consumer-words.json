@@ -2901,6 +2901,5625 @@
           ]
         }
       ]
+    },
+    {
+      "id": "1198180",
+      "kanji": [
+        {
+          "common": true,
+          "text": "会う",
+          "tags": []
+        },
+        {
+          "common": true,
+          "text": "逢う",
+          "tags": []
+        },
+        {
+          "common": true,
+          "text": "遭う",
+          "tags": []
+        },
+        {
+          "common": false,
+          "text": "遇う",
+          "tags": [
+            "rK"
+          ]
+        }
+      ],
+      "kana": [
+        {
+          "common": true,
+          "text": "あう",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "v5u",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [
+            "逢う may indicate intimacy or emotion, 遭う undesirability"
+          ],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to meet"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to encounter"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to see"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to come across"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to run into"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v5u",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [
+            "uk"
+          ],
+          "info": [
+            "esp. 遭う when in kanji"
+          ],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to have (e.g. an accident)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to suffer (e.g. an unpleasant fate)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to encounter"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to face"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to go through (e.g. a tough time)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to get caught up (in)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v5u",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "tegenkomen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "meemaken"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "tegenkomen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "meemaken"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "beleven"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{事故に} krijgen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{困難に} ondervinden"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "stoten op"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "stuiten op"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "geconfronteerd worden met"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{災難に} te kampen hebben met"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "het hoofd moeten bieden aan"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "ontmoeten"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "zien"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "treffen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{突然～} aantreffen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "stoten op"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "tegen het lijf lopen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v5u",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "rencontrer"
+            },
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "rencontrer"
+            },
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "se rencontrer"
+            },
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "être confronté à"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v5u",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "rencontrer (des difficultés)"
+            },
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "rencontrer (des difficultés)"
+            },
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "être confronté à"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v5u",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "geraten in … (z.B. ein Unwetter)"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "kommen in"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v5u",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "haben (z.B. einen Unfall)"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "treffen auf …"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "stoßen auf …"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v5u",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "sich versammeln"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "sich treffen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v5u",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "sich treffen, um etw. gemeinsam zu machen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v5u",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "passen"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "harmonieren"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v5u",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "übereinstimmen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v5u",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "einträglich sein"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "sich lohnen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v5u",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "sich begegnen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v5u",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "zufällig treffen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v5u",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "geraten in …"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "stoßen auf …"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "erfahren"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "erleiden"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v5u",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "találkozik"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "találkozik"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "összecsap"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "összetalálkozik"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "találkozik"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v5u",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "встречать"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "встречаться"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "видеться"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "1) (に) [по]встречаться (с кем-л.); видеться (с кем-л.)"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "[居ないといって]人に会わない не принять (кого-л.) [сказавшись отсутствующим]"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "2) ((тж.) 遭う) встретить (что-л.); перенести, испытать (что-л.)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v5u",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "slv",
+              "gender": null,
+              "type": null,
+              "text": "srečati se {z nekom}"
+            },
+            {
+              "lang": "slv",
+              "gender": null,
+              "type": null,
+              "text": "srečati {koga}"
+            },
+            {
+              "lang": "slv",
+              "gender": null,
+              "type": null,
+              "text": "naleteti {na koga}"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v5u",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "conocerse"
+            },
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "encontrarse con"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v5u",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "tener un accidente"
+            },
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "tener una mala experiencia"
+            },
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "encontrar"
+            },
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "enfrentar"
+            },
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "afrontar"
+            },
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "encontrarse"
+            },
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "conocerse"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v5u",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "swe",
+              "gender": null,
+              "type": null,
+              "text": "träffa"
+            },
+            {
+              "lang": "swe",
+              "gender": null,
+              "type": null,
+              "text": "möta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1579110",
+      "kanji": [
+        {
+          "common": true,
+          "text": "今日",
+          "tags": []
+        }
+      ],
+      "kana": [
+        {
+          "common": true,
+          "text": "きょう",
+          "tags": [
+            "gikun"
+          ],
+          "appliesToKanji": [
+            "*"
+          ]
+        },
+        {
+          "common": true,
+          "text": "こんにち",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        },
+        {
+          "common": false,
+          "text": "こんち",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        },
+        {
+          "common": false,
+          "text": "こんじつ",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "n",
+            "adv"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "today"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "this day"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n",
+            "adv"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "こんにち"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "these days"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "recently"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "nowadays"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n",
+            "adv"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "vandaag"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "vandaag"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "(op) deze dag"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "heden"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n",
+            "adv"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "vandaag de dag"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "heden ten dage"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "tegenwoordig"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "(in de) tegenwoordige tijd"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "in onze dagen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n",
+            "adv"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "aujourd'hui"
+            },
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "ce jour"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n",
+            "adv"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "heute"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n",
+            "adv"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "heutzutage"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "in der heutigen Zeit"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "heute"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "dieser Tag"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "heutiger Tag"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n",
+            "adv"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "ma"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n",
+            "adv"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "сегодня; этот (нынешний) день"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "{～の} сегодняшний"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "(ср.) こんにち"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "сегодня; [в] этот день; сегодняшний день; (перен.) теперь, в настоящее (в наше) время, в наши дни"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n",
+            "adv"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "slv",
+              "gender": null,
+              "type": null,
+              "text": "danes"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n",
+            "adv"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "hoy"
+            },
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "este día"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n",
+            "adv"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "swe",
+              "gender": null,
+              "type": null,
+              "text": "idag"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1352320",
+      "kanji": [
+        {
+          "common": true,
+          "text": "上げる",
+          "tags": []
+        },
+        {
+          "common": false,
+          "text": "騰げる",
+          "tags": [
+            "sK"
+          ]
+        }
+      ],
+      "kana": [
+        {
+          "common": true,
+          "text": "あげる",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        },
+        {
+          "common": false,
+          "text": "アゲる",
+          "tags": [
+            "sk"
+          ],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [
+            [
+              "手を上げる",
+              1
+            ],
+            [
+              "挙げる",
+              9
+            ]
+          ],
+          "antonym": [
+            [
+              "下げる",
+              2
+            ]
+          ],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to raise"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to elevate"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to move something (to a higher place)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to put onto (e.g. a shelf)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [
+            "occ. 騰げる in ref. to price"
+          ],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to increase (price, quality, status, etc.)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to raise (a wage)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to show someone (into a room)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to let in (e.g. a guest)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [
+            "pol",
+            "uk"
+          ],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to give"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to enrol (one's child in school)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to enroll"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to send (one's child; e.g. to college)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to develop (talent, skill, etc.)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to improve"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [
+            [
+              "挙げる",
+              11
+            ]
+          ],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to earn (something desirable)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to achieve (e.g. a good result)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to obtain"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to promote (someone)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to complete"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to finish"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [
+            [
+              "声を上げる",
+              1
+            ],
+            [
+              "挙げる",
+              10
+            ]
+          ],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to make (a loud sound)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to raise (one's voice)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to raise (one's gaze)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to lift up (one's face)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to look up"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [
+            [
+              "髪を上げる"
+            ]
+          ],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to do up (one's hair)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to offer up (incense, a prayer, etc.) to the gods (or Buddha, etc.)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to praise"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to commend"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to flatter"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to make do (with less expenses than expected)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to cover expenses (with a given amount)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to set costs"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to finish (one's studies)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to complete (a lesson)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to pass (e.g. a class)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to upload (e.g. an image)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to publish (on the internet)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to post"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [
+            "col"
+          ],
+          "info": [
+            "esp. as アゲる"
+          ],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to raise someone's spirits"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to cheer someone up"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to enhance a mood"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "(of the tide) to come in"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to rise"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [
+            "finc"
+          ],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to increase (of market price)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to rise (of stock prices)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vi",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to vomit"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to throw up"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "aux-v",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [
+            "uk",
+            "pol"
+          ],
+          "info": [
+            "after the -te form of a verb"
+          ],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to do for (the sake of someone else)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [
+            [
+              "作り上げる",
+              1
+            ]
+          ],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [
+            "after the -masu stem of a verb"
+          ],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to complete ..."
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [
+            [
+              "申し上げる",
+              2
+            ]
+          ],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [
+            "hum"
+          ],
+          "info": [
+            "after the -masu stem of a humble verb to increase the level of humility"
+          ],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to humbly do ..."
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "heffen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "opheffen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "omhoogheffen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "verheffen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "oprichten"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "tillen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "optillen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "omhoogtillen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "omhoogbrengen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "liften"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "verhogen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "eleveren"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{凧を} oplaten"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "opsteken"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{棚に} leggen op"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "opleggen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{帆を} hijsen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "ophijsen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "omhooghijsen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "opbrengen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "opvissen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{碇を} lichten"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "hieuwen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{陸に} landen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "aan land zetten"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{顔を} opkijken"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "loven"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "prijzen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "roemen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "huldigen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "ophemelen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "hoog opgeven van"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "opvoeren"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "doen toenemen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "optrekken"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "opjagen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "opdrijven"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{温度を} hoger zetten"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{スピードを} vergroten"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "bevorderen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "promoveren"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "overgeven"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "braken"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "opgeven"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "kotsen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "vomeren"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "over z'n nek gaan"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{gew.} opbrengen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{客を} binnenlaten"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "inlaten"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "brengen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "leiden naar"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "geleiden"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{学校へ} op school doen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "geven"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "aanbieden"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "toedienen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "offreren"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "schenken"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "voorzetten"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{娘を} wegschenken"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "offeren"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "ten offer brengen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "overhandigen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "ter hand stellen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "reiken"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "overreiken"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "ten einde brengen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "afdoen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "afwerken"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "volbrengen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "voltooien"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "klaarspelen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "gedaan weten te krijgen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{式を} houden"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "vieren"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "celebreren"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "fêteren"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{例を} geven"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "vermelden"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "noemen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "aanhalen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "citeren"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "aanvoeren"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "leveren"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "opnoemen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "opsommen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "opgeven"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "opvissen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{子を} krijgen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{母が} het leven schenken"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "baren"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{父が} verwekken"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "verbeteren"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "ontwikkelen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "ontplooien"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{髪を} doen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "opmaken"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "opsteken"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "kappen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "aanhouden"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "pakken"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "oppakken"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "vatten"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "inrekenen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "snappen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "in hechtenis nemen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "in de kraag grijpen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "arresteren"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{芸者を} bestellen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "laten komen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "erbij halen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "uitnodigen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "ontbieden"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "engageren"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "frituren"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "in kokend vet bakken"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "braden"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{gew.} fritten"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{結果を} behalen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "bereiken"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "verkrijgen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "verwerven"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "realiseren"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "donner"
+            },
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "offrir"
+            },
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "refiler"
+            },
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "élever"
+            },
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "lever (la main, la tête)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "énumérer"
+            },
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "donner (un exemple)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "arrêter"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "tenir (une cérémonie)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "élever"
+            },
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "augmenter"
+            },
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "dresser"
+            },
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "hisser"
+            },
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "relever"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "attraper (un voleur)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "hochheben"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "heben"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "anheben"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "hochtragen"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "aufsetzen"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "hochhalten"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "hissen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "erhöhen"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "anheben"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "anheben (Gesicht, Blick)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "anführen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "geben"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "schenken"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "einladen"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "einlassen"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "hereinbitten"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "bitten"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "bestellen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "zur Schule schicken"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "auf eine höhere Schule wechseln lassen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "aufsteigen lassen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "ausrufen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "fassen"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "verhaften"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "loben"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "preisen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "erreichen"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "erlangen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "beenden"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "opfern"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "ins Bordell schicken"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "ausspucken"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "erbrechen"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "ajándékoz"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "közöl"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "megmond"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "szolgál"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "előidéz"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "előléptet"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "előteremt"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "emel"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "felébreszt"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "felemel"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "felhoz"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "felkelt"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "felnevel"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "felold"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "felvet"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "fokoz"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "kiemel"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "megszüntet"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "felmagasztal"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "dicsér"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "dicsőít"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "magasztal"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "előad"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "előmozdít"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "elősegít"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "fellendít"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "halad"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "támogat"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "bebocsát"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "elküld"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "ajánl"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "felajánl"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "kínál"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "nyújt"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "bemutat"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "befejez"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "befejeződik"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "bevégez"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "bevégződik"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "lezár"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "véget vet"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "elrendez"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "észrevesz"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "észrevételt tesz"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "megfigyel"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "megjegyez"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "megjegyzést tesz"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "megünnepel"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "teljesít"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "hivatkozik"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "idéz"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "megállapít"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "eltűr"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "hoz"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "szül"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "tart"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "terem"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "termel"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "tűr"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "visz"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "feltartóztat"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "leköt"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "megakaszt"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "villamosszékben kivégez"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "villamosszékben meghal"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "abbahagy"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "befog"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "megáll"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "(как 2-й элемент сложн. гл.:)"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "1) поднимать; (ср. напр.) つりあげる【釣り上げる】"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "2) (означает законченность действия, выраженного первым гл.:)"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "(неперех., у кого-л.) рвота"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "(перех.)"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "1) ((тж.) 揚げる, 挙げる) поднимать; повышать"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "(ср.) こえ【声】(を上げて), な【名】(を上げる), ふうさい【風采】(を揚げる)"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "2) давать, преподносить"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "(ср.) ぜんりょく【全力】(を上げる)"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "3) ((тж.) 揚げる) хвалить"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "4) впускать (в комнату, в дом)"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "5) заканчивать, кончать; (ср.) …あげる"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "6) обходиться, стоить"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "7) возлагать на алтарь"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "8) арестовать, схватить (преступника)"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "9) приводить (напр. пример); упоминать (напр. факт)"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "10) ((тж.) 挙げる) проводить (обряд, церемонию)"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "11) всасывать, впитывать"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "12) вызывать (гейшу)"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "13) ((тж.) 挙げる) родить (ребёнка)"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "14) ((тк.) 揚げる) жарить"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "15) (как служ. гл. после деепр. показывает, что действие совершается 1-м лицом для 2-го или 3-го или низшим, в каком-л. смысле, для высшего:)"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "(ср.) あげず"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "slv",
+              "gender": null,
+              "type": null,
+              "text": "dvigniti"
+            },
+            {
+              "lang": "slv",
+              "gender": null,
+              "type": null,
+              "text": "podariti"
+            },
+            {
+              "lang": "slv",
+              "gender": null,
+              "type": null,
+              "text": "dati"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "elevar"
+            },
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "levantar"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "atarse (cabello)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "volar (cometas)"
+            },
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "lanzar (fuegos artificales)"
+            },
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "subir a la superficie (ej. submarino)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "desembarcar"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "mostrar a alguien (en una habitación)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "enviar a alguien"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "matricular"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "subir (precio, calidad, estatus, voz)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "hacer (un sonido agudo)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "ganar (algo desagradable)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "alabar"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "dar (ejemplo"
+            },
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "citar"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "convocar (toda la energía de uno)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "suf",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "swe",
+              "gender": null,
+              "type": null,
+              "text": "ge"
+            },
+            {
+              "lang": "swe",
+              "gender": null,
+              "type": null,
+              "text": "höja upp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1020470",
+      "kanji": [
+        {
+          "common": false,
+          "text": "＆",
+          "tags": []
+        },
+        {
+          "common": false,
+          "text": "ａｎｄ",
+          "tags": []
+        },
+        {
+          "common": false,
+          "text": "ＡＮＤ",
+          "tags": []
+        }
+      ],
+      "kana": [
+        {
+          "common": true,
+          "text": "アンド",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        },
+        {
+          "common": false,
+          "text": "エンド",
+          "tags": [
+            "ik"
+          ],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "conj"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [
+            "uk"
+          ],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "and"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "ＡＮＤ"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [
+            "logic"
+          ],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "AND (Boolean operator)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{comp.} AND"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "en"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "UND (in der Schaltungslogik)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "és"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "ha"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "meg"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "mintha"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

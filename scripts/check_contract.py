@@ -6,13 +6,18 @@ import hashlib
 import json
 from pathlib import Path
 import sqlite3
+import tempfile
 import fastjsonschema
 from contract import sha
 from contract_lookup import AtlasIndex
 
 
 def check(directory):
-    root = Path(directory)
+    with tempfile.TemporaryDirectory(prefix='atlas-verified-indexes-') as temporary:
+        return check_indexes(Path(directory), Path(temporary))
+
+
+def check_indexes(root, temporary):
     manifest = json.loads((root/'consumer-manifest.json').read_text())
     fastjsonschema.compile(json.loads((Path(__file__).resolve().parents[1]/'schemas/consumer-manifest-v2.schema.json').read_text()))(manifest)
     if manifest['schemaVersion'] != 2:
@@ -24,24 +29,22 @@ def check(directory):
             raise ValueError('Unsafe or duplicate package filename')
         if compressed.stat().st_size != descriptor['compressedBytes'] or sha(compressed) != descriptor['sha256']:
             raise ValueError('Invalid compressed release package')
+        raw = temporary/descriptor['file'].removesuffix('.gz')
         digest = hashlib.sha256(); size = 0
-        with gzip.open(compressed, 'rb') as stream:
+        with gzip.open(compressed, 'rb') as stream, raw.open('xb') as output:
             while chunk := stream.read(1024*1024):
                 size += len(chunk)
                 if size > descriptor['uncompressedBytes']:
                     raise ValueError('Expanded package exceeds manifest size')
-                digest.update(chunk)
+                digest.update(chunk); output.write(chunk)
         if size != descriptor['uncompressedBytes'] or digest.hexdigest() != descriptor['uncompressedSha256']:
             raise ValueError('Invalid expanded release package')
-        raw = root/descriptor['file'].removesuffix('.gz')
-        if sha(raw) != descriptor['uncompressedSha256']:
-            raise ValueError('Test index differs from downloadable index')
         with closing(sqlite3.connect(raw.resolve().as_uri()+'?mode=ro', uri=True)) as db:
             db.execute('PRAGMA cache_size=-131072')
             if db.execute('PRAGMA integrity_check').fetchone()[0] != 'ok':
                 raise ValueError('Invalid SQLite package')
             about = dict(db.execute('SELECT key,value FROM about'))
-            if about.get('schema') != '2' or about.get('revision') != manifest['dictionaryRevision']:
+            if about.get('schema') != '2' or about.get('revision') != manifest['dictionaryRevision'] or about.get('format') != {'core':'atlas-core','language':'atlas-language','source-records':'atlas-source-records'}[descriptor['role']]:
                 raise ValueError('Unsupported package generation')
             if descriptor['role'] == 'language':
                 if about['language'] != descriptor['language']:
@@ -50,6 +53,13 @@ def check(directory):
                     sense = json.loads(payload)
                     if sense['id'] != sense_id or sense['language'] != descriptor['language'] or not sense['glosses'] or not sense['sourceRecords']:
                         raise ValueError('Malformed structured sense')
+                    restrictions = sense.get('restrictions') or {}
+                    for key in ['spellings', 'readings']:
+                        values = restrictions.get(key, [])
+                        if not isinstance(values, list) or not all(isinstance(value, str) for value in values):
+                            raise ValueError('Malformed source form restrictions')
+
+        if descriptor['role'] == 'source-records': raw.unlink()
         if descriptor['role'] == 'core': core = raw
         elif descriptor['role'] == 'language': packs[descriptor['language']] = raw
         descriptors[descriptor['file']] = descriptor
@@ -77,6 +87,17 @@ def check(directory):
         japanese = index.search('実体','ja')
         if not any(any(s['kind']=='definition' and s['language']=='ja' for s in e['senses']) for e in japanese):
             raise ValueError('No actual Japanese definition')
+        def meanings(query, identity):
+            return [gloss for entry in index.search(query, 'en') if entry['entryId'] == identity for sense in entry['senses'] for gloss in sense['glosses']]
+        today = 'jmdict:ja:1579110'
+        assert 'these days' not in meanings('きょう', today)
+        assert 'these days' in meanings('こんにち', today)
+        assert 'these days' in meanings('今日', today)
+        reverse = next(entry for entry in index.search('nowadays', 'en') if entry['entryId'] == today)
+        assert reverse['matchedForm']['reading'] == 'こんにち'
+        conjunction = 'jmdict:ja:1020470'
+        assert 'AND (Boolean operator)' not in meanings('&', conjunction)
+        assert 'AND (Boolean operator)' in meanings('Boolean', conjunction)
     finally:
         index.close()
     report = {'passed': True, 'revision': manifest['dictionaryRevision'], 'packages': len(descriptors), 'lookups': lookups}

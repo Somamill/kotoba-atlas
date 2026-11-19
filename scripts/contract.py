@@ -6,10 +6,10 @@ import json
 from pathlib import Path
 import shutil
 import sqlite3
+import sys
 import zipfile
-import unicodedata
 from adapters import LANGUAGES, fiction, jmdict, jmnedict, omw
-from structured import unique
+from structured import unique, normalized
 from structured import digest
 from structured import extract
 
@@ -17,10 +17,6 @@ from structured import extract
 def encoded(value):
     return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(',', ':'))
 
-
-def normalized(value):
-    value = unicodedata.normalize('NFKC', value).strip().casefold()
-    return ''.join(chr(ord(c)-0x60) if 'ァ' <= c <= 'ヶ' else c for c in value)
 
 
 def sha(path):
@@ -92,7 +88,7 @@ class Builder:
             stored = self.db.execute('SELECT entry_id,language,payload FROM senses WHERE id=?', (sense['id'],)).fetchone()
             if stored != (entry_id, sense['language'], encoded(sense)):
                 previous = json.loads(stored[2])
-                semantic = lambda value: {k: v for k, v in value.items() if k not in {'examples', 'sourceRecords'}}
+                semantic = lambda value: {k: v for k, v in value.items() if k not in {'examples', 'sourceRecords', 'order'}}
                 if stored[:2] != (entry_id, sense['language']) or semantic(previous) != semantic(sense):
                     raise ValueError('Conflicting stable sense identity: '+sense['id'])
                 previous['examples'] = unique(previous.get('examples', [])+sense.get('examples', []))
@@ -100,6 +96,8 @@ class Builder:
                 self.db.execute('UPDATE senses SET payload=? WHERE id=?', (encoded(previous), sense['id']))
 
     def finish(self):
+        # Checkpoints are intermediate only; export still requires every validation below.
+        self.db.commit()
         assert self.db.execute('PRAGMA integrity_check').fetchone()[0] == 'ok'
         assert not self.db.execute('SELECT id FROM senses WHERE entry_id NOT IN (SELECT id FROM entries) LIMIT 1').fetchone()
         self.db.execute('ANALYZE')
@@ -119,7 +117,7 @@ def package(path, role, revision, language=None):
             'file': compressed.name, 'sha256': sha(compressed), 'uncompressedSha256': sha(path),
             'url': 'https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v'+revision+'/'+compressed.name,
             'compressedBytes': compressed.stat().st_size, 'uncompressedBytes': path.stat().st_size,
-            'compatibility': {'requiredSchema': 2, 'requiredCapabilities': ['shared-core', 'entry-language-fallback']}}
+            'compatibility': {'requiredSchema': 2, 'requiredCapabilities': ['shared-core', 'entry-language-fallback', 'form-restrictions']}}
 
 
 def add_aliases(builder, path):
@@ -245,22 +243,34 @@ def export(build_path, output, revision):
     if core.exists():
         raise FileExistsError(core)
     destination = sqlite3.connect(core)
-    source.backup(destination)
-    destination.execute('DROP TABLE senses')
+    schema(destination)
+    destination.executescript('DROP TABLE senses; DROP TABLE source_records; DROP TABLE entry_source_records;')
+    destination.execute('ATTACH DATABASE ? AS original', (str(Path(build_path).resolve()),))
+    for table in ['about', 'entries', 'forms', 'sources', 'metadata', 'notices']:
+        destination.execute('INSERT INTO '+table+' SELECT * FROM original.'+table)
+    tables = {row[0] for row in source.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+    for table, key in [('kanji', 'term'), ('tags', 'name')]:
+        if table in tables:
+            destination.execute('CREATE TABLE '+table+'('+key+' TEXT PRIMARY KEY,payload TEXT NOT NULL)')
+            destination.execute('INSERT INTO '+table+' SELECT * FROM original.'+table)
+    destination.commit()
+    destination.execute('DETACH DATABASE original')
     destination.executescript('''
-        CREATE TABLE reverse_keys(id INTEGER PRIMARY KEY,entry_id TEXT NOT NULL,sense_id TEXT NOT NULL,language TEXT NOT NULL);
+        CREATE TABLE reverse_keys(id INTEGER PRIMARY KEY,entry_id TEXT NOT NULL,sense_id TEXT NOT NULL,language TEXT NOT NULL,form_hint TEXT NOT NULL);
         CREATE VIRTUAL TABLE reverse_search USING fts5(gloss,content='',tokenize='unicode61 remove_diacritics 2');''')
     for sense_id, entry_id, language, payload in source.execute('SELECT id,entry_id,language,payload FROM senses ORDER BY id'):
         sense = json.loads(payload)
-        cursor = destination.execute('INSERT INTO reverse_keys(entry_id,sense_id,language) VALUES(?,?,?)',
-                                     (entry_id, sense_id, language))
+        restrictions = sense.get('restrictions') or {}
+        hint = {key: values for key, values in restrictions.items() if key in {'spellings', 'readings'} and values and '*' not in values}
+        cursor = destination.execute('INSERT INTO reverse_keys(entry_id,sense_id,language,form_hint) VALUES(?,?,?,?)',
+                                     (entry_id, sense_id, language, encoded(hint)))
         destination.execute('INSERT INTO reverse_search(rowid,gloss) VALUES(?,?)',
                             (cursor.lastrowid, '\n'.join(unique(sense['glosses']+sense.get('equivalents', [])))))
-    # Raw records and their many-to-many links are optional provenance, not lookup data.
-    destination.executescript('DROP TABLE source_records; DROP TABLE entry_source_records;')
     destination.execute("UPDATE about SET value='atlas-core' WHERE key='format'")
-    destination.commit(); destination.execute('VACUUM'); destination.close()
+    destination.execute("INSERT INTO about VALUES('capabilities',?)", (encoded(['shared-core', 'entry-language-fallback', 'form-restrictions']),))
+    destination.commit(); destination.close()
     packages = [package(core, 'core', revision)]
+    core.unlink()
     originals = output/(stem+'_Source_Records.sqlite')
     if originals.exists():
         raise FileExistsError(originals)
@@ -280,10 +290,12 @@ def export(build_path, output, revision):
         ('revision', revision), ('core_sha256', packages[0]['uncompressedSha256'])])
     archive.commit(); archive.close()
     provenance_package = package(originals, 'source-records', revision)
+    originals.unlink()
     provenance_package['optionalForLookup'] = True
     packages.append(provenance_package)
     capabilities = []
     coverage = language_coverage(source)
+    record_sources = {identity: sys.intern(origin) for identity, origin in source.execute('SELECT id,source_id FROM source_records')}
     for language in LANGUAGES:
         rows = source.execute('SELECT id,entry_id,payload FROM senses WHERE language=? ORDER BY id', (language,))
         pack = output/(stem+'_'+language+'.sqlite')
@@ -292,15 +304,14 @@ def export(build_path, output, revision):
         target = sqlite3.connect(pack)
         target.executescript('''CREATE TABLE about(key TEXT PRIMARY KEY,value TEXT NOT NULL);
             CREATE TABLE senses(id TEXT PRIMARY KEY,entry_id TEXT NOT NULL,payload TEXT NOT NULL);
-            CREATE INDEX entry_senses ON senses(entry_id);
-            CREATE VIRTUAL TABLE reverse_search USING fts5(entry_id UNINDEXED,sense_id UNINDEXED,gloss,tokenize='unicode61 remove_diacritics 2');''')
+            CREATE INDEX entry_senses ON senses(entry_id);''')
         count = 0
         kinds = {}
+        package_sources = set()
         for sense_id, entry_id, payload in rows:
             sense = json.loads(payload)
             target.execute('INSERT INTO senses VALUES(?,?,?)', (sense_id, entry_id, payload))
-            target.execute('INSERT INTO reverse_search(entry_id,sense_id,gloss) VALUES(?,?,?)',
-                           (entry_id, sense_id, '\n'.join(sense['glosses'])))
+            package_sources.update(record_sources[identity] for identity in sense['sourceRecords'])
             count += 1; kinds[sense['kind']] = kinds.get(sense['kind'], 0)+1
         target.executemany('INSERT INTO about VALUES(?,?)', [('schema', '2'), ('format', 'atlas-language'),
             ('language', language), ('revision', revision), ('core_sha256', packages[0]['uncompressedSha256'])])
@@ -310,10 +321,9 @@ def export(build_path, output, revision):
         target.close()
         if count:
             descriptor = package(pack, 'language', revision, language)
+            pack.unlink()
             descriptor.update(senses=count, entries=entries, senseKinds=kinds)
-            descriptor['sourceIds'] = [r[0] for r in source.execute('''
-                SELECT DISTINCT r.source_id FROM senses s, json_each(s.payload,'$.sourceRecords') p
-                JOIN source_records r ON r.id=p.value WHERE s.language=? ORDER BY r.source_id''', (language,))]
+            descriptor['sourceIds'] = sorted(package_sources)
             packages.append(descriptor)
         else:
             pack.unlink()
@@ -372,12 +382,14 @@ def main():
                 builder.db.commit(); print(spec['id'], count, flush=True)
             elif spec['kind'] == 'atlas-v1-metadata':
                 add_legacy_metadata(builder, path, spec)
+                builder.db.commit()
                 print("Metadata copied", flush=True)
         wordnets = [s for s in specs if s['kind'] == 'omw-tab']
         redirects = {}
         for spec in specs:
             if spec['kind'] == 'yomitan-redirects':
                 redirects[spec['id']] = add_source_redirects(builder, args.cache/spec['id']/'data', spec)
+                builder.db.commit()
                 print('Redirects', spec['id'], redirects[spec['id']]['resolved'], flush=True)
         (args.output/'redirect-coverage.json').write_text(json.dumps(redirects, ensure_ascii=False, indent=2)+'\n')
         # Each pinned source has its own directory; adapter paths are local data files.
@@ -385,6 +397,8 @@ def main():
         count = 0
         for record in omw(local_specs, Path('/')):
             builder.add(record); count += 1
+            if count % 1000 == 0:
+                builder.db.commit()
         print('WordNet entries', count, flush=True)
         for record in fiction('data/fictional-entities.json'):
             builder.add(record)

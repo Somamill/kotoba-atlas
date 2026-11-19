@@ -39,7 +39,7 @@ def jmdict(path, spec):
                     forms.append({'text': kanji['text'], 'reading': kana['text'], 'kind': 'headword',
                                   'tags': kanji['tags'], 'common': kanji['common']})
         senses = []
-        for sense in word['sense']:
+        for sense_order, sense in enumerate(word['sense']):
             by_language = defaultdict(list)
             for gloss in sense['gloss']:
                 language = ISO3.get(gloss['lang'], gloss['lang'])
@@ -49,7 +49,7 @@ def jmdict(path, spec):
             semantic_id = entry_id+':sense:'+digest({k: v for k, v in sense.items() if k != 'examples'})
             for language, glosses in by_language.items():
                 senses.append({'id': semantic_id+':'+language, 'semanticId': semantic_id,
-                    'language': language, 'kind': 'definition',
+                    'language': language, 'kind': 'definition', 'order': sense_order,
                     'glosses': unique([g['text'] for g in glosses]),
                     'glossDetails': glosses, 'tags': sense['partOfSpeech']+sense['misc'],
                     'restrictions': restrictions, 'sourceRecords': [source_record_id],

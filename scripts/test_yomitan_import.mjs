@@ -22,7 +22,7 @@ configure({useWebWorkers: false});
 const {LanguageTransformer} = await upstream('ext/js/language/language-transformer.js');
 const {japaneseTransforms} = await upstream('ext/js/language/ja/japanese-transforms.js');
 const selected = new Map(), storedCounts = {};
-const wanted = new Set(['ノリのいい', '隠密局', '公儀隠密局', '羅睺', '物ノ怪', '鎌かけて', '鎌かける', '鎌を掛ける', 'ぬまる', '沼る', '推し活する', '食べる', '楽しい', 'てぇてぇ', '日本語']);
+const wanted = new Set(['ノリのいい', '隠密局', '公儀隠密局', '羅睺', '物ノ怪', '鎌かけて', '鎌かける', '鎌を掛ける', 'ぬまる', '沼る', '推し活する', '食べる', '楽しい', 'てぇてぇ', '日本語', '今日', '＆', 'ＡＮＤ']);
 let database;
 if (mode === 'indexeddb') {
   const require = createRequire(path.join(source, 'package.json'));
@@ -69,6 +69,23 @@ if (mode === 'indexeddb') {
   assert.ok(names.some(row => (row.term ?? row.expression) === 'あーみん'), 'Kana-only name lookup was lost');
 }
 for (const term of wanted) assert.ok(selected.has(term), 'No imported entry: ' + term);
+const definitions = row => row.glossary ?? row.definitions;
+const today = selected.get('今日').filter(row => row.sequence === 1579110);
+const conjunction = term => selected.get(term).filter(row => row.sequence === 1020470);
+assert.ok(today.length && conjunction('＆').length && conjunction('ＡＮＤ').length);
+if (result.title.includes('German')) {
+  // German's independently sourced senses are broader than the English senses.
+  for (const reading of ['きょう', 'こんにち']) {
+    assert.ok(today.some(row => row.reading === reading && definitions(row).includes('heute')));
+    assert.ok(today.filter(row => row.reading === reading).every(row => !definitions(row).join(' ').includes('English fallback')));
+  }
+  for (const term of ['＆', 'ＡＮＤ']) assert.ok(conjunction(term).some(row => definitions(row).includes('UND (in der Schaltungslogik)')));
+} else {
+  assert.ok(today.some(row => row.reading === 'きょう' && !definitions(row).join(' ').includes('these days')));
+  assert.ok(today.some(row => row.reading === 'こんにち' && definitions(row).join(' ').includes('these days')));
+  assert.ok(conjunction('＆').every(row => !definitions(row).join(' ').includes('Boolean operator')));
+  assert.ok(conjunction('ＡＮＤ').some(row => definitions(row).join(' ').includes('Boolean operator')));
+}
 const transformer = new LanguageTransformer();
 transformer.addDescriptor(japaneseTransforms);
 const cases = [

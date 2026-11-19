@@ -9,6 +9,7 @@ import zipfile
 from adapters import LANGUAGES
 from editions import bounded_banks, check_transfer_budget, edition_stem, optimize_archive, compact_note
 from contract import normalized
+from structured import applies_to_form
 
 
 def sequence(identity):
@@ -64,14 +65,27 @@ def terms(db, language):
     kanji = {}
     if db.execute("SELECT 1 FROM sqlite_master WHERE name='kanji'").fetchone():
         kanji = {term: json.loads(payload) for term, payload in db.execute('SELECT term,payload FROM kanji')}
-    for identity, rules, term, reading, payload in db.execute('''
-        SELECT e.id,e.rules,f.text,f.reading,p.payload FROM selected p
+    for identity, rules, term, reading, kind, payload in db.execute('''
+        SELECT e.id,e.rules,f.text,f.reading,f.kind,p.payload FROM selected p
         JOIN entries e ON e.id=p.entry_id JOIN forms f ON f.entry_id=e.id
         WHERE f.kind!='reading' OR EXISTS(SELECT 1 FROM kana_headwords k WHERE k.entry_id=e.id)
         OR NOT EXISTS(SELECT 1 FROM forms written WHERE written.entry_id=e.id
             AND written.reading=f.reading AND written.kind!='reading' AND written.text!=f.text)
         GROUP BY e.id,f.text,f.reading ORDER BY f.text,f.reading,e.id'''):
-        senses = json.loads(payload)
+        selected = json.loads(payload)
+        restricted = any(any((sense.get('restrictions') or {}).get(key, []) and '*' not in (sense.get('restrictions') or {})[key]
+            for key in ['spellings', 'readings']) for sense in selected)
+        form = {'text': term, 'reading': reading, 'kind': kind}
+        forms = [form]
+        if restricted:
+            forms = [json.loads(row[0]) for row in db.execute('SELECT payload FROM forms WHERE entry_id=?', (identity,))]
+            form = next(f for f in forms if f['text'] == term and (f.get('reading') or '') == reading and f.get('kind', 'headword') == kind)
+        senses = [sense for sense in selected if applies_to_form(sense, form, forms)]
+        if not senses and language != 'en':
+            senses = [json.loads(row[0]) for row in db.execute("SELECT payload FROM senses WHERE entry_id=? AND language='en'", (identity,))]
+            senses = [sense for sense in senses if applies_to_form(sense, form, forms)]
+        if not senses:
+            continue
         glosses = []
         for sense in senses:
             label = '[English fallback]\n' if language != 'en' and sense['language'] == 'en' else ''

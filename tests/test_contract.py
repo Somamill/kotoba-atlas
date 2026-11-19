@@ -77,6 +77,7 @@ class ContractTests(unittest.TestCase):
                 self.assertTrue(all(s['language'] == 'de' for s in result['senses']))
                 self.assertEqual(index.search('Dämon', 'de')[0]['entryId'], 'jmdict:ja:1502400')
                 self.assertEqual(index.search('ワンチャン', 'de')[0]['entryId'], 'jmdict:ja:2831313')
+                self.assertEqual(index.search('日本語', 'de')[0]['matchedForm']['reading'], 'にほんご')
                 self.assertTrue({'jmdict:ja:2794860','jmdict:ja:2831313'} <= {r['entryId'] for r in index.search('ワンチャン', 'de')})
             finally:
                 index.close()
@@ -119,6 +120,35 @@ class ContractTests(unittest.TestCase):
             self.assertEqual(counts[0], counts[1])
             self.assertGreater(sum(len(json.loads(row[0]).get('examples', [])) for row in builder.db.execute('SELECT payload FROM senses')), 0)
             builder.finish(); builder.close()
+
+    def test_source_reading_and_spelling_conditions_survive_reverse_and_browser_projection(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            build_fixtures(root)
+            index = AtlasIndex(root/'atlas-core.sqlite', {'en': root/'atlas-en.sqlite'})
+            try:
+                def glosses(query, identity):
+                    return [g for entry in index.search(query, 'en') if entry['entryId'] == identity for sense in entry['senses'] for g in sense['glosses']]
+                today = 'jmdict:ja:1579110'
+                self.assertNotIn('these days', glosses('きょう', today))
+                self.assertIn('these days', glosses('こんにち', today))
+                self.assertIn('these days', glosses('今日', today))
+                reverse = next(e for e in index.search('nowadays', 'en') if e['entryId'] == today)
+                self.assertEqual(reverse['matchedForm']['reading'], 'こんにち')
+                conjunction = 'jmdict:ja:1020470'
+                self.assertNotIn('AND (Boolean operator)', glosses('&', conjunction))
+                self.assertNotIn('AND (Boolean operator)', glosses('and', conjunction))
+                self.assertIn('AND (Boolean operator)', glosses('AND', conjunction))
+                self.assertIn('AND (Boolean operator)', glosses('Boolean', conjunction))
+            finally:
+                index.close()
+            with zipfile.ZipFile(root/'Kotoba_Atlas_English_v0_0_0_beta_1.zip') as archive:
+                rows = [row for name in archive.namelist() if name.startswith('term_bank_') for row in json.loads(archive.read(name))]
+            meanings = lambda term, reading: ' '.join(g for row in rows if row[0] == term and row[1] == reading for g in row[5])
+            self.assertNotIn('these days', meanings('今日', 'きょう'))
+            self.assertIn('these days', meanings('今日', 'こんにち'))
+            self.assertNotIn('Boolean operator', meanings('＆', 'アンド'))
+            self.assertIn('Boolean operator', meanings('ＡＮＤ', 'アンド'))
 
     def test_script_candidates_do_not_force_ambiguous_language(self):
         self.assertEqual({x['language'] for x in language_candidates('日本')}, {'ja', 'zh'})
@@ -164,6 +194,9 @@ class ContractTests(unittest.TestCase):
                 self.assertEqual(sha(raw), package['uncompressedSha256'])
                 with sqlite3.connect(raw) as database:
                     self.assertEqual(database.execute('PRAGMA integrity_check').fetchone()[0], 'ok')
+                    if package['role'] == 'language':
+                        self.assertEqual(database.execute("SELECT COUNT(*) FROM sqlite_master WHERE name='reverse_search'").fetchone()[0], 0)
+                        self.assertIn(record['sourceRecords'][0]['source'], package['sourceIds'])
                     if package['language'] == 'en':
                         sense = json.loads(database.execute('SELECT payload FROM senses').fetchone()[0])
                         self.assertEqual(sense['restrictions']['work'], 'BLACK TORCH')

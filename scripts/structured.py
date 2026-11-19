@@ -2,8 +2,74 @@
 import hashlib
 import html
 import json
+import unicodedata
 import re
 from urllib.parse import parse_qs, urlparse
+
+
+def normalized(value):
+    value = unicodedata.normalize('NFKC', value).strip().casefold()
+    return ''.join(chr(ord(c)-0x60) if 'ァ' <= c <= 'ヶ' else c for c in value)
+
+
+def source_forms(form, forms):
+    if form.get('kind') != 'alias':
+        return [form]
+    pending, seen, result = [form], set(), []
+    for _ in range(8):
+        following = []
+        for alias in pending:
+            target = alias.get('canonicalSpelling')
+            if not target or target in seen:
+                continue
+            seen.add(target)
+            for candidate in forms:
+                if candidate['text'] != target:
+                    continue
+                if candidate.get('kind') == 'alias':
+                    following.append(candidate)
+                else:
+                    result.append(candidate)
+        pending = following
+        if not pending:
+            break
+    if result:
+        return unique(result)
+    canonical = [f for f in forms if f.get('kind') != 'alias']
+    return [f for f in canonical if normalized(f.get('reading') or '') == normalized(form.get('reading') or '')] or canonical
+
+
+def applies_to_form(sense, form, forms):
+    restrictions = sense.get('restrictions') or {}
+    spellings, readings = restrictions.get('spellings', []), restrictions.get('readings', [])
+    if not isinstance(spellings, list) or not isinstance(readings, list) or not all(isinstance(v, str) for v in spellings+readings):
+        raise ValueError('Invalid source form restrictions')
+    limited_spellings = bool(spellings) and '*' not in spellings
+    limited_readings = bool(readings) and '*' not in readings
+    if not limited_spellings and not limited_readings:
+        return True
+    for base in source_forms(form, forms):
+        reading = normalized(base.get('reading') or '')
+        if limited_readings and not any(normalized(value) == reading for value in readings):
+            continue
+        candidates = [base['text']] if base.get('kind') != 'reading' else [f['text'] for f in forms
+            if f.get('kind') != 'alias' and normalized(f.get('reading') or '') == reading]
+        if not limited_spellings or any(text in spellings for text in candidates):
+            return True
+    return False
+
+
+def choose_form(forms, query, reading=None):
+    eligible = [f for f in forms if reading is None or (f.get('reading') or '') == reading]
+    exact = next((f for f in eligible if f['text'] == query), None)
+    compatible = next((f for f in eligible if unicodedata.normalize('NFKC', f['text']) == unicodedata.normalize('NFKC', query)), None)
+    return exact or compatible or (eligible[0] if eligible else None)
+
+
+def scope_forms(form, forms, reading_specified=False):
+    if not reading_specified and form.get('kind', 'headword') == 'headword':
+        return [candidate for candidate in forms if candidate['text'] == form['text'] and candidate.get('kind', 'headword') == 'headword']
+    return [form]
 
 
 def digest(value):

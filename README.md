@@ -1,7 +1,7 @@
 <p align="center"><img src="docs/media/hero.svg" alt="Kotoba Atlas. More Japanese. One dictionary. German with English fallback or English. Part of dot." width="100%"></p>
 
 <p align="center">
-<a href="#download"><strong>Download 1.0.3</strong></a> &nbsp; / &nbsp;
+<a href="#download"><strong>Choose a download</strong></a> &nbsp; / &nbsp;
 <a href="#full-feature-set">Features</a> &nbsp; / &nbsp;
 <a href="#install">Install</a> &nbsp; / &nbsp;
 <a href="docs/compatibility.md">Compatibility</a> &nbsp; / &nbsp;
@@ -10,19 +10,23 @@
 
 **Your Japanese lookup library, in one file.** Everyday vocabulary, source-covered slang, phrases, names, grammar, folklore and kanji—plus pitch and frequency references. Choose your definition language and bring the same complete ZIP to your compatible reading tools.
 
-> **Corrected multilingual preview:** [Atlas 1.1.0 beta 1](https://github.com/Somamill/kotoba-atlas/releases/tag/atlas-v1.1.0-beta.1) introduces structured senses, canonical identities, ten definition families and one shared native core. [Coverage and verification](docs/releases/atlas-v1.1.0-beta.1.md). App-default migration is still in progress.
+> **Corrected multilingual preview:** [Atlas 1.1.0 beta 2](https://github.com/Somamill/kotoba-atlas/releases/tag/atlas-v1.1.0-beta.2) introduces structured senses, canonical identities, ten definition families and one shared native core. [Coverage and verification](docs/releases/atlas-v1.1.0-beta.2.md). App-default migration is still in progress.
 >
 > Historical 1.0.3 and 1.0.4 beta files remain unchanged and can display formatting or cross-reference text as definitions, including ノリのいい ([#5](https://github.com/Somamill/kotoba-atlas/issues/5)). They are not the corrected schema-2 artifacts.
+
+<a id="download"></a>
 
 ### New beta: choose the format your tool uses
 
 | Use | Download | What to expect |
 |---|---|---|
-| Browser dictionary | [English ZIP](https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.1/Kotoba_Atlas_English_v1_1_0_beta_1.zip) · [German ZIP](https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.1/Kotoba_Atlas_German_v1_1_0_beta_1.zip) | One ZIP per definition language; German includes English fallback. Keep compressed. |
-| Native app integration | [Consumer manifest](https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.1/consumer-manifest.json) | Shared core + English fallback + selected language packs; schema-2 reader required. |
-| Coverage and provenance | [Release notes](docs/releases/atlas-v1.1.0-beta.1.md) · [Contract](docs/consumer-contract.md) | Japanese ↔ en/zh/es/ar/id/pt/fr/ja/ru/de. Source-specific partial coverage, with equivalents distinguished from definitions. |
+| Browser dictionary | [English ZIP](https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.2/Kotoba_Atlas_English_v1_1_0_beta_2.zip) · [German ZIP](https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.2/Kotoba_Atlas_German_v1_1_0_beta_2.zip) | One ZIP per definition language; German includes English fallback. Keep compressed. |
+| Native app integration | [Consumer manifest](https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.2/consumer-manifest.json) | Shared core + English fallback + selected language packs; schema-2 reader required. |
+| Coverage and provenance | [Release notes](docs/releases/atlas-v1.1.0-beta.2.md) · [Contract](docs/consumer-contract.md) | Japanese ↔ en/zh/es/ar/id/pt/fr/ja/ru/de. Source-specific partial coverage, with equivalents distinguished from definitions. |
 
 The complete browser archives pass the pinned Yomitan parser and legacy Migaku importer; a representative IndexedDB fixture verifies reading lookup. A current live extension install remains unverified. Native reader/installer tests do not mean every app has adopted the new default yet.
+
+Installation: [English](docs/install.en.md) · [Deutsch](docs/install.de.md) · [日本語](docs/install.ja.md).
 
 
 ## Historical stable download

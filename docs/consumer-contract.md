@@ -1,4 +1,4 @@
-# Atlas consumer contract, schema 2 (implementation draft)
+# Atlas consumer contract, schema 2
 
 This format is under validation. Existing schema-1 native and browser releases remain available; do not point production consumers at this draft until artifact and integration gates pass.
 
@@ -33,6 +33,38 @@ The Swift tests pass on the Mac, including the existing full offline English pac
 All ten definition-language families have explicit package and reverse-index capabilities. Headword adapters currently cover Japanese and English; reverse queries search all included definition-language glosses and equivalents. Arabic and Portuguese WordNet records provide labelled translation equivalents, not full explanatory native definitions. Japanese includes actual Japanese WordNet definitions. JMdict supplies German/Russian and other available language senses; source coverage varies by entry. No UI translation or English fallback is counted as native-definition coverage.
 
 Curated slang annotations attach to explicitly reviewed JMdict identities where verified (`data/usage-identities.json`). ワンチャン as “one chance/maybe” stays distinct from the dog homograph. Upstream records are not merged merely because gloss text looks alike. Unchanged sense IDs survive example enrichment; changed semantic content receives a new sense identity.
+
+## Form-specific meanings (1.1.0 beta 2)
+
+The core advertises required `form-restrictions` capability in `about` and the
+manifest. Readers reject required capabilities they do not implement. Each sense
+can restrict `spellings` and `readings`; absent lists or `*` mean unrestricted.
+Match source spelling/reading pairs before choosing primary senses or fallback.
+Alias chains resolve to source forms, bounded to eight links. Width normalization
+does not erase case when choosing a source spelling.
+
+Conditions belong to the individual source sense and language. Do not copy an
+English condition onto a German or Russian translation: those sources can group
+meanings differently. The English 今日 / ＆ examples below test English senses;
+the German edition is checked against its own broader source conditions.
+
+A written query without an explicit reading retains valid meanings for the
+spelling's source readings, with reading conditions displayed. A reading query
+or explicit reading excludes other readings' meanings: きょう must not inherit
+the “these days” sense of こんにち. “＆” and lowercase “and” must not inherit the
+Boolean-operator sense restricted to ＡＮＤ. Source sense order is display metadata,
+not part of stable identity; adding examples does not change that identity.
+
+`reverse_keys.form_hint` carries sparse spelling/reading conditions for every
+indexed language, independently of installed display packs. Choose an applicable
+source form for a reverse hit (“nowadays” → 今日 / こんにち), then apply the preferred
+definition-language policy. Preserve reading context in details and history.
+
+Frequency and pitch remain separate references. Keep each frequency source and
+scale; do not take a minimum across unrelated lists. Pitch belongs to its attested
+reading and must not be copied from a legacy entry to another reading. Browser
+exports filter senses for each spelling/reading row; native readers enforce the
+same rule at lookup time.
 
 ## Matching and browser projection
 

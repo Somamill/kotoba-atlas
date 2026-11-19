@@ -10,6 +10,8 @@
 
 **Your Japanese lookup library, in one file.** Everyday vocabulary, source-covered slang, phrases, names, grammar, folklore and kanji—plus pitch and frequency references. Choose your definition language and bring the same complete ZIP to your compatible reading tools.
 
+> **Structured-data correction in progress.** The historical 1.0.3 and 1.0.4 beta packages can show formatting or cross-reference text as definitions for some entries, including ノリのいい ([#5](https://github.com/Somamill/kotoba-atlas/issues/5)). The schema-2 replacement is being rebuilt and tested; it is not yet the stable download. [Consumer contract and current validation](docs/consumer-contract.md).
+
 ## Download
 
 | Definition language | Complete versioned ZIP | Lookup pairs | Download size |
@@ -85,7 +87,7 @@ Both complete archives pass schemas, exact content-parity checks and the upstrea
 
 Keep your working dictionary until the replacement finishes. If an old import is stalled, cancel it before retrying. Use normal host controls for duplicate titles and replacement; do not delete your browser profile or learning database. [Upgrade guidance](docs/compatibility.md#upgrading)
 
-## 1.0.4 beta: lookup verification and dict.
+## Historical 1.0.4 beta: lookup verification and dict.
 
 **[Download 1.0.4 beta 1](https://github.com/Somamill/kotoba-atlas/releases/tag/atlas-v1.0.4-beta.1).** The frozen helper retrieves candidate entries for **98.40% (German)** and **95.78% (English)** of Japanese content tokens in a fresh seven-title sample. These are retrieval rates, not selected-sense accuracy. [Newest verification results](docs/accuracy.md)
 

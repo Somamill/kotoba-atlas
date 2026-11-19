@@ -1,0 +1,111 @@
+{
+  "id": "2238120",
+  "kanji": [
+    {
+      "common": false,
+      "text": "ノリの良い",
+      "tags": []
+    },
+    {
+      "common": false,
+      "text": "のりの良い",
+      "tags": []
+    },
+    {
+      "common": false,
+      "text": "乗りの良い",
+      "tags": []
+    },
+    {
+      "common": false,
+      "text": "乗りのいい",
+      "tags": []
+    },
+    {
+      "common": false,
+      "text": "乗りのよい",
+      "tags": []
+    }
+  ],
+  "kana": [
+    {
+      "common": false,
+      "text": "ノリのいい",
+      "tags": [],
+      "appliesToKanji": [
+        "ノリの良い"
+      ]
+    },
+    {
+      "common": false,
+      "text": "のりのいい",
+      "tags": [],
+      "appliesToKanji": [
+        "のりの良い",
+        "乗りの良い",
+        "乗りのいい"
+      ]
+    },
+    {
+      "common": false,
+      "text": "ノリのよい",
+      "tags": [],
+      "appliesToKanji": [
+        "ノリの良い"
+      ]
+    },
+    {
+      "common": false,
+      "text": "のりのよい",
+      "tags": [],
+      "appliesToKanji": [
+        "のりの良い",
+        "乗りの良い",
+        "乗りのよい"
+      ]
+    }
+  ],
+  "sense": [
+    {
+      "partOfSpeech": [
+        "exp",
+        "adj-ix"
+      ],
+      "appliesToKanji": [
+        "*"
+      ],
+      "appliesToKana": [
+        "*"
+      ],
+      "related": [
+        [
+          "乗り",
+          "のり・4",
+          4
+        ]
+      ],
+      "antonym": [],
+      "field": [],
+      "dialect": [],
+      "misc": [
+        "uk"
+      ],
+      "info": [],
+      "languageSource": [],
+      "gloss": [
+        {
+          "lang": "eng",
+          "gender": null,
+          "type": null,
+          "text": "easy to get into (e.g. of music, etc.)"
+        },
+        {
+          "lang": "eng",
+          "gender": null,
+          "type": null,
+          "text": "easily getting into (a certain mood, etc.)"
+        }
+      ]
+    }
+  ]
+}

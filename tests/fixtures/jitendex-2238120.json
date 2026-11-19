@@ -1,0 +1,353 @@
+[
+  "ノリの良い",
+  "ノリのいい",
+  "",
+  "",
+  0,
+  [
+    {
+      "type": "structured-content",
+      "content": [
+        {
+          "tag": "div",
+          "data": {
+            "content": "sense-group"
+          },
+          "content": [
+            {
+              "tag": "span",
+              "title": "expressions (phrases, clauses, etc.)",
+              "data": {
+                "class": "tag",
+                "code": "exp",
+                "content": "part-of-speech-info"
+              },
+              "content": "exp"
+            },
+            {
+              "tag": "span",
+              "title": "adjective (keiyoushi) - yoi/ii class",
+              "data": {
+                "class": "tag",
+                "code": "adj-ix",
+                "content": "part-of-speech-info"
+              },
+              "content": "adjective"
+            },
+            {
+              "tag": "span",
+              "title": "word usually written using kana alone",
+              "data": {
+                "class": "tag",
+                "code": "uk",
+                "content": "misc-info"
+              },
+              "content": "kana"
+            },
+            {
+              "tag": "div",
+              "data": {
+                "content": "sense"
+              },
+              "content": [
+                {
+                  "tag": "ul",
+                  "data": {
+                    "content": "glossary"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "content": "easy to get into (e.g. of music, etc.)"
+                    },
+                    {
+                      "tag": "li",
+                      "content": "easily getting into (a certain mood, etc.)"
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "data": {
+                    "content": "extra-info"
+                  },
+                  "content": {
+                    "tag": "div",
+                    "content": {
+                      "tag": "div",
+                      "data": {
+                        "class": "extra-box",
+                        "content": "xref"
+                      },
+                      "content": [
+                        {
+                          "tag": "div",
+                          "data": {
+                            "content": "xref-content"
+                          },
+                          "content": [
+                            {
+                              "tag": "span",
+                              "lang": "en",
+                              "data": {
+                                "content": "reference-label"
+                              },
+                              "content": "See also"
+                            },
+                            {
+                              "tag": "a",
+                              "lang": "ja",
+                              "href": "?query=%E4%B9%97%E3%82%8A&wildcards=off&primary_reading=%E3%81%AE%E3%82%8A",
+                              "content": [
+                                {
+                                  "tag": "ruby",
+                                  "content": [
+                                    "乗",
+                                    {
+                                      "tag": "rt",
+                                      "content": "の"
+                                    }
+                                  ]
+                                },
+                                "り"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "data": {
+                            "content": "xref-glossary"
+                          },
+                          "content": "④ (getting into the) mood; (entering into the) spirit; energy; enthusiasm; rhythm; feeling"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "data": {
+            "content": "forms"
+          },
+          "content": [
+            {
+              "tag": "span",
+              "title": "spelling and reading variants",
+              "data": {
+                "class": "tag",
+                "content": "forms-label"
+              },
+              "content": "forms"
+            },
+            {
+              "tag": "table",
+              "content": [
+                {
+                  "tag": "tr",
+                  "data": {
+                    "content": "forms-header-row"
+                  },
+                  "content": [
+                    {
+                      "tag": "th"
+                    },
+                    {
+                      "tag": "th",
+                      "content": "ノリの良い"
+                    },
+                    {
+                      "tag": "th",
+                      "content": "のりの良い"
+                    },
+                    {
+                      "tag": "th",
+                      "content": "乗りの良い"
+                    },
+                    {
+                      "tag": "th",
+                      "content": "乗りのいい"
+                    },
+                    {
+                      "tag": "th",
+                      "content": "乗りのよい"
+                    }
+                  ]
+                },
+                {
+                  "tag": "tr",
+                  "content": [
+                    {
+                      "tag": "th",
+                      "content": "ノリのいい"
+                    },
+                    {
+                      "tag": "td",
+                      "data": {
+                        "class": "form-valid"
+                      },
+                      "content": {
+                        "tag": "span",
+                        "title": "valid form/reading combination"
+                      }
+                    },
+                    {
+                      "tag": "td"
+                    },
+                    {
+                      "tag": "td"
+                    },
+                    {
+                      "tag": "td"
+                    },
+                    {
+                      "tag": "td"
+                    }
+                  ]
+                },
+                {
+                  "tag": "tr",
+                  "content": [
+                    {
+                      "tag": "th",
+                      "content": "のりのいい"
+                    },
+                    {
+                      "tag": "td"
+                    },
+                    {
+                      "tag": "td",
+                      "data": {
+                        "class": "form-valid"
+                      },
+                      "content": {
+                        "tag": "span",
+                        "title": "valid form/reading combination"
+                      }
+                    },
+                    {
+                      "tag": "td",
+                      "data": {
+                        "class": "form-valid"
+                      },
+                      "content": {
+                        "tag": "span",
+                        "title": "valid form/reading combination"
+                      }
+                    },
+                    {
+                      "tag": "td",
+                      "data": {
+                        "class": "form-valid"
+                      },
+                      "content": {
+                        "tag": "span",
+                        "title": "valid form/reading combination"
+                      }
+                    },
+                    {
+                      "tag": "td"
+                    }
+                  ]
+                },
+                {
+                  "tag": "tr",
+                  "content": [
+                    {
+                      "tag": "th",
+                      "content": "ノリのよい"
+                    },
+                    {
+                      "tag": "td",
+                      "data": {
+                        "class": "form-valid"
+                      },
+                      "content": {
+                        "tag": "span",
+                        "title": "valid form/reading combination"
+                      }
+                    },
+                    {
+                      "tag": "td"
+                    },
+                    {
+                      "tag": "td"
+                    },
+                    {
+                      "tag": "td"
+                    },
+                    {
+                      "tag": "td"
+                    }
+                  ]
+                },
+                {
+                  "tag": "tr",
+                  "content": [
+                    {
+                      "tag": "th",
+                      "content": "のりのよい"
+                    },
+                    {
+                      "tag": "td"
+                    },
+                    {
+                      "tag": "td",
+                      "data": {
+                        "class": "form-valid"
+                      },
+                      "content": {
+                        "tag": "span",
+                        "title": "valid form/reading combination"
+                      }
+                    },
+                    {
+                      "tag": "td",
+                      "data": {
+                        "class": "form-valid"
+                      },
+                      "content": {
+                        "tag": "span",
+                        "title": "valid form/reading combination"
+                      }
+                    },
+                    {
+                      "tag": "td"
+                    },
+                    {
+                      "tag": "td",
+                      "data": {
+                        "class": "form-valid"
+                      },
+                      "content": {
+                        "tag": "span",
+                        "title": "valid form/reading combination"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "data": {
+            "content": "attribution"
+          },
+          "content": {
+            "tag": "a",
+            "href": "https://www.edrdg.org/jmwsgi/entr.py?svc=jmdict&q=2238120",
+            "content": "JMdict"
+          }
+        }
+      ]
+    }
+  ],
+  2238120,
+  ""
+]

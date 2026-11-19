@@ -1,0 +1,1299 @@
+{
+  "words": [
+    {
+      "id": "1207240",
+      "kanji": [
+        {
+          "common": true,
+          "text": "楽しい",
+          "tags": []
+        },
+        {
+          "common": false,
+          "text": "愉しい",
+          "tags": [
+            "rK"
+          ]
+        },
+        {
+          "common": false,
+          "text": "樂しい",
+          "tags": [
+            "sK"
+          ]
+        },
+        {
+          "common": false,
+          "text": "娯しい",
+          "tags": [
+            "sK"
+          ]
+        }
+      ],
+      "kana": [
+        {
+          "common": true,
+          "text": "たのしい",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "adj-i"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "enjoyable"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "fun"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "pleasant"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "happy"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "delightful"
+            }
+          ],
+          "examples": [
+            {
+              "source": {
+                "type": "tatoeba",
+                "value": "233856"
+              },
+              "text": "楽しかった",
+              "sentences": [
+                {
+                  "lang": "jpn",
+                  "text": "あなたと一緒にいて楽しかった。"
+                },
+                {
+                  "lang": "eng",
+                  "text": "I really enjoyed your company."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1243490",
+      "kanji": [
+        {
+          "common": true,
+          "text": "銀行",
+          "tags": []
+        }
+      ],
+      "kana": [
+        {
+          "common": true,
+          "text": "ぎんこう",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "bank"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "banking institution"
+            }
+          ],
+          "examples": [
+            {
+              "source": {
+                "type": "tatoeba",
+                "value": "216508"
+              },
+              "text": "銀行",
+              "sentences": [
+                {
+                  "lang": "jpn",
+                  "text": "ジェーンはお金を引き出しに銀行へ行った。"
+                },
+                {
+                  "lang": "eng",
+                  "text": "Jane went to the bank to take out some money."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1358280",
+      "kanji": [
+        {
+          "common": true,
+          "text": "食べる",
+          "tags": []
+        },
+        {
+          "common": false,
+          "text": "喰べる",
+          "tags": [
+            "sK"
+          ]
+        }
+      ],
+      "kana": [
+        {
+          "common": true,
+          "text": "たべる",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to eat"
+            }
+          ],
+          "examples": [
+            {
+              "source": {
+                "type": "tatoeba",
+                "value": "193344"
+              },
+              "text": "食べる",
+              "sentences": [
+                {
+                  "lang": "jpn",
+                  "text": "もっと果物を食べるべきです。"
+                },
+                {
+                  "lang": "eng",
+                  "text": "You should eat more fruit."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to live on (e.g. a salary)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to live off"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to subsist on"
+            }
+          ],
+          "examples": [
+            {
+              "source": {
+                "type": "tatoeba",
+                "value": "81964"
+              },
+              "text": "食べて",
+              "sentences": [
+                {
+                  "lang": "jpn",
+                  "text": "僕は脚本家で食べていく決心をした。"
+                },
+                {
+                  "lang": "eng",
+                  "text": "I am determined to make a living as a playwright."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1464530",
+      "kanji": [
+        {
+          "common": true,
+          "text": "日本語",
+          "tags": []
+        }
+      ],
+      "kana": [
+        {
+          "common": true,
+          "text": "にほんご",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        },
+        {
+          "common": false,
+          "text": "にっぽんご",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "Japanese (language)"
+            }
+          ],
+          "examples": [
+            {
+              "source": {
+                "type": "tatoeba",
+                "value": "154716"
+              },
+              "text": "日本語",
+              "sentences": [
+                {
+                  "lang": "jpn",
+                  "text": "私は日本語で苦労している。"
+                },
+                {
+                  "lang": "eng",
+                  "text": "I have difficulty in Japanese."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1502400",
+      "kanji": [
+        {
+          "common": false,
+          "text": "物の怪",
+          "tags": []
+        },
+        {
+          "common": false,
+          "text": "物の気",
+          "tags": [
+            "rK"
+          ]
+        },
+        {
+          "common": false,
+          "text": "ものの気",
+          "tags": [
+            "sK"
+          ]
+        }
+      ],
+      "kana": [
+        {
+          "common": false,
+          "text": "もののけ",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "evil spirit"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "(vengeful) ghost"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "specter"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "spectre"
+            }
+          ],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "1852260",
+      "kanji": [
+        {
+          "common": false,
+          "text": "鎌をかける",
+          "tags": []
+        },
+        {
+          "common": false,
+          "text": "鎌を掛ける",
+          "tags": []
+        },
+        {
+          "common": false,
+          "text": "カマを掛ける",
+          "tags": [
+            "sK"
+          ]
+        }
+      ],
+      "kana": [
+        {
+          "common": false,
+          "text": "カマをかける",
+          "tags": [],
+          "appliesToKanji": []
+        },
+        {
+          "common": false,
+          "text": "かまをかける",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "exp",
+            "v1"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [
+            "uk",
+            "id"
+          ],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to trick someone (into confirming or revealing the truth)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to ask a leading question"
+            }
+          ],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "2238120",
+      "kanji": [
+        {
+          "common": false,
+          "text": "ノリの良い",
+          "tags": []
+        },
+        {
+          "common": false,
+          "text": "のりの良い",
+          "tags": []
+        },
+        {
+          "common": false,
+          "text": "乗りの良い",
+          "tags": []
+        },
+        {
+          "common": false,
+          "text": "乗りのいい",
+          "tags": []
+        },
+        {
+          "common": false,
+          "text": "乗りのよい",
+          "tags": []
+        }
+      ],
+      "kana": [
+        {
+          "common": false,
+          "text": "ノリのいい",
+          "tags": [],
+          "appliesToKanji": [
+            "ノリの良い"
+          ]
+        },
+        {
+          "common": false,
+          "text": "のりのいい",
+          "tags": [],
+          "appliesToKanji": [
+            "のりの良い",
+            "乗りの良い",
+            "乗りのいい"
+          ]
+        },
+        {
+          "common": false,
+          "text": "ノリのよい",
+          "tags": [],
+          "appliesToKanji": [
+            "ノリの良い"
+          ]
+        },
+        {
+          "common": false,
+          "text": "のりのよい",
+          "tags": [],
+          "appliesToKanji": [
+            "のりの良い",
+            "乗りの良い",
+            "乗りのよい"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "exp",
+            "adj-ix"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [
+            [
+              "乗り",
+              "のり・4",
+              4
+            ]
+          ],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [
+            "uk"
+          ],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "easy to get into (e.g. of music, etc.)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "easily getting into (a certain mood, etc.)"
+            }
+          ],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "2794860",
+      "kanji": [],
+      "kana": [
+        {
+          "common": true,
+          "text": "ワンちゃん",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        },
+        {
+          "common": false,
+          "text": "わんちゃん",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        },
+        {
+          "common": false,
+          "text": "ワンチャン",
+          "tags": [
+            "sk"
+          ],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [
+            [
+              "ワンワン",
+              4
+            ]
+          ],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [
+            "chn"
+          ],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "doggie"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "pooch"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "bow-wow"
+            }
+          ],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "2831313",
+      "kanji": [],
+      "kana": [
+        {
+          "common": false,
+          "text": "ワンチャン",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [
+            [
+              "ワンチャンス"
+            ]
+          ],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [
+            "abbr"
+          ],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "one chance"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "only opportunity"
+            }
+          ],
+          "examples": []
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [
+            "sl"
+          ],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "maybe"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "perhaps"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "there is a chance that"
+            }
+          ],
+          "examples": []
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [
+            "sl"
+          ],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "one-night stand"
+            }
+          ],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "2840124",
+      "kanji": [
+        {
+          "common": false,
+          "text": "ガチ恋",
+          "tags": []
+        }
+      ],
+      "kana": [
+        {
+          "common": false,
+          "text": "ガチこい",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [
+            [
+              "ガチ"
+            ]
+          ],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [
+            "sl"
+          ],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "being in love with an idol, actor, etc."
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "fan who is in love with an idol, actor, etc."
+            }
+          ],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "2841343",
+      "kanji": [],
+      "kana": [
+        {
+          "common": false,
+          "text": "リアコ",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [
+            "sl"
+          ],
+          "info": [
+            "from リアルに恋している"
+          ],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "being in love with an idol, actor, etc."
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "fan who is in love with an idol, actor, etc."
+            }
+          ],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "2850527",
+      "kanji": [
+        {
+          "common": false,
+          "text": "推し活",
+          "tags": []
+        }
+      ],
+      "kana": [
+        {
+          "common": false,
+          "text": "おしかつ",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [
+            [
+              "推し",
+              2
+            ]
+          ],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [
+            "sl"
+          ],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "(doing) various things to support one's favourite member of a boy band, girl group, etc."
+            }
+          ],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "2854053",
+      "kanji": [
+        {
+          "common": false,
+          "text": "羅睺",
+          "tags": []
+        }
+      ],
+      "kana": [
+        {
+          "common": false,
+          "text": "らご",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        },
+        {
+          "common": false,
+          "text": "らごう",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "Rago"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": "explanation",
+              "text": "mythological celestial body and/or evil spirit (asura) said to cause eclipses"
+            }
+          ],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "2854926",
+      "kanji": [
+        {
+          "common": false,
+          "text": "沼る",
+          "tags": []
+        }
+      ],
+      "kana": [
+        {
+          "common": false,
+          "text": "ぬまる",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "v5r",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [
+            "net-sl"
+          ],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to get hooked (on a video game, TV show, etc.)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to become addicted (to)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to become obsessed (with)"
+            }
+          ],
+          "examples": []
+        },
+        {
+          "partOfSpeech": [
+            "v5r",
+            "vi"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [
+            "vidg"
+          ],
+          "dialect": [],
+          "misc": [
+            "net-sl"
+          ],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to be in a slump"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to struggle to make progress"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to get stuck (e.g. at a certain rank)"
+            }
+          ],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "id": "2858544",
+      "kanji": [
+        {
+          "common": false,
+          "text": "蛙化現象",
+          "tags": []
+        }
+      ],
+      "kana": [
+        {
+          "common": false,
+          "text": "かえるかげんしょう",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [
+            "from Grimm's The Frog Prince"
+          ],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "frogification phenomenon"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": "explanation",
+              "text": "developing an aversion to someone one had feelings for once that person reciprocates those feelings"
+            }
+          ],
+          "examples": []
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [
+            "col"
+          ],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "disillusionment upon noticing negative qualities in a romantic partner"
+            }
+          ],
+          "examples": []
+        }
+      ]
+    }
+  ]
+}

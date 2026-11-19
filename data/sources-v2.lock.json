@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "omw-arb",
+      "language": "ar",
+      "kind": "omw-tab",
+      "path": "wns/arb/wn-data-arb.tab",
+      "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/arb/wn-data-arb.tab",
+      "sha256": "812af3ec3acec1b5825f44b79910fe3782945a0f4792141bb4aea3b68f9fe49a",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "citation": "Black W., Elkateb S., Rodriguez H., Alkhalifa M., Vossen P., Pease A., Bertran M., Fellbaum C.,. 2006. *The Arabic WordNet Project*. In *Proceedings of LREC 2006*.\nLahsen Abouenour, Karim Bouzoubaa, Paolo Rosso. 2013. *On the evaluation and improvement of {Arabic} WordNet coverage and usability*. *Language Resources and Evaluation*, **47(3)** pp 891–917.",
+      "sourceUrl": "http://globalwordnet.org/resources/arabic-wordnet/",
+      "revision": "406bf83b3c507a3d1f26e88252d5d66893fd36bf",
+      "licenseFile": {
+        "path": "wns/arb/LICENSE",
+        "sha256": "02313f044f2e509033a9fc4aae89184352d4ccff19ed6d63856e8e37fd2c30ac",
+        "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/arb/LICENSE"
+      }
+    },
+    {
+      "id": "omw-cmn",
+      "language": "zh",
+      "kind": "omw-tab",
+      "path": "wns/cow/wn-data-cmn.tab",
+      "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/cow/wn-data-cmn.tab",
+      "sha256": "379fd2e41d3e1395f9f27cf23a39c6181849ffb4020c14a07ed2a4d4dd651122",
+      "license": "wordnet",
+      "citation": "Shan Wang and Francis Bond. 2013. `Building the Chinese Open Wordnet (COW): Starting from Core Synsets <https://aclweb.org/anthology/W/W13/W13-4302.pdf>`_. In *Proceedings of the 11th Workshop on Asian Language Resources, a Workshop of The 6th International Joint Conference on Natural Language Processing (IJCNLP-6)*. Nagoya, Japan. pp 10–18.",
+      "sourceUrl": "https://bond-lab.github.io/cow/",
+      "revision": "406bf83b3c507a3d1f26e88252d5d66893fd36bf",
+      "licenseFile": {
+        "path": "wns/cow/LICENSE",
+        "sha256": "81a3cb1f97e120581d67c71424f2de5dd96325d951f991e8a092147a2a4b2321",
+        "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/cow/LICENSE"
+      }
+    },
+    {
+      "id": "omw-fr",
+      "language": "fr",
+      "kind": "omw-tab",
+      "path": "wns/fra/wn-data-fra.tab",
+      "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/fra/wn-data-fra.tab",
+      "sha256": "6effab15723bbb482f2922d42eb1db37c8586984ce7735ebfe0a096000b69f86",
+      "license": "http://www.cecill.info/licenses/Licence_CeCILL-C_V1-en.html",
+      "citation": "Benoit Sagot and Darla Fišer. 2008. Building a free French wordnet from multilingual resources, *E.L.R.A. (ELRA) (ed.), Proceedings of the Sixth International Language Resources and Evaluation (LREC 2008)*. Marrakech, Morocco.",
+      "sourceUrl": "http://pauillac.inria.fr/~sagot/index.html#wolf",
+      "revision": "406bf83b3c507a3d1f26e88252d5d66893fd36bf",
+      "licenseFile": {
+        "path": "wns/fra/LICENSE",
+        "sha256": "3cc8a6f74249a041a4ae4ce708bdfeff8fa7e9cd0b97ef7d3fab139087f73e51",
+        "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/fra/LICENSE"
+      }
+    },
+    {
+      "id": "omw-id",
+      "language": "id",
+      "kind": "omw-tab",
+      "path": "wns/msa/wn-data-ind.tab",
+      "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/msa/wn-data-ind.tab",
+      "sha256": "aa4fffad11f83199a7a0ffe062aad65eb72216b47f3b2944b86cb806b4c1175a",
+      "license": "https://opensource.org/licenses/MIT/",
+      "citation": "Nurril Hirfana Mohamed Noor, Suerya Sapuan and Francis Bond. 2011. `Creating the open Wordnet Bahasa <http://web.mysites.ntu.edu.sg/fcbond/open/pubs/2011-wn-bahasa.pdf>`_. In *Proceedings of the 25th Pacific Asia Conference on Language, Information and Computation (PACLIC 25)*. pp 258–267. Singapore.",
+      "sourceUrl": "http://wn-msa.sourceforge.net/",
+      "revision": "406bf83b3c507a3d1f26e88252d5d66893fd36bf",
+      "licenseFile": {
+        "path": "wns/msa/LICENSE",
+        "sha256": "d16fe95c087c732e06758795c95dabc2a18a9b141881005d85b051bf85d587b7",
+        "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/msa/LICENSE"
+      }
+    },
+    {
+      "id": "omw-ja",
+      "language": "ja",
+      "kind": "omw-tab",
+      "path": "wns/jpn/wn-data-jpn.tab",
+      "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/jpn/wn-data-jpn.tab",
+      "sha256": "f47fefb11824b86d8556c632f5b71438397abac79677b607070cd0bdcb9ac212",
+      "license": "wordnet",
+      "citation": "Hitoshi Isahara, Francis Bond, Kiyotaka Uchimoto, Masao Utiyama and Kyoko Kanzaki. 2008. *Development of Japanese WordNet*. In *LREC-2008*, Marrakech.",
+      "sourceUrl": "https://bond-lab.github.io/wnja/",
+      "revision": "406bf83b3c507a3d1f26e88252d5d66893fd36bf",
+      "licenseFile": {
+        "path": "wns/jpn/LICENSE",
+        "sha256": "a4be32a83ad0a1cff9a31c23aaa107be20eb843d97c68a2ff72e10ff5ac17cee",
+        "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/jpn/LICENSE"
+      }
+    },
+    {
+      "id": "omw-pt",
+      "language": "pt",
+      "kind": "omw-tab",
+      "path": "wns/por/wn-data-por.tab",
+      "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/por/wn-data-por.tab",
+      "sha256": "0ba180e2d2a5317e61b4ebe94a7e969e68eea2d9e60705e1e9053c6e2ac5e684",
+      "license": "https://creativecommons.org/licenses/by-sa/",
+      "citation": "Valeria de Paiva and Alexandre Rademaker. 2012. Revisiting a Brazilian wordnet. In *Proceedings of Global Wordnet Conference*, Matsue. Global Wordnet Association. (also with Gerard de Melo's contribution)",
+      "sourceUrl": "http://wn.mybluemix.net/",
+      "revision": "406bf83b3c507a3d1f26e88252d5d66893fd36bf",
+      "licenseFile": {
+        "path": "wns/por/LICENSE",
+        "sha256": "4c7824c3cf3ca7d5fc68ee0473e16741361a67e242557c0661a0d6bd926ea297",
+        "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/por/LICENSE"
+      }
+    },
+    {
+      "id": "omw-es",
+      "language": "es",
+      "kind": "omw-tab",
+      "path": "wns/mcr/wn-data-spa.tab",
+      "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/mcr/wn-data-spa.tab",
+      "sha256": "0ec37ce94ee2acc63ad6b120e1051f9841d172778cc24adc0023fb8dccf0a7cd",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "citation": "Aitor Gonzalez-Agirre, Egoitz Laparra and German Rigau. 2012. `Multilingual Central Repository version 3.0: upgrading a very large lexical knowledge base <http://adimen.si.ehu.es/web/sites/all/modules/pubdlcnt/pubdlcnt.php?file=http://adimen.si.ehu.es/~rigau/publications/gwc12-glr.pdf&nid=18>`_. In *Proceedings of the 6th Global WordNet Conference (GWC 2012)*. Matsue, Japan.",
+      "sourceUrl": "https://adimen.si.ehu.es/web/MCR/",
+      "revision": "406bf83b3c507a3d1f26e88252d5d66893fd36bf",
+      "licenseFile": {
+        "path": "wns/mcr/LICENSE",
+        "sha256": "ccbb7b96a812b37a88a9cb8dfda92dc251e61c5fca5225ff23f5fc3d33b32a70",
+        "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/mcr/LICENSE"
+      }
+    },
+    {
+      "id": "omw-en",
+      "language": "en",
+      "kind": "omw-tab",
+      "path": "wns/eng/wn-data-eng.tab",
+      "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/eng/wn-data-eng.tab",
+      "sha256": "d1409d88addcdb890b1606dd280b558cca4258b1f33bd580d54ed949daad1ede",
+      "license": "WordNet-3.0",
+      "revision": "406bf83b3c507a3d1f26e88252d5d66893fd36bf",
+      "licenseFile": {
+        "path": "wns/eng/LICENSE",
+        "sha256": "879422521551f1933cdb75a56c89da11ffce2c800c9431052d7b66207b5c2c68",
+        "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/eng/LICENSE"
+      }
+    },
+    {
+      "id": "jmdict-simplified",
+      "kind": "jmdict-json",
+      "path": "jmdict-all-3.6.2+20261116213322.json.zip",
+      "url": "https://github.com/scriptin/jmdict-simplified/releases/download/3.6.2%2B20261116213322/jmdict-all-3.6.2%2B20261116213322.json.zip",
+      "sha256": "3a13576085e15262299d9bdf83a8c188dcfb3ddeda636768b469e6e3049f8564",
+      "license": "CC-BY-SA-4.0",
+      "revision": "3.6.2+20261116213322",
+      "sourceUrl": "https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project",
+      "attribution": "JMdict contributors and the Electronic Dictionary Research and Development Group; JSON normalization by scriptin/jmdict-simplified."
+    },
+    {
+      "id": "jmnedict-simplified",
+      "kind": "jmnedict-json",
+      "path": "jmnedict-all-3.6.2+20261116213322.json.zip",
+      "url": "https://github.com/scriptin/jmdict-simplified/releases/download/3.6.2%2B20261116213322/jmnedict-all-3.6.2%2B20261116213322.json.zip",
+      "sha256": "43f42df8361581a0b3629da4a59e568541fe44e818fb7dfc7654d6f07c269251",
+      "license": "CC-BY-SA-4.0",
+      "attribution": "Electronic Dictionary Research and Development Group and contributors; JSON normalization by scriptin/jmdict-simplified.",
+      "revision": "3.6.2+20261116213322"
+    },
+    {
+      "id": "jmdict-examples",
+      "kind": "jmdict-json",
+      "path": "jmdict-examples-eng-3.6.2+20261116213322.json.zip",
+      "url": "https://github.com/scriptin/jmdict-simplified/releases/download/3.6.2%2B20261116213322/jmdict-examples-eng-3.6.2%2B20261116213322.json.zip",
+      "sha256": "477e868ef421caae5d796f2bffd626ad73fa3f7032a404b7d9d7944b0e8235c5",
+      "license": "CC-BY-SA-4.0 with Tatoeba sentences under CC-BY-2.0-FR",
+      "attribution": "Electronic Dictionary Research and Development Group and contributors; JSON normalization by scriptin/jmdict-simplified. Example sentences: Tatoeba contributors.",
+      "revision": "3.6.2+20261116213322"
+    },
+    {
+      "id": "atlas-v1-metadata",
+      "kind": "atlas-v1-metadata",
+      "path": "Kotoba_Atlas_English_v1_0_4_beta_2.sqlite.gz",
+      "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.0.4-beta.2/Kotoba_Atlas_English_v1_0_4_beta_2.sqlite.gz",
+      "sha256": "6bdf7efe61bcac2c246a577043c359a4db733bb248097fb4a72a73ae3ea0d5f8",
+      "uncompressedBytes": 596086784,
+      "uncompressedSha256": "02921bea34bab11a9ac90ba0778a2f30b85f5badbcb426b00a56e41ed2def921",
+      "license": "Original per-source licences retained in package notices; metadata/kanji/tags only.",
+      "revision": "1.0.4-beta.2"
+    },
+    {
+      "id": "jitendex-aliases",
+      "kind": "yomitan-redirects",
+      "path": "Jitendex-Yomitan.zip",
+      "url": "https://github.com/stephenmk/stephenmk.github.io/releases/download/2026.10.03.0/jitendex-yomitan.zip",
+      "sha256": "e914c76596220dffc6ee0c069cd05992f03adb2988c12c3cebe817a3ac271356",
+      "license": "CC-BY-SA-4.0",
+      "attribution": "Stephen Kraus and JMdict contributors. Only source-declared spelling redirects are used; no page text is treated as a definition.",
+      "sourceUrl": "https://jitendex.org/pages/legal.html"
+    }
+  ]
+}

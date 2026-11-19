@@ -10,6 +10,20 @@ spec.loader.exec_module(build)
 
 
 class BuildTests(unittest.TestCase):
+    def test_redirect_copies_only_verified_target_definitions(self):
+        db = sqlite3.connect(':memory:')
+        db.execute('CREATE TABLE definitions(term TEXT, reading TEXT, source INTEGER, gloss TEXT, rules TEXT, score INTEGER, UNIQUE(term,reading,source,gloss))')
+        db.execute('CREATE TABLE structured_redirects(term TEXT, reading TEXT, source INTEGER, target TEXT, target_reading TEXT, rules TEXT, score INTEGER)')
+        build.store(db, ('労働相', 'ろうどうしょう', 0, 'Minister of Labour', 'n', 0))
+        db.execute('INSERT INTO structured_redirects VALUES(?,?,?,?,?,?,?)',
+                   ('勞働相', '', 0, '労働相', 'ろうどうしょう', '', -101))
+        build.resolve_redirects(db)
+        self.assertEqual(db.execute('SELECT reading,gloss FROM definitions WHERE term=?', ('勞働相',)).fetchone(),
+                         ('ろうどうしょう', 'Minister of Labour'))
+        db.execute('INSERT INTO structured_redirects VALUES(?,?,?,?,?,?,?)',
+                   ('欠', '', 0, 'missing', None, '', 0))
+        with self.assertRaisesRegex(ValueError, 'Unresolved structured redirects'):
+            build.resolve_redirects(db)
     def test_duplicate_gloss_keeps_all_verb_rules(self):
         db = sqlite3.connect(':memory:')
         db.execute('CREATE TABLE definitions(term TEXT, reading TEXT, source INTEGER, gloss TEXT, rules TEXT, score INTEGER, UNIQUE(term,reading,source,gloss))')

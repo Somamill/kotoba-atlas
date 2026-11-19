@@ -1,3 +1,4 @@
-# Optional local subtitle audit/lookup tooling; never bundled into dictionary ZIPs.
+# Required local producer/analysis tooling; never bundled into dictionary packages.
 SudachiPy==0.6.11
 SudachiDict-core==20250129
+ijson==3.4.0.post0

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Somamill/kotoba-atlas/blob/main/schemas/consumer-manifest-v2.schema.json",
+  "title": "Kotoba Atlas consumer manifest, schema 2",
+  "type": "object",
+  "required": ["schemaVersion", "dictionaryRevision", "channel", "packages", "sources", "sourceLanguages", "queryLanguages", "normalization", "fallback", "capabilities"],
+  "properties": {
+    "schemaVersion": {"const": 2},
+    "dictionaryRevision": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"},
+    "channel": {"enum": ["stable", "beta"]},
+    "normalization": {"const": "nfkc-casefold-kana-v1"},
+    "queryLanguages": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/language"}},
+    "sourceLanguages": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/language"}},
+    "fallback": {"type": "object", "required": ["language", "scope", "primaryPresent", "primaryMissing"], "properties": {"language": {"const": "en"}, "scope": {"const": "entry"}, "primaryPresent": {"const": "primary-only"}, "primaryMissing": {"const": "english-once-with-fallback-label"}}},
+    "capabilities": {"type": "array", "items": {"type": "object", "required": ["language", "primaryLanguageEntries", "primaryLanguageSenses", "senseKinds", "definitions", "translationEquivalents", "reverseLookup", "coverage"], "properties": {"language": {"$ref": "#/$defs/language"}, "primaryLanguageEntries": {"type": "integer", "minimum": 0}, "primaryLanguageSenses": {"type": "integer", "minimum": 0}, "senseKinds": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}}, "definitions": {"enum": ["available", "unavailable"]}, "translationEquivalents": {"type": "boolean"}, "reverseLookup": {"type": "boolean"}, "coverage": {"type": "string"}}}},
+    "sources": {"type": "array", "items": {"type": "object", "required": ["id", "license"], "properties": {"id": {"type": "string", "minLength": 1}, "license": {"type": "string", "minLength": 1}}}},
+    "packages": {"type": "array", "minItems": 3, "items": {"$ref": "#/$defs/package"}}
+  },
+  "$defs": {
+    "language": {"enum": ["en", "zh", "es", "ar", "id", "pt", "fr", "ja", "ru", "de"]},
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "package": {
+      "type": "object",
+      "required": ["id", "role", "language", "format", "schemaVersion", "dictionaryRevision", "file", "url", "sha256", "uncompressedSha256", "compressedBytes", "uncompressedBytes", "compatibility"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^(core|source-records|language:(en|zh|es|ar|id|pt|fr|ja|ru|de))$"},
+        "role": {"enum": ["core", "language", "source-records"]},
+        "language": {"anyOf": [{"$ref": "#/$defs/language"}, {"type": "null"}]},
+        "format": {"const": "atlas-sqlite-v2+gzip"},
+        "schemaVersion": {"const": 2},
+        "dictionaryRevision": {"type": "string"},
+        "file": {"type": "string", "pattern": "^[A-Za-z0-9_.-]+\\.sqlite\\.gz$"},
+        "url": {"type": "string", "pattern": "^https://github\\.com/Somamill/kotoba-atlas/releases/download/atlas-v[A-Za-z0-9.-]+/[A-Za-z0-9_.-]+\\.sqlite\\.gz$"},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "uncompressedSha256": {"$ref": "#/$defs/sha256"},
+        "compressedBytes": {"type": "integer", "minimum": 1, "maximum": 1000000000},
+        "uncompressedBytes": {"type": "integer", "minimum": 1, "maximum": 8000000000},
+        "compatibility": {"type": "object", "required": ["requiredSchema", "requiredCapabilities"], "properties": {"requiredSchema": {"const": 2}, "requiredCapabilities": {"type": "array", "uniqueItems": true, "items": {"enum": ["shared-core", "entry-language-fallback", "form-restrictions"]}}}}
+      }
+    }
+  }
+}

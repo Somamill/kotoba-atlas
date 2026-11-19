@@ -1,0 +1,491 @@
+{
+  "schemaVersion": 1,
+  "rules": [
+    {
+      "suffix": "していました",
+      "replacement": "する",
+      "class": "vs"
+    },
+    {
+      "suffix": "していた",
+      "replacement": "する",
+      "class": "vs"
+    },
+    {
+      "suffix": "している",
+      "replacement": "する",
+      "class": "vs"
+    },
+    {
+      "suffix": "してる",
+      "replacement": "する",
+      "class": "vs"
+    },
+    {
+      "suffix": "しました",
+      "replacement": "する",
+      "class": "vs"
+    },
+    {
+      "suffix": "しなかった",
+      "replacement": "する",
+      "class": "vs"
+    },
+    {
+      "suffix": "しない",
+      "replacement": "する",
+      "class": "vs"
+    },
+    {
+      "suffix": "した",
+      "replacement": "する",
+      "class": "vs"
+    },
+    {
+      "suffix": "来なかった",
+      "replacement": "来る",
+      "class": "vk"
+    },
+    {
+      "suffix": "来ない",
+      "replacement": "来る",
+      "class": "vk"
+    },
+    {
+      "suffix": "来ました",
+      "replacement": "来る",
+      "class": "vk"
+    },
+    {
+      "suffix": "来た",
+      "replacement": "来る",
+      "class": "vk"
+    },
+    {
+      "suffix": "くなかった",
+      "replacement": "い",
+      "class": "adj-i"
+    },
+    {
+      "suffix": "くない",
+      "replacement": "い",
+      "class": "adj-i"
+    },
+    {
+      "suffix": "かった",
+      "replacement": "い",
+      "class": "adj-i"
+    },
+    {
+      "suffix": "くて",
+      "replacement": "い",
+      "class": "adj-i"
+    },
+    {
+      "suffix": "ていました",
+      "replacement": "る",
+      "class": "v1"
+    },
+    {
+      "suffix": "ていた",
+      "replacement": "る",
+      "class": "v1"
+    },
+    {
+      "suffix": "ている",
+      "replacement": "る",
+      "class": "v1"
+    },
+    {
+      "suffix": "てる",
+      "replacement": "る",
+      "class": "v1"
+    },
+    {
+      "suffix": "でいました",
+      "replacement": "る",
+      "class": "v1"
+    },
+    {
+      "suffix": "でいた",
+      "replacement": "る",
+      "class": "v1"
+    },
+    {
+      "suffix": "でいる",
+      "replacement": "る",
+      "class": "v1"
+    },
+    {
+      "suffix": "でる",
+      "replacement": "る",
+      "class": "v1"
+    },
+    {
+      "suffix": "ちゃった",
+      "replacement": "る",
+      "class": "v1"
+    },
+    {
+      "suffix": "ました",
+      "replacement": "る",
+      "class": "v1"
+    },
+    {
+      "suffix": "ません",
+      "replacement": "る",
+      "class": "v1"
+    },
+    {
+      "suffix": "なかった",
+      "replacement": "る",
+      "class": "v1"
+    },
+    {
+      "suffix": "ない",
+      "replacement": "る",
+      "class": "v1"
+    },
+    {
+      "suffix": "なきゃ",
+      "replacement": "る",
+      "class": "v1"
+    },
+    {
+      "suffix": "られた",
+      "replacement": "る",
+      "class": "v1"
+    },
+    {
+      "suffix": "られる",
+      "replacement": "る",
+      "class": "v1"
+    },
+    {
+      "suffix": "て",
+      "replacement": "る",
+      "class": "v1"
+    },
+    {
+      "suffix": "た",
+      "replacement": "る",
+      "class": "v1"
+    },
+    {
+      "suffix": "っている",
+      "replacement": "う",
+      "class": "v5"
+    },
+    {
+      "suffix": "っている",
+      "replacement": "つ",
+      "class": "v5"
+    },
+    {
+      "suffix": "っている",
+      "replacement": "る",
+      "class": "v5"
+    },
+    {
+      "suffix": "ってる",
+      "replacement": "う",
+      "class": "v5"
+    },
+    {
+      "suffix": "ってる",
+      "replacement": "つ",
+      "class": "v5"
+    },
+    {
+      "suffix": "ってる",
+      "replacement": "る",
+      "class": "v5"
+    },
+    {
+      "suffix": "っていた",
+      "replacement": "う",
+      "class": "v5"
+    },
+    {
+      "suffix": "っていた",
+      "replacement": "つ",
+      "class": "v5"
+    },
+    {
+      "suffix": "っていた",
+      "replacement": "る",
+      "class": "v5"
+    },
+    {
+      "suffix": "って",
+      "replacement": "う",
+      "class": "v5"
+    },
+    {
+      "suffix": "って",
+      "replacement": "つ",
+      "class": "v5"
+    },
+    {
+      "suffix": "って",
+      "replacement": "る",
+      "class": "v5"
+    },
+    {
+      "suffix": "った",
+      "replacement": "う",
+      "class": "v5"
+    },
+    {
+      "suffix": "った",
+      "replacement": "つ",
+      "class": "v5"
+    },
+    {
+      "suffix": "った",
+      "replacement": "る",
+      "class": "v5"
+    },
+    {
+      "suffix": "んでいる",
+      "replacement": "む",
+      "class": "v5"
+    },
+    {
+      "suffix": "んでいる",
+      "replacement": "ぶ",
+      "class": "v5"
+    },
+    {
+      "suffix": "んでいる",
+      "replacement": "ぬ",
+      "class": "v5"
+    },
+    {
+      "suffix": "んでる",
+      "replacement": "む",
+      "class": "v5"
+    },
+    {
+      "suffix": "んでる",
+      "replacement": "ぶ",
+      "class": "v5"
+    },
+    {
+      "suffix": "んでる",
+      "replacement": "ぬ",
+      "class": "v5"
+    },
+    {
+      "suffix": "んで",
+      "replacement": "む",
+      "class": "v5"
+    },
+    {
+      "suffix": "んで",
+      "replacement": "ぶ",
+      "class": "v5"
+    },
+    {
+      "suffix": "んで",
+      "replacement": "ぬ",
+      "class": "v5"
+    },
+    {
+      "suffix": "んだ",
+      "replacement": "む",
+      "class": "v5"
+    },
+    {
+      "suffix": "んだ",
+      "replacement": "ぶ",
+      "class": "v5"
+    },
+    {
+      "suffix": "んだ",
+      "replacement": "ぬ",
+      "class": "v5"
+    },
+    {
+      "suffix": "いて",
+      "replacement": "く",
+      "class": "v5"
+    },
+    {
+      "suffix": "いた",
+      "replacement": "く",
+      "class": "v5"
+    },
+    {
+      "suffix": "いで",
+      "replacement": "ぐ",
+      "class": "v5"
+    },
+    {
+      "suffix": "いだ",
+      "replacement": "ぐ",
+      "class": "v5"
+    },
+    {
+      "suffix": "して",
+      "replacement": "す",
+      "class": "v5"
+    },
+    {
+      "suffix": "した",
+      "replacement": "す",
+      "class": "v5"
+    },
+    {
+      "suffix": "わない",
+      "replacement": "う",
+      "class": "v5"
+    },
+    {
+      "suffix": "かない",
+      "replacement": "く",
+      "class": "v5"
+    },
+    {
+      "suffix": "がない",
+      "replacement": "ぐ",
+      "class": "v5"
+    },
+    {
+      "suffix": "さない",
+      "replacement": "す",
+      "class": "v5"
+    },
+    {
+      "suffix": "たない",
+      "replacement": "つ",
+      "class": "v5"
+    },
+    {
+      "suffix": "なない",
+      "replacement": "ぬ",
+      "class": "v5"
+    },
+    {
+      "suffix": "ばない",
+      "replacement": "ぶ",
+      "class": "v5"
+    },
+    {
+      "suffix": "まない",
+      "replacement": "む",
+      "class": "v5"
+    },
+    {
+      "suffix": "らない",
+      "replacement": "る",
+      "class": "v5"
+    },
+    {
+      "suffix": "わなかった",
+      "replacement": "う",
+      "class": "v5"
+    },
+    {
+      "suffix": "かなかった",
+      "replacement": "く",
+      "class": "v5"
+    },
+    {
+      "suffix": "がなかった",
+      "replacement": "ぐ",
+      "class": "v5"
+    },
+    {
+      "suffix": "さなかった",
+      "replacement": "す",
+      "class": "v5"
+    },
+    {
+      "suffix": "たなかった",
+      "replacement": "つ",
+      "class": "v5"
+    },
+    {
+      "suffix": "ななかった",
+      "replacement": "ぬ",
+      "class": "v5"
+    },
+    {
+      "suffix": "ばなかった",
+      "replacement": "ぶ",
+      "class": "v5"
+    },
+    {
+      "suffix": "まなかった",
+      "replacement": "む",
+      "class": "v5"
+    },
+    {
+      "suffix": "らなかった",
+      "replacement": "る",
+      "class": "v5"
+    },
+    {
+      "suffix": "かなきゃ",
+      "replacement": "く",
+      "class": "v5"
+    },
+    {
+      "suffix": "わなきゃ",
+      "replacement": "う",
+      "class": "v5"
+    },
+    {
+      "suffix": "いました",
+      "replacement": "う",
+      "class": "v5"
+    },
+    {
+      "suffix": "きました",
+      "replacement": "く",
+      "class": "v5"
+    },
+    {
+      "suffix": "ぎました",
+      "replacement": "ぐ",
+      "class": "v5"
+    },
+    {
+      "suffix": "しました",
+      "replacement": "す",
+      "class": "v5"
+    },
+    {
+      "suffix": "ちました",
+      "replacement": "つ",
+      "class": "v5"
+    },
+    {
+      "suffix": "にました",
+      "replacement": "ぬ",
+      "class": "v5"
+    },
+    {
+      "suffix": "びました",
+      "replacement": "ぶ",
+      "class": "v5"
+    },
+    {
+      "suffix": "みました",
+      "replacement": "む",
+      "class": "v5"
+    },
+    {
+      "suffix": "りました",
+      "replacement": "る",
+      "class": "v5"
+    }
+  ],
+  "irregular": {
+    "行った": "行く",
+    "行って": "行く",
+    "行っていた": "行く",
+    "行ってる": "行く"
+  }
+}

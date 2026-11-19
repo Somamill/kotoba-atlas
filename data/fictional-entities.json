@@ -1,0 +1,34 @@
+[
+  {
+    "id": "atlas:ja:fiction:black-torch:kougi-onmitsu-kyoku",
+    "sourceLanguage": "ja",
+    "canonicalName": "公儀隠密局",
+    "aliases": ["隠密局"],
+    "reading": null,
+    "readingStatus": "No publisher-verified pronunciation supplied; do not synthesize one.",
+    "kind": "fictional-organization",
+    "work": "BLACK TORCH",
+    "officialLocalizedNames": {},
+    "definitions": {
+      "ja": "漫画『BLACK TORCH』に登場する組織。",
+      "en": "A fictional organization appearing in the manga BLACK TORCH."
+    },
+    "definitionStatus": "Original factual identification, not an official translated name or a general-language meaning.",
+    "annotationLicense": "CC0-1.0",
+    "annotationAuthor": "Kotoba Atlas contributors",
+    "references": [
+      {
+        "url": "https://jumpsq.shueisha.co.jp/rensai/blacktorch/",
+        "publisher": "Shueisha / Jump SQ",
+        "supports": ["canonicalName", "alias", "work", "fictional-organization"],
+        "accessed": "2026-11-19",
+        "rights": "Reference only. Publisher text and images are not reproduced or relicensed."
+      },
+      {
+        "url": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=08881391881097315501",
+        "publisher": "Shueisha",
+        "status": "Issue #6 supporting reference; server returned HTTP 503 during independent verification. Not required for the independently verified identification."
+      }
+    ]
+  }
+]

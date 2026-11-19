@@ -1,0 +1,945 @@
+{
+  "schemaVersion": 2,
+  "dictionaryRevision": "1.1.0-beta.2",
+  "channel": "beta",
+  "queryLanguages": [
+    "en",
+    "zh",
+    "es",
+    "ar",
+    "id",
+    "pt",
+    "fr",
+    "ja",
+    "ru",
+    "de"
+  ],
+  "normalization": "nfkc-casefold-kana-v1",
+  "sourceLanguages": [
+    "en",
+    "ja"
+  ],
+  "fallback": {
+    "language": "en",
+    "scope": "entry",
+    "primaryPresent": "primary-only",
+    "primaryMissing": "english-once-with-fallback-label"
+  },
+  "entryCountsBySourceLanguage": {
+    "en": 156584,
+    "ja": 1056822
+  },
+  "packages": [
+    {
+      "id": "core",
+      "role": "core",
+      "language": null,
+      "format": "atlas-sqlite-v2+gzip",
+      "schemaVersion": 2,
+      "dictionaryRevision": "1.1.0-beta.2",
+      "file": "Kotoba_Atlas_1_1_0_beta_2_Core.sqlite.gz",
+      "sha256": "ee08bcd59e773783e562e9162e7ff21446337f8bb44f9f91cba0b29bbf6848c4",
+      "uncompressedSha256": "0afe8fc089ccb8b6b326345d7e15effaafd79b40574fea515a229b72218a55cf",
+      "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.2/Kotoba_Atlas_1_1_0_beta_2_Core.sqlite.gz",
+      "compressedBytes": 473708496,
+      "uncompressedBytes": 1884286976,
+      "compatibility": {
+        "requiredSchema": 2,
+        "requiredCapabilities": [
+          "shared-core",
+          "entry-language-fallback",
+          "form-restrictions"
+        ]
+      },
+      "sourceIds": [
+        "atlas-factual-annotations",
+        "atlas-spelling-aliases",
+        "atlas-usage",
+        "atlas-v1-metadata",
+        "jitendex-aliases",
+        "jmdict-examples",
+        "jmdict-simplified",
+        "jmnedict-simplified",
+        "omw-arb",
+        "omw-cmn",
+        "omw-en",
+        "omw-es",
+        "omw-fr",
+        "omw-id",
+        "omw-ja",
+        "omw-pt"
+      ]
+    },
+    {
+      "id": "source-records",
+      "role": "source-records",
+      "language": null,
+      "format": "atlas-sqlite-v2+gzip",
+      "schemaVersion": 2,
+      "dictionaryRevision": "1.1.0-beta.2",
+      "file": "Kotoba_Atlas_1_1_0_beta_2_Source_Records.sqlite.gz",
+      "sha256": "812bd099954ae074a34c71786cb786fc5a4338205e75c33dda43658918a4b531",
+      "uncompressedSha256": "106c8557e6b51ec80bd861c962e243cdcefa46fd483dba41f388ef365033df11",
+      "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.2/Kotoba_Atlas_1_1_0_beta_2_Source_Records.sqlite.gz",
+      "compressedBytes": 483670139,
+      "uncompressedBytes": 2731339776,
+      "compatibility": {
+        "requiredSchema": 2,
+        "requiredCapabilities": [
+          "shared-core",
+          "entry-language-fallback",
+          "form-restrictions"
+        ]
+      },
+      "optionalForLookup": true
+    },
+    {
+      "id": "language:en",
+      "role": "language",
+      "language": "en",
+      "format": "atlas-sqlite-v2+gzip",
+      "schemaVersion": 2,
+      "dictionaryRevision": "1.1.0-beta.2",
+      "file": "Kotoba_Atlas_1_1_0_beta_2_en.sqlite.gz",
+      "sha256": "841a2669923759cca0ed7c8559a219454f2b952a4581b618ad4f441e4184a699",
+      "uncompressedSha256": "0ffbca0d81a97136d5d240e86b7cde1ae0f8ba1e8b38cf680f145a9fe1dce8de",
+      "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.2/Kotoba_Atlas_1_1_0_beta_2_en.sqlite.gz",
+      "compressedBytes": 248998754,
+      "uncompressedBytes": 1244676096,
+      "compatibility": {
+        "requiredSchema": 2,
+        "requiredCapabilities": [
+          "shared-core",
+          "entry-language-fallback",
+          "form-restrictions"
+        ]
+      },
+      "senses": 1363608,
+      "entries": 1213406,
+      "senseKinds": {
+        "factual-identification": 1,
+        "editorial-usage": 9,
+        "definition": 619163,
+        "proper-name-translation": 744435
+      },
+      "sourceIds": [
+        "atlas-factual-annotations",
+        "atlas-usage",
+        "jmdict-examples",
+        "jmdict-simplified",
+        "jmnedict-simplified",
+        "omw-en",
+        "omw-ja"
+      ]
+    },
+    {
+      "id": "language:zh",
+      "role": "language",
+      "language": "zh",
+      "format": "atlas-sqlite-v2+gzip",
+      "schemaVersion": 2,
+      "dictionaryRevision": "1.1.0-beta.2",
+      "file": "Kotoba_Atlas_1_1_0_beta_2_zh.sqlite.gz",
+      "sha256": "11eff07099538ce2c4a77f95d2a1d73349d4e02c5fb2970db70cf9f43a469cef",
+      "uncompressedSha256": "f84ff1d599f5adde0561c8b3095ad3c86d806e6a18be468e9f93f9f490d75609",
+      "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.2/Kotoba_Atlas_1_1_0_beta_2_zh.sqlite.gz",
+      "compressedBytes": 24157576,
+      "uncompressedBytes": 130404352,
+      "compatibility": {
+        "requiredSchema": 2,
+        "requiredCapabilities": [
+          "shared-core",
+          "entry-language-fallback",
+          "form-restrictions"
+        ]
+      },
+      "senses": 151479,
+      "entries": 115068,
+      "senseKinds": {
+        "translation-equivalent": 151479
+      },
+      "sourceIds": [
+        "omw-cmn"
+      ]
+    },
+    {
+      "id": "language:es",
+      "role": "language",
+      "language": "es",
+      "format": "atlas-sqlite-v2+gzip",
+      "schemaVersion": 2,
+      "dictionaryRevision": "1.1.0-beta.2",
+      "file": "Kotoba_Atlas_1_1_0_beta_2_es.sqlite.gz",
+      "sha256": "5239a903522eab2d394a4daebbd4b1556f203b51b499422eae11d2b0d5bb65a4",
+      "uncompressedSha256": "19b4463fec69b6eb206ccf58bcd311e47578306e9e0e033cb0934ea636d3f3e8",
+      "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.2/Kotoba_Atlas_1_1_0_beta_2_es.sqlite.gz",
+      "compressedBytes": 52480804,
+      "uncompressedBytes": 289107968,
+      "compatibility": {
+        "requiredSchema": 2,
+        "requiredCapabilities": [
+          "shared-core",
+          "entry-language-fallback",
+          "form-restrictions"
+        ]
+      },
+      "senses": 323919,
+      "entries": 232271,
+      "senseKinds": {
+        "definition": 96042,
+        "translation-equivalent": 227877
+      },
+      "sourceIds": [
+        "jmdict-simplified",
+        "omw-es"
+      ]
+    },
+    {
+      "id": "language:ar",
+      "role": "language",
+      "language": "ar",
+      "format": "atlas-sqlite-v2+gzip",
+      "schemaVersion": 2,
+      "dictionaryRevision": "1.1.0-beta.2",
+      "file": "Kotoba_Atlas_1_1_0_beta_2_ar.sqlite.gz",
+      "sha256": "001c7132226e3e83cbb010c8b36e9fb48becef5609b223ef81367f903e565410",
+      "uncompressedSha256": "c81267452f27fe14fb2570fd08d855360f60cfe52e7d3352f8ac85891df2f920",
+      "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.2/Kotoba_Atlas_1_1_0_beta_2_ar.sqlite.gz",
+      "compressedBytes": 12339007,
+      "uncompressedBytes": 68599808,
+      "compatibility": {
+        "requiredSchema": 2,
+        "requiredCapabilities": [
+          "shared-core",
+          "entry-language-fallback",
+          "form-restrictions"
+        ]
+      },
+      "senses": 68965,
+      "entries": 46962,
+      "senseKinds": {
+        "translation-equivalent": 68965
+      },
+      "sourceIds": [
+        "omw-arb"
+      ]
+    },
+    {
+      "id": "language:id",
+      "role": "language",
+      "language": "id",
+      "format": "atlas-sqlite-v2+gzip",
+      "schemaVersion": 2,
+      "dictionaryRevision": "1.1.0-beta.2",
+      "file": "Kotoba_Atlas_1_1_0_beta_2_id.sqlite.gz",
+      "sha256": "22df732b01725b7080be20c9eefb6546e3c4e479c428aa66d06b065ea6da534d",
+      "uncompressedSha256": "61f6ab25bf59f2781ab894f012e50ba0cc8c842cca75aaaaf6ae450aa0de90cc",
+      "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.2/Kotoba_Atlas_1_1_0_beta_2_id.sqlite.gz",
+      "compressedBytes": 34346037,
+      "uncompressedBytes": 190976000,
+      "compatibility": {
+        "requiredSchema": 2,
+        "requiredCapabilities": [
+          "shared-core",
+          "entry-language-fallback",
+          "form-restrictions"
+        ]
+      },
+      "senses": 211383,
+      "entries": 134734,
+      "senseKinds": {
+        "translation-equivalent": 175561,
+        "definition": 35822
+      },
+      "sourceIds": [
+        "omw-id"
+      ]
+    },
+    {
+      "id": "language:pt",
+      "role": "language",
+      "language": "pt",
+      "format": "atlas-sqlite-v2+gzip",
+      "schemaVersion": 2,
+      "dictionaryRevision": "1.1.0-beta.2",
+      "file": "Kotoba_Atlas_1_1_0_beta_2_pt.sqlite.gz",
+      "sha256": "8d6d0e08c88555406ce1df6bd4a9e6bb139b0626dc11c8ddabedd3cf57f19d4d",
+      "uncompressedSha256": "ebb391a9d1d31acfe37be73d25674f48b9ac4e4ad7c262308ce30fb0cdc54a60",
+      "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.2/Kotoba_Atlas_1_1_0_beta_2_pt.sqlite.gz",
+      "compressedBytes": 30461466,
+      "uncompressedBytes": 169590784,
+      "compatibility": {
+        "requiredSchema": 2,
+        "requiredCapabilities": [
+          "shared-core",
+          "entry-language-fallback",
+          "form-restrictions"
+        ]
+      },
+      "senses": 200405,
+      "entries": 141387,
+      "senseKinds": {
+        "translation-equivalent": 200405
+      },
+      "sourceIds": [
+        "omw-pt"
+      ]
+    },
+    {
+      "id": "language:fr",
+      "role": "language",
+      "language": "fr",
+      "format": "atlas-sqlite-v2+gzip",
+      "schemaVersion": 2,
+      "dictionaryRevision": "1.1.0-beta.2",
+      "file": "Kotoba_Atlas_1_1_0_beta_2_fr.sqlite.gz",
+      "sha256": "0c63b3f7b7062b19b0be6c975a1e11b14f37d5a0b713f4c04959f7ee7c9fb4d0",
+      "uncompressedSha256": "e442a7fd0a5bb870c15fedcfe26a5d410844259cb46a80b46351c4e1140c6733",
+      "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.2/Kotoba_Atlas_1_1_0_beta_2_fr.sqlite.gz",
+      "compressedBytes": 40161675,
+      "uncompressedBytes": 228216832,
+      "compatibility": {
+        "requiredSchema": 2,
+        "requiredCapabilities": [
+          "shared-core",
+          "entry-language-fallback",
+          "form-restrictions"
+        ]
+      },
+      "senses": 263633,
+      "entries": 182503,
+      "senseKinds": {
+        "definition": 16487,
+        "translation-equivalent": 247146
+      },
+      "sourceIds": [
+        "jmdict-simplified",
+        "omw-fr"
+      ]
+    },
+    {
+      "id": "language:ja",
+      "role": "language",
+      "language": "ja",
+      "format": "atlas-sqlite-v2+gzip",
+      "schemaVersion": 2,
+      "dictionaryRevision": "1.1.0-beta.2",
+      "file": "Kotoba_Atlas_1_1_0_beta_2_ja.sqlite.gz",
+      "sha256": "5aca52a56b16559e0ee05b4c8ab55cf0bd58ccd6894eef042d4a60f2a8a1445f",
+      "uncompressedSha256": "9749fe030da5c00203c990c5e6844e7a4e299fdca94731b97f83f11259c2aac9",
+      "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.2/Kotoba_Atlas_1_1_0_beta_2_ja.sqlite.gz",
+      "compressedBytes": 82004780,
+      "uncompressedBytes": 356376576,
+      "compatibility": {
+        "requiredSchema": 2,
+        "requiredCapabilities": [
+          "shared-core",
+          "entry-language-fallback",
+          "form-restrictions"
+        ]
+      },
+      "senses": 365048,
+      "entries": 250587,
+      "senseKinds": {
+        "factual-identification": 1,
+        "definition": 365047
+      },
+      "sourceIds": [
+        "atlas-factual-annotations",
+        "omw-ja"
+      ]
+    },
+    {
+      "id": "language:ru",
+      "role": "language",
+      "language": "ru",
+      "format": "atlas-sqlite-v2+gzip",
+      "schemaVersion": 2,
+      "dictionaryRevision": "1.1.0-beta.2",
+      "file": "Kotoba_Atlas_1_1_0_beta_2_ru.sqlite.gz",
+      "sha256": "b5cf783ecc7d8575c4380205b17abde7f0d015fa85dc319170f04859529a5754",
+      "uncompressedSha256": "6b83ec92143df94d43783c79ae980e8182bffcb9e3d93a7e30e32779eb7475a3",
+      "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.2/Kotoba_Atlas_1_1_0_beta_2_ru.sqlite.gz",
+      "compressedBytes": 13685473,
+      "uncompressedBytes": 84217856,
+      "compatibility": {
+        "requiredSchema": 2,
+        "requiredCapabilities": [
+          "shared-core",
+          "entry-language-fallback",
+          "form-restrictions"
+        ]
+      },
+      "senses": 69457,
+      "entries": 69419,
+      "senseKinds": {
+        "definition": 69457
+      },
+      "sourceIds": [
+        "jmdict-simplified"
+      ]
+    },
+    {
+      "id": "language:de",
+      "role": "language",
+      "language": "de",
+      "format": "atlas-sqlite-v2+gzip",
+      "schemaVersion": 2,
+      "dictionaryRevision": "1.1.0-beta.2",
+      "file": "Kotoba_Atlas_1_1_0_beta_2_de.sqlite.gz",
+      "sha256": "24bc27149e614c90452eee17cc66b5435401520355a34b0463390bb60c05e06e",
+      "uncompressedSha256": "8acb36019ea71fcbe9de102242cc8f73e7b64788d165dcb74aad4d2ace9ecf00",
+      "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.2/Kotoba_Atlas_1_1_0_beta_2_de.sqlite.gz",
+      "compressedBytes": 28078654,
+      "uncompressedBytes": 186228736,
+      "compatibility": {
+        "requiredSchema": 2,
+        "requiredCapabilities": [
+          "shared-core",
+          "entry-language-fallback",
+          "form-restrictions"
+        ]
+      },
+      "senses": 166106,
+      "entries": 129159,
+      "senseKinds": {
+        "editorial-usage": 9,
+        "definition": 166097
+      },
+      "sourceIds": [
+        "atlas-usage",
+        "jmdict-simplified"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "language": "en",
+      "primaryLanguageEntries": 1213406,
+      "primaryLanguageSenses": 1363608,
+      "senseKinds": {
+        "factual-identification": 1,
+        "editorial-usage": 9,
+        "definition": 619163,
+        "proper-name-translation": 744435
+      },
+      "bySourceLanguage": [
+        {
+          "sourceLanguage": "en",
+          "primaryLanguageEntries": 156584,
+          "primaryLanguageSenses": 206978,
+          "exampleReferences": 101569,
+          "senseKinds": {
+            "definition": 206978
+          }
+        },
+        {
+          "sourceLanguage": "ja",
+          "primaryLanguageEntries": 1056822,
+          "primaryLanguageSenses": 1156630,
+          "exampleReferences": 186546,
+          "senseKinds": {
+            "definition": 412185,
+            "editorial-usage": 9,
+            "factual-identification": 1,
+            "proper-name-translation": 744435
+          }
+        }
+      ],
+      "definitions": "available",
+      "translationEquivalents": false,
+      "reverseLookup": true,
+      "englishFallback": false,
+      "coverage": "partial; exact counts, not universal language coverage"
+    },
+    {
+      "language": "zh",
+      "primaryLanguageEntries": 115068,
+      "primaryLanguageSenses": 151479,
+      "senseKinds": {
+        "translation-equivalent": 151479
+      },
+      "bySourceLanguage": [
+        {
+          "sourceLanguage": "en",
+          "primaryLanguageEntries": 64141,
+          "primaryLanguageSenses": 77714,
+          "exampleReferences": 0,
+          "senseKinds": {
+            "translation-equivalent": 77714
+          }
+        },
+        {
+          "sourceLanguage": "ja",
+          "primaryLanguageEntries": 50927,
+          "primaryLanguageSenses": 73765,
+          "exampleReferences": 0,
+          "senseKinds": {
+            "translation-equivalent": 73765
+          }
+        }
+      ],
+      "definitions": "unavailable",
+      "translationEquivalents": true,
+      "reverseLookup": true,
+      "englishFallback": true,
+      "coverage": "partial; exact counts, not universal language coverage"
+    },
+    {
+      "language": "es",
+      "primaryLanguageEntries": 232271,
+      "primaryLanguageSenses": 323919,
+      "senseKinds": {
+        "definition": 96042,
+        "translation-equivalent": 227877
+      },
+      "bySourceLanguage": [
+        {
+          "sourceLanguage": "en",
+          "primaryLanguageEntries": 113887,
+          "primaryLanguageSenses": 148693,
+          "exampleReferences": 2583,
+          "senseKinds": {
+            "definition": 33389,
+            "translation-equivalent": 115304
+          }
+        },
+        {
+          "sourceLanguage": "ja",
+          "primaryLanguageEntries": 118384,
+          "primaryLanguageSenses": 175226,
+          "exampleReferences": 3970,
+          "senseKinds": {
+            "definition": 62653,
+            "translation-equivalent": 112573
+          }
+        }
+      ],
+      "definitions": "available",
+      "translationEquivalents": true,
+      "reverseLookup": true,
+      "englishFallback": true,
+      "coverage": "partial; exact counts, not universal language coverage"
+    },
+    {
+      "language": "ar",
+      "primaryLanguageEntries": 46962,
+      "primaryLanguageSenses": 68965,
+      "senseKinds": {
+        "translation-equivalent": 68965
+      },
+      "bySourceLanguage": [
+        {
+          "sourceLanguage": "en",
+          "primaryLanguageEntries": 15796,
+          "primaryLanguageSenses": 21556,
+          "exampleReferences": 0,
+          "senseKinds": {
+            "translation-equivalent": 21556
+          }
+        },
+        {
+          "sourceLanguage": "ja",
+          "primaryLanguageEntries": 31166,
+          "primaryLanguageSenses": 47409,
+          "exampleReferences": 0,
+          "senseKinds": {
+            "translation-equivalent": 47409
+          }
+        }
+      ],
+      "definitions": "unavailable",
+      "translationEquivalents": true,
+      "reverseLookup": true,
+      "englishFallback": true,
+      "coverage": "partial; exact counts, not universal language coverage"
+    },
+    {
+      "language": "id",
+      "primaryLanguageEntries": 134734,
+      "primaryLanguageSenses": 211383,
+      "senseKinds": {
+        "translation-equivalent": 175561,
+        "definition": 35822
+      },
+      "bySourceLanguage": [
+        {
+          "sourceLanguage": "en",
+          "primaryLanguageEntries": 66330,
+          "primaryLanguageSenses": 93228,
+          "exampleReferences": 0,
+          "senseKinds": {
+            "definition": 20703,
+            "translation-equivalent": 72525
+          }
+        },
+        {
+          "sourceLanguage": "ja",
+          "primaryLanguageEntries": 68404,
+          "primaryLanguageSenses": 118155,
+          "exampleReferences": 0,
+          "senseKinds": {
+            "definition": 15119,
+            "translation-equivalent": 103036
+          }
+        }
+      ],
+      "definitions": "available",
+      "translationEquivalents": true,
+      "reverseLookup": true,
+      "englishFallback": true,
+      "coverage": "partial; exact counts, not universal language coverage"
+    },
+    {
+      "language": "pt",
+      "primaryLanguageEntries": 141387,
+      "primaryLanguageSenses": 200405,
+      "senseKinds": {
+        "translation-equivalent": 200405
+      },
+      "bySourceLanguage": [
+        {
+          "sourceLanguage": "en",
+          "primaryLanguageEntries": 71128,
+          "primaryLanguageSenses": 90399,
+          "exampleReferences": 0,
+          "senseKinds": {
+            "translation-equivalent": 90399
+          }
+        },
+        {
+          "sourceLanguage": "ja",
+          "primaryLanguageEntries": 70259,
+          "primaryLanguageSenses": 110006,
+          "exampleReferences": 0,
+          "senseKinds": {
+            "translation-equivalent": 110006
+          }
+        }
+      ],
+      "definitions": "unavailable",
+      "translationEquivalents": true,
+      "reverseLookup": true,
+      "englishFallback": true,
+      "coverage": "partial; exact counts, not universal language coverage"
+    },
+    {
+      "language": "fr",
+      "primaryLanguageEntries": 182503,
+      "primaryLanguageSenses": 263633,
+      "senseKinds": {
+        "definition": 16487,
+        "translation-equivalent": 247146
+      },
+      "bySourceLanguage": [
+        {
+          "sourceLanguage": "en",
+          "primaryLanguageEntries": 90757,
+          "primaryLanguageSenses": 120875,
+          "exampleReferences": 0,
+          "senseKinds": {
+            "translation-equivalent": 120875
+          }
+        },
+        {
+          "sourceLanguage": "ja",
+          "primaryLanguageEntries": 91746,
+          "primaryLanguageSenses": 142758,
+          "exampleReferences": 0,
+          "senseKinds": {
+            "definition": 16487,
+            "translation-equivalent": 126271
+          }
+        }
+      ],
+      "definitions": "available",
+      "translationEquivalents": true,
+      "reverseLookup": true,
+      "englishFallback": true,
+      "coverage": "partial; exact counts, not universal language coverage"
+    },
+    {
+      "language": "ja",
+      "primaryLanguageEntries": 250587,
+      "primaryLanguageSenses": 365048,
+      "senseKinds": {
+        "factual-identification": 1,
+        "definition": 365047
+      },
+      "bySourceLanguage": [
+        {
+          "sourceLanguage": "en",
+          "primaryLanguageEntries": 156584,
+          "primaryLanguageSenses": 206978,
+          "exampleReferences": 101569,
+          "senseKinds": {
+            "definition": 206978
+          }
+        },
+        {
+          "sourceLanguage": "ja",
+          "primaryLanguageEntries": 94003,
+          "primaryLanguageSenses": 158070,
+          "exampleReferences": 154096,
+          "senseKinds": {
+            "definition": 158069,
+            "factual-identification": 1
+          }
+        }
+      ],
+      "definitions": "available",
+      "translationEquivalents": false,
+      "reverseLookup": true,
+      "englishFallback": true,
+      "coverage": "partial; exact counts, not universal language coverage"
+    },
+    {
+      "language": "ru",
+      "primaryLanguageEntries": 69419,
+      "primaryLanguageSenses": 69457,
+      "senseKinds": {
+        "definition": 69457
+      },
+      "bySourceLanguage": [
+        {
+          "sourceLanguage": "ja",
+          "primaryLanguageEntries": 69419,
+          "primaryLanguageSenses": 69457,
+          "exampleReferences": 0,
+          "senseKinds": {
+            "definition": 69457
+          }
+        }
+      ],
+      "definitions": "available",
+      "translationEquivalents": false,
+      "reverseLookup": true,
+      "englishFallback": true,
+      "coverage": "partial; exact counts, not universal language coverage"
+    },
+    {
+      "language": "de",
+      "primaryLanguageEntries": 129159,
+      "primaryLanguageSenses": 166106,
+      "senseKinds": {
+        "editorial-usage": 9,
+        "definition": 166097
+      },
+      "bySourceLanguage": [
+        {
+          "sourceLanguage": "ja",
+          "primaryLanguageEntries": 129159,
+          "primaryLanguageSenses": 166106,
+          "exampleReferences": 9,
+          "senseKinds": {
+            "definition": 166097,
+            "editorial-usage": 9
+          }
+        }
+      ],
+      "definitions": "available",
+      "translationEquivalents": false,
+      "reverseLookup": true,
+      "englishFallback": true,
+      "coverage": "partial; exact counts, not universal language coverage"
+    }
+  ],
+  "sources": [
+    {
+      "author": "Kotoba Atlas contributors",
+      "id": "atlas-factual-annotations",
+      "license": "CC0-1.0",
+      "references": [
+        {
+          "accessed": "2026-11-19",
+          "publisher": "Shueisha / Jump SQ",
+          "rights": "Reference only. Publisher text and images are not reproduced or relicensed.",
+          "supports": [
+            "canonicalName",
+            "alias",
+            "work",
+            "fictional-organization"
+          ],
+          "url": "https://jumpsq.shueisha.co.jp/rensai/blacktorch/"
+        },
+        {
+          "publisher": "Shueisha",
+          "status": "Issue #6 supporting reference; server returned HTTP 503 during independent verification. Not required for the independently verified identification.",
+          "url": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=08881391881097315501"
+        }
+      ]
+    },
+    {
+      "attribution": "Kotoba Atlas contributors; existing documented spelling/phrase aliases.",
+      "id": "atlas-spelling-aliases",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "attribution": "Original usage annotations/examples and German adaptations by Kotoba Atlas contributors.",
+      "id": "atlas-usage",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "id": "atlas-v1-metadata",
+      "kind": "atlas-v1-metadata",
+      "license": "Original per-source licences retained in package notices; metadata/kanji/tags only.",
+      "path": "Kotoba_Atlas_English_v1_0_4_beta_2.sqlite.gz",
+      "revision": "1.0.4-beta.2",
+      "sha256": "6bdf7efe61bcac2c246a577043c359a4db733bb248097fb4a72a73ae3ea0d5f8",
+      "uncompressedBytes": 596086784,
+      "uncompressedSha256": "02921bea34bab11a9ac90ba0778a2f30b85f5badbcb426b00a56e41ed2def921",
+      "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.0.4-beta.2/Kotoba_Atlas_English_v1_0_4_beta_2.sqlite.gz"
+    },
+    {
+      "attribution": "Stephen Kraus and JMdict contributors. Only source-declared spelling redirects are used; no page text is treated as a definition.",
+      "id": "jitendex-aliases",
+      "license": "CC-BY-SA-4.0",
+      "sha256": "e914c76596220dffc6ee0c069cd05992f03adb2988c12c3cebe817a3ac271356",
+      "sourceUrl": "https://jitendex.org/pages/legal.html",
+      "url": "https://github.com/stephenmk/stephenmk.github.io/releases/download/2026.10.03.0/jitendex-yomitan.zip"
+    },
+    {
+      "attribution": "Electronic Dictionary Research and Development Group and contributors; JSON normalization by scriptin/jmdict-simplified. Example sentences: Tatoeba contributors.",
+      "id": "jmdict-examples",
+      "license": "CC-BY-SA-4.0 with Tatoeba sentences under CC-BY-2.0-FR",
+      "revision": "3.6.2+20261116213322",
+      "sha256": "477e868ef421caae5d796f2bffd626ad73fa3f7032a404b7d9d7944b0e8235c5",
+      "url": "https://github.com/scriptin/jmdict-simplified/releases/download/3.6.2%2B20261116213322/jmdict-examples-eng-3.6.2%2B20261116213322.json.zip"
+    },
+    {
+      "attribution": "JMdict contributors and the Electronic Dictionary Research and Development Group; JSON normalization by scriptin/jmdict-simplified.",
+      "id": "jmdict-simplified",
+      "license": "CC-BY-SA-4.0",
+      "revision": "3.6.2+20261116213322",
+      "sha256": "3a13576085e15262299d9bdf83a8c188dcfb3ddeda636768b469e6e3049f8564",
+      "sourceUrl": "https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project",
+      "url": "https://github.com/scriptin/jmdict-simplified/releases/download/3.6.2%2B20261116213322/jmdict-all-3.6.2%2B20261116213322.json.zip"
+    },
+    {
+      "attribution": "Electronic Dictionary Research and Development Group and contributors; JSON normalization by scriptin/jmdict-simplified.",
+      "id": "jmnedict-simplified",
+      "license": "CC-BY-SA-4.0",
+      "revision": "3.6.2+20261116213322",
+      "sha256": "43f42df8361581a0b3629da4a59e568541fe44e818fb7dfc7654d6f07c269251",
+      "url": "https://github.com/scriptin/jmdict-simplified/releases/download/3.6.2%2B20261116213322/jmnedict-all-3.6.2%2B20261116213322.json.zip"
+    },
+    {
+      "citation": "Black W., Elkateb S., Rodriguez H., Alkhalifa M., Vossen P., Pease A., Bertran M., Fellbaum C.,. 2006. *The Arabic WordNet Project*. In *Proceedings of LREC 2006*.\nLahsen Abouenour, Karim Bouzoubaa, Paolo Rosso. 2013. *On the evaluation and improvement of {Arabic} WordNet coverage and usability*. *Language Resources and Evaluation*, **47(3)** pp 891–917.",
+      "id": "omw-arb",
+      "language": "ar",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "licenseFile": {
+        "path": "wns/arb/LICENSE",
+        "sha256": "02313f044f2e509033a9fc4aae89184352d4ccff19ed6d63856e8e37fd2c30ac",
+        "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/arb/LICENSE"
+      },
+      "revision": "406bf83b3c507a3d1f26e88252d5d66893fd36bf",
+      "sha256": "812af3ec3acec1b5825f44b79910fe3782945a0f4792141bb4aea3b68f9fe49a",
+      "sourceUrl": "http://globalwordnet.org/resources/arabic-wordnet/",
+      "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/arb/wn-data-arb.tab"
+    },
+    {
+      "citation": "Shan Wang and Francis Bond. 2013. `Building the Chinese Open Wordnet (COW): Starting from Core Synsets <https://aclweb.org/anthology/W/W13/W13-4302.pdf>`_. In *Proceedings of the 11th Workshop on Asian Language Resources, a Workshop of The 6th International Joint Conference on Natural Language Processing (IJCNLP-6)*. Nagoya, Japan. pp 10–18.",
+      "id": "omw-cmn",
+      "language": "zh",
+      "license": "wordnet",
+      "licenseFile": {
+        "path": "wns/cow/LICENSE",
+        "sha256": "81a3cb1f97e120581d67c71424f2de5dd96325d951f991e8a092147a2a4b2321",
+        "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/cow/LICENSE"
+      },
+      "revision": "406bf83b3c507a3d1f26e88252d5d66893fd36bf",
+      "sha256": "379fd2e41d3e1395f9f27cf23a39c6181849ffb4020c14a07ed2a4d4dd651122",
+      "sourceUrl": "https://bond-lab.github.io/cow/",
+      "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/cow/wn-data-cmn.tab"
+    },
+    {
+      "id": "omw-en",
+      "language": "en",
+      "license": "WordNet-3.0",
+      "licenseFile": {
+        "path": "wns/eng/LICENSE",
+        "sha256": "879422521551f1933cdb75a56c89da11ffce2c800c9431052d7b66207b5c2c68",
+        "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/eng/LICENSE"
+      },
+      "revision": "406bf83b3c507a3d1f26e88252d5d66893fd36bf",
+      "sha256": "d1409d88addcdb890b1606dd280b558cca4258b1f33bd580d54ed949daad1ede",
+      "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/eng/wn-data-eng.tab"
+    },
+    {
+      "citation": "Aitor Gonzalez-Agirre, Egoitz Laparra and German Rigau. 2012. `Multilingual Central Repository version 3.0: upgrading a very large lexical knowledge base <http://adimen.si.ehu.es/web/sites/all/modules/pubdlcnt/pubdlcnt.php?file=http://adimen.si.ehu.es/~rigau/publications/gwc12-glr.pdf&nid=18>`_. In *Proceedings of the 6th Global WordNet Conference (GWC 2012)*. Matsue, Japan.",
+      "id": "omw-es",
+      "language": "es",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "licenseFile": {
+        "path": "wns/mcr/LICENSE",
+        "sha256": "ccbb7b96a812b37a88a9cb8dfda92dc251e61c5fca5225ff23f5fc3d33b32a70",
+        "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/mcr/LICENSE"
+      },
+      "revision": "406bf83b3c507a3d1f26e88252d5d66893fd36bf",
+      "sha256": "0ec37ce94ee2acc63ad6b120e1051f9841d172778cc24adc0023fb8dccf0a7cd",
+      "sourceUrl": "https://adimen.si.ehu.es/web/MCR/",
+      "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/mcr/wn-data-spa.tab"
+    },
+    {
+      "citation": "Benoit Sagot and Darla Fišer. 2008. Building a free French wordnet from multilingual resources, *E.L.R.A. (ELRA) (ed.), Proceedings of the Sixth International Language Resources and Evaluation (LREC 2008)*. Marrakech, Morocco.",
+      "id": "omw-fr",
+      "language": "fr",
+      "license": "http://www.cecill.info/licenses/Licence_CeCILL-C_V1-en.html",
+      "licenseFile": {
+        "path": "wns/fra/LICENSE",
+        "sha256": "3cc8a6f74249a041a4ae4ce708bdfeff8fa7e9cd0b97ef7d3fab139087f73e51",
+        "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/fra/LICENSE"
+      },
+      "revision": "406bf83b3c507a3d1f26e88252d5d66893fd36bf",
+      "sha256": "6effab15723bbb482f2922d42eb1db37c8586984ce7735ebfe0a096000b69f86",
+      "sourceUrl": "http://pauillac.inria.fr/~sagot/index.html#wolf",
+      "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/fra/wn-data-fra.tab"
+    },
+    {
+      "citation": "Nurril Hirfana Mohamed Noor, Suerya Sapuan and Francis Bond. 2011. `Creating the open Wordnet Bahasa <http://web.mysites.ntu.edu.sg/fcbond/open/pubs/2011-wn-bahasa.pdf>`_. In *Proceedings of the 25th Pacific Asia Conference on Language, Information and Computation (PACLIC 25)*. pp 258–267. Singapore.",
+      "id": "omw-id",
+      "language": "id",
+      "license": "https://opensource.org/licenses/MIT/",
+      "licenseFile": {
+        "path": "wns/msa/LICENSE",
+        "sha256": "d16fe95c087c732e06758795c95dabc2a18a9b141881005d85b051bf85d587b7",
+        "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/msa/LICENSE"
+      },
+      "revision": "406bf83b3c507a3d1f26e88252d5d66893fd36bf",
+      "sha256": "aa4fffad11f83199a7a0ffe062aad65eb72216b47f3b2944b86cb806b4c1175a",
+      "sourceUrl": "http://wn-msa.sourceforge.net/",
+      "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/msa/wn-data-ind.tab"
+    },
+    {
+      "citation": "Hitoshi Isahara, Francis Bond, Kiyotaka Uchimoto, Masao Utiyama and Kyoko Kanzaki. 2008. *Development of Japanese WordNet*. In *LREC-2008*, Marrakech.",
+      "id": "omw-ja",
+      "language": "ja",
+      "license": "wordnet",
+      "licenseFile": {
+        "path": "wns/jpn/LICENSE",
+        "sha256": "a4be32a83ad0a1cff9a31c23aaa107be20eb843d97c68a2ff72e10ff5ac17cee",
+        "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/jpn/LICENSE"
+      },
+      "revision": "406bf83b3c507a3d1f26e88252d5d66893fd36bf",
+      "sha256": "f47fefb11824b86d8556c632f5b71438397abac79677b607070cd0bdcb9ac212",
+      "sourceUrl": "https://bond-lab.github.io/wnja/",
+      "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/jpn/wn-data-jpn.tab"
+    },
+    {
+      "citation": "Valeria de Paiva and Alexandre Rademaker. 2012. Revisiting a Brazilian wordnet. In *Proceedings of Global Wordnet Conference*, Matsue. Global Wordnet Association. (also with Gerard de Melo's contribution)",
+      "id": "omw-pt",
+      "language": "pt",
+      "license": "https://creativecommons.org/licenses/by-sa/",
+      "licenseFile": {
+        "path": "wns/por/LICENSE",
+        "sha256": "4c7824c3cf3ca7d5fc68ee0473e16741361a67e242557c0661a0d6bd926ea297",
+        "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/por/LICENSE"
+      },
+      "revision": "406bf83b3c507a3d1f26e88252d5d66893fd36bf",
+      "sha256": "0ba180e2d2a5317e61b4ebe94a7e969e68eea2d9e60705e1e9053c6e2ac5e684",
+      "sourceUrl": "http://wn.mybluemix.net/",
+      "url": "https://raw.githubusercontent.com/omwn/omw-data/406bf83b3c507a3d1f26e88252d5d66893fd36bf/wns/por/wn-data-por.tab"
+    }
+  ]
+}

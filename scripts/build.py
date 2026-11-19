@@ -114,7 +114,26 @@ def store(db, values):
         score=max(definitions.score,excluded.score)''', values)
 
 
+def resolve_redirects(db):
+    pending = db.execute('SELECT * FROM structured_redirects').fetchall()
+    while pending:
+        unresolved = []
+        for term, reading, source, target, target_reading, rules, score in pending:
+            rows = db.execute('SELECT reading,gloss,rules,score FROM definitions WHERE term=? AND source=? '
+                              'AND (? IS NULL OR reading=?)',
+                              (target, source, target_reading, target_reading)).fetchall()
+            if not rows:
+                unresolved.append((term, reading, source, target, target_reading, rules, score))
+            for target_reading_value, gloss, target_rules, target_score in rows:
+                store(db, (term, reading or target_reading_value, source, gloss,
+                           ' '.join(sorted(set((rules+' '+target_rules).split()))), min(score, target_score)))
+        if len(unresolved) == len(pending):
+            raise ValueError('Unresolved structured redirects: '+repr(unresolved[:5]))
+        pending = unresolved
+
+
 def main():
+    from structured import definition_text, extract
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--cache', type=Path, default=ROOT / '.cache')
     parser.add_argument('--output', type=Path, default=ROOT / 'dist')
@@ -131,6 +150,8 @@ def main():
     db.execute('PRAGMA journal_mode=OFF')
     db.execute('PRAGMA synchronous=OFF')
     db.execute('CREATE TABLE definitions(term TEXT, reading TEXT, source INTEGER, gloss TEXT, rules TEXT, score INTEGER, UNIQUE(term,reading,source,gloss))')
+    db.execute('CREATE TABLE structured_records(record_id TEXT PRIMARY KEY, entry_id TEXT, source INTEGER, term TEXT, reading TEXT, payload TEXT)')
+    db.execute('CREATE TABLE structured_redirects(term TEXT, reading TEXT, source INTEGER, target TEXT, target_reading TEXT, rules TEXT, score INTEGER)')
     sources = json.loads((ROOT / 'data/sources.json').read_text())
     notices, stats = [], []
     counts = {'word_rows': 0, 'kanji_rows': 0, 'metadata_rows': 0}
@@ -138,7 +159,27 @@ def main():
     def add(row, source, label):
         assert len(row) == 8 and isinstance(row[0], str) and row[0]
         assert isinstance(row[1], str) and isinstance(row[3], str)
-        gloss = '\n'.join(filter(None, (clean(g) for g in row[5])))
+        if any(isinstance(node, dict) and node.get('type') == 'structured-content' for node in row[5]):
+            language = label.split(' •', 1)[0].lower()
+            if language not in {'en', 'de', 'ja'}:
+                raise ValueError('Structured source needs an explicit definition language: '+label)
+            spec = sources[source] if source < len(sources) else {}
+            identity = {'id': spec.get('file', label), 'namespace': 'jmdict' if label == 'EN • Jitendex' else label,
+                        'license': spec.get('license', 'See source manifest')}
+            record = extract(row, identity, language)
+            db.execute('INSERT OR IGNORE INTO structured_records VALUES(?,?,?,?,?,?)',
+                (record['sourceRecords'][0]['id'], record['id'], source, row[0], row[1],
+                 json.dumps(record, ensure_ascii=False, separators=(',', ':'))))
+            gloss = definition_text(row, identity, language)
+            if not gloss:
+                if record['redirects']:
+                    for target in record['redirects']:
+                        db.execute('INSERT INTO structured_redirects VALUES(?,?,?,?,?,?,?)',
+                            (row[0], row[1], source, target['term'], target['reading'], row[3], int(row[4])))
+                    return
+                raise ValueError('No semantic glossary adapter for structured entry: '+repr(row[:2]))
+        else:
+            gloss = '\n'.join(filter(None, (clean(g) for g in row[5])))
         if row[2]:
             gloss = 'Tags: ' + row[2] + '\n' + gloss
         if not gloss:
@@ -194,6 +235,7 @@ def main():
         stats.append({'source': label, 'rows_added': db.execute('SELECT count(*) FROM definitions').fetchone()[0] - before})
         print(label, stats[-1]['rows_added'], flush=True)
 
+    resolve_redirects(db)
     alias_number = len(sources)
     for row in alias_rows():
         add(row, alias_number, 'DE/EN • verified spelling/phrase supplement')

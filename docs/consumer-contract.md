@@ -2,7 +2,7 @@
 
 This format is under validation. Existing schema-1 native and browser releases remain available; do not point production consumers at this draft until artifact and integration gates pass.
 
-One indexed lexical core contains canonical entry identities, source languages, valid source spelling/reading pairs, attribution, compact source-record locators and a multilingual reverse-search index. Full original source records live once in an optional provenance package. Language packs contain structured senses. A pack binds to the exact uncompressed core SHA-256 and dictionary revision. Consumers must reject mismatched generations. History, favorites and notes belong outside these replaceable packages.
+One indexed lexical core contains canonical entry identities, source languages, valid source spelling/reading pairs, attribution and a multilingual reverse-search index. Sense/form payloads retain source-record references. Full original source records and their entry associations live once in an optional provenance package, with sources and licence notices. Language packs contain structured senses. A pack binds to the exact uncompressed core SHA-256 and dictionary revision. Consumers must reject mismatched generations. History, favorites and notes belong outside these replaceable packages.
 
 JMdict entry IDs use `jmdict:ja:<upstream-id>`. Unchanged senses have content-addressed IDs; upstream JMdict does not provide immutable sense IDs, so changed senses receive new identities. WordNet senses retain the upstream Princeton WordNet 3.0 synset identity and explicit language. Unknown identity relationships are not merged by similar text. Original source records remain available for provenance.
 
@@ -33,3 +33,19 @@ The Swift tests pass on the Mac, including the existing full offline English pac
 All ten definition-language families have explicit package and reverse-index capabilities. Headword adapters currently cover Japanese and English; reverse queries search all included definition-language glosses and equivalents. Arabic and Portuguese WordNet records provide labelled translation equivalents, not full explanatory native definitions. Japanese includes actual Japanese WordNet definitions. JMdict supplies German/Russian and other available language senses; source coverage varies by entry. No UI translation or English fallback is counted as native-definition coverage.
 
 Curated slang annotations attach to explicitly reviewed JMdict identities where verified (`data/usage-identities.json`). ワンチャン as “one chance/maybe” stays distinct from the dog homograph. Upstream records are not merged merely because gloss text looks alike. Unchanged sense IDs survive example enrichment; changed semantic content receives a new sense identity.
+
+## Matching and browser projection
+
+The Japanese-focused consumers retain ambiguous candidates, prefer Japanese-source
+entries, and boost exact displayed-language equivalents over incidental full-text
+matches. Source-marked irregular/rare spellings receive a small penalty; an alias
+cannot erase the upstream spelling's tags. Both ワンチャン identities remain.
+Canonical display forms prefer actual headwords and common source forms over
+redirect aliases. Script candidates are hints, never a destructive filter.
+
+The browser projection omits redundant reading-only rows when the same entry
+already has a written form with that reading, retaining kana-only entries and
+usually-kana (`uk`) forms. The reading column remains searchable. A pinned real
+Yomitan IndexedDB fixture checks written-name reading and kana-only-name lookup;
+full-edition parser checks cover every bank. These do not certify the current
+Migaku browser extension.

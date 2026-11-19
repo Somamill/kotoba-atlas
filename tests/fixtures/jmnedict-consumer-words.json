@@ -1,0 +1,63 @@
+{
+  "words": [
+    {
+      "id": "5000000",
+      "kanji": [
+        {
+          "text": "ゝ泉",
+          "tags": []
+        }
+      ],
+      "kana": [
+        {
+          "text": "ちゅせん",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "translation": [
+        {
+          "type": [
+            "given"
+          ],
+          "related": [],
+          "translation": [
+            {
+              "lang": "eng",
+              "text": "Chusen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5000085",
+      "kanji": [],
+      "kana": [
+        {
+          "text": "あーみん",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "translation": [
+        {
+          "type": [
+            "fem"
+          ],
+          "related": [],
+          "translation": [
+            {
+              "lang": "eng",
+              "text": "A-min"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

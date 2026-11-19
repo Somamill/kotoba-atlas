@@ -71,11 +71,14 @@ def main():
     table = 'l1name' + name
     count = db.c.execute('SELECT count(*) FROM ' + table).fetchone()[0]
     examples = {}
-    for term in ['羅睺', '物ノ怪', '鎌かけて', '鎌かける', 'てぇてぇ', 'ぬまる', '沼る', '推し活', 'ワンチャン']:
+    for term in ['ノリのいい', '隠密局', '公儀隠密局', '羅睺', '物ノ怪', '鎌かけて', '鎌かける', 'てぇてぇ', 'ぬまる', '沼る', '推し活', 'ワンチャン']:
         rows = db.c.execute('SELECT pronunciation,pos,definition FROM ' + table + ' WHERE term=?', (term,)).fetchall()
         assert rows, 'Missing lookup after import: ' + term
         examples[term] = [{'reading': row[0], 'pos': row[1], 'definition': row[2][:200]} for row in rows]
     assert any('v1' in row['pos'].split() for row in examples['鎌かける'])
+    clean = db.c.execute('SELECT definition FROM '+table+' WHERE term=?', ('ノリのいい',)).fetchall()
+    assert any('easily getting into' in row[0] for row in clean), 'Clean meaning missing after legacy import'
+    assert all(not re.search(r'expadjectivekana|See also|query=|edrdg', row[0]) for row in clean), 'Polluted meaning after legacy import'
     seconds = time.perf_counter() - started
     report = {'archive': args.archive.name, 'revision': index['revision'], 'upstream_revision': revision,
               'scope': 'Public legacy Anki importer core and actual SQLite table/index/insertion functions; GUI/language registry facade; no external frequency list',

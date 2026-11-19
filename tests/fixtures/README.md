@@ -21,3 +21,10 @@ annotations (CC BY-SA 4.0) and the CC0 factual fiction-identification annotation
 `data/usage-identities.json` is an explicit identity review against those pinned
 JMdict records. In particular 2831313 is the chance/maybe ワンチャン entry;
 2794860 is the separate dog homograph and is never merged into it.
+
+The names fixture retains two real JMnedict records (5000000, 5000085),
+CC BY-SA 4.0. The examples fixture retains the corresponding pinned JMdict
+English records; sentences remain Tatoeba CC BY 2.0 FR, with source fields.
+`atlas-metadata.json` retains a small 日本語 frequency/pitch and 語 kanji
+subset from the pinned Atlas metadata source, including original source
+and licence notices (notice bytes are base64 encoded).

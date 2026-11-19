@@ -22,7 +22,7 @@ configure({useWebWorkers: false});
 const {LanguageTransformer} = await upstream('ext/js/language/language-transformer.js');
 const {japaneseTransforms} = await upstream('ext/js/language/ja/japanese-transforms.js');
 const selected = new Map(), storedCounts = {};
-const wanted = new Set(['羅睺', '物ノ怪', '鎌かけて', '鎌かける', '鎌を掛ける', 'ぬまる', '沼る', '推し活する', '食べる', '楽しい', 'てぇてぇ', '日本語']);
+const wanted = new Set(['ノリのいい', '隠密局', '公儀隠密局', '羅睺', '物ノ怪', '鎌かけて', '鎌かける', '鎌を掛ける', 'ぬまる', '沼る', '推し活する', '食べる', '楽しい', 'てぇてぇ', '日本語']);
 let database;
 if (mode === 'indexeddb') {
   const require = createRequire(path.join(source, 'package.json'));
@@ -47,7 +47,7 @@ if (mode === 'indexeddb') {
       storedCounts[store] = (storedCounts[store] || 0) + count;
       if (store === 'terms') for (let i = start; i < start + count; i++) {
         const row = entries[i];
-        if (wanted.has(row.expression)) selected.set(row.term ?? row.expression, row);
+        if (wanted.has(row.expression)) selected.set(row.term ?? row.expression, [...(selected.get(row.term ?? row.expression) ?? []), row]);
       }
     },
     async bulkUpdate() {},
@@ -61,9 +61,12 @@ assert.deepEqual(errors.map(error => error.message), []);
 assert.ok(result?.importSuccess, 'Import did not finish');
 if (mode === 'indexeddb') {
   const rows = await database.findTermsBulk([...wanted], new Set([result.title]), 'exact');
-  for (const row of rows) selected.set(row.term ?? row.expression, row);
+  for (const row of rows) selected.set(row.term ?? row.expression, [...(selected.get(row.term ?? row.expression) ?? []), row]);
   assert.ok((await database.findTermMetaBulk(['日本語'], new Set([result.title]))).length, 'Native metadata did not reach IndexedDB');
   assert.ok((await database.findKanjiBulk(['語'], new Set([result.title]))).length, 'Native kanji did not reach IndexedDB');
+  const names = await database.findTermsBulk(['ちゅせん', 'あーみん'], new Set([result.title]), 'exact');
+  assert.ok(names.some(row => (row.term ?? row.expression) === 'ゝ泉' && row.reading === 'ちゅせん'), 'Written-name reading lookup was lost');
+  assert.ok(names.some(row => (row.term ?? row.expression) === 'あーみん'), 'Kana-only name lookup was lost');
 }
 for (const term of wanted) assert.ok(selected.has(term), 'No imported entry: ' + term);
 const transformer = new LanguageTransformer();
@@ -76,13 +79,18 @@ const cases = [
   ['食べていました', '食べる', 'v1'], ['楽しくなかった', '楽しい', 'adj-i'],
 ];
 for (const [surface, term, rule] of cases) {
-  const row = selected.get(term), rules = Array.isArray(row.rules) ? row.rules : row.rules.split(' ');
-  assert.ok(rules.includes(rule), 'Lost dictionary rule: ' + term + '/' + rule);
+  const rows = selected.get(term);
+  assert.ok(rows.some(row => (Array.isArray(row.rules) ? row.rules : row.rules.split(' ')).includes(rule)), 'Lost dictionary rule: ' + term + '/' + rule);
   const mask = transformer.getConditionFlagsFromConditionType(rule);
   assert.ok(transformer.transform(surface).some(candidate => candidate.text === term && LanguageTransformer.conditionsMatch(candidate.conditions, mask)), surface + ' did not resolve with its dictionary rule');
 }
+const clean = selected.get('ノリのいい').find(row => row.sequence === 2238120);
+const cleanGlossary = clean?.glossary ?? clean?.definitions;
+assert.ok(cleanGlossary && cleanGlossary.some(gloss => typeof gloss === 'string' && gloss.includes('easily getting into')), 'Clean canonical definition missing after import');
+assert.doesNotMatch(cleanGlossary.join(' '), /expadjectivekana|See also|query=|edrdg/);
 const report = {archive: path.basename(archive), revision: result.revision, upstream_revision: revision,
   scope: mode === 'indexeddb' ? 'Upstream importer and database adapter with fake-indexeddb on a representative fixture' : 'Full upstream parser/schema/import pipeline with a counting storage facade; no persistent IndexedDB writes',
+  structured_regressions: {clean_entry_sequence: clean.sequence, clean_glossary: cleanGlossary, fiction_aliases_present: true},
   counts: result.counts, storedCounts, deinflection_cases: cases.length, elapsed_seconds: Math.round((performance.now() - started) / 10) / 100,
   peak_rss_bytes: process.resourceUsage().maxRSS * 1024,
   archive_sha256: crypto.createHash('sha256').update(buffer).digest('hex'), live_extension_tested: false};

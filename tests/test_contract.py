@@ -10,7 +10,7 @@ import unittest
 import zipfile
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'scripts'))
-from adapters import fiction, jmdict, omw
+from adapters import fiction, jmdict, jmnedict, omw
 from contract import Builder, export, normalized, sha
 from structured import present
 from contract_lookup import AtlasIndex, language_candidates
@@ -76,10 +76,49 @@ class ContractTests(unittest.TestCase):
                 self.assertFalse(result['fallback'])
                 self.assertTrue(all(s['language'] == 'de' for s in result['senses']))
                 self.assertEqual(index.search('Dämon', 'de')[0]['entryId'], 'jmdict:ja:1502400')
-                self.assertEqual(index.search('ワンチャン', 'de')[0]['entryId'].split(':')[:2], ['jmdict', 'ja'])
+                self.assertEqual(index.search('ワンチャン', 'de')[0]['entryId'], 'jmdict:ja:2831313')
                 self.assertTrue({'jmdict:ja:2794860','jmdict:ja:2831313'} <= {r['entryId'] for r in index.search('ワンチャン', 'de')})
             finally:
                 index.close()
+
+    def test_real_names_keep_reading_lookup_without_redundant_browser_rows(self):
+        fixture = json.loads((Path(__file__).parent/'fixtures/jmnedict-consumer-words.json').read_text())
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            archive = root/'names.zip'
+            with zipfile.ZipFile(archive, 'w') as zipped:
+                zipped.writestr('names.json', json.dumps(fixture))
+            builder = Builder(root/'build.sqlite', '1.1.0-beta.1')
+            records = list(jmnedict(archive, {'id': 'jmnedict-fixture', 'license': 'CC-BY-SA-4.0'}))
+            for record in records:
+                builder.add(record)
+            builder.finish(); builder.close()
+            browser = export_browser(root/'build.sqlite', root/'browser', '1.1.0-beta.1', 'en', optimize=False)
+            with zipfile.ZipFile(browser) as zipped:
+                rows = [row for name in zipped.namelist() if name.startswith('term_bank_') for row in json.loads(zipped.read(name))]
+            for record in records:
+                written = [f for f in record['headwords'] if f['kind'] != 'reading']
+                for form in written or record['headwords']:
+                    self.assertTrue(any(row[0] == form['text'] and row[1] == form['reading'] for row in rows))
+                if written:
+                    for form in written:
+                        self.assertFalse(any(row[0] == form['reading'] and row[0] != form['text'] for row in rows))
+
+    def test_real_example_enrichment_keeps_sense_identity(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            builder = Builder(root/'build.sqlite', '1.1.0-beta.1')
+            counts = []
+            for fixture, source in [('jmdict-consumer-words.json', 'words'), ('jmdict-examples-consumer-words.json', 'examples')]:
+                archive = root/(source+'.zip')
+                with zipfile.ZipFile(archive, 'w') as zipped:
+                    zipped.writestr('words.json', (Path(__file__).parent/'fixtures'/fixture).read_bytes())
+                for record in jmdict(archive, {'id': source, 'license': 'CC-BY-SA-4.0; examples CC-BY-2.0-FR'}):
+                    builder.add(record)
+                counts.append(builder.db.execute('SELECT count(*) FROM senses').fetchone()[0])
+            self.assertEqual(counts[0], counts[1])
+            self.assertGreater(sum(len(json.loads(row[0]).get('examples', [])) for row in builder.db.execute('SELECT payload FROM senses')), 0)
+            builder.finish(); builder.close()
 
     def test_script_candidates_do_not_force_ambiguous_language(self):
         self.assertEqual({x['language'] for x in language_candidates('日本')}, {'ja', 'zh'})
@@ -133,12 +172,13 @@ class ContractTests(unittest.TestCase):
                         ids = database.execute('SELECT DISTINCT entry_id FROM forms WHERE text IN (?,?)',
                                                ('隠密局', '公儀隠密局')).fetchall()
                         self.assertEqual(ids, [(record['id'],)])
-                        reference = json.loads(database.execute('SELECT payload FROM source_records').fetchone()[0])
-                        self.assertEqual(reference['provenancePackage'], 'source-records')
+                        self.assertEqual(database.execute("SELECT COUNT(*) FROM sqlite_master WHERE name IN ('source_records','entry_source_records')").fetchone()[0], 0)
                         self.assertEqual(database.execute('SELECT COUNT(*) FROM sqlite_master WHERE name=?', ('senses',)).fetchone()[0], 0)
                     if package['role'] == 'source-records':
                         original = json.loads(database.execute('SELECT payload FROM source_records').fetchone()[0])
                         self.assertIsNone(original['record']['reading'])
+                        self.assertTrue(json.loads(database.execute('SELECT payload FROM sources').fetchone()[0])['license'])
+                        self.assertEqual(database.execute('SELECT entry_id FROM entry_source_records').fetchone()[0], record['id'])
 
     def test_normalization_does_not_merge_lexical_identities(self):
         self.assertEqual(normalized(' ｶﾀｶﾅ '), 'かたかな')

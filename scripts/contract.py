@@ -219,9 +219,27 @@ def add_legacy_metadata(builder, compressed, spec):
         temporary.unlink(missing_ok=True)
 
 
+def language_coverage(source):
+    """One corpus pass per count, separating Japanese from auxiliary headwords."""
+    result = {language: {} for language in LANGUAGES}
+    for language, origin, entries, senses, examples in source.execute("""
+        SELECT s.language,e.source_language,count(DISTINCT e.id),count(*),
+            sum(json_array_length(s.payload,'$.examples'))
+        FROM senses s JOIN entries e ON e.id=s.entry_id GROUP BY s.language,e.source_language"""):
+        result[language][origin] = {'sourceLanguage': origin, 'primaryLanguageEntries': entries,
+            'primaryLanguageSenses': senses, 'exampleReferences': examples or 0, 'senseKinds': {}}
+    for language, origin, kind, count in source.execute("""
+        SELECT s.language,e.source_language,json_extract(s.payload,'$.kind'),count(*)
+        FROM senses s JOIN entries e ON e.id=s.entry_id
+        GROUP BY s.language,e.source_language,json_extract(s.payload,'$.kind')"""):
+        result[language][origin]['senseKinds'][kind] = count
+    return {language: list(origins.values()) for language, origins in result.items()}
+
+
 def export(build_path, output, revision):
     output = Path(output); output.mkdir(parents=True, exist_ok=True)
     source = sqlite3.connect(build_path)
+    source.execute('PRAGMA cache_size=-262144')
     stem = 'Kotoba_Atlas_'+revision.replace('.', '_').replace('-', '_')
     core = output/(stem+'_Core.sqlite')
     if core.exists():
@@ -238,11 +256,8 @@ def export(build_path, output, revision):
                                      (entry_id, sense_id, language))
         destination.execute('INSERT INTO reverse_search(rowid,gloss) VALUES(?,?)',
                             (cursor.lastrowid, '\n'.join(unique(sense['glosses']+sense.get('equivalents', [])))))
-    # Original source payloads are preserved once in an optional provenance package.
-    # Normal lookup needs identities and citations, not every source snapshot in memory/storage.
-    destination.execute('''UPDATE source_records SET payload=json_object(
-        'id',id,'source',source_id,'upstreamId',json_extract(payload,'$.record.id'),
-        'synset',json_extract(payload,'$.record.synset'),'provenancePackage','source-records')''')
+    # Raw records and their many-to-many links are optional provenance, not lookup data.
+    destination.executescript('DROP TABLE source_records; DROP TABLE entry_source_records;')
     destination.execute("UPDATE about SET value='atlas-core' WHERE key='format'")
     destination.commit(); destination.execute('VACUUM'); destination.close()
     packages = [package(core, 'core', revision)]
@@ -251,7 +266,14 @@ def export(build_path, output, revision):
         raise FileExistsError(originals)
     archive = sqlite3.connect(originals)
     archive.executescript('''CREATE TABLE about(key TEXT PRIMARY KEY,value TEXT NOT NULL);
-        CREATE TABLE source_records(id TEXT PRIMARY KEY,source_id TEXT NOT NULL,payload TEXT NOT NULL);''')
+        CREATE TABLE source_records(id TEXT PRIMARY KEY,source_id TEXT NOT NULL,payload TEXT NOT NULL);
+        CREATE TABLE entry_source_records(entry_id TEXT NOT NULL,record_id TEXT NOT NULL,PRIMARY KEY(entry_id,record_id));
+        CREATE TABLE sources(id TEXT PRIMARY KEY,payload TEXT NOT NULL);
+        CREATE TABLE notices(name TEXT PRIMARY KEY,content BLOB NOT NULL);''')
+    archive.executemany('INSERT INTO entry_source_records VALUES(?,?)',
+        source.execute('SELECT entry_id,record_id FROM entry_source_records ORDER BY entry_id,record_id'))
+    archive.executemany('INSERT INTO sources VALUES(?,?)', source.execute('SELECT id,payload FROM sources ORDER BY id'))
+    archive.executemany('INSERT INTO notices VALUES(?,?)', source.execute('SELECT name,content FROM notices ORDER BY name'))
     archive.executemany('INSERT INTO source_records VALUES(?,?,?)',
                         source.execute('SELECT id,source_id,payload FROM source_records ORDER BY id'))
     archive.executemany('INSERT INTO about VALUES(?,?)', [('schema', '2'), ('format', 'atlas-source-records'),
@@ -261,6 +283,7 @@ def export(build_path, output, revision):
     provenance_package['optionalForLookup'] = True
     packages.append(provenance_package)
     capabilities = []
+    coverage = language_coverage(source)
     for language in LANGUAGES:
         rows = source.execute('SELECT id,entry_id,payload FROM senses WHERE language=? ORDER BY id', (language,))
         pack = output/(stem+'_'+language+'.sqlite')
@@ -296,6 +319,7 @@ def export(build_path, output, revision):
             pack.unlink()
         capabilities.append({'language': language, 'primaryLanguageEntries': entries,
             'primaryLanguageSenses': count, 'senseKinds': kinds,
+            'bySourceLanguage': coverage[language],
             'definitions': 'available' if kinds.get('definition') else 'unavailable',
             'translationEquivalents': bool(kinds.get('translation-equivalent')),
             'reverseLookup': bool(count), 'englishFallback': language != 'en',
@@ -308,6 +332,7 @@ def export(build_path, output, revision):
         'sourceLanguages': [r[0] for r in source.execute('SELECT DISTINCT source_language FROM entries ORDER BY source_language')],
         'fallback': {'language': 'en', 'scope': 'entry', 'primaryPresent': 'primary-only',
                      'primaryMissing': 'english-once-with-fallback-label'},
+        'entryCountsBySourceLanguage': dict(source.execute('SELECT source_language,count(*) FROM entries GROUP BY source_language')),
         'packages': packages, 'capabilities': capabilities,
         'sources': [json.loads(r[0]) for r in source.execute('SELECT payload FROM sources ORDER BY id')]}
     (output/'consumer-manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2)+'\n')

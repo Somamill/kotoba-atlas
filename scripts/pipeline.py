@@ -30,6 +30,9 @@ def main():
         run(sys.executable, 'scripts/test_migaku_import.py', str(archive), '--source', '.cache/upstream/migaku',
             '--database', str(args.output/('migaku-test-'+language+'.sqlite')), '--report', str(archive.with_suffix('.legacy-migaku.json')))
     run(sys.executable, 'scripts/consumer_fixtures.py', str(args.output/'consumer-fixtures'))
+    run('node', 'scripts/test_yomitan_import.mjs', '.cache/upstream/yomitan',
+        str(args.output/'consumer-fixtures/Kotoba_Atlas_English_v0_0_0_beta_1.zip'),
+        str(args.output/'yomitan-indexeddb-fixture.json'), 'indexeddb')
     source_files = [Path('data/sources-v2.lock.json'), *sorted(Path('scripts').glob('*.py'))]
     evidence = {'revision': args.revision, 'sources': {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in source_files},
                 'publication': 'not performed; inspect artifact checks and consumer/native evidence before uploading',

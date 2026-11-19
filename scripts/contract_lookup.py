@@ -22,8 +22,7 @@ def inflected_forms(query):
 
 def accepts(rules, required):
     return required is None or any(tag == required or
-        (required in {'v5', 'vs'} and tag.startswith(required)) or
-        (required.startswith('v') and tag == 'v') for tag in rules.split())
+        (required in {'v1', 'v5', 'vs', 'adj-i'} and tag.startswith(required)) for tag in rules.split())
 
 
 
@@ -70,11 +69,12 @@ class AtlasIndex:
         queries = inflected_forms(query) + [(form, None) for form in (forms or [])]
         for form, required_class in queries[:32]:
             key = normalized(form)
-            for entry_id, term, reading, rules in self.db.execute('''
-                SELECT f.entry_id,f.text,f.reading,e.rules FROM forms f JOIN entries e ON e.id=f.entry_id WHERE f.normalized=? OR f.reading_key=? LIMIT 240''', (key, key)):
+            for entry_id, term, reading, rules, payload in self.db.execute('''
+                SELECT f.entry_id,f.text,f.reading,e.rules,f.payload FROM forms f JOIN entries e ON e.id=f.entry_id WHERE (f.normalized=? OR f.reading_key=?) AND (f.kind!='alias' OR NOT EXISTS(SELECT 1 FROM forms original WHERE original.entry_id=f.entry_id AND original.text=f.text AND original.reading=f.reading AND original.kind!='alias')) LIMIT 240''', (key, key)):
                 if not accepts(rules, required_class):
                     continue
-                penalty = 0 if term == query else (1 if key == normalized(query) else 4)
+                form_tags = json.loads(payload).get('tags', [])
+                penalty = (0 if term == query else (1 if key == normalized(query) else 4)) + (2 if {'sk', 'ik', 'ok', 'rk'} & set(form_tags) else 0)
                 candidates[entry_id] = min(candidates.get(entry_id, 100), penalty)
         # Reading-linked spelling candidates retain separate upstream identities.
         if any('HIRAGANA' in unicodedata.name(c, '') or 'KATAKANA' in unicodedata.name(c, '') for c in query):
@@ -86,7 +86,7 @@ class AtlasIndex:
         if words:
             fts = ' AND '.join('"'+word.replace('"', '""')+'"' for word in words)
             queries = [('SELECT entry_id FROM reverse_keys WHERE id IN '
-                        '(SELECT rowid FROM reverse_search WHERE reverse_search MATCH ? LIMIT 240)', (fts,))]
+                        '(SELECT rowid FROM reverse_search WHERE reverse_search MATCH ? ORDER BY rank LIMIT 240)', (fts,))]
             if not self.core_reverse:
                 queries = [('SELECT entry_id FROM '+alias+'.reverse_search WHERE reverse_search MATCH ? LIMIT 80', (fts,))
                            for alias in self.packs.values()]
@@ -96,7 +96,7 @@ class AtlasIndex:
         result = []
         for entry_id, penalty in sorted(candidates.items(), key=lambda item: (item[1], item[0]))[:240]:
             identity = self.db.execute('SELECT source_language,kind FROM entries WHERE id=?', (entry_id,)).fetchone()
-            headwords = [json.loads(row[0]) for row in self.db.execute('SELECT payload FROM forms WHERE entry_id=? ORDER BY kind,text,reading', (entry_id,))]
+            headwords = [json.loads(row[0]) for row in self.db.execute("SELECT payload FROM forms WHERE entry_id=? ORDER BY CASE kind WHEN 'headword' THEN 0 WHEN 'reading' THEN 1 ELSE 2 END, json_extract(payload,'$.common') DESC,text,reading", (entry_id,))]
             senses = []
             for language in dict.fromkeys([primary_language, 'en']):
                 if language in self.packs:
@@ -105,10 +105,11 @@ class AtlasIndex:
             entry = present({'id': entry_id, 'sourceLanguage': identity[0], 'headwords': headwords, 'senses': senses}, primary_language)
             if not entry['senses']:
                 continue
+            entry['kind'] = identity[1]
             entry['queryLanguages'] = language_candidates(query)
-            entry['matchPenalty'] = penalty
+            entry['matchPenalty'] = min(penalty, 15) if any(normalized(gloss) == normalized(query) for sense in entry['senses'] for gloss in sense['glosses']+sense.get('equivalents', [])) else penalty
             result.append(entry)
-        result.sort(key=lambda item: (item['matchPenalty']//10, item['fallback'], item['matchPenalty'], item['entryId']))
+        result.sort(key=lambda item: (item['sourceLanguage'] != 'ja', item['matchPenalty']//10, item['kind'] == 'name', item['fallback'], item['matchPenalty'], item['entryId']))
         return result[:limit]
 
     def close(self):

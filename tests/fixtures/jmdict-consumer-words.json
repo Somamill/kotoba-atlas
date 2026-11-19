@@ -1155,6 +1155,1752 @@
           ]
         }
       ]
+    },
+    {
+      "id": "1207240",
+      "kanji": [
+        {
+          "common": true,
+          "text": "楽しい",
+          "tags": []
+        },
+        {
+          "common": false,
+          "text": "愉しい",
+          "tags": [
+            "rK"
+          ]
+        },
+        {
+          "common": false,
+          "text": "樂しい",
+          "tags": [
+            "sK"
+          ]
+        },
+        {
+          "common": false,
+          "text": "娯しい",
+          "tags": [
+            "sK"
+          ]
+        }
+      ],
+      "kana": [
+        {
+          "common": true,
+          "text": "たのしい",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "adj-i"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "enjoyable"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "fun"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "pleasant"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "happy"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "delightful"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "adj-i"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "plezierig"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "aangenaam"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "leuk"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "prettig"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "fijn"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "tof"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "vermakelijk"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "vrolijk"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "amusant"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "heuglijk"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "verheugend"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "aardig"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "genotvol"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "genoeglijk"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{veroud.} genietelijk"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{m.b.t. wensen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "(na)gedachtenis enz.} zalig"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "gelukkig"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "adj-i"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "agréable"
+            },
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "heureux"
+            },
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "joyeux"
+            },
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "agréable"
+            },
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "heureux"
+            },
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "joyeux"
+            },
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "amusant"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "adj-i"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "angenehm"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "vergnüglich"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "lustig"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "glücklich"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "fröhlich"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "froh"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "erfreulich"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "zufrieden"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "adj-i"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "satt"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "adj-i"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "reich"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "wohlhabend"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "adj-i"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "móka"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "adj-i"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "радостный, весёлый, приятный; счастливый"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "adj-i"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "slv",
+              "gender": null,
+              "type": null,
+              "text": "zabaven"
+            },
+            {
+              "lang": "slv",
+              "gender": null,
+              "type": null,
+              "text": "prijeten"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "adj-i"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "divertido"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "adj-i"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "swe",
+              "gender": null,
+              "type": null,
+              "text": "kul"
+            },
+            {
+              "lang": "swe",
+              "gender": null,
+              "type": null,
+              "text": "rolig"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1358280",
+      "kanji": [
+        {
+          "common": true,
+          "text": "食べる",
+          "tags": []
+        },
+        {
+          "common": false,
+          "text": "喰べる",
+          "tags": [
+            "sK"
+          ]
+        }
+      ],
+      "kana": [
+        {
+          "common": true,
+          "text": "たべる",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to eat"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to live on (e.g. a salary)"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to live off"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "to subsist on"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "eten"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "opeten"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "consumeren"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "gebruiken"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "nemen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "nuttigen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "verorberen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "naar binnen werken"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "wegwerken"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{inform.} bikken"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{inform.} binnenslaan"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{i.h.b.} zich voeden met"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{uitdr.} de inwendige mens versterken"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "de kost verdienen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "aan de kost komen"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "in zijn onderhoud voorzien"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "leven (van)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "manger"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "essen"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "speisen"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "zu sich nehmen"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "fressen"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "probieren"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "leben von"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "kiesz"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "1) есть"
+            },
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "2) (перен.) жить, существовать"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "slv",
+              "gender": null,
+              "type": null,
+              "text": "jesti"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "comer"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "v1",
+            "vt"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "swe",
+              "gender": null,
+              "type": null,
+              "text": "äta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1464530",
+      "kanji": [
+        {
+          "common": true,
+          "text": "日本語",
+          "tags": []
+        }
+      ],
+      "kana": [
+        {
+          "common": true,
+          "text": "にほんご",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        },
+        {
+          "common": false,
+          "text": "にっぽんご",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "Japanese (language)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "Japans"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "Japanse taal"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "{veroud.} Japannees"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "langue japonaise"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "Japanisch"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "japanische Sprache"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "японский язык"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "slv",
+              "gender": null,
+              "type": null,
+              "text": "japonščina"
+            },
+            {
+              "lang": "slv",
+              "gender": null,
+              "type": null,
+              "text": "japonski jezik"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "japonés (idioma)"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "swe",
+              "gender": null,
+              "type": null,
+              "text": "japanska"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1243490",
+      "kanji": [
+        {
+          "common": true,
+          "text": "銀行",
+          "tags": []
+        }
+      ],
+      "kana": [
+        {
+          "common": true,
+          "text": "ぎんこう",
+          "tags": [],
+          "appliesToKanji": [
+            "*"
+          ]
+        }
+      ],
+      "sense": [
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "bank"
+            },
+            {
+              "lang": "eng",
+              "gender": null,
+              "type": null,
+              "text": "banking institution"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "bank"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "bankiershuis"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "bankiersfirma"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "bankkantoor"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "bankinstelling"
+            },
+            {
+              "lang": "dut",
+              "gender": null,
+              "type": null,
+              "text": "bankgebouw"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "fre",
+              "gender": null,
+              "type": null,
+              "text": "banque"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "Bank"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "Bankhaus"
+            },
+            {
+              "lang": "ger",
+              "gender": null,
+              "type": null,
+              "text": "Sparkasse"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "bank"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "árokpart"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "bank"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "bedőlési szög"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "biliárdasztal párnázott része"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "billentyűzet"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "érckibukkanás"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "evezősor"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "evezőspad"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "fejtési pad"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "fejtési pászta"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "folyópart"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "földgát"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "földhányás"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "földsánc"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "földtöltés"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "gurítódomb"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "játékbank"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "klaviatúra"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "part"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "pénzgyűjtő kazetta"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "pénzintézet"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "persely"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "sorozat"
+            },
+            {
+              "lang": "hun",
+              "gender": null,
+              "type": null,
+              "text": "sziklapad"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "rus",
+              "gender": null,
+              "type": null,
+              "text": "банк"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "slv",
+              "gender": null,
+              "type": null,
+              "text": "banka"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "spa",
+              "gender": null,
+              "type": null,
+              "text": "banco"
+            }
+          ]
+        },
+        {
+          "partOfSpeech": [
+            "n"
+          ],
+          "appliesToKanji": [
+            "*"
+          ],
+          "appliesToKana": [
+            "*"
+          ],
+          "related": [],
+          "antonym": [],
+          "field": [],
+          "dialect": [],
+          "misc": [],
+          "info": [],
+          "languageSource": [],
+          "gloss": [
+            {
+              "lang": "swe",
+              "gender": null,
+              "type": null,
+              "text": "bank"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

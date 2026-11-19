@@ -1,5 +1,6 @@
 """Validate release bytes, expanded indexes and real lookups before publication."""
 import argparse
+from contextlib import closing
 import gzip
 import hashlib
 import json
@@ -35,7 +36,8 @@ def check(directory):
         raw = root/descriptor['file'].removesuffix('.gz')
         if sha(raw) != descriptor['uncompressedSha256']:
             raise ValueError('Test index differs from downloadable index')
-        with sqlite3.connect(raw.resolve().as_uri()+'?mode=ro', uri=True) as db:
+        with closing(sqlite3.connect(raw.resolve().as_uri()+'?mode=ro', uri=True)) as db:
+            db.execute('PRAGMA cache_size=-131072')
             if db.execute('PRAGMA integrity_check').fetchone()[0] != 'ok':
                 raise ValueError('Invalid SQLite package')
             about = dict(db.execute('SELECT key,value FROM about'))

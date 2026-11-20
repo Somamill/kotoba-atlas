@@ -1,11 +1,16 @@
 <p align="center"><img src="docs/media/hero.svg" alt="Kotoba Atlas. More Japanese. One dictionary. German with English fallback or English. Part of dot." width="100%"></p>
 
 <p align="center">
+<a href="https://github.com/Somamill/kotoba-atlas/releases"><img alt="Downloads: Open" src="https://img.shields.io/badge/Downloads-Open-26374D?style=for-the-badge&amp;logo=github&amp;logoColor=white"></a>
+<a href="https://www.reddit.com/user/dot-app/"><img alt="Reddit: dot. apps" src="https://img.shields.io/badge/Reddit-dot.%20apps-AD3000?style=for-the-badge&amp;logo=reddit&amp;logoColor=white"></a>
+</p>
+<p align="center">
 <a href="#download"><strong>Choose a download</strong></a> &nbsp; / &nbsp;
 <a href="#full-feature-set">Features</a> &nbsp; / &nbsp;
 <a href="#install">Install</a> &nbsp; / &nbsp;
 <a href="docs/compatibility.md">Compatibility</a> &nbsp; / &nbsp;
-<a href="docs/releases/1.0.3/">Test evidence</a>
+<a href="docs/releases/1.0.3/">Test evidence</a> &nbsp; / &nbsp;
+  <a href="https://www.reddit.com/user/dot-app/">Reddit</a>
 </p>
 
 **Your Japanese lookup library, in one file.** Everyday vocabulary, source-covered slang, phrases, names, grammar, folklore and kanji—plus pitch and frequency references. Choose your definition language and bring the same complete ZIP to your compatible reading tools.

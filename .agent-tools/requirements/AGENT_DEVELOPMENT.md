@@ -4,6 +4,8 @@ Applies to registered dot. product scopes. Shared technical tooling lives in [Ma
 
 ## Start and finish each task
 
+When asked to complete, check, or fix requirements for a registered dot. product, start with the approved shared policy in Somamill/dot-brand-kit. Run the repo's requirements sync, read the verified guidance relevant to the request, then use the product's local instructions to apply it. For App Store requests, start with the synced APP_STORE_PLAYBOOK.md. If the sync entry point is unavailable, read the approved kit directly. Follow Apple's current requirements and the owner's authorization.
+
 1. Run `python3 .agent-tools/run.py requirements` to check the approved shared policy against main. If it reports a new version, run the same command with `--update`, inspect the managed diff and include it in the task PR. Do not overwrite dirty policy files. Offline: use the last verified copy for reversible work and report staleness; refresh before release or obtain an explicit owner exception.
 2. Read AGENTS.md, `.agent-tools/PROJECT_CONTEXT.md` and the relevant local design/Store documents. Scope affected code, callers, assets, configuration and tests before editing. Keep independent work in separate branches/checkouts and preserve collaborators' changes.
 3. Check relevant installed capabilities, their versions/configuration and a small real probe before choosing the approach. Consult TOOL_CATALOG.md. Install/configure missing appropriate tools autonomously from official sources; preserve project pins, licenses and existing configuration. Prefer stable compatible versions over blindly upgrading everything. No paid subscription, spending or new external credential agreement is implied by installation permission.
@@ -30,7 +32,15 @@ For new or redesigned controls, use [dot. controls](https://github.com/Somamill/
 
 For new or changed UI, apply the [dot. copy guide](https://github.com/Somamill/dot-brand-kit/blob/main/kit/guidelines/copy.md). Remove repeated descriptions and generic filler first. Let layout, placement and native control state carry familiar interactions. Use short visible labels for unfamiliar actions, settings and meaningful consequences. Keep localized accessibility names and recovery copy. Check the changed flow in its real context, including a second language, and use accent or motion for feedback where it helps.
 
-Registered products must follow the [dot. Credits standard](https://github.com/Somamill/dot-brand-kit/blob/main/docs/CREDITS.md). Add Credits in About or Settings with Max’s approved Ko-fi link where the distribution rules permit it. Keep a shared list of owner-approved socials and omit the section while it is empty. Verify Credits during app adoption and before release.
+Registered products must follow the [dot. Credits standard](https://github.com/Somamill/dot-brand-kit/blob/main/docs/CREDITS.md). Add Credits in About or Settings with Max’s approved Ko-fi link where the distribution rules permit it. Keep a shared list of owner-approved socials and omit the section while it is empty. Use the shared public email for friendly feedback links in Credits, repository contact sections, and App Store support pages. Verify Credits during app adoption and before release.
+
+## Default-on iCloud sync for App Store apps
+
+Every registered dot. App Store app on iOS, iPadOS, or macOS must integrate iCloud sync for relevant user data and enable it by default whenever the user's system iCloud account and app access are available. Respect an existing explicit opt-out and the system's iCloud controls. Keep core flows usable offline or without iCloud; save changes locally and resume sync when available without losing data. Use the private CloudKit database or the appropriate private iCloud API. Keep credentials, caches and device-specific state local. Keep large user-imported media local unless its sync behavior is explicitly designed and documented. Data-only repositories have no app sync requirement.
+
+Wire the user data store to iCloud and configure the target’s entitlements and container. Enabling the capability in Xcode alone does not integrate sync. This policy requires integration only.
+
+For App Store work, complete all required and applicable App Store Connect fields and assets using the [release checklist](APP_STORE_PLAYBOOK.md#complete-app-store-connect). Fix routine omissions independently using verified build and product facts and the task's existing authorization. Ask the owner only for missing facts or decisions that require their input, and continue other work while blocked.
 
 ## Boundaries
 

@@ -144,3 +144,5 @@ Identity follows the [shared dot. brand kit](https://github.com/Somamill/dot-bra
 ## Contact
 
 Questions, ideas, or spotted a bug? [Email Max](mailto:max@miller-max.com). Feedback is always welcome.
+
+[Support Max on Ko-fi](https://ko-fi.com/somamill)

@@ -122,7 +122,7 @@ def compare(before, after, scratch, samples):
             if fixtures:
                 compressed = raw.with_suffix('.sqlite.gz')
                 fixture = root/('atlas-'+(language or 'core')+'.sqlite')
-                with compressed.open('xb') as stream, gzip.GzipFile(filename='', fileobj=stream, compresslevel=6, mtime=0) as archive:
+                with compressed.open('xb') as stream, gzip.GzipFile(filename='', mode='wb', fileobj=stream, compresslevel=6, mtime=0) as archive:
                     archive.write(fixture.read_bytes())
             start = time.monotonic()
             unpack(compressed, raw, package)

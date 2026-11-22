@@ -40,6 +40,10 @@ The spelling index used 94,740,480 fewer bytes, a 65.4% reduction. SQLite integr
 
 `dbstat` attributed 522,399,744 bytes to `reverse_keys` and 450,965,504 bytes to `forms`. Textual entry IDs account for 158,080,503 bytes and sense IDs for 291,233,353 bytes inside `reverse_keys`. The corresponding form hints account for 6,411,824 bytes. These fields remain directly queryable in schema 2. The full experiment includes planner output and all page allocations. [Raw beta-2 evidence](atlas-beta2-core-experiment.json).
 
+## Fixture before and after
+
+The comparison used Python 3.13.5, SQLite 3.47.1, zlib 1.2.12, Node 26.13.1 and 7-Zip 26.06 on an Apple Silicon MacBook Pro (`MacBookPro18,3`, 16 GiB, macOS 27.2.1). All row and result projections were equal, and all 11 English browser member hashes matched. Compressed core bytes were 213,738 → 212,948. Expanded core bytes were 1,286,144 → 1,282,048. Local verification and inflation took 2.62 → 2.33 ms. Single-run fixture generation was 0.50 → 0.88 seconds and sibling-process load varied during measurement. The peak resident set was 68,304,896 → 66,551,808 bytes. These small wall-time and RSS samples are descriptive. [Raw fixture evidence](atlas-producer-fixture-evidence.json).
+
 ## Consumer verification
 
 - dict. public main `fea82704`: 9 Swift contract tests with regenerated candidate bytes. Overlapping runtime branch `22ba0c76`: 14 passing tests including completed-package resumption, corrupt downloads and preserving history through interrupted activation.

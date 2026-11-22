@@ -171,7 +171,7 @@ def compare(before, after, scratch, samples):
     with closing(open_db(baseline_core)) as db:
         analyze_only = profile(db, samples)
     differences = [query for query, left, right in zip(WORKLOAD, *projections) if left != right]
-    browser = {}
+    browser = None
     for root in (before, after):
         hashes = {}
         for path in sorted(root.glob('Kotoba_Atlas_*.zip')):
@@ -183,7 +183,7 @@ def compare(before, after, scratch, samples):
                     with archive.open(member) as stream:
                         members[member.filename] = hashlib.file_digest(stream, 'sha256').hexdigest()
                 hashes[path.name] = members
-        if browser and browser != hashes:
+        if browser is not None and browser != hashes:
             raise ValueError('Browser export data changed')
         browser = hashes
     return {'packages': results, 'before': profiles[0], 'after': profiles[1],

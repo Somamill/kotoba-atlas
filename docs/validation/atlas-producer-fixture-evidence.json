@@ -1,0 +1,2107 @@
+{
+  "packages": {
+    "core": {
+      "before": {
+        "descriptor": {
+          "id": "core",
+          "role": "core",
+          "language": null,
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "0.0.0-fixture.1",
+          "file": "Kotoba_Atlas_0_0_0_fixture_1_Core.sqlite.gz",
+          "sha256": "c787d713e5ecc8c995085d63b6aff5726c6c3aeccc94be415c0dededea53fb46",
+          "uncompressedSha256": "a23dce36354e21c8a0adb818c1cf0cccc78149a9e5575b14f414c0b7f71c0e02",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v0.0.0-fixture.1/Kotoba_Atlas_0_0_0_fixture_1_Core.sqlite.gz",
+          "compressedBytes": 213738,
+          "uncompressedBytes": 1286144,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "sourceIds": [
+            "atlas-factual-annotations",
+            "atlas-spelling-aliases",
+            "atlas-usage",
+            "atlas-v1-metadata",
+            "jmdict-examples-fixture",
+            "jmdict-fixture",
+            "jmnedict-fixture"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.0026244170003337786
+      },
+      "after": {
+        "descriptor": {
+          "id": "core",
+          "role": "core",
+          "language": null,
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "0.0.0-fixture.1",
+          "file": "Kotoba_Atlas_0_0_0_fixture_1_Core.sqlite.gz",
+          "sha256": "f3874f912d31a2cd4dfb95f560a912fb3d185bcba3f246287ecef96832555bd2",
+          "uncompressedSha256": "327254349ddfc8bbcd84e5396958c11763713ba17480af7e153dc4647613ae54",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v0.0.0-fixture.1/Kotoba_Atlas_0_0_0_fixture_1_Core.sqlite.gz",
+          "compressedBytes": 212948,
+          "uncompressedBytes": 1282048,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "sourceIds": [
+            "atlas-factual-annotations",
+            "atlas-spelling-aliases",
+            "atlas-usage",
+            "atlas-v1-metadata",
+            "jmdict-examples-fixture",
+            "jmdict-fixture",
+            "jmnedict-fixture"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.0023277090076589957
+      },
+      "identicalRows": {
+        "about": 4,
+        "entries": 24,
+        "forms": 97,
+        "kanji": 1,
+        "metadata": 5,
+        "notices": 5,
+        "reverse_keys": 158,
+        "reverse_search_config": 1,
+        "reverse_search_data": 5,
+        "reverse_search_docsize": 158,
+        "reverse_search_idx": 3,
+        "sources": 7
+      }
+    },
+    "language:en": {
+      "before": {
+        "descriptor": {
+          "id": "language:en",
+          "role": "language",
+          "language": "en",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "0.0.0-fixture.1",
+          "file": "Kotoba_Atlas_0_0_0_fixture_1_en.sqlite.gz",
+          "sha256": "6ee971f55cf41bd8e75f93511386cba2fb10a683d79ffb599aae56ef9ec16398",
+          "uncompressedSha256": "9a425ea5dc6ebffe1346c7596c04fe1dede83f09dd91c17372a8225afcba245c",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v0.0.0-fixture.1/Kotoba_Atlas_0_0_0_fixture_1_en.sqlite.gz",
+          "compressedBytes": 15431,
+          "uncompressedBytes": 102400,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 63,
+          "entries": 24,
+          "senseKinds": {
+            "factual-identification": 1,
+            "editorial-usage": 9,
+            "definition": 51,
+            "proper-name-translation": 2
+          },
+          "sourceIds": [
+            "atlas-factual-annotations",
+            "atlas-usage",
+            "jmdict-examples-fixture",
+            "jmdict-fixture",
+            "jmnedict-fixture"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.0004259579873178154
+      },
+      "after": {
+        "descriptor": {
+          "id": "language:en",
+          "role": "language",
+          "language": "en",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "0.0.0-fixture.1",
+          "file": "Kotoba_Atlas_0_0_0_fixture_1_en.sqlite.gz",
+          "sha256": "30ace6de6e8660e7ecddc52fe2fddb7d3ccd1c2807e9c3744e970a8884856564",
+          "uncompressedSha256": "c64fc839a6d5ca1cc8287d22837451722b697fb937819c0ae19f3586551e1759",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v0.0.0-fixture.1/Kotoba_Atlas_0_0_0_fixture_1_en.sqlite.gz",
+          "compressedBytes": 15433,
+          "uncompressedBytes": 102400,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 63,
+          "entries": 24,
+          "senseKinds": {
+            "factual-identification": 1,
+            "editorial-usage": 9,
+            "definition": 51,
+            "proper-name-translation": 2
+          },
+          "coreSha256": "327254349ddfc8bbcd84e5396958c11763713ba17480af7e153dc4647613ae54",
+          "sourceIds": [
+            "atlas-factual-annotations",
+            "atlas-usage",
+            "jmdict-examples-fixture",
+            "jmdict-fixture",
+            "jmnedict-fixture"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.000543708010809496
+      },
+      "identicalRows": {
+        "about": 4,
+        "senses": 63
+      }
+    },
+    "language:es": {
+      "before": {
+        "descriptor": {
+          "id": "language:es",
+          "role": "language",
+          "language": "es",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "0.0.0-fixture.1",
+          "file": "Kotoba_Atlas_0_0_0_fixture_1_es.sqlite.gz",
+          "sha256": "f899567e2872af8d06f32495607cc5186854bfa3102ec0297e26f54aac66f271",
+          "uncompressedSha256": "c94e1735cb3c0f723e9dcef1cefc82f2900af82888223fe2f336533bc0a76d3f",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v0.0.0-fixture.1/Kotoba_Atlas_0_0_0_fixture_1_es.sqlite.gz",
+          "compressedBytes": 3988,
+          "uncompressedBytes": 49152,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 21,
+          "entries": 8,
+          "senseKinds": {
+            "definition": 21
+          },
+          "sourceIds": [
+            "jmdict-fixture"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.00033741699007805437
+      },
+      "after": {
+        "descriptor": {
+          "id": "language:es",
+          "role": "language",
+          "language": "es",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "0.0.0-fixture.1",
+          "file": "Kotoba_Atlas_0_0_0_fixture_1_es.sqlite.gz",
+          "sha256": "ce170083a78ff1bd153a4c7b3f3a6a2c3b2d555dbf6bb571cf14fb5db324c484",
+          "uncompressedSha256": "804b3386035fba1753f105f6f81dad43ef6584106f3d232095e430ffa2a63cc5",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v0.0.0-fixture.1/Kotoba_Atlas_0_0_0_fixture_1_es.sqlite.gz",
+          "compressedBytes": 3989,
+          "uncompressedBytes": 49152,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 21,
+          "entries": 8,
+          "senseKinds": {
+            "definition": 21
+          },
+          "coreSha256": "327254349ddfc8bbcd84e5396958c11763713ba17480af7e153dc4647613ae54",
+          "sourceIds": [
+            "jmdict-fixture"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.00033391700708307326
+      },
+      "identicalRows": {
+        "about": 4,
+        "senses": 21
+      }
+    },
+    "language:fr": {
+      "before": {
+        "descriptor": {
+          "id": "language:fr",
+          "role": "language",
+          "language": "fr",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "0.0.0-fixture.1",
+          "file": "Kotoba_Atlas_0_0_0_fixture_1_fr.sqlite.gz",
+          "sha256": "6942a8c59227c6486587e8fc7d1f16672e3390b12e6cd20435b3d8ab4ad7554a",
+          "uncompressedSha256": "a010c733e5f6ee1876084c9a441f930d95b99056a546fa51d7d8b1f3ab89dcc9",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v0.0.0-fixture.1/Kotoba_Atlas_0_0_0_fixture_1_fr.sqlite.gz",
+          "compressedBytes": 3023,
+          "uncompressedBytes": 40960,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 13,
+          "entries": 7,
+          "senseKinds": {
+            "definition": 13
+          },
+          "sourceIds": [
+            "jmdict-fixture"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.00031837499409448355
+      },
+      "after": {
+        "descriptor": {
+          "id": "language:fr",
+          "role": "language",
+          "language": "fr",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "0.0.0-fixture.1",
+          "file": "Kotoba_Atlas_0_0_0_fixture_1_fr.sqlite.gz",
+          "sha256": "faa93a9f4629f3767eb4161148b3948afa683a5061c74cd6c1b4df7c330917bc",
+          "uncompressedSha256": "b212addac2a6532f8130e2c6baac9aad5a5d2ceb9d998e285bca3fb2558ee7ec",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v0.0.0-fixture.1/Kotoba_Atlas_0_0_0_fixture_1_fr.sqlite.gz",
+          "compressedBytes": 3024,
+          "uncompressedBytes": 40960,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 13,
+          "entries": 7,
+          "senseKinds": {
+            "definition": 13
+          },
+          "coreSha256": "327254349ddfc8bbcd84e5396958c11763713ba17480af7e153dc4647613ae54",
+          "sourceIds": [
+            "jmdict-fixture"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.0003447079943725839
+      },
+      "identicalRows": {
+        "about": 4,
+        "senses": 13
+      }
+    },
+    "language:ja": {
+      "before": {
+        "descriptor": {
+          "id": "language:ja",
+          "role": "language",
+          "language": "ja",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "0.0.0-fixture.1",
+          "file": "Kotoba_Atlas_0_0_0_fixture_1_ja.sqlite.gz",
+          "sha256": "dbad0e0b3459599bd80f99ca22413ec06aeb7167f833134dc58328d04f9725e3",
+          "uncompressedSha256": "4d26ad280c5c5d5454a99b349f6d4d00f09b87f9b5551c22431b2eaecf178350",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v0.0.0-fixture.1/Kotoba_Atlas_0_0_0_fixture_1_ja.sqlite.gz",
+          "compressedBytes": 1032,
+          "uncompressedBytes": 28672,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 1,
+          "entries": 1,
+          "senseKinds": {
+            "factual-identification": 1
+          },
+          "sourceIds": [
+            "atlas-factual-annotations"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.00027187500381842256
+      },
+      "after": {
+        "descriptor": {
+          "id": "language:ja",
+          "role": "language",
+          "language": "ja",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "0.0.0-fixture.1",
+          "file": "Kotoba_Atlas_0_0_0_fixture_1_ja.sqlite.gz",
+          "sha256": "df8de9cf24faf452124e35a5be37a2f989f7677295f9234a0a89756f746cba56",
+          "uncompressedSha256": "08cbe1609772b0431ef47c701b16a0bddf4bb26a4c67f8f206ffd906c763f207",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v0.0.0-fixture.1/Kotoba_Atlas_0_0_0_fixture_1_ja.sqlite.gz",
+          "compressedBytes": 1034,
+          "uncompressedBytes": 28672,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 1,
+          "entries": 1,
+          "senseKinds": {
+            "factual-identification": 1
+          },
+          "coreSha256": "327254349ddfc8bbcd84e5396958c11763713ba17480af7e153dc4647613ae54",
+          "sourceIds": [
+            "atlas-factual-annotations"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.0004712080117315054
+      },
+      "identicalRows": {
+        "about": 4,
+        "senses": 1
+      }
+    },
+    "language:ru": {
+      "before": {
+        "descriptor": {
+          "id": "language:ru",
+          "role": "language",
+          "language": "ru",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "0.0.0-fixture.1",
+          "file": "Kotoba_Atlas_0_0_0_fixture_1_ru.sqlite.gz",
+          "sha256": "0676d0a4e322a8746b1d34f82c2246df7fe58ad8876e7961866fcd4e2c81e62f",
+          "uncompressedSha256": "ee44b80a866b73d4497bb66b577471b1dcfd5d9ca65f460a58c0bdc54d5e6e7a",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v0.0.0-fixture.1/Kotoba_Atlas_0_0_0_fixture_1_ru.sqlite.gz",
+          "compressedBytes": 3725,
+          "uncompressedBytes": 40960,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 8,
+          "entries": 8,
+          "senseKinds": {
+            "definition": 8
+          },
+          "sourceIds": [
+            "jmdict-fixture"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.00029858300695195794
+      },
+      "after": {
+        "descriptor": {
+          "id": "language:ru",
+          "role": "language",
+          "language": "ru",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "0.0.0-fixture.1",
+          "file": "Kotoba_Atlas_0_0_0_fixture_1_ru.sqlite.gz",
+          "sha256": "54ef9a3abc3f9addf835518aa1f824febb479aa0563ce994ef5aa6132029ce03",
+          "uncompressedSha256": "7570932a05aaa5633fc6fe51dc27bf681556a3fbc2f03e02777444de3250b307",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v0.0.0-fixture.1/Kotoba_Atlas_0_0_0_fixture_1_ru.sqlite.gz",
+          "compressedBytes": 3725,
+          "uncompressedBytes": 40960,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 8,
+          "entries": 8,
+          "senseKinds": {
+            "definition": 8
+          },
+          "coreSha256": "327254349ddfc8bbcd84e5396958c11763713ba17480af7e153dc4647613ae54",
+          "sourceIds": [
+            "jmdict-fixture"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.0002823329996317625
+      },
+      "identicalRows": {
+        "about": 4,
+        "senses": 8
+      }
+    },
+    "language:de": {
+      "before": {
+        "descriptor": {
+          "id": "language:de",
+          "role": "language",
+          "language": "de",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "0.0.0-fixture.1",
+          "file": "Kotoba_Atlas_0_0_0_fixture_1_de.sqlite.gz",
+          "sha256": "114079ea89ad114f5dc1aa98b8f20b38b969cb0992ef1d44b9c9cb364be5ddd9",
+          "uncompressedSha256": "26c5e86d59bd5aa8236139b31f4263c7d6db7d6055b83b56ca43ae815bf57621",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v0.0.0-fixture.1/Kotoba_Atlas_0_0_0_fixture_1_de.sqlite.gz",
+          "compressedBytes": 11376,
+          "uncompressedBytes": 86016,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 52,
+          "entries": 19,
+          "senseKinds": {
+            "editorial-usage": 9,
+            "definition": 43
+          },
+          "sourceIds": [
+            "atlas-usage",
+            "jmdict-fixture"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.0005875409988220781
+      },
+      "after": {
+        "descriptor": {
+          "id": "language:de",
+          "role": "language",
+          "language": "de",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "0.0.0-fixture.1",
+          "file": "Kotoba_Atlas_0_0_0_fixture_1_de.sqlite.gz",
+          "sha256": "188dd70247b58298ae05f1fd6aed2389d252633d79e8be58a288b55b3d3e35e3",
+          "uncompressedSha256": "a3fa7c3651770c410604788392e73d7ddd6bb44daa4e5144838bfd2ea023f965",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v0.0.0-fixture.1/Kotoba_Atlas_0_0_0_fixture_1_de.sqlite.gz",
+          "compressedBytes": 11377,
+          "uncompressedBytes": 86016,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 52,
+          "entries": 19,
+          "senseKinds": {
+            "editorial-usage": 9,
+            "definition": 43
+          },
+          "coreSha256": "327254349ddfc8bbcd84e5396958c11763713ba17480af7e153dc4647613ae54",
+          "sourceIds": [
+            "atlas-usage",
+            "jmdict-fixture"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.0003918750007869676
+      },
+      "identicalRows": {
+        "about": 4,
+        "senses": 52
+      }
+    }
+  },
+  "before": {
+    "sql": {
+      "reverseKeyPayloadBytes": {
+        "entryId": 3000,
+        "senseId": 14592,
+        "formHint": 368
+      },
+      "stats": false,
+      "dbstat": {
+        "about": {
+          "bytes": 4096,
+          "unusedBytes": 3940
+        },
+        "entries": {
+          "bytes": 4096,
+          "unusedBytes": 2999
+        },
+        "form_lookup": {
+          "bytes": 4096,
+          "unusedBytes": 442
+        },
+        "forms": {
+          "bytes": 24576,
+          "unusedBytes": 6900
+        },
+        "kanji": {
+          "bytes": 4096,
+          "unusedBytes": 3323
+        },
+        "metadata": {
+          "bytes": 4096,
+          "unusedBytes": 3489
+        },
+        "metadata_lookup": {
+          "bytes": 4096,
+          "unusedBytes": 3983
+        },
+        "notices": {
+          "bytes": 1126400,
+          "unusedBytes": 10143
+        },
+        "reading_lookup": {
+          "bytes": 4096,
+          "unusedBytes": 309
+        },
+        "reverse_keys": {
+          "bytes": 24576,
+          "unusedBytes": 4439
+        },
+        "reverse_search_config": {
+          "bytes": 4096,
+          "unusedBytes": 4074
+        },
+        "reverse_search_data": {
+          "bytes": 16384,
+          "unusedBytes": 7752
+        },
+        "reverse_search_docsize": {
+          "bytes": 4096,
+          "unusedBytes": 2792
+        },
+        "reverse_search_idx": {
+          "bytes": 4096,
+          "unusedBytes": 4058
+        },
+        "sources": {
+          "bytes": 4096,
+          "unusedBytes": 1912
+        },
+        "spelling_lookup": {
+          "bytes": 12288,
+          "unusedBytes": 7324
+        },
+        "sqlite_autoindex_about_1": {
+          "bytes": 4096,
+          "unusedBytes": 4029
+        },
+        "sqlite_autoindex_entries_1": {
+          "bytes": 4096,
+          "unusedBytes": 3352
+        },
+        "sqlite_autoindex_forms_1": {
+          "bytes": 12288,
+          "unusedBytes": 6508
+        },
+        "sqlite_autoindex_kanji_1": {
+          "bytes": 4096,
+          "unusedBytes": 4079
+        },
+        "sqlite_autoindex_notices_1": {
+          "bytes": 4096,
+          "unusedBytes": 3903
+        },
+        "sqlite_autoindex_sources_1": {
+          "bytes": 4096,
+          "unusedBytes": 3912
+        },
+        "sqlite_schema": {
+          "bytes": 4096,
+          "unusedBytes": 1528
+        }
+      },
+      "queries": {
+        "swiftForms": {
+          "sql": "SELECT e.rowid,f.text,e.rules,EXISTS(SELECT 1 FROM json_each(f.payload,'$.tags') WHERE value IN ('sk','ik','ok','rk','sK','iK','oK','rK')) FROM forms f JOIN entries e ON e.id=f.entry_id WHERE (f.normalized=? OR f.reading_key=?) AND (f.kind!='alias' OR NOT EXISTS(SELECT 1 FROM forms original WHERE original.entry_id=f.entry_id AND original.text=f.text AND original.reading=f.reading AND original.kind!='alias')) LIMIT 240",
+          "bindings": [
+            "きょう",
+            "きょう"
+          ],
+          "plan": [
+            "MULTI-INDEX OR",
+            "INDEX 1",
+            "SEARCH f USING INDEX form_lookup (normalized=?)",
+            "INDEX 2",
+            "SEARCH f USING INDEX reading_lookup (reading_key=?)",
+            "CORRELATED SCALAR SUBQUERY 2",
+            "SEARCH original USING COVERING INDEX sqlite_autoindex_forms_1 (entry_id=? AND text=? AND reading=?)",
+            "SEARCH e USING INDEX sqlite_autoindex_entries_1 (id=?)",
+            "CORRELATED SCALAR SUBQUERY 1",
+            "SCAN json_each VIRTUAL TABLE INDEX 3:"
+          ],
+          "medianMs": 0.023958,
+          "maxMs": 0.121208,
+          "samplesMs": [
+            0.121208,
+            0.027625,
+            0.023958,
+            0.022083,
+            0.021791,
+            0.020166,
+            0.021,
+            0.057083,
+            0.039042,
+            0.0245,
+            0.042583,
+            0.024084,
+            0.021042,
+            0.020875,
+            0.01975
+          ]
+        },
+        "swiftPrefix": {
+          "sql": "SELECT e.rowid FROM forms f JOIN entries e ON e.id=f.entry_id WHERE f.normalized>=? AND f.normalized<? LIMIT 80",
+          "bindings": [
+            "食",
+            "食􏿿"
+          ],
+          "plan": [
+            "SEARCH f USING COVERING INDEX form_lookup (normalized>? AND normalized<?)",
+            "SEARCH e USING COVERING INDEX sqlite_autoindex_entries_1 (id=?)"
+          ],
+          "medianMs": 0.009292,
+          "maxMs": 0.069917,
+          "samplesMs": [
+            0.069917,
+            0.012792,
+            0.009084,
+            0.01025,
+            0.009625,
+            0.008917,
+            0.009083,
+            0.009334,
+            0.009458,
+            0.010042,
+            0.0085,
+            0.009166,
+            0.008791,
+            0.009125,
+            0.009292
+          ]
+        },
+        "swiftReverse": {
+          "sql": "SELECT e.rowid,e.id,r.sense_id,r.language,form_hint FROM reverse_keys r JOIN entries e ON e.id=r.entry_id WHERE r.id IN (SELECT rowid FROM reverse_search WHERE reverse_search MATCH ? ORDER BY rank LIMIT 240)",
+          "bindings": [
+            "\"nowadays\""
+          ],
+          "plan": [
+            "SEARCH r USING INTEGER PRIMARY KEY (rowid=?)",
+            "LIST SUBQUERY 1",
+            "SCAN reverse_search VIRTUAL TABLE INDEX 32:M1",
+            "CREATE BLOOM FILTER",
+            "SEARCH e USING COVERING INDEX sqlite_autoindex_entries_1 (id=?)"
+          ],
+          "medianMs": 0.046834,
+          "maxMs": 0.248042,
+          "samplesMs": [
+            0.094334,
+            0.053084,
+            0.049916,
+            0.04825,
+            0.047625,
+            0.046292,
+            0.047292,
+            0.046834,
+            0.045167,
+            0.046125,
+            0.0465,
+            0.045666,
+            0.045583,
+            0.04625,
+            0.248042
+          ]
+        },
+        "swiftHeadwords": {
+          "sql": "SELECT payload FROM forms WHERE entry_id=? ORDER BY CASE kind WHEN 'headword' THEN 0 WHEN 'reading' THEN 1 ELSE 2 END,json_extract(payload,'$.common') DESC,COALESCE((SELECT json_extract(r.payload,'$.common') FROM forms r WHERE r.entry_id=forms.entry_id AND r.text=forms.reading AND r.kind='reading' LIMIT 1),0) DESC,text,reading",
+          "bindings": [
+            "jmdict:ja:1579110"
+          ],
+          "plan": [
+            "SEARCH forms USING INDEX sqlite_autoindex_forms_1 (entry_id=?)",
+            "CORRELATED SCALAR SUBQUERY 1",
+            "SEARCH r USING INDEX sqlite_autoindex_forms_1 (entry_id=? AND text=?)",
+            "USE TEMP B-TREE FOR ORDER BY"
+          ],
+          "medianMs": 0.036375,
+          "maxMs": 0.050875,
+          "samplesMs": [
+            0.050875,
+            0.039041,
+            0.037667,
+            0.037417,
+            0.037041,
+            0.036375,
+            0.036292,
+            0.036916,
+            0.03575,
+            0.036375,
+            0.035042,
+            0.035125,
+            0.035208,
+            0.034625,
+            0.035416
+          ]
+        },
+        "swiftPitch": {
+          "sql": "SELECT DISTINCT m.mode,m.payload FROM forms f JOIN metadata m ON m.term=f.text WHERE f.entry_id=? AND f.reading=?",
+          "bindings": [
+            "jmdict:ja:1579110",
+            "きょう"
+          ],
+          "plan": [
+            "SEARCH f USING COVERING INDEX sqlite_autoindex_forms_1 (entry_id=?)",
+            "SEARCH m USING INDEX metadata_lookup (term=?)",
+            "USE TEMP B-TREE FOR DISTINCT"
+          ],
+          "medianMs": 0.011917,
+          "maxMs": 0.034167,
+          "samplesMs": [
+            0.034167,
+            0.013375,
+            0.0125,
+            0.0125,
+            0.011917,
+            0.015667,
+            0.011083,
+            0.012209,
+            0.011792,
+            0.011709,
+            0.010875,
+            0.012042,
+            0.011625,
+            0.01175,
+            0.011167
+          ]
+        }
+      }
+    },
+    "lookup": [
+      {
+        "query": "きょう",
+        "language": "en",
+        "medianMs": 0.173459,
+        "maxMs": 0.26225,
+        "samplesMs": [
+          0.26225,
+          0.202083,
+          0.193416,
+          0.18575,
+          0.183959,
+          0.173875,
+          0.170625,
+          0.171625,
+          0.172,
+          0.173459,
+          0.172333,
+          0.170375,
+          0.1795,
+          0.17175,
+          0.172625
+        ]
+      },
+      {
+        "query": "こんにち",
+        "language": "en",
+        "medianMs": 0.195417,
+        "maxMs": 0.205583,
+        "samplesMs": [
+          0.203625,
+          0.19725,
+          0.196875,
+          0.195375,
+          0.193375,
+          0.192792,
+          0.19475,
+          0.193334,
+          0.196,
+          0.200416,
+          0.205583,
+          0.204125,
+          0.195417,
+          0.195333,
+          0.192458
+        ]
+      },
+      {
+        "query": "今日",
+        "language": "en",
+        "medianMs": 0.162584,
+        "maxMs": 0.632042,
+        "samplesMs": [
+          0.162584,
+          0.154791,
+          0.154041,
+          0.152542,
+          0.154,
+          0.154,
+          0.15275,
+          0.154791,
+          0.632042,
+          0.259792,
+          0.215125,
+          0.25,
+          0.1785,
+          0.16575,
+          0.162709
+        ]
+      },
+      {
+        "query": "nowadays",
+        "language": "en",
+        "medianMs": 0.236917,
+        "maxMs": 0.272291,
+        "samplesMs": [
+          0.250875,
+          0.225541,
+          0.2225,
+          0.220166,
+          0.272291,
+          0.2465,
+          0.234209,
+          0.244875,
+          0.236917,
+          0.245125,
+          0.234375,
+          0.231375,
+          0.231708,
+          0.265667,
+          0.2565
+        ]
+      },
+      {
+        "query": "AND",
+        "language": "en",
+        "medianMs": 0.264083,
+        "maxMs": 0.375375,
+        "samplesMs": [
+          0.314708,
+          0.285125,
+          0.273583,
+          0.278458,
+          0.271917,
+          0.256792,
+          0.265041,
+          0.263583,
+          0.264083,
+          0.24775,
+          0.251625,
+          0.2465,
+          0.259458,
+          0.256875,
+          0.375375
+        ]
+      },
+      {
+        "query": "and",
+        "language": "en",
+        "medianMs": 0.2475,
+        "maxMs": 0.326667,
+        "samplesMs": [
+          0.315584,
+          0.252584,
+          0.326667,
+          0.319542,
+          0.2475,
+          0.235542,
+          0.231209,
+          0.230708,
+          0.231083,
+          0.230125,
+          0.225792,
+          0.326166,
+          0.314083,
+          0.261958,
+          0.243458
+        ]
+      },
+      {
+        "query": "Boolean",
+        "language": "en",
+        "medianMs": 0.19125,
+        "maxMs": 0.20875,
+        "samplesMs": [
+          0.20875,
+          0.200334,
+          0.195291,
+          0.192208,
+          0.19175,
+          0.19125,
+          0.196375,
+          0.18975,
+          0.188958,
+          0.192334,
+          0.189667,
+          0.189,
+          0.189666,
+          0.188416,
+          0.189666
+        ]
+      },
+      {
+        "query": "はし",
+        "language": "en",
+        "medianMs": 0.054375,
+        "maxMs": 0.06675,
+        "samplesMs": [
+          0.06675,
+          0.056334,
+          0.054833,
+          0.054375,
+          0.0545,
+          0.054458,
+          0.052708,
+          0.053583,
+          0.054417,
+          0.052334,
+          0.053292,
+          0.052875,
+          0.054417,
+          0.053042,
+          0.052875
+        ]
+      },
+      {
+        "query": "ワンチャン",
+        "language": "en",
+        "medianMs": 0.256542,
+        "maxMs": 0.344541,
+        "samplesMs": [
+          0.281041,
+          0.266792,
+          0.260334,
+          0.253666,
+          0.253125,
+          0.249542,
+          0.249458,
+          0.250416,
+          0.250666,
+          0.256542,
+          0.249917,
+          0.344541,
+          0.336792,
+          0.295958,
+          0.267166
+        ]
+      },
+      {
+        "query": "鎌かけてる",
+        "language": "de",
+        "medianMs": 0.179417,
+        "maxMs": 0.217916,
+        "samplesMs": [
+          0.217916,
+          0.187917,
+          0.183459,
+          0.180875,
+          0.183291,
+          0.179417,
+          0.177958,
+          0.179291,
+          0.181375,
+          0.176833,
+          0.177459,
+          0.178875,
+          0.18,
+          0.176958,
+          0.1775
+        ]
+      },
+      {
+        "query": "Dämon",
+        "language": "de",
+        "medianMs": 0.139208,
+        "maxMs": 0.158166,
+        "samplesMs": [
+          0.158166,
+          0.145667,
+          0.14325,
+          0.140542,
+          0.140709,
+          0.139208,
+          0.138084,
+          0.138583,
+          0.138125,
+          0.137833,
+          0.1375,
+          0.139292,
+          0.138583,
+          0.139708,
+          0.137041
+        ]
+      },
+      {
+        "query": "物ノ怪",
+        "language": "de",
+        "medianMs": 0.150791,
+        "maxMs": 0.15925,
+        "samplesMs": [
+          0.15925,
+          0.153458,
+          0.15125,
+          0.152542,
+          0.152625,
+          0.150666,
+          0.148959,
+          0.149083,
+          0.150791,
+          0.15325,
+          0.151458,
+          0.150583,
+          0.147,
+          0.144208,
+          0.146125
+        ]
+      },
+      {
+        "query": "ノリのいい",
+        "language": "de",
+        "medianMs": 0.25825,
+        "maxMs": 0.437,
+        "samplesMs": [
+          0.25825,
+          0.251417,
+          0.249875,
+          0.248792,
+          0.246458,
+          0.248875,
+          0.243583,
+          0.437,
+          0.339542,
+          0.317833,
+          0.29375,
+          0.290583,
+          0.347791,
+          0.260917,
+          0.249041
+        ]
+      },
+      {
+        "query": "沼ってる",
+        "language": "de",
+        "medianMs": 0.196333,
+        "maxMs": 0.226583,
+        "samplesMs": [
+          0.226583,
+          0.207,
+          0.203375,
+          0.199667,
+          0.198334,
+          0.195708,
+          0.195292,
+          0.193667,
+          0.193375,
+          0.193417,
+          0.196417,
+          0.196333,
+          0.196792,
+          0.191958,
+          0.193167
+        ]
+      },
+      {
+        "query": "隠密局",
+        "language": "de",
+        "medianMs": 0.107125,
+        "maxMs": 0.118958,
+        "samplesMs": [
+          0.118958,
+          0.112,
+          0.109542,
+          0.108958,
+          0.107625,
+          0.105916,
+          0.107792,
+          0.105875,
+          0.10575,
+          0.107125,
+          0.105417,
+          0.107625,
+          0.10625,
+          0.106083,
+          0.105792
+        ]
+      },
+      {
+        "query": "実体",
+        "language": "ja",
+        "medianMs": 0.043875,
+        "maxMs": 0.046125,
+        "samplesMs": [
+          0.046125,
+          0.045084,
+          0.043875,
+          0.0435,
+          0.044084,
+          0.045125,
+          0.043958,
+          0.044083,
+          0.043542,
+          0.042542,
+          0.043709,
+          0.042959,
+          0.044167,
+          0.0425,
+          0.042292
+        ]
+      }
+    ]
+  },
+  "after": {
+    "sql": {
+      "reverseKeyPayloadBytes": {
+        "entryId": 3000,
+        "senseId": 14592,
+        "formHint": 368
+      },
+      "stats": true,
+      "dbstat": {
+        "about": {
+          "bytes": 4096,
+          "unusedBytes": 3940
+        },
+        "entries": {
+          "bytes": 4096,
+          "unusedBytes": 2999
+        },
+        "form_lookup": {
+          "bytes": 4096,
+          "unusedBytes": 442
+        },
+        "forms": {
+          "bytes": 24576,
+          "unusedBytes": 6900
+        },
+        "kanji": {
+          "bytes": 4096,
+          "unusedBytes": 3323
+        },
+        "metadata": {
+          "bytes": 4096,
+          "unusedBytes": 3489
+        },
+        "metadata_lookup": {
+          "bytes": 4096,
+          "unusedBytes": 3983
+        },
+        "notices": {
+          "bytes": 1126400,
+          "unusedBytes": 10143
+        },
+        "reading_lookup": {
+          "bytes": 4096,
+          "unusedBytes": 309
+        },
+        "reverse_keys": {
+          "bytes": 24576,
+          "unusedBytes": 4439
+        },
+        "reverse_search_config": {
+          "bytes": 4096,
+          "unusedBytes": 4074
+        },
+        "reverse_search_data": {
+          "bytes": 16384,
+          "unusedBytes": 7752
+        },
+        "reverse_search_docsize": {
+          "bytes": 4096,
+          "unusedBytes": 2792
+        },
+        "reverse_search_idx": {
+          "bytes": 4096,
+          "unusedBytes": 4058
+        },
+        "sources": {
+          "bytes": 4096,
+          "unusedBytes": 1912
+        },
+        "spelling_lookup": {
+          "bytes": 4096,
+          "unusedBytes": 2354
+        },
+        "sqlite_autoindex_about_1": {
+          "bytes": 4096,
+          "unusedBytes": 4029
+        },
+        "sqlite_autoindex_entries_1": {
+          "bytes": 4096,
+          "unusedBytes": 3352
+        },
+        "sqlite_autoindex_forms_1": {
+          "bytes": 12288,
+          "unusedBytes": 6508
+        },
+        "sqlite_autoindex_kanji_1": {
+          "bytes": 4096,
+          "unusedBytes": 4079
+        },
+        "sqlite_autoindex_notices_1": {
+          "bytes": 4096,
+          "unusedBytes": 3903
+        },
+        "sqlite_autoindex_sources_1": {
+          "bytes": 4096,
+          "unusedBytes": 3912
+        },
+        "sqlite_schema": {
+          "bytes": 4096,
+          "unusedBytes": 1462
+        },
+        "sqlite_stat1": {
+          "bytes": 4096,
+          "unusedBytes": 3511
+        }
+      },
+      "queries": {
+        "swiftForms": {
+          "sql": "SELECT e.rowid,f.text,e.rules,EXISTS(SELECT 1 FROM json_each(f.payload,'$.tags') WHERE value IN ('sk','ik','ok','rk','sK','iK','oK','rK')) FROM forms f JOIN entries e ON e.id=f.entry_id WHERE (f.normalized=? OR f.reading_key=?) AND (f.kind!='alias' OR NOT EXISTS(SELECT 1 FROM forms original WHERE original.entry_id=f.entry_id AND original.text=f.text AND original.reading=f.reading AND original.kind!='alias')) LIMIT 240",
+          "bindings": [
+            "きょう",
+            "きょう"
+          ],
+          "plan": [
+            "MULTI-INDEX OR",
+            "INDEX 1",
+            "SEARCH f USING INDEX form_lookup (normalized=?)",
+            "INDEX 2",
+            "SEARCH f USING INDEX reading_lookup (reading_key=?)",
+            "CORRELATED SCALAR SUBQUERY 2",
+            "SEARCH original USING COVERING INDEX sqlite_autoindex_forms_1 (entry_id=? AND text=? AND reading=?)",
+            "SEARCH e USING INDEX sqlite_autoindex_entries_1 (id=?)",
+            "CORRELATED SCALAR SUBQUERY 1",
+            "SCAN json_each VIRTUAL TABLE INDEX 3:"
+          ],
+          "medianMs": 0.022,
+          "maxMs": 0.11275,
+          "samplesMs": [
+            0.11275,
+            0.042583,
+            0.022,
+            0.020416,
+            0.019542,
+            0.019334,
+            0.019208,
+            0.025208,
+            0.028583,
+            0.022041,
+            0.02175,
+            0.020792,
+            0.025333,
+            0.02325,
+            0.020041
+          ]
+        },
+        "swiftPrefix": {
+          "sql": "SELECT e.rowid FROM forms f JOIN entries e ON e.id=f.entry_id WHERE f.normalized>=? AND f.normalized<? LIMIT 80",
+          "bindings": [
+            "食",
+            "食􏿿"
+          ],
+          "plan": [
+            "SEARCH f USING COVERING INDEX form_lookup (normalized>? AND normalized<?)",
+            "SEARCH e USING COVERING INDEX sqlite_autoindex_entries_1 (id=?)"
+          ],
+          "medianMs": 0.008833,
+          "maxMs": 0.035458,
+          "samplesMs": [
+            0.027375,
+            0.010833,
+            0.009,
+            0.009167,
+            0.008542,
+            0.008375,
+            0.008,
+            0.009,
+            0.008875,
+            0.007958,
+            0.008291,
+            0.007875,
+            0.008833,
+            0.008084,
+            0.035458
+          ]
+        },
+        "swiftReverse": {
+          "sql": "SELECT e.rowid,e.id,r.sense_id,r.language,form_hint FROM reverse_keys r JOIN entries e ON e.id=r.entry_id WHERE r.id IN (SELECT rowid FROM reverse_search WHERE reverse_search MATCH ? ORDER BY rank LIMIT 240)",
+          "bindings": [
+            "\"nowadays\""
+          ],
+          "plan": [
+            "SEARCH r USING INTEGER PRIMARY KEY (rowid=?)",
+            "LIST SUBQUERY 1",
+            "SCAN reverse_search VIRTUAL TABLE INDEX 32:M1",
+            "CREATE BLOOM FILTER",
+            "SEARCH e USING COVERING INDEX sqlite_autoindex_entries_1 (id=?)"
+          ],
+          "medianMs": 0.042208,
+          "maxMs": 0.080875,
+          "samplesMs": [
+            0.080875,
+            0.0455,
+            0.043375,
+            0.04275,
+            0.042833,
+            0.042875,
+            0.042208,
+            0.041875,
+            0.041459,
+            0.042125,
+            0.041667,
+            0.044667,
+            0.040583,
+            0.04025,
+            0.041125
+          ]
+        },
+        "swiftHeadwords": {
+          "sql": "SELECT payload FROM forms WHERE entry_id=? ORDER BY CASE kind WHEN 'headword' THEN 0 WHEN 'reading' THEN 1 ELSE 2 END,json_extract(payload,'$.common') DESC,COALESCE((SELECT json_extract(r.payload,'$.common') FROM forms r WHERE r.entry_id=forms.entry_id AND r.text=forms.reading AND r.kind='reading' LIMIT 1),0) DESC,text,reading",
+          "bindings": [
+            "jmdict:ja:1579110"
+          ],
+          "plan": [
+            "SEARCH forms USING INDEX sqlite_autoindex_forms_1 (entry_id=?)",
+            "CORRELATED SCALAR SUBQUERY 1",
+            "SEARCH r USING INDEX sqlite_autoindex_forms_1 (entry_id=? AND text=?)",
+            "USE TEMP B-TREE FOR ORDER BY"
+          ],
+          "medianMs": 0.035584,
+          "maxMs": 0.042541,
+          "samplesMs": [
+            0.042541,
+            0.036541,
+            0.036042,
+            0.036375,
+            0.036083,
+            0.034833,
+            0.035292,
+            0.036,
+            0.034667,
+            0.03475,
+            0.036167,
+            0.03525,
+            0.034084,
+            0.035416,
+            0.035584
+          ]
+        },
+        "swiftPitch": {
+          "sql": "SELECT DISTINCT m.mode,m.payload FROM forms f JOIN metadata m ON m.term=f.text WHERE f.entry_id=? AND f.reading=?",
+          "bindings": [
+            "jmdict:ja:1579110",
+            "きょう"
+          ],
+          "plan": [
+            "SCAN m USING INDEX metadata_lookup",
+            "SEARCH f USING COVERING INDEX sqlite_autoindex_forms_1 (entry_id=? AND text=? AND reading=?)",
+            "USE TEMP B-TREE FOR DISTINCT"
+          ],
+          "medianMs": 0.0115,
+          "maxMs": 0.03275,
+          "samplesMs": [
+            0.03275,
+            0.012791,
+            0.012083,
+            0.011709,
+            0.011666,
+            0.015875,
+            0.0115,
+            0.011584,
+            0.011333,
+            0.01125,
+            0.011167,
+            0.011125,
+            0.011167,
+            0.011334,
+            0.011458
+          ]
+        }
+      }
+    },
+    "lookup": [
+      {
+        "query": "きょう",
+        "language": "en",
+        "medianMs": 0.166292,
+        "maxMs": 0.207333,
+        "samplesMs": [
+          0.207333,
+          0.177917,
+          0.171125,
+          0.169459,
+          0.1665,
+          0.165875,
+          0.166292,
+          0.165792,
+          0.166375,
+          0.171334,
+          0.16625,
+          0.165,
+          0.164875,
+          0.163625,
+          0.164209
+        ]
+      },
+      {
+        "query": "こんにち",
+        "language": "en",
+        "medianMs": 0.19075,
+        "maxMs": 0.278166,
+        "samplesMs": [
+          0.1995,
+          0.196167,
+          0.197458,
+          0.191375,
+          0.19125,
+          0.278166,
+          0.19075,
+          0.187667,
+          0.190542,
+          0.19125,
+          0.1895,
+          0.187708,
+          0.186792,
+          0.186625,
+          0.187334
+        ]
+      },
+      {
+        "query": "今日",
+        "language": "en",
+        "medianMs": 0.149458,
+        "maxMs": 0.154917,
+        "samplesMs": [
+          0.154917,
+          0.151,
+          0.153,
+          0.14875,
+          0.150833,
+          0.149833,
+          0.148333,
+          0.148542,
+          0.147792,
+          0.148416,
+          0.149333,
+          0.151542,
+          0.149458,
+          0.14975,
+          0.147584
+        ]
+      },
+      {
+        "query": "nowadays",
+        "language": "en",
+        "medianMs": 0.204916,
+        "maxMs": 0.222792,
+        "samplesMs": [
+          0.222792,
+          0.210459,
+          0.208958,
+          0.207458,
+          0.208166,
+          0.206167,
+          0.204916,
+          0.203667,
+          0.203959,
+          0.204792,
+          0.202792,
+          0.20275,
+          0.2065,
+          0.203667,
+          0.203875
+        ]
+      },
+      {
+        "query": "AND",
+        "language": "en",
+        "medianMs": 0.229167,
+        "maxMs": 0.36625,
+        "samplesMs": [
+          0.25425,
+          0.234459,
+          0.229625,
+          0.229167,
+          0.225959,
+          0.224584,
+          0.222834,
+          0.22425,
+          0.223958,
+          0.222333,
+          0.221084,
+          0.28475,
+          0.36625,
+          0.281125,
+          0.286375
+        ]
+      },
+      {
+        "query": "and",
+        "language": "en",
+        "medianMs": 0.261625,
+        "maxMs": 0.280208,
+        "samplesMs": [
+          0.277583,
+          0.270792,
+          0.280208,
+          0.270875,
+          0.270542,
+          0.242583,
+          0.251917,
+          0.26175,
+          0.270167,
+          0.246792,
+          0.24875,
+          0.251709,
+          0.244916,
+          0.261625,
+          0.247083
+        ]
+      },
+      {
+        "query": "Boolean",
+        "language": "en",
+        "medianMs": 0.215084,
+        "maxMs": 0.251917,
+        "samplesMs": [
+          0.218083,
+          0.230875,
+          0.215084,
+          0.235458,
+          0.208708,
+          0.214458,
+          0.210375,
+          0.234666,
+          0.232667,
+          0.212666,
+          0.2255,
+          0.209375,
+          0.251917,
+          0.19075,
+          0.188292
+        ]
+      },
+      {
+        "query": "はし",
+        "language": "en",
+        "medianMs": 0.051625,
+        "maxMs": 0.060459,
+        "samplesMs": [
+          0.060459,
+          0.054666,
+          0.0555,
+          0.052958,
+          0.05275,
+          0.051458,
+          0.051458,
+          0.052041,
+          0.051166,
+          0.050666,
+          0.051625,
+          0.050625,
+          0.051917,
+          0.051167,
+          0.051208
+        ]
+      },
+      {
+        "query": "ワンチャン",
+        "language": "en",
+        "medianMs": 0.263,
+        "maxMs": 0.326833,
+        "samplesMs": [
+          0.272959,
+          0.263,
+          0.256084,
+          0.252417,
+          0.326292,
+          0.326833,
+          0.296833,
+          0.324458,
+          0.269292,
+          0.261125,
+          0.258917,
+          0.259458,
+          0.257459,
+          0.25975,
+          0.263166
+        ]
+      },
+      {
+        "query": "鎌かけてる",
+        "language": "de",
+        "medianMs": 0.190334,
+        "maxMs": 0.300708,
+        "samplesMs": [
+          0.291084,
+          0.300708,
+          0.212,
+          0.20075,
+          0.199292,
+          0.194291,
+          0.186625,
+          0.190334,
+          0.184833,
+          0.187084,
+          0.190625,
+          0.186083,
+          0.1885,
+          0.182833,
+          0.184625
+        ]
+      },
+      {
+        "query": "Dämon",
+        "language": "de",
+        "medianMs": 0.145416,
+        "maxMs": 0.171125,
+        "samplesMs": [
+          0.171125,
+          0.152583,
+          0.147,
+          0.148209,
+          0.147541,
+          0.144791,
+          0.142792,
+          0.14175,
+          0.144,
+          0.145416,
+          0.145083,
+          0.143417,
+          0.145625,
+          0.142833,
+          0.147125
+        ]
+      },
+      {
+        "query": "物ノ怪",
+        "language": "de",
+        "medianMs": 0.163916,
+        "maxMs": 0.35525,
+        "samplesMs": [
+          0.170041,
+          0.159625,
+          0.158459,
+          0.160792,
+          0.35525,
+          0.248959,
+          0.17975,
+          0.167833,
+          0.165959,
+          0.221667,
+          0.163916,
+          0.16075,
+          0.156666,
+          0.15825,
+          0.155708
+        ]
+      },
+      {
+        "query": "ノリのいい",
+        "language": "de",
+        "medianMs": 0.263333,
+        "maxMs": 0.895625,
+        "samplesMs": [
+          0.286042,
+          0.268625,
+          0.263333,
+          0.264833,
+          0.895625,
+          0.414667,
+          0.571375,
+          0.354834,
+          0.262666,
+          0.263125,
+          0.2595,
+          0.25825,
+          0.256917,
+          0.25775,
+          0.254458
+        ]
+      },
+      {
+        "query": "沼ってる",
+        "language": "de",
+        "medianMs": 0.227666,
+        "maxMs": 0.403292,
+        "samplesMs": [
+          0.235375,
+          0.211041,
+          0.20625,
+          0.205375,
+          0.2055,
+          0.205209,
+          0.325625,
+          0.205417,
+          0.403292,
+          0.253333,
+          0.227666,
+          0.352959,
+          0.233792,
+          0.217333,
+          0.260458
+        ]
+      },
+      {
+        "query": "隠密局",
+        "language": "de",
+        "medianMs": 0.120084,
+        "maxMs": 0.310292,
+        "samplesMs": [
+          0.138042,
+          0.126292,
+          0.120084,
+          0.114208,
+          0.1165,
+          0.289708,
+          0.174417,
+          0.154667,
+          0.310292,
+          0.12175,
+          0.115916,
+          0.114584,
+          0.1145,
+          0.114541,
+          0.11525
+        ]
+      },
+      {
+        "query": "実体",
+        "language": "ja",
+        "medianMs": 0.046917,
+        "maxMs": 0.050791,
+        "samplesMs": [
+          0.050791,
+          0.048458,
+          0.047417,
+          0.046917,
+          0.045458,
+          0.047792,
+          0.044958,
+          0.045708,
+          0.047667,
+          0.045958,
+          0.046666,
+          0.047333,
+          0.047209,
+          0.045334,
+          0.046875
+        ]
+      }
+    ]
+  },
+  "lookupDifferences": [],
+  "browserZipMembers": {
+    "Kotoba_Atlas_English_v0_0_0_beta_1.zip": 11
+  },
+  "analyzeOnly": {
+    "reverseKeyPayloadBytes": {
+      "entryId": 3000,
+      "senseId": 14592,
+      "formHint": 368
+    },
+    "stats": true,
+    "dbstat": {
+      "about": {
+        "bytes": 4096,
+        "unusedBytes": 3940
+      },
+      "entries": {
+        "bytes": 4096,
+        "unusedBytes": 2999
+      },
+      "form_lookup": {
+        "bytes": 4096,
+        "unusedBytes": 442
+      },
+      "forms": {
+        "bytes": 24576,
+        "unusedBytes": 6900
+      },
+      "kanji": {
+        "bytes": 4096,
+        "unusedBytes": 3323
+      },
+      "metadata": {
+        "bytes": 4096,
+        "unusedBytes": 3489
+      },
+      "metadata_lookup": {
+        "bytes": 4096,
+        "unusedBytes": 3983
+      },
+      "notices": {
+        "bytes": 1126400,
+        "unusedBytes": 10143
+      },
+      "reading_lookup": {
+        "bytes": 4096,
+        "unusedBytes": 309
+      },
+      "reverse_keys": {
+        "bytes": 24576,
+        "unusedBytes": 4439
+      },
+      "reverse_search_config": {
+        "bytes": 4096,
+        "unusedBytes": 4074
+      },
+      "reverse_search_data": {
+        "bytes": 16384,
+        "unusedBytes": 7752
+      },
+      "reverse_search_docsize": {
+        "bytes": 4096,
+        "unusedBytes": 2792
+      },
+      "reverse_search_idx": {
+        "bytes": 4096,
+        "unusedBytes": 4058
+      },
+      "sources": {
+        "bytes": 4096,
+        "unusedBytes": 1912
+      },
+      "spelling_lookup": {
+        "bytes": 12288,
+        "unusedBytes": 7324
+      },
+      "sqlite_autoindex_about_1": {
+        "bytes": 4096,
+        "unusedBytes": 4029
+      },
+      "sqlite_autoindex_entries_1": {
+        "bytes": 4096,
+        "unusedBytes": 3352
+      },
+      "sqlite_autoindex_forms_1": {
+        "bytes": 12288,
+        "unusedBytes": 6508
+      },
+      "sqlite_autoindex_kanji_1": {
+        "bytes": 4096,
+        "unusedBytes": 4079
+      },
+      "sqlite_autoindex_notices_1": {
+        "bytes": 4096,
+        "unusedBytes": 3903
+      },
+      "sqlite_autoindex_sources_1": {
+        "bytes": 4096,
+        "unusedBytes": 3912
+      },
+      "sqlite_schema": {
+        "bytes": 4096,
+        "unusedBytes": 1448
+      },
+      "sqlite_stat1": {
+        "bytes": 4096,
+        "unusedBytes": 3507
+      }
+    },
+    "queries": {
+      "swiftForms": {
+        "sql": "SELECT e.rowid,f.text,e.rules,EXISTS(SELECT 1 FROM json_each(f.payload,'$.tags') WHERE value IN ('sk','ik','ok','rk','sK','iK','oK','rK')) FROM forms f JOIN entries e ON e.id=f.entry_id WHERE (f.normalized=? OR f.reading_key=?) AND (f.kind!='alias' OR NOT EXISTS(SELECT 1 FROM forms original WHERE original.entry_id=f.entry_id AND original.text=f.text AND original.reading=f.reading AND original.kind!='alias')) LIMIT 240",
+        "bindings": [
+          "きょう",
+          "きょう"
+        ],
+        "plan": [
+          "MULTI-INDEX OR",
+          "INDEX 1",
+          "SEARCH f USING INDEX form_lookup (normalized=?)",
+          "INDEX 2",
+          "SEARCH f USING INDEX reading_lookup (reading_key=?)",
+          "CORRELATED SCALAR SUBQUERY 2",
+          "SEARCH original USING COVERING INDEX sqlite_autoindex_forms_1 (entry_id=? AND text=? AND reading=?)",
+          "SEARCH e USING INDEX sqlite_autoindex_entries_1 (id=?)",
+          "CORRELATED SCALAR SUBQUERY 1",
+          "SCAN json_each VIRTUAL TABLE INDEX 3:"
+        ],
+        "medianMs": 0.017167,
+        "maxMs": 0.103167,
+        "samplesMs": [
+          0.103167,
+          0.021084,
+          0.018625,
+          0.017875,
+          0.017583,
+          0.017792,
+          0.017334,
+          0.017042,
+          0.017084,
+          0.017167,
+          0.017125,
+          0.017083,
+          0.017083,
+          0.016709,
+          0.01675
+        ]
+      },
+      "swiftPrefix": {
+        "sql": "SELECT e.rowid FROM forms f JOIN entries e ON e.id=f.entry_id WHERE f.normalized>=? AND f.normalized<? LIMIT 80",
+        "bindings": [
+          "食",
+          "食􏿿"
+        ],
+        "plan": [
+          "SEARCH f USING COVERING INDEX form_lookup (normalized>? AND normalized<?)",
+          "SEARCH e USING COVERING INDEX sqlite_autoindex_entries_1 (id=?)"
+        ],
+        "medianMs": 0.007333,
+        "maxMs": 0.021333,
+        "samplesMs": [
+          0.021333,
+          0.008,
+          0.007333,
+          0.007333,
+          0.007542,
+          0.007167,
+          0.00725,
+          0.007333,
+          0.007291,
+          0.007042,
+          0.0075,
+          0.007292,
+          0.007708,
+          0.0075,
+          0.007167
+        ]
+      },
+      "swiftReverse": {
+        "sql": "SELECT e.rowid,e.id,r.sense_id,r.language,form_hint FROM reverse_keys r JOIN entries e ON e.id=r.entry_id WHERE r.id IN (SELECT rowid FROM reverse_search WHERE reverse_search MATCH ? ORDER BY rank LIMIT 240)",
+        "bindings": [
+          "\"nowadays\""
+        ],
+        "plan": [
+          "SEARCH r USING INTEGER PRIMARY KEY (rowid=?)",
+          "LIST SUBQUERY 1",
+          "SCAN reverse_search VIRTUAL TABLE INDEX 32:M1",
+          "CREATE BLOOM FILTER",
+          "SEARCH e USING COVERING INDEX sqlite_autoindex_entries_1 (id=?)"
+        ],
+        "medianMs": 0.04275,
+        "maxMs": 0.134375,
+        "samplesMs": [
+          0.134375,
+          0.048791,
+          0.04475,
+          0.043875,
+          0.043375,
+          0.043208,
+          0.058292,
+          0.042583,
+          0.042667,
+          0.041833,
+          0.042458,
+          0.04275,
+          0.041792,
+          0.041541,
+          0.041542
+        ]
+      },
+      "swiftHeadwords": {
+        "sql": "SELECT payload FROM forms WHERE entry_id=? ORDER BY CASE kind WHEN 'headword' THEN 0 WHEN 'reading' THEN 1 ELSE 2 END,json_extract(payload,'$.common') DESC,COALESCE((SELECT json_extract(r.payload,'$.common') FROM forms r WHERE r.entry_id=forms.entry_id AND r.text=forms.reading AND r.kind='reading' LIMIT 1),0) DESC,text,reading",
+        "bindings": [
+          "jmdict:ja:1579110"
+        ],
+        "plan": [
+          "SEARCH forms USING INDEX sqlite_autoindex_forms_1 (entry_id=?)",
+          "CORRELATED SCALAR SUBQUERY 1",
+          "SEARCH r USING INDEX sqlite_autoindex_forms_1 (entry_id=? AND text=?)",
+          "USE TEMP B-TREE FOR ORDER BY"
+        ],
+        "medianMs": 0.036083,
+        "maxMs": 0.083833,
+        "samplesMs": [
+          0.083833,
+          0.038875,
+          0.037583,
+          0.037583,
+          0.037209,
+          0.036334,
+          0.036083,
+          0.035917,
+          0.035833,
+          0.035583,
+          0.036417,
+          0.035542,
+          0.035375,
+          0.0355,
+          0.035041
+        ]
+      },
+      "swiftPitch": {
+        "sql": "SELECT DISTINCT m.mode,m.payload FROM forms f JOIN metadata m ON m.term=f.text WHERE f.entry_id=? AND f.reading=?",
+        "bindings": [
+          "jmdict:ja:1579110",
+          "きょう"
+        ],
+        "plan": [
+          "SCAN m USING INDEX metadata_lookup",
+          "SEARCH f USING COVERING INDEX spelling_lookup (text=? AND reading=? AND entry_id=?)",
+          "USE TEMP B-TREE FOR DISTINCT"
+        ],
+        "medianMs": 0.011542,
+        "maxMs": 0.035583,
+        "samplesMs": [
+          0.035583,
+          0.01275,
+          0.012333,
+          0.011542,
+          0.012042,
+          0.011458,
+          0.011167,
+          0.0115,
+          0.011833,
+          0.011416,
+          0.011417,
+          0.011333,
+          0.011292,
+          0.011583,
+          0.01175
+        ]
+      }
+    }
+  },
+  "analyzeSeconds": 0.0012872079969383776,
+  "machine": "arm64",
+  "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+  "python": "3.13.5",
+  "sqlite": "3.47.1",
+  "peakRSS": 41517056,
+  "peakRSSUnit": "bytes",
+  "sourceLockSHA256": "2562ebe505248a523a1853f253e5f56072425c9a8a1fa13ddd70fb7a88b917d5",
+  "commit": "f69549b3aa3714e14e5bc1d1931afca525c450bc"
+}

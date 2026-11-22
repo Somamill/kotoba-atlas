@@ -44,6 +44,23 @@ The spelling index used 94,740,480 fewer bytes, a 65.4% reduction. SQLite integr
 
 The comparison used Python 3.13.5, SQLite 3.47.1, zlib 1.2.12, Node 26.13.1 and 7-Zip 26.06 on an Apple Silicon MacBook Pro (`MacBookPro18,3`, 16 GiB, macOS 27.2.1). All row and result projections were equal, and all 11 English browser member hashes matched. Compressed core bytes were 213,738 → 212,948. Expanded core bytes were 1,286,144 → 1,282,048. Local verification and inflation took 2.62 → 2.33 ms. Single-run fixture generation was 0.50 → 0.88 seconds and sibling-process load varied during measurement. The peak resident set was 68,304,896 → 66,551,808 bytes. These small wall-time and RSS samples are descriptive. [Raw fixture evidence](atlas-producer-fixture-evidence.json).
 
+## Paired full-corpus export
+
+Both arms use the same locked source database and dictionary revision `1.1.0-beta.3`. The audited pipeline regenerated the source database and the candidate export reused the finished intermediate to control for ingestion. The native exports overlapped on this Mac. The baseline interval from first core creation through its manifest was 1,181 seconds. The candidate exporter logged 1,179 seconds. Those intervals include all native packaging and establish no native export speedup at this sample size.
+
+| Bytes | Audited export | Candidate export | Saved |
+| --- | ---: | ---: | ---: |
+| Core compressed | 473,708,496 | 446,970,096 | 26,738,400 |
+| Core expanded | 1,884,286,976 | 1,789,546,496 | 94,740,480 |
+| Core + English + German compressed | 750,785,841 | 724,047,512 | 26,738,329 |
+| Core + English + German expanded | 3,315,191,808 | 3,220,451,328 | 94,740,480 |
+| All 12 native packages compressed | 1,524,092,701 | 1,497,354,404 | 26,738,297 |
+| All 12 native packages expanded | 7,564,021,760 | 7,469,281,280 | 94,740,480 |
+
+Row-for-row comparison verified all 12 native packages, including 1,056,822 Japanese and 156,584 English canonical entries, 2,314,207 forms, 3,184,003 senses and 1,954,384 original source records. All 16 lookup projections matched. Both full browser ZIPs had 492 members each and identical member and archive SHA-256. Tiny differences in compressed language and provenance pack sizes follow from rebinding to the candidate core hash.
+
+The five full-corpus query plans were equal across the baseline, the ANALYZE-only copy and the candidate. ANALYZE took 6.82 seconds on the baseline scratch database. Exact/reading medians were 0.576 → 0.523 ms and reverse 0.645 → 0.501 ms. The single local core verification/inflation sample was 5.26 → 8.18 seconds with both export jobs active. The benchmark itself peaked at 51,625,984 resident bytes. The timings do not establish a reliable change in lookup or install latency. [Raw full-corpus evidence](atlas-producer-full-evidence.json).
+
 ## Consumer verification
 
 - dict. public main `fea82704`: 9 Swift contract tests with regenerated candidate bytes. Overlapping runtime branch `22ba0c76`: 14 passing tests including completed-package resumption, corrupt downloads and preserving history through interrupted activation.

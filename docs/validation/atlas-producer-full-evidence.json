@@ -1,0 +1,2819 @@
+{
+  "packages": {
+    "core": {
+      "before": {
+        "descriptor": {
+          "id": "core",
+          "role": "core",
+          "language": null,
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_Core.sqlite.gz",
+          "sha256": "9d72ab1805bc7c5cca909d9acb19fb35405f98679444fbac4c6a18b941d94008",
+          "uncompressedSha256": "c02e6d466d64bc768831ed9d9d263bde9cdd8078455c5ede958659120252f2ce",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_Core.sqlite.gz",
+          "compressedBytes": 473708496,
+          "uncompressedBytes": 1884286976,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "sourceIds": [
+            "atlas-factual-annotations",
+            "atlas-spelling-aliases",
+            "atlas-usage",
+            "atlas-v1-metadata",
+            "jitendex-aliases",
+            "jmdict-examples",
+            "jmdict-simplified",
+            "jmnedict-simplified",
+            "omw-arb",
+            "omw-cmn",
+            "omw-en",
+            "omw-es",
+            "omw-fr",
+            "omw-id",
+            "omw-ja",
+            "omw-pt"
+          ]
+        },
+        "verifyAndExpandSeconds": 5.262778499993146
+      },
+      "after": {
+        "descriptor": {
+          "id": "core",
+          "role": "core",
+          "language": null,
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_Core.sqlite.gz",
+          "sha256": "af014890c583d4ee1bfad60f982e59a72cb954b9bfbd8b2cf0a1816ea770bdbd",
+          "uncompressedSha256": "1ca91fa280a60da55a010111895d9293572275c5d94efd9ed3f232dbe50ecee0",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_Core.sqlite.gz",
+          "compressedBytes": 446970096,
+          "uncompressedBytes": 1789546496,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "sourceIds": [
+            "atlas-factual-annotations",
+            "atlas-spelling-aliases",
+            "atlas-usage",
+            "atlas-v1-metadata",
+            "jitendex-aliases",
+            "jmdict-examples",
+            "jmdict-simplified",
+            "jmnedict-simplified",
+            "omw-arb",
+            "omw-cmn",
+            "omw-en",
+            "omw-es",
+            "omw-fr",
+            "omw-id",
+            "omw-ja",
+            "omw-pt"
+          ]
+        },
+        "verifyAndExpandSeconds": 8.181480707993614
+      },
+      "identicalRows": {
+        "about": 4,
+        "entries": 1213406,
+        "forms": 2314207,
+        "kanji": 10384,
+        "metadata": 1006753,
+        "notices": 13,
+        "reverse_keys": 3184003,
+        "reverse_search_config": 1,
+        "reverse_search_data": 21220,
+        "reverse_search_docsize": 3184003,
+        "reverse_search_idx": 20716,
+        "sources": 16,
+        "tags": 74
+      }
+    },
+    "source-records": {
+      "before": {
+        "descriptor": {
+          "id": "source-records",
+          "role": "source-records",
+          "language": null,
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_Source_Records.sqlite.gz",
+          "sha256": "1387e027f86ebe32603c9d8ec0751de173481bf06e961941a21031c13433c231",
+          "uncompressedSha256": "9fe55a1cc0e086e811c3b095d479996968bf5bc07c1c805aedf00ad54b9f93f1",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_Source_Records.sqlite.gz",
+          "compressedBytes": 483670105,
+          "uncompressedBytes": 2731339776,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "optionalForLookup": true
+        },
+        "verifyAndExpandSeconds": 4.373719334005727
+      },
+      "after": {
+        "descriptor": {
+          "id": "source-records",
+          "role": "source-records",
+          "language": null,
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_Source_Records.sqlite.gz",
+          "sha256": "680926da4d0b5ae72e4e01d80ad57f69103336e3de57c03d0c0c39110021d885",
+          "uncompressedSha256": "1aeb2ad45f079fae85281f819177627c8410b4bf6e2ce39122398707073b4789",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_Source_Records.sqlite.gz",
+          "compressedBytes": 483670056,
+          "uncompressedBytes": 2731339776,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "optionalForLookup": true,
+          "coreSha256": "1ca91fa280a60da55a010111895d9293572275c5d94efd9ed3f232dbe50ecee0"
+        },
+        "verifyAndExpandSeconds": 6.170089209001162
+      },
+      "identicalRows": {
+        "about": 3,
+        "entry_source_records": 3583974,
+        "notices": 13,
+        "source_records": 1954384,
+        "sources": 16
+      }
+    },
+    "language:en": {
+      "before": {
+        "descriptor": {
+          "id": "language:en",
+          "role": "language",
+          "language": "en",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_en.sqlite.gz",
+          "sha256": "c21481ee6090b8975a0714bebb91c3d0bc516c1ac78ea48ef17f5861daa07afc",
+          "uncompressedSha256": "3d99214fdf55fa687ef29a97f0ea77ce74fdda8d01ac6aaf0bff81d74241c02e",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_en.sqlite.gz",
+          "compressedBytes": 248998731,
+          "uncompressedBytes": 1244676096,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 1363608,
+          "entries": 1213406,
+          "senseKinds": {
+            "factual-identification": 1,
+            "editorial-usage": 9,
+            "definition": 619163,
+            "proper-name-translation": 744435
+          },
+          "sourceIds": [
+            "atlas-factual-annotations",
+            "atlas-usage",
+            "jmdict-examples",
+            "jmdict-simplified",
+            "jmnedict-simplified",
+            "omw-en",
+            "omw-ja"
+          ]
+        },
+        "verifyAndExpandSeconds": 3.560485875001177
+      },
+      "after": {
+        "descriptor": {
+          "id": "language:en",
+          "role": "language",
+          "language": "en",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_en.sqlite.gz",
+          "sha256": "4c7825e97fae587e3644294f7da8118979598248bf3270dbb5916219600a4b53",
+          "uncompressedSha256": "70bdd1cde6168407c6dd53aabb67df361141501dcb427c66053d02a6e4811b03",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_en.sqlite.gz",
+          "compressedBytes": 248998775,
+          "uncompressedBytes": 1244676096,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 1363608,
+          "entries": 1213406,
+          "senseKinds": {
+            "factual-identification": 1,
+            "editorial-usage": 9,
+            "definition": 619163,
+            "proper-name-translation": 744435
+          },
+          "coreSha256": "1ca91fa280a60da55a010111895d9293572275c5d94efd9ed3f232dbe50ecee0",
+          "sourceIds": [
+            "atlas-factual-annotations",
+            "atlas-usage",
+            "jmdict-examples",
+            "jmdict-simplified",
+            "jmnedict-simplified",
+            "omw-en",
+            "omw-ja"
+          ]
+        },
+        "verifyAndExpandSeconds": 4.597402624989627
+      },
+      "identicalRows": {
+        "about": 4,
+        "senses": 1363608
+      }
+    },
+    "language:zh": {
+      "before": {
+        "descriptor": {
+          "id": "language:zh",
+          "role": "language",
+          "language": "zh",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_zh.sqlite.gz",
+          "sha256": "2757b8c8992cf55fffa98269a5e35db98ba2a49a3dd31d8254b53e4fe345bd45",
+          "uncompressedSha256": "e15553cd5f3f4a0b78988e9d67d0d635f183c29bc6f142e97c1e3ee51db28409",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_zh.sqlite.gz",
+          "compressedBytes": 24157587,
+          "uncompressedBytes": 130404352,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 151479,
+          "entries": 115068,
+          "senseKinds": {
+            "translation-equivalent": 151479
+          },
+          "sourceIds": [
+            "omw-cmn"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.3402135000069393
+      },
+      "after": {
+        "descriptor": {
+          "id": "language:zh",
+          "role": "language",
+          "language": "zh",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_zh.sqlite.gz",
+          "sha256": "3906988197dbc2bf37d01f1a97d3ee10a8b15330fa985b957a8ed5ba4e22cdd8",
+          "uncompressedSha256": "ecd82f8826c5e721e3041f9cc0e94816d682a35fb50729b88e12b3fa9e59a4dc",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_zh.sqlite.gz",
+          "compressedBytes": 24157616,
+          "uncompressedBytes": 130404352,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 151479,
+          "entries": 115068,
+          "senseKinds": {
+            "translation-equivalent": 151479
+          },
+          "coreSha256": "1ca91fa280a60da55a010111895d9293572275c5d94efd9ed3f232dbe50ecee0",
+          "sourceIds": [
+            "omw-cmn"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.286596334000933
+      },
+      "identicalRows": {
+        "about": 4,
+        "senses": 151479
+      }
+    },
+    "language:es": {
+      "before": {
+        "descriptor": {
+          "id": "language:es",
+          "role": "language",
+          "language": "es",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_es.sqlite.gz",
+          "sha256": "9b9973209fe9b0ad2fba0b92cc2665173f01abdfbe28dca0a7b582f669c29e6f",
+          "uncompressedSha256": "950f4f340f7ad59fba4995635d089ec885964bcf915f13319529e6c70ce69cda",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_es.sqlite.gz",
+          "compressedBytes": 52480795,
+          "uncompressedBytes": 289107968,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 323919,
+          "entries": 232271,
+          "senseKinds": {
+            "definition": 96042,
+            "translation-equivalent": 227877
+          },
+          "sourceIds": [
+            "jmdict-simplified",
+            "omw-es"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.6901664170000004
+      },
+      "after": {
+        "descriptor": {
+          "id": "language:es",
+          "role": "language",
+          "language": "es",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_es.sqlite.gz",
+          "sha256": "398697a959a9283580a8fd9b8ad7e88faadd191aeb956a1eb64edba60cafcc48",
+          "uncompressedSha256": "6983710868661ba9d150b0bfa619fa57431c7a896d2662f46c5cae007eed9eec",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_es.sqlite.gz",
+          "compressedBytes": 52480796,
+          "uncompressedBytes": 289107968,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 323919,
+          "entries": 232271,
+          "senseKinds": {
+            "definition": 96042,
+            "translation-equivalent": 227877
+          },
+          "coreSha256": "1ca91fa280a60da55a010111895d9293572275c5d94efd9ed3f232dbe50ecee0",
+          "sourceIds": [
+            "jmdict-simplified",
+            "omw-es"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.7300694580044365
+      },
+      "identicalRows": {
+        "about": 4,
+        "senses": 323919
+      }
+    },
+    "language:ar": {
+      "before": {
+        "descriptor": {
+          "id": "language:ar",
+          "role": "language",
+          "language": "ar",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_ar.sqlite.gz",
+          "sha256": "34d442d4616ad473ff1fa7c3ba0d04b7e31b0fd7dd5805a76d9170b562184baa",
+          "uncompressedSha256": "47bf9330bb1989901c99795c26e977b5bb09a45da6891077e32505f5e95e8671",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_ar.sqlite.gz",
+          "compressedBytes": 12339002,
+          "uncompressedBytes": 68599808,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 68965,
+          "entries": 46962,
+          "senseKinds": {
+            "translation-equivalent": 68965
+          },
+          "sourceIds": [
+            "omw-arb"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.1681544169987319
+      },
+      "after": {
+        "descriptor": {
+          "id": "language:ar",
+          "role": "language",
+          "language": "ar",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_ar.sqlite.gz",
+          "sha256": "2341f148dda69046e7bba3d1426509d0860bb6d9816d6d5f4a52067e36e5f496",
+          "uncompressedSha256": "34dfbd7aa3ed9d7985f48c18d1d04a69c24b57a4315242db3f4375aee00d4419",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_ar.sqlite.gz",
+          "compressedBytes": 12338983,
+          "uncompressedBytes": 68599808,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 68965,
+          "entries": 46962,
+          "senseKinds": {
+            "translation-equivalent": 68965
+          },
+          "coreSha256": "1ca91fa280a60da55a010111895d9293572275c5d94efd9ed3f232dbe50ecee0",
+          "sourceIds": [
+            "omw-arb"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.16811187499843072
+      },
+      "identicalRows": {
+        "about": 4,
+        "senses": 68965
+      }
+    },
+    "language:id": {
+      "before": {
+        "descriptor": {
+          "id": "language:id",
+          "role": "language",
+          "language": "id",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_id.sqlite.gz",
+          "sha256": "090fc48e5e837b0fe43377a227ff23f1ed7b170f70e4a5ec8dfcd6654970e195",
+          "uncompressedSha256": "1a4ec39ef5c8df9373675e3e2b397a5b1d7efa22af3c1be97d63282d6a537334",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_id.sqlite.gz",
+          "compressedBytes": 34346044,
+          "uncompressedBytes": 190976000,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 211383,
+          "entries": 134734,
+          "senseKinds": {
+            "translation-equivalent": 175561,
+            "definition": 35822
+          },
+          "sourceIds": [
+            "omw-id"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.4620262079988606
+      },
+      "after": {
+        "descriptor": {
+          "id": "language:id",
+          "role": "language",
+          "language": "id",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_id.sqlite.gz",
+          "sha256": "ef9852ad350dd7565b743f8e0fb523c47b0e41a95074a1fcdf113cfcc4e22940",
+          "uncompressedSha256": "0536b0809b116de3ab507843bbfabb6ea3e58752e58d205b41d680c962815e28",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_id.sqlite.gz",
+          "compressedBytes": 34346063,
+          "uncompressedBytes": 190976000,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 211383,
+          "entries": 134734,
+          "senseKinds": {
+            "translation-equivalent": 175561,
+            "definition": 35822
+          },
+          "coreSha256": "1ca91fa280a60da55a010111895d9293572275c5d94efd9ed3f232dbe50ecee0",
+          "sourceIds": [
+            "omw-id"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.4465982499968959
+      },
+      "identicalRows": {
+        "about": 4,
+        "senses": 211383
+      }
+    },
+    "language:pt": {
+      "before": {
+        "descriptor": {
+          "id": "language:pt",
+          "role": "language",
+          "language": "pt",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_pt.sqlite.gz",
+          "sha256": "3c37a0000676dd7f9d30ce1bd18f6a07876aecc0d8bfafebaedab4ecfa0f5d8c",
+          "uncompressedSha256": "ae9b030a246df533e1bbefed2e47a7316c68290bc3225d8300542d041cbcf020",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_pt.sqlite.gz",
+          "compressedBytes": 30461476,
+          "uncompressedBytes": 169590784,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 200405,
+          "entries": 141387,
+          "senseKinds": {
+            "translation-equivalent": 200405
+          },
+          "sourceIds": [
+            "omw-pt"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.37289345799945295
+      },
+      "after": {
+        "descriptor": {
+          "id": "language:pt",
+          "role": "language",
+          "language": "pt",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_pt.sqlite.gz",
+          "sha256": "52591186254d4d9fb3296f81817936ea62bc9b99876b83ac97e0b65e804c13ca",
+          "uncompressedSha256": "7e73c4ca04c809ec861ba4a1543e4d216f5e2fd6979a37150c49243ab3a7bad1",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_pt.sqlite.gz",
+          "compressedBytes": 30461463,
+          "uncompressedBytes": 169590784,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 200405,
+          "entries": 141387,
+          "senseKinds": {
+            "translation-equivalent": 200405
+          },
+          "coreSha256": "1ca91fa280a60da55a010111895d9293572275c5d94efd9ed3f232dbe50ecee0",
+          "sourceIds": [
+            "omw-pt"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.4296455830044579
+      },
+      "identicalRows": {
+        "about": 4,
+        "senses": 200405
+      }
+    },
+    "language:fr": {
+      "before": {
+        "descriptor": {
+          "id": "language:fr",
+          "role": "language",
+          "language": "fr",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_fr.sqlite.gz",
+          "sha256": "8b8bf1dcd9928eb7eabbf469f4cb0f8882867816ad0fa04f4b7e90861d6c9b2f",
+          "uncompressedSha256": "c8a5dc29d6c1c399cc624a381b1ff7edc2f57daff87fa170287fbeffa1856007",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_fr.sqlite.gz",
+          "compressedBytes": 40161674,
+          "uncompressedBytes": 228216832,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 263633,
+          "entries": 182503,
+          "senseKinds": {
+            "definition": 16487,
+            "translation-equivalent": 247146
+          },
+          "sourceIds": [
+            "jmdict-simplified",
+            "omw-fr"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.44155670898908284
+      },
+      "after": {
+        "descriptor": {
+          "id": "language:fr",
+          "role": "language",
+          "language": "fr",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_fr.sqlite.gz",
+          "sha256": "6dd88f66f85ed464fce84f33eb5d1584294375dd405b402e4491a9c294b857c7",
+          "uncompressedSha256": "04a4fb4c4a8ca15174c653570d350e939caa9ce59734ff0a3c3a950cdf547fec",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_fr.sqlite.gz",
+          "compressedBytes": 40161674,
+          "uncompressedBytes": 228216832,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 263633,
+          "entries": 182503,
+          "senseKinds": {
+            "definition": 16487,
+            "translation-equivalent": 247146
+          },
+          "coreSha256": "1ca91fa280a60da55a010111895d9293572275c5d94efd9ed3f232dbe50ecee0",
+          "sourceIds": [
+            "jmdict-simplified",
+            "omw-fr"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.5187401250004768
+      },
+      "identicalRows": {
+        "about": 4,
+        "senses": 263633
+      }
+    },
+    "language:ja": {
+      "before": {
+        "descriptor": {
+          "id": "language:ja",
+          "role": "language",
+          "language": "ja",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_ja.sqlite.gz",
+          "sha256": "b74c33aa6e8dd7b51b675f82b830e0c254d258b64c0472ff8ff88910d007b2b7",
+          "uncompressedSha256": "9c258a0c02d1271f8c8415c378a298b817fa0160c6c00f13555aa61f55449517",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_ja.sqlite.gz",
+          "compressedBytes": 82004724,
+          "uncompressedBytes": 356376576,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 365048,
+          "entries": 250587,
+          "senseKinds": {
+            "factual-identification": 1,
+            "definition": 365047
+          },
+          "sourceIds": [
+            "atlas-factual-annotations",
+            "omw-ja"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.9918122080125613
+      },
+      "after": {
+        "descriptor": {
+          "id": "language:ja",
+          "role": "language",
+          "language": "ja",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_ja.sqlite.gz",
+          "sha256": "d28616b76a3a08502d0d8d1b0ebd9b32b2a55fa355f3e8af7009b1cd77ea2a8b",
+          "uncompressedSha256": "944584a28e48e05d9f75b81de667ff1c26f08f3c6a99d656be8a13664b76b797",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_ja.sqlite.gz",
+          "compressedBytes": 82004769,
+          "uncompressedBytes": 356376576,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 365048,
+          "entries": 250587,
+          "senseKinds": {
+            "factual-identification": 1,
+            "definition": 365047
+          },
+          "coreSha256": "1ca91fa280a60da55a010111895d9293572275c5d94efd9ed3f232dbe50ecee0",
+          "sourceIds": [
+            "atlas-factual-annotations",
+            "omw-ja"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.9706162079964997
+      },
+      "identicalRows": {
+        "about": 4,
+        "senses": 365048
+      }
+    },
+    "language:ru": {
+      "before": {
+        "descriptor": {
+          "id": "language:ru",
+          "role": "language",
+          "language": "ru",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_ru.sqlite.gz",
+          "sha256": "edca30db46119541807391fe4d5434c578baeaebc05c84ea878774e010ba17fa",
+          "uncompressedSha256": "1264a1edf54ff4333213e43c3e886792add6ca39ac502823fe8c6d25f217ae59",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_ru.sqlite.gz",
+          "compressedBytes": 13685453,
+          "uncompressedBytes": 84217856,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 69457,
+          "entries": 69419,
+          "senseKinds": {
+            "definition": 69457
+          },
+          "sourceIds": [
+            "jmdict-simplified"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.1371032919996651
+      },
+      "after": {
+        "descriptor": {
+          "id": "language:ru",
+          "role": "language",
+          "language": "ru",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_ru.sqlite.gz",
+          "sha256": "b8e6bc438e813f6a7b1c3d1d5ff64fd2919126a8db6bab1f694cf2a7ed0a0ec5",
+          "uncompressedSha256": "8cb8caab042f14f31e96c30cf29cb4644d6400f9127b2a9156262ff297686319",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_ru.sqlite.gz",
+          "compressedBytes": 13685472,
+          "uncompressedBytes": 84217856,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 69457,
+          "entries": 69419,
+          "senseKinds": {
+            "definition": 69457
+          },
+          "coreSha256": "1ca91fa280a60da55a010111895d9293572275c5d94efd9ed3f232dbe50ecee0",
+          "sourceIds": [
+            "jmdict-simplified"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.13842762500280514
+      },
+      "identicalRows": {
+        "about": 4,
+        "senses": 69457
+      }
+    },
+    "language:de": {
+      "before": {
+        "descriptor": {
+          "id": "language:de",
+          "role": "language",
+          "language": "de",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_de.sqlite.gz",
+          "sha256": "e22b99363e3f453caf31b4d36f00663e12df801d33f6b0668b533a1da53db634",
+          "uncompressedSha256": "a46ce49419b21f5de61ce053f945d677b4b24610ba06dfccb25eb4634fd1937a",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_de.sqlite.gz",
+          "compressedBytes": 28078614,
+          "uncompressedBytes": 186228736,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 166106,
+          "entries": 129159,
+          "senseKinds": {
+            "editorial-usage": 9,
+            "definition": 166097
+          },
+          "sourceIds": [
+            "atlas-usage",
+            "jmdict-simplified"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.3080136669886997
+      },
+      "after": {
+        "descriptor": {
+          "id": "language:de",
+          "role": "language",
+          "language": "de",
+          "format": "atlas-sqlite-v2+gzip",
+          "schemaVersion": 2,
+          "dictionaryRevision": "1.1.0-beta.3",
+          "file": "Kotoba_Atlas_1_1_0_beta_3_de.sqlite.gz",
+          "sha256": "4cddac64616a60a5f8f4f086fac6a512d8e7399fa8e7c63777e586c82d96196c",
+          "uncompressedSha256": "6cee3fc4c757d6cba32d85021ff2125a56e8694f724055318a5114eed8142249",
+          "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.3/Kotoba_Atlas_1_1_0_beta_3_de.sqlite.gz",
+          "compressedBytes": 28078641,
+          "uncompressedBytes": 186228736,
+          "compatibility": {
+            "requiredSchema": 2,
+            "requiredCapabilities": [
+              "shared-core",
+              "entry-language-fallback",
+              "form-restrictions"
+            ]
+          },
+          "senses": 166106,
+          "entries": 129159,
+          "senseKinds": {
+            "editorial-usage": 9,
+            "definition": 166097
+          },
+          "coreSha256": "1ca91fa280a60da55a010111895d9293572275c5d94efd9ed3f232dbe50ecee0",
+          "sourceIds": [
+            "atlas-usage",
+            "jmdict-simplified"
+          ]
+        },
+        "verifyAndExpandSeconds": 0.3969575000082841
+      },
+      "identicalRows": {
+        "about": 4,
+        "senses": 166106
+      }
+    }
+  },
+  "before": {
+    "sql": {
+      "reverseKeyPayloadBytes": {
+        "entryId": 158080503,
+        "senseId": 291233353,
+        "formHint": 6411824
+      },
+      "stats": false,
+      "dbstat": {
+        "about": {
+          "bytes": 4096,
+          "unusedBytes": 3943
+        },
+        "entries": {
+          "bytes": 59113472,
+          "unusedBytes": 422136
+        },
+        "form_lookup": {
+          "bytes": 109101056,
+          "unusedBytes": 711681
+        },
+        "forms": {
+          "bytes": 450965504,
+          "unusedBytes": 11281766
+        },
+        "kanji": {
+          "bytes": 3719168,
+          "unusedBytes": 211161
+        },
+        "metadata": {
+          "bytes": 120045568,
+          "unusedBytes": 1768151
+        },
+        "metadata_lookup": {
+          "bytes": 26365952,
+          "unusedBytes": 91491
+        },
+        "notices": {
+          "bytes": 1171456,
+          "unusedBytes": 13305
+        },
+        "reading_lookup": {
+          "bytes": 113115136,
+          "unusedBytes": 874976
+        },
+        "reverse_keys": {
+          "bytes": 522399744,
+          "unusedBytes": 11831690
+        },
+        "reverse_search_config": {
+          "bytes": 4096,
+          "unusedBytes": 4074
+        },
+        "reverse_search_data": {
+          "bytes": 86736896,
+          "unusedBytes": 919144
+        },
+        "reverse_search_docsize": {
+          "bytes": 33128448,
+          "unusedBytes": 77697
+        },
+        "reverse_search_idx": {
+          "bytes": 430080,
+          "unusedBytes": 50625
+        },
+        "sources": {
+          "bytes": 16384,
+          "unusedBytes": 5699
+        },
+        "spelling_lookup": {
+          "bytes": 144879616,
+          "unusedBytes": 1176016
+        },
+        "sqlite_autoindex_about_1": {
+          "bytes": 4096,
+          "unusedBytes": 4029
+        },
+        "sqlite_autoindex_entries_1": {
+          "bytes": 47128576,
+          "unusedBytes": 205080
+        },
+        "sqlite_autoindex_forms_1": {
+          "bytes": 164671488,
+          "unusedBytes": 1507659
+        },
+        "sqlite_autoindex_kanji_1": {
+          "bytes": 118784,
+          "unusedBytes": 4336
+        },
+        "sqlite_autoindex_notices_1": {
+          "bytes": 4096,
+          "unusedBytes": 3733
+        },
+        "sqlite_autoindex_sources_1": {
+          "bytes": 4096,
+          "unusedBytes": 3785
+        },
+        "sqlite_autoindex_tags_1": {
+          "bytes": 4096,
+          "unusedBytes": 3144
+        },
+        "sqlite_schema": {
+          "bytes": 4096,
+          "unusedBytes": 1387
+        },
+        "tags": {
+          "bytes": 12288,
+          "unusedBytes": 7635
+        }
+      },
+      "queries": {
+        "swiftForms": {
+          "sql": "SELECT e.rowid,f.text,e.rules,EXISTS(SELECT 1 FROM json_each(f.payload,'$.tags') WHERE value IN ('sk','ik','ok','rk','sK','iK','oK','rK')) FROM forms f JOIN entries e ON e.id=f.entry_id WHERE (f.normalized=? OR f.reading_key=?) AND (f.kind!='alias' OR NOT EXISTS(SELECT 1 FROM forms original WHERE original.entry_id=f.entry_id AND original.text=f.text AND original.reading=f.reading AND original.kind!='alias')) LIMIT 240",
+          "bindings": [
+            "きょう",
+            "きょう"
+          ],
+          "plan": [
+            "MULTI-INDEX OR",
+            "INDEX 1",
+            "SEARCH f USING INDEX form_lookup (normalized=?)",
+            "INDEX 2",
+            "SEARCH f USING INDEX reading_lookup (reading_key=?)",
+            "CORRELATED SCALAR SUBQUERY 2",
+            "SEARCH original USING COVERING INDEX sqlite_autoindex_forms_1 (entry_id=? AND text=? AND reading=?)",
+            "SEARCH e USING INDEX sqlite_autoindex_entries_1 (id=?)",
+            "CORRELATED SCALAR SUBQUERY 1",
+            "SCAN json_each VIRTUAL TABLE INDEX 3:"
+          ],
+          "medianMs": 0.575958,
+          "maxMs": 13.491833,
+          "samplesMs": [
+            1.219708,
+            0.575958,
+            0.570625,
+            2.322917,
+            6.007958,
+            0.586833,
+            0.564167,
+            0.808833,
+            0.693541,
+            0.560959,
+            0.714375,
+            0.511125,
+            0.572334,
+            0.523,
+            2.404542,
+            1.466958,
+            0.547959,
+            0.521333,
+            0.518084,
+            0.514041,
+            13.491833
+          ]
+        },
+        "swiftPrefix": {
+          "sql": "SELECT e.rowid FROM forms f JOIN entries e ON e.id=f.entry_id WHERE f.normalized>=? AND f.normalized<? LIMIT 80",
+          "bindings": [
+            "食",
+            "食􏿿"
+          ],
+          "plan": [
+            "SEARCH f USING COVERING INDEX form_lookup (normalized>? AND normalized<?)",
+            "SEARCH e USING COVERING INDEX sqlite_autoindex_entries_1 (id=?)"
+          ],
+          "medianMs": 0.090959,
+          "maxMs": 0.224959,
+          "samplesMs": [
+            0.224959,
+            0.097333,
+            0.094542,
+            0.091709,
+            0.091166,
+            0.090917,
+            0.090959,
+            0.090875,
+            0.090458,
+            0.090959,
+            0.090541,
+            0.094459,
+            0.091,
+            0.096791,
+            0.091042,
+            0.089833,
+            0.090958,
+            0.090542,
+            0.090416,
+            0.090875,
+            0.090542
+          ]
+        },
+        "swiftReverse": {
+          "sql": "SELECT e.rowid,e.id,r.sense_id,r.language,form_hint FROM reverse_keys r JOIN entries e ON e.id=r.entry_id WHERE r.id IN (SELECT rowid FROM reverse_search WHERE reverse_search MATCH ? ORDER BY rank LIMIT 240)",
+          "bindings": [
+            "\"nowadays\""
+          ],
+          "plan": [
+            "SEARCH r USING INTEGER PRIMARY KEY (rowid=?)",
+            "LIST SUBQUERY 1",
+            "SCAN reverse_search VIRTUAL TABLE INDEX 32:M1",
+            "CREATE BLOOM FILTER",
+            "SEARCH e USING COVERING INDEX sqlite_autoindex_entries_1 (id=?)"
+          ],
+          "medianMs": 0.644833,
+          "maxMs": 8.183917,
+          "samplesMs": [
+            1.035083,
+            0.861708,
+            0.520958,
+            0.459833,
+            0.492625,
+            0.507,
+            1.41175,
+            1.879834,
+            1.35325,
+            0.644833,
+            0.4795,
+            1.659958,
+            1.356791,
+            0.488708,
+            0.4615,
+            0.452375,
+            8.183917,
+            1.786458,
+            2.021375,
+            0.473583,
+            0.453959
+          ]
+        },
+        "swiftHeadwords": {
+          "sql": "SELECT payload FROM forms WHERE entry_id=? ORDER BY CASE kind WHEN 'headword' THEN 0 WHEN 'reading' THEN 1 ELSE 2 END,json_extract(payload,'$.common') DESC,COALESCE((SELECT json_extract(r.payload,'$.common') FROM forms r WHERE r.entry_id=forms.entry_id AND r.text=forms.reading AND r.kind='reading' LIMIT 1),0) DESC,text,reading",
+          "bindings": [
+            "jmdict:ja:1579110"
+          ],
+          "plan": [
+            "SEARCH forms USING INDEX sqlite_autoindex_forms_1 (entry_id=?)",
+            "CORRELATED SCALAR SUBQUERY 1",
+            "SEARCH r USING INDEX sqlite_autoindex_forms_1 (entry_id=? AND text=?)",
+            "USE TEMP B-TREE FOR ORDER BY"
+          ],
+          "medianMs": 0.042125,
+          "maxMs": 1.437584,
+          "samplesMs": [
+            0.074958,
+            0.045833,
+            0.04325,
+            0.042708,
+            0.042125,
+            0.042084,
+            0.045542,
+            0.042042,
+            0.041708,
+            0.041333,
+            0.041208,
+            0.041125,
+            0.04275,
+            0.041958,
+            0.040917,
+            0.04075,
+            0.040792,
+            1.437584,
+            0.069291,
+            0.058416,
+            0.062084
+          ]
+        },
+        "swiftPitch": {
+          "sql": "SELECT DISTINCT m.mode,m.payload FROM forms f JOIN metadata m ON m.term=f.text WHERE f.entry_id=? AND f.reading=?",
+          "bindings": [
+            "jmdict:ja:1579110",
+            "きょう"
+          ],
+          "plan": [
+            "SEARCH f USING COVERING INDEX sqlite_autoindex_forms_1 (entry_id=?)",
+            "SEARCH m USING INDEX metadata_lookup (term=?)",
+            "USE TEMP B-TREE FOR DISTINCT"
+          ],
+          "medianMs": 0.137667,
+          "maxMs": 0.414959,
+          "samplesMs": [
+            0.414959,
+            0.213292,
+            0.114625,
+            0.217416,
+            0.151458,
+            0.165167,
+            0.051375,
+            0.050917,
+            0.031375,
+            0.137667,
+            0.140541,
+            0.167208,
+            0.045958,
+            0.047625,
+            0.029,
+            0.027333,
+            0.233166,
+            0.180333,
+            0.034208,
+            0.028708,
+            0.159083
+          ]
+        }
+      }
+    },
+    "lookup": [
+      {
+        "query": "きょう",
+        "language": "en",
+        "medianMs": 22.389458,
+        "maxMs": 46.232625,
+        "samplesMs": [
+          21.868583,
+          17.876417,
+          30.96675,
+          20.532084,
+          46.232625,
+          27.91,
+          21.465542,
+          37.669792,
+          14.549958,
+          13.911083,
+          13.707083,
+          26.287375,
+          22.389458,
+          26.961917,
+          32.693166,
+          16.19575,
+          32.488292,
+          18.831875,
+          37.67925,
+          22.050167,
+          23.636375
+        ]
+      },
+      {
+        "query": "こんにち",
+        "language": "en",
+        "medianMs": 0.411292,
+        "maxMs": 1.223791,
+        "samplesMs": [
+          0.612208,
+          0.425292,
+          0.411292,
+          0.405041,
+          0.400833,
+          0.405083,
+          0.680791,
+          0.443125,
+          0.42475,
+          0.418834,
+          0.406375,
+          0.403375,
+          0.40025,
+          1.223791,
+          0.464167,
+          0.431834,
+          0.414041,
+          0.405375,
+          0.402459,
+          0.397458,
+          0.396417
+        ]
+      },
+      {
+        "query": "今日",
+        "language": "en",
+        "medianMs": 4.809458,
+        "maxMs": 19.488666,
+        "samplesMs": [
+          4.809458,
+          3.839792,
+          3.804667,
+          3.838625,
+          12.1265,
+          3.81125,
+          4.0875,
+          19.488666,
+          8.047583,
+          10.580834,
+          3.966209,
+          3.861333,
+          12.8195,
+          10.627084,
+          3.985542,
+          3.94575,
+          3.912667,
+          14.482125,
+          9.788583,
+          6.785041,
+          12.06425
+        ]
+      },
+      {
+        "query": "nowadays",
+        "language": "en",
+        "medianMs": 13.016916,
+        "maxMs": 35.371542,
+        "samplesMs": [
+          9.706625,
+          13.016916,
+          25.046417,
+          6.820625,
+          6.489,
+          6.41475,
+          35.371542,
+          19.243166,
+          17.897084,
+          20.140333,
+          9.827583,
+          6.82,
+          8.64925,
+          6.573375,
+          10.450208,
+          13.919541,
+          6.664583,
+          15.274625,
+          23.123792,
+          18.599666,
+          13.960334
+        ]
+      },
+      {
+        "query": "AND",
+        "language": "en",
+        "medianMs": 347.1495,
+        "maxMs": 413.791834,
+        "samplesMs": [
+          413.791834,
+          308.400916,
+          318.738666,
+          368.0435,
+          334.277458,
+          347.1495,
+          409.193958,
+          366.274958,
+          393.827125,
+          335.292292,
+          401.297875,
+          337.463833,
+          368.05325,
+          342.01225,
+          328.249291,
+          333.905416,
+          332.005709,
+          370.126792,
+          372.516083,
+          343.20175,
+          403.3165
+        ]
+      },
+      {
+        "query": "and",
+        "language": "en",
+        "medianMs": 379.847708,
+        "maxMs": 432.22425,
+        "samplesMs": [
+          373.736,
+          372.207709,
+          383.91525,
+          394.2555,
+          381.689292,
+          380.412834,
+          387.813667,
+          376.415334,
+          366.147,
+          405.24525,
+          399.214792,
+          374.229083,
+          398.544625,
+          401.733209,
+          371.497834,
+          314.549625,
+          336.115125,
+          331.998417,
+          364.267292,
+          379.847708,
+          432.22425
+        ]
+      },
+      {
+        "query": "Boolean",
+        "language": "en",
+        "medianMs": 3.714292,
+        "maxMs": 17.81825,
+        "samplesMs": [
+          17.81825,
+          3.214916,
+          3.14725,
+          3.714292,
+          5.627209,
+          3.665875,
+          3.757542,
+          3.515959,
+          10.399166,
+          3.097417,
+          2.988958,
+          4.963416,
+          3.744375,
+          4.390042,
+          4.220208,
+          3.064542,
+          2.985542,
+          2.958208,
+          2.94875,
+          8.573667,
+          4.791667
+        ]
+      },
+      {
+        "query": "はし",
+        "language": "en",
+        "medianMs": 7.935958,
+        "maxMs": 45.008834,
+        "samplesMs": [
+          41.16575,
+          7.935958,
+          7.542042,
+          7.327416,
+          7.285917,
+          7.424375,
+          7.389167,
+          7.317,
+          7.301625,
+          45.008834,
+          8.665292,
+          24.63875,
+          33.130959,
+          14.446583,
+          7.400666,
+          7.249916,
+          17.068417,
+          8.727,
+          7.409667,
+          33.60225,
+          16.75675
+        ]
+      },
+      {
+        "query": "ワンチャン",
+        "language": "en",
+        "medianMs": 0.414208,
+        "maxMs": 3.276375,
+        "samplesMs": [
+          3.276375,
+          0.474208,
+          0.421459,
+          0.402083,
+          0.39675,
+          0.388541,
+          0.384417,
+          0.381542,
+          0.383375,
+          0.377458,
+          0.377417,
+          0.3795,
+          0.672042,
+          0.458334,
+          0.909541,
+          0.954834,
+          0.424125,
+          0.422625,
+          0.446,
+          0.414208,
+          0.407416
+        ]
+      },
+      {
+        "query": "鎌かけてる",
+        "language": "de",
+        "medianMs": 0.260417,
+        "maxMs": 1.607333,
+        "samplesMs": [
+          1.607333,
+          0.308916,
+          0.260417,
+          0.246167,
+          0.241292,
+          0.238917,
+          1.338334,
+          0.30025,
+          0.292917,
+          0.250167,
+          0.770834,
+          0.241958,
+          0.238458,
+          0.23575,
+          0.234916,
+          0.233084,
+          0.235916,
+          1.024542,
+          0.910583,
+          0.802959,
+          0.794458
+        ]
+      },
+      {
+        "query": "Dämon",
+        "language": "de",
+        "medianMs": 5.297458,
+        "maxMs": 32.998792,
+        "samplesMs": [
+          32.998792,
+          6.122333,
+          5.472917,
+          9.795375,
+          10.736333,
+          26.191917,
+          7.788583,
+          5.410875,
+          5.297458,
+          5.195667,
+          5.189125,
+          5.198334,
+          5.138459,
+          5.152916,
+          5.24725,
+          5.194334,
+          5.137,
+          5.156416,
+          5.133,
+          6.881833,
+          26.755125
+        ]
+      },
+      {
+        "query": "物ノ怪",
+        "language": "de",
+        "medianMs": 0.298125,
+        "maxMs": 1.591083,
+        "samplesMs": [
+          1.591083,
+          0.370333,
+          0.329291,
+          0.31725,
+          0.309125,
+          0.309458,
+          0.30875,
+          0.303291,
+          0.301791,
+          0.300083,
+          0.297208,
+          0.295625,
+          0.295875,
+          0.2945,
+          0.298125,
+          0.293916,
+          0.29375,
+          0.293833,
+          0.293667,
+          0.293083,
+          0.292459
+        ]
+      },
+      {
+        "query": "ノリのいい",
+        "language": "de",
+        "medianMs": 0.350375,
+        "maxMs": 1.435208,
+        "samplesMs": [
+          1.435208,
+          0.391,
+          0.384958,
+          0.372375,
+          0.865791,
+          0.788709,
+          0.3645,
+          0.350375,
+          0.351875,
+          0.350833,
+          0.351125,
+          0.349125,
+          0.347833,
+          0.341334,
+          0.341,
+          0.340542,
+          0.346583,
+          0.342333,
+          0.342333,
+          0.341459,
+          0.341
+        ]
+      },
+      {
+        "query": "沼ってる",
+        "language": "de",
+        "medianMs": 0.239416,
+        "maxMs": 1.940166,
+        "samplesMs": [
+          1.207291,
+          0.299667,
+          1.940166,
+          0.283542,
+          0.255,
+          0.24875,
+          0.244542,
+          0.244958,
+          0.239708,
+          0.238292,
+          0.237333,
+          0.24275,
+          0.239416,
+          0.237917,
+          0.2365,
+          0.235709,
+          0.236,
+          0.235208,
+          0.235125,
+          0.234334,
+          0.234875
+        ]
+      },
+      {
+        "query": "隠密局",
+        "language": "de",
+        "medianMs": 0.139833,
+        "maxMs": 1.022417,
+        "samplesMs": [
+          1.022417,
+          0.173208,
+          0.15525,
+          0.148875,
+          0.143292,
+          0.141291,
+          0.140083,
+          0.140458,
+          0.139791,
+          0.139833,
+          0.139709,
+          0.139916,
+          0.1395,
+          0.139,
+          0.139041,
+          0.138917,
+          0.143167,
+          0.139375,
+          0.138542,
+          0.138125,
+          0.1375
+        ]
+      },
+      {
+        "query": "実体",
+        "language": "ja",
+        "medianMs": 26.871084,
+        "maxMs": 68.430042,
+        "samplesMs": [
+          49.313375,
+          41.141834,
+          21.1865,
+          15.209166,
+          22.373208,
+          15.148209,
+          68.430042,
+          32.829917,
+          21.577625,
+          18.921584,
+          35.104333,
+          14.54075,
+          32.994834,
+          40.582833,
+          15.127167,
+          22.052375,
+          46.111209,
+          26.871084,
+          34.134833,
+          33.257708,
+          20.985542
+        ]
+      }
+    ]
+  },
+  "after": {
+    "sql": {
+      "reverseKeyPayloadBytes": {
+        "entryId": 158080503,
+        "senseId": 291233353,
+        "formHint": 6411824
+      },
+      "stats": true,
+      "dbstat": {
+        "about": {
+          "bytes": 4096,
+          "unusedBytes": 3943
+        },
+        "entries": {
+          "bytes": 59113472,
+          "unusedBytes": 422136
+        },
+        "form_lookup": {
+          "bytes": 109101056,
+          "unusedBytes": 711681
+        },
+        "forms": {
+          "bytes": 450965504,
+          "unusedBytes": 11281766
+        },
+        "kanji": {
+          "bytes": 3719168,
+          "unusedBytes": 211161
+        },
+        "metadata": {
+          "bytes": 120045568,
+          "unusedBytes": 1768151
+        },
+        "metadata_lookup": {
+          "bytes": 26365952,
+          "unusedBytes": 91491
+        },
+        "notices": {
+          "bytes": 1171456,
+          "unusedBytes": 13305
+        },
+        "reading_lookup": {
+          "bytes": 113115136,
+          "unusedBytes": 874976
+        },
+        "reverse_keys": {
+          "bytes": 522399744,
+          "unusedBytes": 11831690
+        },
+        "reverse_search_config": {
+          "bytes": 4096,
+          "unusedBytes": 4074
+        },
+        "reverse_search_data": {
+          "bytes": 86736896,
+          "unusedBytes": 919144
+        },
+        "reverse_search_docsize": {
+          "bytes": 33128448,
+          "unusedBytes": 77697
+        },
+        "reverse_search_idx": {
+          "bytes": 430080,
+          "unusedBytes": 50625
+        },
+        "sources": {
+          "bytes": 16384,
+          "unusedBytes": 5699
+        },
+        "spelling_lookup": {
+          "bytes": 50139136,
+          "unusedBytes": 146350
+        },
+        "sqlite_autoindex_about_1": {
+          "bytes": 4096,
+          "unusedBytes": 4029
+        },
+        "sqlite_autoindex_entries_1": {
+          "bytes": 47128576,
+          "unusedBytes": 205080
+        },
+        "sqlite_autoindex_forms_1": {
+          "bytes": 164671488,
+          "unusedBytes": 1507659
+        },
+        "sqlite_autoindex_kanji_1": {
+          "bytes": 118784,
+          "unusedBytes": 4336
+        },
+        "sqlite_autoindex_notices_1": {
+          "bytes": 4096,
+          "unusedBytes": 3733
+        },
+        "sqlite_autoindex_sources_1": {
+          "bytes": 4096,
+          "unusedBytes": 3785
+        },
+        "sqlite_autoindex_tags_1": {
+          "bytes": 4096,
+          "unusedBytes": 3144
+        },
+        "sqlite_schema": {
+          "bytes": 4096,
+          "unusedBytes": 1316
+        },
+        "sqlite_stat1": {
+          "bytes": 4096,
+          "unusedBytes": 3416
+        },
+        "tags": {
+          "bytes": 12288,
+          "unusedBytes": 7635
+        }
+      },
+      "queries": {
+        "swiftForms": {
+          "sql": "SELECT e.rowid,f.text,e.rules,EXISTS(SELECT 1 FROM json_each(f.payload,'$.tags') WHERE value IN ('sk','ik','ok','rk','sK','iK','oK','rK')) FROM forms f JOIN entries e ON e.id=f.entry_id WHERE (f.normalized=? OR f.reading_key=?) AND (f.kind!='alias' OR NOT EXISTS(SELECT 1 FROM forms original WHERE original.entry_id=f.entry_id AND original.text=f.text AND original.reading=f.reading AND original.kind!='alias')) LIMIT 240",
+          "bindings": [
+            "きょう",
+            "きょう"
+          ],
+          "plan": [
+            "MULTI-INDEX OR",
+            "INDEX 1",
+            "SEARCH f USING INDEX form_lookup (normalized=?)",
+            "INDEX 2",
+            "SEARCH f USING INDEX reading_lookup (reading_key=?)",
+            "CORRELATED SCALAR SUBQUERY 2",
+            "SEARCH original USING COVERING INDEX sqlite_autoindex_forms_1 (entry_id=? AND text=? AND reading=?)",
+            "SEARCH e USING INDEX sqlite_autoindex_entries_1 (id=?)",
+            "CORRELATED SCALAR SUBQUERY 1",
+            "SCAN json_each VIRTUAL TABLE INDEX 3:"
+          ],
+          "medianMs": 0.522958,
+          "maxMs": 3.050542,
+          "samplesMs": [
+            1.285083,
+            1.25425,
+            2.125292,
+            1.906542,
+            0.590208,
+            0.524583,
+            0.514667,
+            1.052708,
+            3.050542,
+            1.412958,
+            0.584084,
+            0.522958,
+            0.514875,
+            0.51025,
+            0.508458,
+            0.510292,
+            0.510791,
+            0.510542,
+            0.509875,
+            0.509291,
+            0.509084
+          ]
+        },
+        "swiftPrefix": {
+          "sql": "SELECT e.rowid FROM forms f JOIN entries e ON e.id=f.entry_id WHERE f.normalized>=? AND f.normalized<? LIMIT 80",
+          "bindings": [
+            "食",
+            "食􏿿"
+          ],
+          "plan": [
+            "SEARCH f USING COVERING INDEX form_lookup (normalized>? AND normalized<?)",
+            "SEARCH e USING COVERING INDEX sqlite_autoindex_entries_1 (id=?)"
+          ],
+          "medianMs": 0.091458,
+          "maxMs": 10.522417,
+          "samplesMs": [
+            0.21625,
+            0.094458,
+            0.092458,
+            0.091042,
+            0.090958,
+            0.090917,
+            0.090625,
+            0.091,
+            0.090959,
+            0.091292,
+            0.091417,
+            0.091458,
+            0.091125,
+            0.091125,
+            0.091584,
+            0.311833,
+            0.412958,
+            0.309459,
+            0.306333,
+            0.306583,
+            10.522417
+          ]
+        },
+        "swiftReverse": {
+          "sql": "SELECT e.rowid,e.id,r.sense_id,r.language,form_hint FROM reverse_keys r JOIN entries e ON e.id=r.entry_id WHERE r.id IN (SELECT rowid FROM reverse_search WHERE reverse_search MATCH ? ORDER BY rank LIMIT 240)",
+          "bindings": [
+            "\"nowadays\""
+          ],
+          "plan": [
+            "SEARCH r USING INTEGER PRIMARY KEY (rowid=?)",
+            "LIST SUBQUERY 1",
+            "SCAN reverse_search VIRTUAL TABLE INDEX 32:M1",
+            "CREATE BLOOM FILTER",
+            "SEARCH e USING COVERING INDEX sqlite_autoindex_entries_1 (id=?)"
+          ],
+          "medianMs": 0.500708,
+          "maxMs": 7.183458,
+          "samplesMs": [
+            2.419,
+            0.562833,
+            0.482166,
+            0.461917,
+            0.457667,
+            1.717875,
+            1.653125,
+            0.526041,
+            0.465666,
+            0.457292,
+            0.449834,
+            0.654541,
+            0.500708,
+            0.472166,
+            0.459666,
+            2.242334,
+            7.183458,
+            3.697875,
+            0.518458,
+            0.467541,
+            0.45925
+          ]
+        },
+        "swiftHeadwords": {
+          "sql": "SELECT payload FROM forms WHERE entry_id=? ORDER BY CASE kind WHEN 'headword' THEN 0 WHEN 'reading' THEN 1 ELSE 2 END,json_extract(payload,'$.common') DESC,COALESCE((SELECT json_extract(r.payload,'$.common') FROM forms r WHERE r.entry_id=forms.entry_id AND r.text=forms.reading AND r.kind='reading' LIMIT 1),0) DESC,text,reading",
+          "bindings": [
+            "jmdict:ja:1579110"
+          ],
+          "plan": [
+            "SEARCH forms USING INDEX sqlite_autoindex_forms_1 (entry_id=?)",
+            "CORRELATED SCALAR SUBQUERY 1",
+            "SEARCH r USING INDEX sqlite_autoindex_forms_1 (entry_id=? AND text=?)",
+            "USE TEMP B-TREE FOR ORDER BY"
+          ],
+          "medianMs": 0.041583,
+          "maxMs": 0.083333,
+          "samplesMs": [
+            0.083333,
+            0.082167,
+            0.056084,
+            0.045292,
+            0.043208,
+            0.0425,
+            0.041916,
+            0.041792,
+            0.041583,
+            0.041584,
+            0.041125,
+            0.040959,
+            0.040792,
+            0.041583,
+            0.040666,
+            0.04075,
+            0.041042,
+            0.043916,
+            0.040917,
+            0.041,
+            0.041
+          ]
+        },
+        "swiftPitch": {
+          "sql": "SELECT DISTINCT m.mode,m.payload FROM forms f JOIN metadata m ON m.term=f.text WHERE f.entry_id=? AND f.reading=?",
+          "bindings": [
+            "jmdict:ja:1579110",
+            "きょう"
+          ],
+          "plan": [
+            "SEARCH f USING COVERING INDEX sqlite_autoindex_forms_1 (entry_id=?)",
+            "SEARCH m USING INDEX metadata_lookup (term=?)",
+            "USE TEMP B-TREE FOR DISTINCT"
+          ],
+          "medianMs": 0.026917,
+          "maxMs": 0.090334,
+          "samplesMs": [
+            0.090334,
+            0.031875,
+            0.029,
+            0.027959,
+            0.027042,
+            0.027208,
+            0.027125,
+            0.027041,
+            0.026875,
+            0.026958,
+            0.026917,
+            0.027542,
+            0.026875,
+            0.02675,
+            0.026625,
+            0.026625,
+            0.026791,
+            0.026625,
+            0.0265,
+            0.026584,
+            0.026792
+          ]
+        }
+      }
+    },
+    "lookup": [
+      {
+        "query": "きょう",
+        "language": "en",
+        "medianMs": 29.305167,
+        "maxMs": 56.560417,
+        "samplesMs": [
+          35.164208,
+          28.058167,
+          46.112875,
+          29.305167,
+          16.623583,
+          17.127041,
+          37.676375,
+          56.560417,
+          33.417916,
+          17.012791,
+          25.7265,
+          33.532958,
+          23.398375,
+          19.46675,
+          32.987166,
+          14.278042,
+          30.882833,
+          35.662292,
+          16.783375,
+          21.081458,
+          54.15425
+        ]
+      },
+      {
+        "query": "こんにち",
+        "language": "en",
+        "medianMs": 0.396667,
+        "maxMs": 0.6405,
+        "samplesMs": [
+          0.6405,
+          0.431084,
+          0.411709,
+          0.406167,
+          0.403834,
+          0.404083,
+          0.400083,
+          0.397792,
+          0.396667,
+          0.3995,
+          0.394458,
+          0.4295,
+          0.394,
+          0.393416,
+          0.393792,
+          0.392709,
+          0.395708,
+          0.393084,
+          0.39125,
+          0.391459,
+          0.391625
+        ]
+      },
+      {
+        "query": "今日",
+        "language": "en",
+        "medianMs": 4.003,
+        "maxMs": 17.219875,
+        "samplesMs": [
+          4.787084,
+          17.219875,
+          12.172417,
+          12.235375,
+          3.967125,
+          3.941875,
+          5.386334,
+          4.003,
+          3.832958,
+          3.80275,
+          3.803209,
+          3.8185,
+          3.783625,
+          4.989292,
+          3.935333,
+          3.832333,
+          10.845458,
+          4.104084,
+          7.288542,
+          3.93875,
+          4.959208
+        ]
+      },
+      {
+        "query": "nowadays",
+        "language": "en",
+        "medianMs": 12.968084,
+        "maxMs": 30.299375,
+        "samplesMs": [
+          6.82575,
+          11.97125,
+          7.440166,
+          6.578084,
+          30.299375,
+          25.662166,
+          12.768375,
+          9.420209,
+          21.705,
+          19.773708,
+          7.007417,
+          15.20175,
+          6.802917,
+          12.968084,
+          22.245667,
+          16.424583,
+          16.278375,
+          6.798625,
+          6.515917,
+          13.206917,
+          24.840416
+        ]
+      },
+      {
+        "query": "AND",
+        "language": "en",
+        "medianMs": 345.153833,
+        "maxMs": 425.181208,
+        "samplesMs": [
+          317.014666,
+          366.589959,
+          425.181208,
+          291.51,
+          377.334917,
+          373.310417,
+          324.406834,
+          345.153833,
+          340.430209,
+          322.27725,
+          387.096208,
+          401.503917,
+          422.857625,
+          383.041708,
+          297.027666,
+          360.031792,
+          326.798333,
+          341.72,
+          350.625,
+          318.725208,
+          315.62625
+        ]
+      },
+      {
+        "query": "and",
+        "language": "en",
+        "medianMs": 352.834,
+        "maxMs": 452.527958,
+        "samplesMs": [
+          370.887458,
+          331.7665,
+          374.699959,
+          298.140667,
+          400.333958,
+          379.341833,
+          349.606167,
+          346.922709,
+          357.220292,
+          369.671416,
+          318.896166,
+          344.671125,
+          336.334166,
+          311.977416,
+          352.834,
+          337.465958,
+          389.326625,
+          368.234,
+          343.722416,
+          452.527958,
+          368.492542
+        ]
+      },
+      {
+        "query": "Boolean",
+        "language": "en",
+        "medianMs": 3.357875,
+        "maxMs": 30.241584,
+        "samplesMs": [
+          6.853041,
+          3.357875,
+          6.051125,
+          28.424833,
+          3.536541,
+          3.089417,
+          2.973834,
+          2.9755,
+          2.927584,
+          10.254875,
+          7.282417,
+          7.16925,
+          30.241584,
+          5.232292,
+          5.378791,
+          3.036125,
+          2.960917,
+          2.950959,
+          3.317292,
+          3.063541,
+          2.941959
+        ]
+      },
+      {
+        "query": "はし",
+        "language": "en",
+        "medianMs": 16.223792,
+        "maxMs": 32.881167,
+        "samplesMs": [
+          16.223792,
+          10.996416,
+          27.612583,
+          10.141541,
+          32.243708,
+          20.626959,
+          11.062417,
+          16.871584,
+          17.627667,
+          12.7515,
+          22.275541,
+          25.723375,
+          7.669208,
+          15.507041,
+          7.60925,
+          32.881167,
+          17.76275,
+          22.141125,
+          7.47925,
+          7.515042,
+          10.265125
+        ]
+      },
+      {
+        "query": "ワンチャン",
+        "language": "en",
+        "medianMs": 0.602583,
+        "maxMs": 24.205917,
+        "samplesMs": [
+          7.341708,
+          0.505417,
+          0.434625,
+          1.78025,
+          2.996417,
+          0.710542,
+          0.739291,
+          1.072042,
+          0.78175,
+          1.279333,
+          0.602583,
+          0.530083,
+          1.874917,
+          24.205917,
+          0.523458,
+          0.421458,
+          0.407167,
+          0.399208,
+          0.396209,
+          0.391416,
+          0.386792
+        ]
+      },
+      {
+        "query": "鎌かけてる",
+        "language": "de",
+        "medianMs": 0.33125,
+        "maxMs": 1.015417,
+        "samplesMs": [
+          0.949291,
+          0.377208,
+          0.275125,
+          0.256375,
+          0.249792,
+          0.240042,
+          0.23825,
+          0.237584,
+          0.233042,
+          0.253208,
+          1.015417,
+          0.911125,
+          0.873875,
+          0.820459,
+          0.79275,
+          0.797833,
+          0.649458,
+          0.316375,
+          0.755416,
+          0.33125,
+          0.262916
+        ]
+      },
+      {
+        "query": "Dämon",
+        "language": "de",
+        "medianMs": 5.384833,
+        "maxMs": 29.022333,
+        "samplesMs": [
+          29.022333,
+          7.026292,
+          22.997667,
+          5.783292,
+          6.979417,
+          5.866083,
+          5.447875,
+          28.559625,
+          15.186667,
+          5.384833,
+          5.202708,
+          5.163834,
+          5.248875,
+          5.14075,
+          5.188167,
+          5.129834,
+          5.119583,
+          5.126042,
+          5.124,
+          5.187292,
+          6.090209
+        ]
+      },
+      {
+        "query": "物ノ怪",
+        "language": "de",
+        "medianMs": 0.317083,
+        "maxMs": 1.331125,
+        "samplesMs": [
+          1.088083,
+          0.405667,
+          0.340333,
+          0.3245,
+          0.318084,
+          0.311833,
+          0.311375,
+          0.305208,
+          0.302375,
+          1.331125,
+          0.382416,
+          0.335292,
+          0.331917,
+          0.330208,
+          0.317083,
+          0.30925,
+          0.306416,
+          0.307958,
+          0.301791,
+          0.300292,
+          0.297375
+        ]
+      },
+      {
+        "query": "ノリのいい",
+        "language": "de",
+        "medianMs": 0.35325,
+        "maxMs": 1.294458,
+        "samplesMs": [
+          0.874792,
+          0.504333,
+          1.294458,
+          0.413458,
+          0.369666,
+          0.36125,
+          0.354916,
+          0.353834,
+          0.354167,
+          0.353,
+          0.349875,
+          0.350542,
+          0.350333,
+          0.34625,
+          0.345583,
+          0.346958,
+          0.35325,
+          0.351084,
+          0.352375,
+          0.351166,
+          1.132375
+        ]
+      },
+      {
+        "query": "沼ってる",
+        "language": "de",
+        "medianMs": 0.314917,
+        "maxMs": 1.697959,
+        "samplesMs": [
+          1.697959,
+          0.315375,
+          0.797916,
+          0.263834,
+          0.249709,
+          0.245041,
+          0.24325,
+          0.566417,
+          0.265333,
+          0.366792,
+          0.258167,
+          0.244792,
+          0.239875,
+          0.237583,
+          0.314917,
+          0.27,
+          0.692417,
+          0.9835,
+          0.837709,
+          0.801125,
+          0.791125
+        ]
+      },
+      {
+        "query": "隠密局",
+        "language": "de",
+        "medianMs": 0.142042,
+        "maxMs": 1.078958,
+        "samplesMs": [
+          1.078958,
+          0.225084,
+          0.166917,
+          0.157167,
+          0.151209,
+          0.146916,
+          0.143958,
+          0.142625,
+          0.141375,
+          0.142042,
+          0.143083,
+          0.139834,
+          0.138833,
+          0.139083,
+          0.138625,
+          0.138875,
+          0.142708,
+          0.138583,
+          0.138125,
+          0.138542,
+          0.138458
+        ]
+      },
+      {
+        "query": "実体",
+        "language": "ja",
+        "medianMs": 26.416917,
+        "maxMs": 53.555708,
+        "samplesMs": [
+          44.642708,
+          15.05475,
+          37.549584,
+          35.477041,
+          29.447625,
+          53.555708,
+          26.416917,
+          17.854167,
+          16.210625,
+          14.325666,
+          38.834958,
+          16.14775,
+          18.685625,
+          27.315291,
+          40.444375,
+          19.898333,
+          14.887375,
+          50.619625,
+          15.520458,
+          16.500709,
+          31.57325
+        ]
+      }
+    ]
+  },
+  "lookupDifferences": [],
+  "browserZipMembers": {
+    "Kotoba_Atlas_English_v1_1_0_beta_3.zip": 492,
+    "Kotoba_Atlas_German_v1_1_0_beta_3.zip": 492
+  },
+  "analyzeOnly": {
+    "reverseKeyPayloadBytes": {
+      "entryId": 158080503,
+      "senseId": 291233353,
+      "formHint": 6411824
+    },
+    "stats": true,
+    "dbstat": {
+      "about": {
+        "bytes": 4096,
+        "unusedBytes": 3943
+      },
+      "entries": {
+        "bytes": 59113472,
+        "unusedBytes": 422136
+      },
+      "form_lookup": {
+        "bytes": 109101056,
+        "unusedBytes": 711681
+      },
+      "forms": {
+        "bytes": 450965504,
+        "unusedBytes": 11281766
+      },
+      "kanji": {
+        "bytes": 3719168,
+        "unusedBytes": 211161
+      },
+      "metadata": {
+        "bytes": 120045568,
+        "unusedBytes": 1768151
+      },
+      "metadata_lookup": {
+        "bytes": 26365952,
+        "unusedBytes": 91491
+      },
+      "notices": {
+        "bytes": 1171456,
+        "unusedBytes": 13305
+      },
+      "reading_lookup": {
+        "bytes": 113115136,
+        "unusedBytes": 874976
+      },
+      "reverse_keys": {
+        "bytes": 522399744,
+        "unusedBytes": 11831690
+      },
+      "reverse_search_config": {
+        "bytes": 4096,
+        "unusedBytes": 4074
+      },
+      "reverse_search_data": {
+        "bytes": 86736896,
+        "unusedBytes": 919144
+      },
+      "reverse_search_docsize": {
+        "bytes": 33128448,
+        "unusedBytes": 77697
+      },
+      "reverse_search_idx": {
+        "bytes": 430080,
+        "unusedBytes": 50625
+      },
+      "sources": {
+        "bytes": 16384,
+        "unusedBytes": 5699
+      },
+      "spelling_lookup": {
+        "bytes": 144879616,
+        "unusedBytes": 1176016
+      },
+      "sqlite_autoindex_about_1": {
+        "bytes": 4096,
+        "unusedBytes": 4029
+      },
+      "sqlite_autoindex_entries_1": {
+        "bytes": 47128576,
+        "unusedBytes": 205080
+      },
+      "sqlite_autoindex_forms_1": {
+        "bytes": 164671488,
+        "unusedBytes": 1507659
+      },
+      "sqlite_autoindex_kanji_1": {
+        "bytes": 118784,
+        "unusedBytes": 4336
+      },
+      "sqlite_autoindex_notices_1": {
+        "bytes": 4096,
+        "unusedBytes": 3733
+      },
+      "sqlite_autoindex_sources_1": {
+        "bytes": 4096,
+        "unusedBytes": 3785
+      },
+      "sqlite_autoindex_tags_1": {
+        "bytes": 4096,
+        "unusedBytes": 3144
+      },
+      "sqlite_schema": {
+        "bytes": 4096,
+        "unusedBytes": 1306
+      },
+      "sqlite_stat1": {
+        "bytes": 4096,
+        "unusedBytes": 3412
+      },
+      "tags": {
+        "bytes": 12288,
+        "unusedBytes": 7635
+      }
+    },
+    "queries": {
+      "swiftForms": {
+        "sql": "SELECT e.rowid,f.text,e.rules,EXISTS(SELECT 1 FROM json_each(f.payload,'$.tags') WHERE value IN ('sk','ik','ok','rk','sK','iK','oK','rK')) FROM forms f JOIN entries e ON e.id=f.entry_id WHERE (f.normalized=? OR f.reading_key=?) AND (f.kind!='alias' OR NOT EXISTS(SELECT 1 FROM forms original WHERE original.entry_id=f.entry_id AND original.text=f.text AND original.reading=f.reading AND original.kind!='alias')) LIMIT 240",
+        "bindings": [
+          "きょう",
+          "きょう"
+        ],
+        "plan": [
+          "MULTI-INDEX OR",
+          "INDEX 1",
+          "SEARCH f USING INDEX form_lookup (normalized=?)",
+          "INDEX 2",
+          "SEARCH f USING INDEX reading_lookup (reading_key=?)",
+          "CORRELATED SCALAR SUBQUERY 2",
+          "SEARCH original USING COVERING INDEX sqlite_autoindex_forms_1 (entry_id=? AND text=? AND reading=?)",
+          "SEARCH e USING INDEX sqlite_autoindex_entries_1 (id=?)",
+          "CORRELATED SCALAR SUBQUERY 1",
+          "SCAN json_each VIRTUAL TABLE INDEX 3:"
+        ],
+        "medianMs": 0.482208,
+        "maxMs": 8.349166,
+        "samplesMs": [
+          0.918333,
+          0.490958,
+          0.4845,
+          0.476416,
+          0.482208,
+          0.47275,
+          0.473667,
+          0.472209,
+          8.349166,
+          0.55,
+          0.484958,
+          0.47825,
+          5.293334,
+          6.633416,
+          0.538292,
+          0.48875,
+          0.477416,
+          0.475583,
+          0.475166,
+          0.473375,
+          0.472833
+        ]
+      },
+      "swiftPrefix": {
+        "sql": "SELECT e.rowid FROM forms f JOIN entries e ON e.id=f.entry_id WHERE f.normalized>=? AND f.normalized<? LIMIT 80",
+        "bindings": [
+          "食",
+          "食􏿿"
+        ],
+        "plan": [
+          "SEARCH f USING COVERING INDEX form_lookup (normalized>? AND normalized<?)",
+          "SEARCH e USING COVERING INDEX sqlite_autoindex_entries_1 (id=?)"
+        ],
+        "medianMs": 0.299375,
+        "maxMs": 1.099667,
+        "samplesMs": [
+          0.193875,
+          0.316375,
+          0.331333,
+          0.101917,
+          0.093041,
+          0.091,
+          0.090834,
+          0.091333,
+          0.565083,
+          0.317333,
+          0.299917,
+          0.315125,
+          0.3015,
+          0.296417,
+          0.298125,
+          1.099667,
+          0.316416,
+          0.302333,
+          0.299375,
+          0.295875,
+          0.297666
+        ]
+      },
+      "swiftReverse": {
+        "sql": "SELECT e.rowid,e.id,r.sense_id,r.language,form_hint FROM reverse_keys r JOIN entries e ON e.id=r.entry_id WHERE r.id IN (SELECT rowid FROM reverse_search WHERE reverse_search MATCH ? ORDER BY rank LIMIT 240)",
+        "bindings": [
+          "\"nowadays\""
+        ],
+        "plan": [
+          "SEARCH r USING INTEGER PRIMARY KEY (rowid=?)",
+          "LIST SUBQUERY 1",
+          "SCAN reverse_search VIRTUAL TABLE INDEX 32:M1",
+          "CREATE BLOOM FILTER",
+          "SEARCH e USING COVERING INDEX sqlite_autoindex_entries_1 (id=?)"
+        ],
+        "medianMs": 0.442125,
+        "maxMs": 8.969375,
+        "samplesMs": [
+          1.134417,
+          0.468083,
+          0.449,
+          0.442125,
+          0.441292,
+          0.436833,
+          0.436166,
+          0.435958,
+          0.434667,
+          0.434,
+          0.433375,
+          0.437333,
+          0.436625,
+          0.436625,
+          8.969375,
+          1.918792,
+          1.2005,
+          0.512417,
+          0.4575,
+          2.239417,
+          1.21725
+        ]
+      },
+      "swiftHeadwords": {
+        "sql": "SELECT payload FROM forms WHERE entry_id=? ORDER BY CASE kind WHEN 'headword' THEN 0 WHEN 'reading' THEN 1 ELSE 2 END,json_extract(payload,'$.common') DESC,COALESCE((SELECT json_extract(r.payload,'$.common') FROM forms r WHERE r.entry_id=forms.entry_id AND r.text=forms.reading AND r.kind='reading' LIMIT 1),0) DESC,text,reading",
+        "bindings": [
+          "jmdict:ja:1579110"
+        ],
+        "plan": [
+          "SEARCH forms USING INDEX sqlite_autoindex_forms_1 (entry_id=?)",
+          "CORRELATED SCALAR SUBQUERY 1",
+          "SEARCH r USING INDEX sqlite_autoindex_forms_1 (entry_id=? AND text=?)",
+          "USE TEMP B-TREE FOR ORDER BY"
+        ],
+        "medianMs": 0.04125,
+        "maxMs": 0.114208,
+        "samplesMs": [
+          0.114208,
+          0.047084,
+          0.044375,
+          0.042584,
+          0.042292,
+          0.041917,
+          0.042458,
+          0.041667,
+          0.041833,
+          0.04125,
+          0.041541,
+          0.040792,
+          0.041166,
+          0.041042,
+          0.041,
+          0.040708,
+          0.040958,
+          0.040833,
+          0.041,
+          0.041084,
+          0.040792
+        ]
+      },
+      "swiftPitch": {
+        "sql": "SELECT DISTINCT m.mode,m.payload FROM forms f JOIN metadata m ON m.term=f.text WHERE f.entry_id=? AND f.reading=?",
+        "bindings": [
+          "jmdict:ja:1579110",
+          "きょう"
+        ],
+        "plan": [
+          "SEARCH f USING COVERING INDEX sqlite_autoindex_forms_1 (entry_id=?)",
+          "SEARCH m USING INDEX metadata_lookup (term=?)",
+          "USE TEMP B-TREE FOR DISTINCT"
+        ],
+        "medianMs": 0.026959,
+        "maxMs": 0.08975,
+        "samplesMs": [
+          0.08975,
+          0.032167,
+          0.029125,
+          0.027916,
+          0.028,
+          0.027125,
+          0.026917,
+          0.026959,
+          0.026875,
+          0.027417,
+          0.026625,
+          0.026666,
+          0.026959,
+          0.026875,
+          0.026792,
+          0.026833,
+          0.027125,
+          0.027333,
+          0.026875,
+          0.02675,
+          0.026792
+        ]
+      }
+    }
+  },
+  "analyzeSeconds": 6.821161041996675,
+  "machine": "arm64",
+  "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+  "python": "3.13.5",
+  "sqlite": "3.47.1",
+  "peakRSS": 51625984,
+  "peakRSSUnit": "bytes",
+  "sourceLockSHA256": "2562ebe505248a523a1853f253e5f56072425c9a8a1fa13ddd70fb7a88b917d5",
+  "commit": "8ea4d963ee63c083fa2ce06f21ae70f04e54ab37",
+  "browserArchiveParity": {
+    "Kotoba_Atlas_English_v1_1_0_beta_3.zip": {
+      "members": 492,
+      "memberBytesIdentical": true,
+      "baselineZIP": "94b8acc957874b5889b8459312f4dbcdd322df50ddea08b2764c1fa3bf373ab7",
+      "candidateZIP": "94b8acc957874b5889b8459312f4dbcdd322df50ddea08b2764c1fa3bf373ab7"
+    },
+    "Kotoba_Atlas_German_v1_1_0_beta_3.zip": {
+      "members": 492,
+      "memberBytesIdentical": true,
+      "baselineZIP": "3ec99d2e7ad480149ee9a5d7356ec69789a031e54765e5e816b0c3d49939fb74",
+      "candidateZIP": "3ec99d2e7ad480149ee9a5d7356ec69789a031e54765e5e816b0c3d49939fb74"
+    }
+  }
+}

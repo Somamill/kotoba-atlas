@@ -55,7 +55,12 @@ def timed(call, samples):
 
 
 def profile(db, samples):
+    entry_bytes, sense_bytes, hint_bytes = db.execute('''
+        SELECT sum(length(CAST(entry_id AS BLOB))),sum(length(CAST(sense_id AS BLOB))),
+               sum(length(CAST(form_hint AS BLOB))) FROM reverse_keys
+    ''').fetchone()
     return {
+        'reverseKeyPayloadBytes': {'entryId': entry_bytes, 'senseId': sense_bytes, 'formHint': hint_bytes},
         'stats': db.execute("SELECT count(*) FROM sqlite_schema WHERE name='sqlite_stat1'").fetchone()[0] == 1,
         'dbstat': {name: {'bytes': size, 'unusedBytes': unused}
                    for name, size, unused in db.execute(

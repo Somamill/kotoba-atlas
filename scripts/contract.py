@@ -24,7 +24,15 @@ def sha(path):
         return hashlib.file_digest(file, 'sha256').hexdigest()
 
 
-def schema(db):
+LOOKUP_INDEXES = '''
+    CREATE INDEX form_lookup ON forms(normalized,entry_id);
+    CREATE INDEX spelling_lookup ON forms(text,reading,entry_id);
+    CREATE INDEX reading_lookup ON forms(reading_key,entry_id);
+    CREATE INDEX metadata_lookup ON metadata(term,mode);
+'''
+
+
+def schema(db, lookup_indexes=True):
     db.executescript('''
     PRAGMA page_size=4096;
     PRAGMA journal_mode=DELETE;
@@ -34,18 +42,16 @@ def schema(db):
     CREATE TABLE forms(entry_id TEXT NOT NULL,text TEXT NOT NULL,reading TEXT NOT NULL,
                        normalized TEXT NOT NULL,reading_key TEXT NOT NULL,kind TEXT NOT NULL,
                        payload TEXT NOT NULL,PRIMARY KEY(entry_id,text,reading,kind));
-    CREATE INDEX form_lookup ON forms(normalized,entry_id);
-    CREATE INDEX spelling_lookup ON forms(text,reading,entry_id);
-    CREATE INDEX reading_lookup ON forms(reading_key,entry_id);
     CREATE TABLE sources(id TEXT PRIMARY KEY,payload TEXT NOT NULL);
     CREATE TABLE source_records(id TEXT PRIMARY KEY,source_id TEXT NOT NULL,payload TEXT NOT NULL);
     CREATE TABLE entry_source_records(entry_id TEXT NOT NULL,record_id TEXT NOT NULL,PRIMARY KEY(entry_id,record_id));
     CREATE TABLE metadata(term TEXT NOT NULL,mode TEXT NOT NULL,payload TEXT NOT NULL,source_id TEXT NOT NULL);
-    CREATE INDEX metadata_lookup ON metadata(term,mode);
     CREATE TABLE notices(name TEXT PRIMARY KEY,content BLOB NOT NULL);
     CREATE TABLE senses(id TEXT PRIMARY KEY,entry_id TEXT NOT NULL,language TEXT NOT NULL,payload TEXT NOT NULL);
     CREATE INDEX entry_senses ON senses(entry_id,language);
     ''')
+    if lookup_indexes:
+        db.executescript(LOOKUP_INDEXES)
 
 
 class Builder:
@@ -243,7 +249,7 @@ def export(build_path, output, revision):
     if core.exists():
         raise FileExistsError(core)
     destination = sqlite3.connect(core)
-    schema(destination)
+    schema(destination, lookup_indexes=False)
     destination.executescript('DROP TABLE senses; DROP TABLE source_records; DROP TABLE entry_source_records;')
     destination.execute('ATTACH DATABASE ? AS original', (str(Path(build_path).resolve()),))
     for table in ['about', 'entries', 'forms', 'sources', 'metadata', 'notices']:
@@ -255,6 +261,7 @@ def export(build_path, output, revision):
             destination.execute('INSERT INTO '+table+' SELECT * FROM original.'+table)
     destination.commit()
     destination.execute('DETACH DATABASE original')
+    destination.executescript(LOOKUP_INDEXES)
     destination.executescript('''
         CREATE TABLE reverse_keys(id INTEGER PRIMARY KEY,entry_id TEXT NOT NULL,sense_id TEXT NOT NULL,language TEXT NOT NULL,form_hint TEXT NOT NULL);
         CREATE VIRTUAL TABLE reverse_search USING fts5(gloss,content='',tokenize='unicode61 remove_diacritics 2');''')
@@ -268,6 +275,7 @@ def export(build_path, output, revision):
                             (cursor.lastrowid, '\n'.join(unique(sense['glosses']+sense.get('equivalents', [])))))
     destination.execute("UPDATE about SET value='atlas-core' WHERE key='format'")
     destination.execute("INSERT INTO about VALUES('capabilities',?)", (encoded(['shared-core', 'entry-language-fallback', 'form-restrictions']),))
+    destination.execute('ANALYZE')
     destination.commit(); destination.close()
     packages = [package(core, 'core', revision)]
     core.unlink()

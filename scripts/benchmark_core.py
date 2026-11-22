@@ -29,13 +29,16 @@ SQL = {
     'swiftReverse': (
         "SELECT e.rowid,e.id,r.sense_id,r.language,form_hint FROM reverse_keys r JOIN entries e ON e.id=r.entry_id WHERE r.id IN (SELECT rowid FROM reverse_search WHERE reverse_search MATCH ? ORDER BY rank LIMIT 240)",
         ('"nowadays"',)),
+    'swiftHeadwords': (
+        "SELECT payload FROM forms WHERE entry_id=? ORDER BY CASE kind WHEN 'headword' THEN 0 WHEN 'reading' THEN 1 ELSE 2 END,json_extract(payload,'$.common') DESC,COALESCE((SELECT json_extract(r.payload,'$.common') FROM forms r WHERE r.entry_id=forms.entry_id AND r.text=forms.reading AND r.kind='reading' LIMIT 1),0) DESC,text,reading",
+        ('jmdict:ja:1579110',)),
     'swiftPitch': (
         "SELECT DISTINCT m.mode,m.payload FROM forms f JOIN metadata m ON m.term=f.text WHERE f.entry_id=? AND f.reading=?",
         ('jmdict:ja:1579110', 'きょう')),
 }
 WORKLOAD = [
     ('きょう', 'en'), ('こんにち', 'en'), ('今日', 'en'), ('nowadays', 'en'),
-    ('AND', 'en'), ('and', 'en'), ('Boolean', 'en'), ('はし', 'en'),
+    ('AND', 'en'), ('and', 'en'), ('Boolean', 'en'), ('はし', 'en'), ('ワンチャン', 'en'),
     ('鎌かけてる', 'de'), ('Dämon', 'de'), ('物ノ怪', 'de'), ('ノリのいい', 'de'),
     ('沼ってる', 'de'), ('隠密局', 'de'), ('実体', 'ja'),
 ]

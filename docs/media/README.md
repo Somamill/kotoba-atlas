@@ -2,6 +2,7 @@
 
 These are presentation assets, not additional dictionary downloads. The released ZIPs are unchanged.
 
+- **atlas-icon.svg:** the Kotoba Atlas icon. An open book and compass needle link the dictionary to navigation. Use this artwork as the source for profile and catalogue exports.
 - **hero.svg:** dot. brand colors, editorial typography and the product's single-file proposition.
 - **coverage.svg:** proportional bars from the 1.0.3 release reports. Independent record families share a zero baseline and scale; lookup pairs include names, spellings and reference entries.
 - **transfer.svg:** German Base64 payloads, 81,588,384 → 67,007,636 bytes (17.9% reduction). The marked Chrome limit is 67,108,864 bytes; the build also reserves 65,536 envelope bytes.

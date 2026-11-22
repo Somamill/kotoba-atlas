@@ -8,6 +8,8 @@ Kotoba Atlas is a Japanese dictionary data resource. Preserve schemas, source li
 
 ## Actual design/context sources
 
+The public README leads with stable and preview downloads. The original Atlas book-and-compass icon lives in `docs/media/atlas-icon.svg`.
+
 README.md; docs/compatibility.md; current release evidence in docs/releases/; dictionary source/build documentation
 
 ## Tools and checks

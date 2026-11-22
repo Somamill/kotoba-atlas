@@ -1,12 +1,12 @@
 """Measure two schema-2 release directories or generated consumer-fixture directories."""
 import argparse
 from contextlib import closing
+import gzip
 from itertools import zip_longest
 import json
 from pathlib import Path
 import platform
 import resource
-import shutil
 import sqlite3
 import statistics
 import subprocess
@@ -108,30 +108,30 @@ def compare(before, after, scratch, samples):
     results = {}
     for package_id, first in descriptors[0].items():
         second = descriptors[1][package_id]
+        if fixtures and package_id == 'source-records':
+            continue
         paths = []
         measurements = []
         for i, (root, package) in enumerate(zip((before, after), (first, second))):
             language = package['language']
             raw = scratch/f'{i}-{package_id.replace(":", "-")}.sqlite'
-            start = time.monotonic()
+            compressed = root/package['file']
             if fixtures:
-                if package_id == 'source-records':
-                    continue
-                raw = root/('atlas-'+(language or 'core')+'.sqlite')
-                if sha(raw) != package['uncompressedSha256']:
-                    raise ValueError('Fixture hash mismatch')
-            else:
-                unpack(root/package['file'], raw, package)
+                compressed = raw.with_suffix('.sqlite.gz')
+                fixture = root/('atlas-'+(language or 'core')+'.sqlite')
+                with compressed.open('xb') as stream, gzip.GzipFile(filename='', fileobj=stream, compresslevel=6, mtime=0) as archive:
+                    archive.write(fixture.read_bytes())
+            start = time.monotonic()
+            unpack(compressed, raw, package)
             measurements.append({'descriptor': package, 'verifyAndExpandSeconds': time.monotonic()-start})
             paths.append(raw)
             if package_id in selected:
                 indexes[i][language or 'core'] = raw
-        if paths:
-            results[package_id] = {'before': measurements[0], 'after': measurements[1],
-                                   'identicalRows': compare_rows(*paths)}
-            if package_id not in selected and not fixtures:
-                for path in paths:
-                    path.unlink()
+        results[package_id] = {'before': measurements[0], 'after': measurements[1],
+                               'identicalRows': compare_rows(*paths)}
+        if package_id not in selected:
+            for path in paths:
+                path.unlink()
     baseline_core = indexes[0]['core']
     profiles = []
     projections = []
@@ -146,10 +146,6 @@ def compare(before, after, scratch, samples):
                                         for query, language in WORKLOAD]})
         finally:
             atlas.close()
-    if fixtures:
-        copy = scratch/'analyze-only.sqlite'
-        shutil.copyfile(baseline_core, copy)
-        baseline_core = copy
     with closing(sqlite3.connect(baseline_core)) as db:
         start = time.monotonic()
         db.execute('ANALYZE')

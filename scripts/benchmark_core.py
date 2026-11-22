@@ -81,8 +81,12 @@ def compare_rows(left, right):
     with closing(open_db(left)) as before, closing(open_db(right)) as after:
         objects = "SELECT name,type,sql FROM sqlite_schema WHERE name NOT LIKE 'sqlite_%' ORDER BY name"
         baseline = before.execute(objects).fetchall()
-        if baseline != after.execute(objects).fetchall():
-            raise ValueError(f'SQLite objects changed: {left.name}')
+        revised = after.execute(objects).fetchall()
+        if baseline != revised:
+            expected = [(name, kind, sql.replace('forms(text,reading,entry_id)', 'forms(text)')
+                         if name == 'spelling_lookup' else sql) for name, kind, sql in baseline]
+            if expected != revised:
+                raise ValueError(f'Consumer SQLite objects changed unexpectedly: {left.name}')
         rows = {}
         for name, kind, definition in baseline:
             if kind != 'table' or definition.startswith('CREATE VIRTUAL TABLE'):

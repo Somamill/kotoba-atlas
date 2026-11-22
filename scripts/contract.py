@@ -26,7 +26,6 @@ def sha(path):
 
 LOOKUP_INDEXES = '''
     CREATE INDEX form_lookup ON forms(normalized,entry_id);
-    CREATE INDEX spelling_lookup ON forms(text,reading,entry_id);
     CREATE INDEX reading_lookup ON forms(reading_key,entry_id);
     CREATE INDEX metadata_lookup ON metadata(term,mode);
 '''
@@ -51,7 +50,7 @@ def schema(db, lookup_indexes=True):
     CREATE INDEX entry_senses ON senses(entry_id,language);
     ''')
     if lookup_indexes:
-        db.executescript(LOOKUP_INDEXES)
+        db.executescript(LOOKUP_INDEXES+'CREATE INDEX spelling_lookup ON forms(text,reading,entry_id);')
 
 
 class Builder:
@@ -261,7 +260,7 @@ def export(build_path, output, revision):
             destination.execute('INSERT INTO '+table+' SELECT * FROM original.'+table)
     destination.commit()
     destination.execute('DETACH DATABASE original')
-    destination.executescript(LOOKUP_INDEXES)
+    destination.executescript(LOOKUP_INDEXES+'CREATE INDEX spelling_lookup ON forms(text);')
     destination.executescript('''
         CREATE TABLE reverse_keys(id INTEGER PRIMARY KEY,entry_id TEXT NOT NULL,sense_id TEXT NOT NULL,language TEXT NOT NULL,form_hint TEXT NOT NULL);
         CREATE VIRTUAL TABLE reverse_search USING fts5(gloss,content='',tokenize='unicode61 remove_diacritics 2');''')

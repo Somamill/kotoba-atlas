@@ -28,9 +28,9 @@ def stage_release(destination):
         if destination.exists() or destination.is_symlink():
             raise FileExistsError(destination)
         staging.rename(destination)
-    finally:
-        if staging.exists():
-            shutil.rmtree(staging)
+    except BaseException:
+        shutil.rmtree(staging)
+        raise
 
 
 def build(output, revision):

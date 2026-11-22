@@ -299,7 +299,7 @@ def export(build_path, output, revision):
     archive.commit(); archive.close()
     provenance_package = package(originals, 'source-records', revision)
     originals.unlink()
-    provenance_package['optionalForLookup'] = True
+    provenance_package.update(optionalForLookup=True, coreSha256=packages[0]['uncompressedSha256'])
     packages.append(provenance_package)
     capabilities = []
     coverage = language_coverage(source)
@@ -330,7 +330,8 @@ def export(build_path, output, revision):
         if count:
             descriptor = package(pack, 'language', revision, language)
             pack.unlink()
-            descriptor.update(senses=count, entries=entries, senseKinds=kinds)
+            descriptor.update(senses=count, entries=entries, senseKinds=kinds,
+                              coreSha256=packages[0]['uncompressedSha256'])
             descriptor['sourceIds'] = sorted(package_sources)
             packages.append(descriptor)
         else:

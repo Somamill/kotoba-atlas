@@ -33,6 +33,7 @@
         "url": {"type": "string", "pattern": "^https://github\\.com/Somamill/kotoba-atlas/releases/download/atlas-v[A-Za-z0-9.-]+/[A-Za-z0-9_.-]+\\.sqlite\\.gz$"},
         "sha256": {"$ref": "#/$defs/sha256"},
         "uncompressedSha256": {"$ref": "#/$defs/sha256"},
+        "coreSha256": {"$ref": "#/$defs/sha256"},
         "compressedBytes": {"type": "integer", "minimum": 1, "maximum": 1000000000},
         "uncompressedBytes": {"type": "integer", "minimum": 1, "maximum": 8000000000},
         "compatibility": {"type": "object", "required": ["requiredSchema", "requiredCapabilities"], "properties": {"requiredSchema": {"const": 2}, "requiredCapabilities": {"type": "array", "uniqueItems": true, "items": {"enum": ["shared-core", "entry-language-fallback", "form-restrictions"]}}}}

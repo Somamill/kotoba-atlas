@@ -8,37 +8,65 @@ from pathlib import Path
 import sqlite3
 import tempfile
 import fastjsonschema
-from contract import sha
+from contract import LANGUAGES, sha
 from contract_lookup import AtlasIndex
 
 
-def check(directory):
+def unpack(compressed, raw, descriptor):
+    if compressed.stat().st_size != descriptor['compressedBytes'] or sha(compressed) != descriptor['sha256']:
+        raise ValueError('Invalid compressed release package')
+    digest = hashlib.sha256(); size = 0
+    with gzip.open(compressed, 'rb') as stream, raw.open('xb') as output:
+        while chunk := stream.read(1024*1024):
+            size += len(chunk)
+            if size > descriptor['uncompressedBytes']:
+                raise ValueError('Expanded package exceeds manifest size')
+            digest.update(chunk); output.write(chunk)
+    if size != descriptor['uncompressedBytes'] or digest.hexdigest() != descriptor['uncompressedSha256']:
+        raise ValueError('Invalid expanded release package')
+
+
+def validate_descriptors(manifest, require_core_binding):
+    packages = {}
+    files = set()
+    revision = manifest['dictionaryRevision']
+    for descriptor in manifest['packages']:
+        role, language = descriptor['role'], descriptor['language']
+        identity = role+(':'+language if role == 'language' and language else '')
+        filename = descriptor['file']
+        url = 'https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v'+revision+'/'+filename
+        if (identity != descriptor['id'] or identity in packages or filename in files
+                or Path(filename).name != filename or (role == 'language') != (language is not None)
+                or descriptor['dictionaryRevision'] != revision or descriptor['url'] != url):
+            raise ValueError('Unsafe, duplicate or inconsistent package descriptor')
+        packages[identity] = descriptor
+        files.add(filename)
+    if set(packages) != {'core', 'source-records', *('language:'+language for language in LANGUAGES)}:
+        raise ValueError('Missing or unexpected release package')
+    core_hash = packages['core']['uncompressedSha256']
+    for identity, descriptor in packages.items():
+        if identity != 'core' and (require_core_binding or 'coreSha256' in descriptor):
+            if descriptor.get('coreSha256') != core_hash:
+                raise ValueError('Manifest package does not match lexical core')
+    return packages
+
+
+def check(directory, require_core_binding=False):
     with tempfile.TemporaryDirectory(prefix='atlas-verified-indexes-') as temporary:
-        return check_indexes(Path(directory), Path(temporary))
+        return check_indexes(Path(directory), Path(temporary), require_core_binding)
 
 
-def check_indexes(root, temporary):
+def check_indexes(root, temporary, require_core_binding=False):
     manifest = json.loads((root/'consumer-manifest.json').read_text())
     fastjsonschema.compile(json.loads((Path(__file__).resolve().parents[1]/'schemas/consumer-manifest-v2.schema.json').read_text()))(manifest)
     if manifest['schemaVersion'] != 2:
         raise ValueError('Unsupported manifest schema')
-    core = None; packs = {}; descriptors = {}
-    for descriptor in manifest['packages']:
-        compressed = root/descriptor['file']
-        if compressed.name != descriptor['file'] or descriptor['file'] in descriptors:
-            raise ValueError('Unsafe or duplicate package filename')
-        if compressed.stat().st_size != descriptor['compressedBytes'] or sha(compressed) != descriptor['sha256']:
-            raise ValueError('Invalid compressed release package')
+    descriptors = validate_descriptors(manifest, require_core_binding)
+    core = None
+    packs = {}
+    for descriptor in descriptors.values():
         raw = temporary/descriptor['file'].removesuffix('.gz')
-        digest = hashlib.sha256(); size = 0
-        with gzip.open(compressed, 'rb') as stream, raw.open('xb') as output:
-            while chunk := stream.read(1024*1024):
-                size += len(chunk)
-                if size > descriptor['uncompressedBytes']:
-                    raise ValueError('Expanded package exceeds manifest size')
-                digest.update(chunk); output.write(chunk)
-        if size != descriptor['uncompressedBytes'] or digest.hexdigest() != descriptor['uncompressedSha256']:
-            raise ValueError('Invalid expanded release package')
+        unpack(root/descriptor['file'], raw, descriptor)
         with closing(sqlite3.connect(raw.resolve().as_uri()+'?mode=ro', uri=True)) as db:
             db.execute('PRAGMA cache_size=-131072')
             if db.execute('PRAGMA integrity_check').fetchone()[0] != 'ok':
@@ -46,6 +74,8 @@ def check_indexes(root, temporary):
             about = dict(db.execute('SELECT key,value FROM about'))
             if about.get('schema') != '2' or about.get('revision') != manifest['dictionaryRevision'] or about.get('format') != {'core':'atlas-core','language':'atlas-language','source-records':'atlas-source-records'}[descriptor['role']]:
                 raise ValueError('Unsupported package generation')
+            if descriptor['role'] != 'core' and about.get('core_sha256') != descriptors['core']['uncompressedSha256']:
+                raise ValueError('Package does not match lexical core')
             if descriptor['role'] == 'language':
                 if about['language'] != descriptor['language']:
                     raise ValueError('Language metadata mismatch')
@@ -62,9 +92,6 @@ def check_indexes(root, temporary):
         if descriptor['role'] == 'source-records': raw.unlink()
         if descriptor['role'] == 'core': core = raw
         elif descriptor['role'] == 'language': packs[descriptor['language']] = raw
-        descriptors[descriptor['file']] = descriptor
-    if set(packs) != {'en','zh','es','ar','id','pt','fr','ja','ru','de'} or core is None:
-        raise ValueError('Missing requested primary-language pack')
     lookups = []
     index = AtlasIndex(core, packs)
     try:
@@ -90,14 +117,19 @@ def check_indexes(root, temporary):
         def meanings(query, identity):
             return [gloss for entry in index.search(query, 'en') if entry['entryId'] == identity for sense in entry['senses'] for gloss in sense['glosses']]
         today = 'jmdict:ja:1579110'
-        assert 'these days' not in meanings('きょう', today)
-        assert 'these days' in meanings('こんにち', today)
-        assert 'these days' in meanings('今日', today)
+        if ('these days' in meanings('きょう', today)
+                or 'these days' not in meanings('こんにち', today)
+                or 'these days' not in meanings('今日', today)):
+            raise ValueError('Reading-scoped senses changed')
         reverse = next(entry for entry in index.search('nowadays', 'en') if entry['entryId'] == today)
-        assert reverse['matchedForm']['reading'] == 'こんにち'
+        if reverse['matchedForm']['reading'] != 'こんにち':
+            raise ValueError('Reverse lookup lost matched reading')
         conjunction = 'jmdict:ja:1020470'
-        assert 'AND (Boolean operator)' not in meanings('&', conjunction)
-        assert 'AND (Boolean operator)' in meanings('Boolean', conjunction)
+        if ('AND (Boolean operator)' in meanings('&', conjunction)
+                or 'AND (Boolean operator)' in meanings('and', conjunction)
+                or 'AND (Boolean operator)' not in meanings('AND', conjunction)
+                or 'AND (Boolean operator)' not in meanings('Boolean', conjunction)):
+            raise ValueError('Spelling-scoped senses changed')
     finally:
         index.close()
     report = {'passed': True, 'revision': manifest['dictionaryRevision'], 'packages': len(descriptors), 'lookups': lookups}

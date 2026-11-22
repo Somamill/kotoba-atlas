@@ -2,6 +2,7 @@
 import argparse
 from contextlib import closing
 import gzip
+import hashlib
 from itertools import zip_longest
 import json
 from pathlib import Path
@@ -13,6 +14,7 @@ import subprocess
 import sys
 import tempfile
 import time
+import zipfile
 
 from check_contract import unpack
 from contract import sha
@@ -111,15 +113,18 @@ def compare_rows(left, right):
 def compare(before, after, scratch, samples):
     fixtures = (before/'atlas-manifest.json').is_file()
     manifest_name = 'atlas-manifest.json' if fixtures else 'consumer-manifest.json'
-    descriptors = [{p['id']: p for p in json.loads((root/manifest_name).read_text())['packages']}
-                   for root in (before, after)]
-    if descriptors[0].keys() != descriptors[1].keys():
-        raise ValueError('Package coverage changed')
+    manifests = [json.loads((root/manifest_name).read_text()) for root in (before, after)]
+    descriptors = [{p['id']: p for p in manifest.pop('packages')} for manifest in manifests]
+    if descriptors[0].keys() != descriptors[1].keys() or manifests[0] != manifests[1]:
+        raise ValueError('Package coverage or consumer metadata changed')
     selected = {'core', 'language:en', 'language:de', 'language:ja'}
     indexes = [{}, {}]
     results = {}
     for package_id, first in descriptors[0].items():
         second = descriptors[1][package_id]
+        byte_fields = {'sha256', 'uncompressedSha256', 'compressedBytes', 'uncompressedBytes', 'coreSha256'}
+        if {k: v for k, v in first.items() if k not in byte_fields} != {k: v for k, v in second.items() if k not in byte_fields}:
+            raise ValueError(f'Package metadata changed: {package_id}')
         if fixtures and package_id == 'source-records':
             continue
         paths = []
@@ -166,8 +171,23 @@ def compare(before, after, scratch, samples):
     with closing(open_db(baseline_core)) as db:
         analyze_only = profile(db, samples)
     differences = [query for query, left, right in zip(WORKLOAD, *projections) if left != right]
+    browser = {}
+    for root in (before, after):
+        hashes = {}
+        for path in sorted(root.glob('Kotoba_Atlas_*.zip')):
+            with zipfile.ZipFile(path) as archive:
+                members = {}
+                for member in archive.infolist():
+                    if member.filename in members:
+                        raise ValueError('Duplicate browser member: '+member.filename)
+                    with archive.open(member) as stream:
+                        members[member.filename] = hashlib.file_digest(stream, 'sha256').hexdigest()
+                hashes[path.name] = members
+        if browser and browser != hashes:
+            raise ValueError('Browser export data changed')
+        browser = hashes
     return {'packages': results, 'before': profiles[0], 'after': profiles[1],
-            'lookupDifferences': differences, 'analyzeOnly': analyze_only, 'analyzeSeconds': analysis_seconds}
+            'lookupDifferences': differences, 'browserZipMembers': {name: len(members) for name, members in browser.items()}, 'analyzeOnly': analyze_only, 'analyzeSeconds': analysis_seconds}
 
 
 def main():

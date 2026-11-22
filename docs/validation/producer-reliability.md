@@ -46,7 +46,7 @@ The comparison used Python 3.13.5, SQLite 3.47.1, zlib 1.2.12, Node 26.13.1 and 
 
 ## Paired full-corpus export
 
-Both arms use the same locked source database and dictionary revision `1.1.0-beta.3`. The audited pipeline regenerated the source database and the candidate export reused the finished intermediate to control for ingestion. The native exports overlapped on this Mac. The baseline interval from first core creation through its manifest was 1,181 seconds. The candidate exporter logged 1,179 seconds. Those intervals include all native packaging and establish no native export speedup at this sample size.
+Both arms use the same locked source database and dictionary revision `1.1.0-beta.3`. The audited pipeline regenerated the source database and the candidate export reused the finished intermediate to control for ingestion. The native exports overlapped on this Mac. The baseline interval from first core creation through its manifest was 1,181 seconds. The candidate exporter logged 1,179 seconds. Those intervals include all native packaging and establish no native export speedup at this sample size. The baseline complete pipeline took 4,219.34 seconds with a 3,151,888,384-byte maximum RSS. The candidate harness took 2,908.60 seconds and peaked at 1,090,174,976 resident bytes. The candidate harness includes waiting for the baseline intermediate, omits its own ingestion, and ran with overlapping native and browser stages. The end-to-end values are workload baselines with separate scopes.
 
 | Bytes | Audited export | Candidate export | Saved |
 | --- | ---: | ---: | ---: |
@@ -61,11 +61,19 @@ Row-for-row comparison verified all 12 native packages, including 1,056,822 Japa
 
 The five full-corpus query plans were equal across the baseline, the ANALYZE-only copy and the candidate. ANALYZE took 6.82 seconds on the baseline scratch database. Exact/reading medians were 0.576 → 0.523 ms and reverse 0.645 → 0.501 ms. The single local core verification/inflation sample was 5.26 → 8.18 seconds with both export jobs active. The benchmark itself peaked at 51,625,984 resident bytes. The timings do not establish a reliable change in lookup or install latency. [Raw full-corpus evidence](atlas-producer-full-evidence.json).
 
+The local candidate sealed all 12 packages after integrity and lookup checks. The producer gate passed 53 tests with zero skips. Each full legacy Migaku import processed 1,297,412 rows. Its candidate English and German runs took 32.05 s and 21.73 s, with peak RSS of 998,670,336 and 1,090,174,976 bytes. The full pinned Yomitan parser also passed each edition, and the real IndexedDB fixture passed. Build and artifact logs are under `dist/producer-baseline` and `dist/producer-final` in this worktree. The candidate's `pipeline-evidence.json` seals the final filenames, byte lengths and SHA-256 values. A separate read verified all 43 sealed files.
+
 ## Consumer verification
 
 - dict. public main `fea82704`: 9 Swift contract tests with regenerated candidate bytes. Overlapping runtime branch `22ba0c76`: 14 passing tests including completed-package resumption, corrupt downloads and preserving history through interrupted activation.
 - narai community schema-2 branch `9ea7e855`: 10 reader, installer and updater tests with regenerated candidate SQL fixtures. It is tracked in [narai PR #24](https://github.com/Somamill/narai/pull/24). Public main `f8b7c1b` still documents the independent bundled Store dictionary path.
 - The producer verifies both browser editions with the pinned Yomitan parser and legacy Migaku importer. The fixture additionally uses the real Yomitan IndexedDB adapter.
 - A SIGKILL against a process holding the staging directory left the final directory absent. The partial tree was quarantined, a same-name retry was refused, and a fresh-name retry completed.
+
+### Full native client runs on macOS
+
+The real narai installer used local gzip streams and activated the core, English and German in a temporary library. A single serial run per variant took 30.46 → 28.93 seconds and peaked at 161,600 → 164,304 KiB RSS after lookup. Both installations resolved the German reverse and English fallback checks. In English display mode both found 今日 / こんにち by `nowadays`. In German display mode that entry was outside narai's default first 40 results on both versions. This is an existing narai ranking difference from the Python reader workload.
+
+The rebuilt Swift consumer ran 600 distinct Japanese headword lookups on those installed files. Both arms returned a result for every query. Warm median was 1.05 → 0.71 ms and p95 was 16.28 → 10.60 ms. Process peak RSS was 58,605,568 → 63,619,072 bytes. The benchmark used one serial run per variant on macOS. Repeat with alternating order to estimate variance. This result measures the headword workload and leaves UI responsiveness and physical-device timing open.
 
 No physical-iPhone performance conclusion follows from these checks. Remaining release checks include physical-iPhone full-generation install, interrupted-download recovery and offline lookup under storage pressure, deployment of the narai catalogue and the private Store integration, and current browser-extension import. GitHub reported Actions disabled. No candidate package or catalogue was published.

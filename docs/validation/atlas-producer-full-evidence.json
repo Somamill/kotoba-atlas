@@ -2815,5 +2815,123 @@
       "baselineZIP": "3ec99d2e7ad480149ee9a5d7356ec69789a031e54765e5e816b0c3d49939fb74",
       "candidateZIP": "3ec99d2e7ad480149ee9a5d7356ec69789a031e54765e5e816b0c3d49939fb74"
     }
+  },
+  "actualConsumers": {
+    "audit": {
+      "narai": {
+        "revision": "1.1.0-beta.3",
+        "durationMs": 30459.427375,
+        "peakRSS": 161600,
+        "peakRSSUnit": "KiB",
+        "languages": [
+          "en",
+          "de"
+        ],
+        "installedBytes": 3315191808,
+        "verifiedLookup": true,
+        "germanNowadaysRankZeroBased": -1
+      },
+      "swift": {
+        "coreHashMilliseconds": 1006.223792,
+        "indexReadyMillisecondsExcludingHash": 3.22825,
+        "limitation": "Japanese headword index/lookup only; not reverse-query performance, app cold launch, input readiness, rendered UI latency or phone performance",
+        "method": "640 headwords evenly spaced across ordered JMdict identities: 40 warmups then 600 distinct queries; warm SQLite, uncached per-query app results; German with English fallback",
+        "missingQueries": [],
+        "os": "Version 27.2.1 (Build 26B131)",
+        "peakResidentBytes": 58605568,
+        "physicalMemoryBytes": 17179869184,
+        "platform": "macOS",
+        "sampleCount": 600,
+        "warmLookupMaximumMilliseconds": 110.877333,
+        "warmLookupMedianMilliseconds": 1.046083,
+        "warmLookupP95Milliseconds": 16.282958
+      }
+    },
+    "candidate": {
+      "narai": {
+        "revision": "1.1.0-beta.3",
+        "durationMs": 28934.902708,
+        "peakRSS": 164304,
+        "peakRSSUnit": "KiB",
+        "languages": [
+          "en",
+          "de"
+        ],
+        "installedBytes": 3220451328,
+        "verifiedLookup": true,
+        "germanNowadaysRankZeroBased": -1
+      },
+      "swift": {
+        "coreHashMilliseconds": 912.892375,
+        "indexReadyMillisecondsExcludingHash": 3.767917,
+        "limitation": "Japanese headword index/lookup only; not reverse-query performance, app cold launch, input readiness, rendered UI latency or phone performance",
+        "method": "640 headwords evenly spaced across ordered JMdict identities: 40 warmups then 600 distinct queries; warm SQLite, uncached per-query app results; German with English fallback",
+        "missingQueries": [],
+        "os": "Version 27.2.1 (Build 26B131)",
+        "peakResidentBytes": 63619072,
+        "physicalMemoryBytes": 17179869184,
+        "platform": "macOS",
+        "sampleCount": 600,
+        "warmLookupMaximumMilliseconds": 66.436333,
+        "warmLookupMedianMilliseconds": 0.707125,
+        "warmLookupP95Milliseconds": 10.602291
+      }
+    }
+  },
+  "auditedCommit": "031f72188030390256b7757f7f38d4713830ea64",
+  "policyRevision": "5fa5ae10b9ee31468496795b1a2d5da2e5d49bfd",
+  "releaseCandidate": {
+    "revision": "1.1.0-beta.3",
+    "sealedFiles": 43,
+    "nativePackages": 12,
+    "testGate": {
+      "tests": 53,
+      "failures": 0,
+      "errors": 0,
+      "skipped": [],
+      "dependencies": {
+        "SudachiPy": "0.6.11",
+        "SudachiDict-core": "20250129",
+        "ijson": "3.4.0.post0"
+      },
+      "passed": true
+    },
+    "artifactGate": {
+      "passed": true,
+      "revision": "1.1.0-beta.3",
+      "packages": 12,
+      "lookups": [
+        {
+          "query": "ノリのいい",
+          "entryId": "jmdict:ja:2238120",
+          "definitionLanguage": "en"
+        },
+        {
+          "query": "物ノ怪",
+          "entryId": "jmdict:ja:1502400",
+          "definitionLanguage": "de"
+        },
+        {
+          "query": "鎌かけてる",
+          "entryId": "jmdict:ja:1852260",
+          "definitionLanguage": "de"
+        },
+        {
+          "query": "沼ってる",
+          "entryId": "jmdict:ja:2854926",
+          "definitionLanguage": "de"
+        },
+        {
+          "query": "羅睺",
+          "entryId": "jmdict:ja:2854053",
+          "definitionLanguage": "en"
+        },
+        {
+          "query": "隠密局",
+          "entryId": "atlas:ja:fiction:black-torch:kougi-onmitsu-kyoku",
+          "definitionLanguage": "en"
+        }
+      ]
+    }
   }
 }

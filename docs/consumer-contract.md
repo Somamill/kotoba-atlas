@@ -1,6 +1,6 @@
 # Atlas consumer contract, schema 2
 
-This format is under validation. Existing schema-1 native and browser releases remain available; do not point production consumers at this draft until artifact and integration gates pass.
+Schema 2 is available in the Atlas beta catalogue. Stable browser and schema-1 native packages remain available.
 
 One indexed lexical core contains canonical entry identities, source languages, valid source spelling/reading pairs, attribution and a multilingual reverse-search index. Sense/form payloads retain source-record references. Full original source records and their entry associations live once in an optional provenance package, with sources and licence notices. Language packs contain structured senses. A pack binds to the exact uncompressed core SHA-256 and dictionary revision. Consumers must reject mismatched generations. History, favorites and notes belong outside these replaceable packages.
 
@@ -16,17 +16,23 @@ Reference producer/query modules: `scripts/contract.py`, `scripts/contract_looku
 
 Consumers stage downloads, validate both hashes and SQLite/schema/core binding, activate a generation atomically and retain the previous working generation for rollback. Interrupted/corrupt/out-of-space updates must preserve the active dictionary. App-data updates and desktop application updates are separate.
 
+## Storage and generation checks
+
+Package descriptors carry exact `compressedBytes` and `uncompressedBytes` and SHA-256 values for each representation. New bound descriptors also expose `coreSha256` before download. This optional schema-2 field duplicates the core's `uncompressedSha256`; it is absent on older manifests. Verify the installed package's `about.core_sha256` even when the field is present. A new core hash requires its own bound packs, even when the only core change is SQLite statistics or index layout.
+
+Use the sizes for disk planning before staging a generation. Allow for compressed downloads, expanded staged files and any active generation retained for rollback at the same time. Reuse a completed package only after its bytes and generation have been checked. Package lengths and hashes support verification; interrupted transfer resumption depends on the consumer and transport.
+
 ## Reproduce locally
 
 Install `requirements-analysis.txt` and `requirements-dev.txt` in one isolated Python environment. `ijson` streams the large upstream JSON snapshots; Sudachi is mandatory for analysis tests. Acquire data with `python scripts/acquire_sources.py`; all bytes and licence notices must match `data/sources-v2.lock.json`.
 
-Run `python scripts/pipeline.py --output dist/<new-candidate> --revision <revision>` with the reviewed upstream Yomitan (`ce1b1bffa0e8819716317f3717932a7fe91e8d52`) and legacy Migaku (`0bc88ae46fbdc1df4d23752b3056cb25a2fd3ca0`) checkouts under `.cache/upstream/yomitan` and `.cache/upstream/migaku`. The output directory must be fresh. The pipeline checks downloadable bytes, SQLite integrity, real Japanese/German/fallback regressions, ordinary browser exports and the Chrome Base64 budget. A failure prevents a passing release packet. No publication or Actions dispatch is performed.
+Run `python scripts/pipeline.py --output dist/<new-candidate> --revision <revision>` with the reviewed upstream Yomitan (`ce1b1bffa0e8819716317f3717932a7fe91e8d52`) and legacy Migaku (`0bc88ae46fbdc1df4d23752b3056cb25a2fd3ca0`) checkouts under `.cache/upstream/yomitan` and `.cache/upstream/migaku`. The output directory must be fresh. The pipeline writes into a sibling `.<name>.partial` directory on the same filesystem and renames it after all checks and output hashes are complete. After abrupt termination, a remaining partial directory is quarantined. Use a fresh output name to retry, or clear your own staging directory after confirming its writer has stopped. The pipeline checks downloadable bytes, SQLite integrity, real Japanese/German/fallback regressions, ordinary browser exports and the Chrome Base64 budget. A failure prevents a passing release packet. No publication or Actions dispatch is performed.
 
 ## Consumer examples and verified boundary
 
-`python scripts/consumer_fixtures.py <directory>` builds small release-format indexes from attributed real JMdict records and curated fiction/usage annotations. `dict.` loads them through its Swift `DictionaryStore(core:packs:language:coreSHA256:)`; its tests cover the same canonical identities, primary-only presentation, English fallback, reverse lookup, constrained inflections, generation mismatch, staged activation, rollback and corrupt-package rejection. `immersed` loads identical bytes through `server/atlas-contract.cjs` and projects selected senses into its existing entry interface. Its community server can read an activated schema-2 generation; the Store edition and updater migration remain pending. Production defaults remain on their existing catalogues until final corpus and app integration gates pass.
+`python scripts/consumer_fixtures.py <directory>` builds small release-format indexes from attributed real JMdict records and curated fiction/usage annotations. `dict.` loads them through its Swift `DictionaryStore(core:packs:language:coreSHA256:)`; its tests cover the same canonical identities, primary-only presentation, English fallback, reverse lookup, constrained inflections, generation mismatch, staged activation, rollback and corrupt-package rejection. `immersed` loads identical bytes through `server/atlas-contract.cjs` and projects selected senses into its existing entry interface. The community migration branch also implements a staged background installer, checks the package bytes and core binding, and retains the previous generation for rollback ([narai PR #24](https://github.com/Somamill/narai/pull/24)). Public narai main still documents a separate bundled 1.0.0 Store dictionary. The private Store build and any deployed catalogue switch require independent verification. The producer candidate leaves the existing release catalogues intact.
 
-The Swift tests pass on the Mac, including the existing full offline English package and real horizontal/vertical OCR. This is not an iPhone/iPad UI or full schema-2 corpus performance result. The phone is excluded for this run.
+See the [producer reliability report](validation/producer-reliability.md) for regenerated consumer fixtures, full-corpus checks and remaining device verification.
 
 ## Coverage boundaries
 

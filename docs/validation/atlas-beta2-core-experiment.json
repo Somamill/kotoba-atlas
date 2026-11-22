@@ -1,0 +1,967 @@
+{
+  "descriptor": {
+    "id": "core",
+    "role": "core",
+    "language": null,
+    "format": "atlas-sqlite-v2+gzip",
+    "schemaVersion": 2,
+    "dictionaryRevision": "1.1.0-beta.2",
+    "file": "Kotoba_Atlas_1_1_0_beta_2_Core.sqlite.gz",
+    "sha256": "ee08bcd59e773783e562e9162e7ff21446337f8bb44f9f91cba0b29bbf6848c4",
+    "uncompressedSha256": "0afe8fc089ccb8b6b326345d7e15effaafd79b40574fea515a229b72218a55cf",
+    "url": "https://github.com/Somamill/kotoba-atlas/releases/download/atlas-v1.1.0-beta.2/Kotoba_Atlas_1_1_0_beta_2_Core.sqlite.gz",
+    "compressedBytes": 473708496,
+    "uncompressedBytes": 1884286976,
+    "compatibility": {
+      "requiredSchema": 2,
+      "requiredCapabilities": [
+        "shared-core",
+        "entry-language-fallback",
+        "form-restrictions"
+      ]
+    },
+    "sourceIds": [
+      "atlas-factual-annotations",
+      "atlas-spelling-aliases",
+      "atlas-usage",
+      "atlas-v1-metadata",
+      "jitendex-aliases",
+      "jmdict-examples",
+      "jmdict-simplified",
+      "jmnedict-simplified",
+      "omw-arb",
+      "omw-cmn",
+      "omw-en",
+      "omw-es",
+      "omw-fr",
+      "omw-id",
+      "omw-ja",
+      "omw-pt"
+    ]
+  },
+  "verifyAndExpandSeconds": 4.493426832996192,
+  "before": {
+    "prepareSeconds": 1.391599653288722e-05,
+    "reverseKeyPayloadBytes": {
+      "entryId": 158080503,
+      "senseId": 291233353,
+      "formHint": 6411824
+    },
+    "stats": false,
+    "dbstat": {
+      "about": {
+        "bytes": 4096,
+        "unusedBytes": 3943
+      },
+      "entries": {
+        "bytes": 59113472,
+        "unusedBytes": 422136
+      },
+      "form_lookup": {
+        "bytes": 109101056,
+        "unusedBytes": 711681
+      },
+      "forms": {
+        "bytes": 450965504,
+        "unusedBytes": 11281766
+      },
+      "kanji": {
+        "bytes": 3719168,
+        "unusedBytes": 211161
+      },
+      "metadata": {
+        "bytes": 120045568,
+        "unusedBytes": 1768151
+      },
+      "metadata_lookup": {
+        "bytes": 26365952,
+        "unusedBytes": 91491
+      },
+      "notices": {
+        "bytes": 1171456,
+        "unusedBytes": 13305
+      },
+      "reading_lookup": {
+        "bytes": 113115136,
+        "unusedBytes": 874976
+      },
+      "reverse_keys": {
+        "bytes": 522399744,
+        "unusedBytes": 11831690
+      },
+      "reverse_search_config": {
+        "bytes": 4096,
+        "unusedBytes": 4074
+      },
+      "reverse_search_data": {
+        "bytes": 86736896,
+        "unusedBytes": 919144
+      },
+      "reverse_search_docsize": {
+        "bytes": 33128448,
+        "unusedBytes": 77697
+      },
+      "reverse_search_idx": {
+        "bytes": 430080,
+        "unusedBytes": 50625
+      },
+      "sources": {
+        "bytes": 16384,
+        "unusedBytes": 5699
+      },
+      "spelling_lookup": {
+        "bytes": 144879616,
+        "unusedBytes": 1176016
+      },
+      "sqlite_autoindex_about_1": {
+        "bytes": 4096,
+        "unusedBytes": 4029
+      },
+      "sqlite_autoindex_entries_1": {
+        "bytes": 47128576,
+        "unusedBytes": 205080
+      },
+      "sqlite_autoindex_forms_1": {
+        "bytes": 164671488,
+        "unusedBytes": 1507659
+      },
+      "sqlite_autoindex_kanji_1": {
+        "bytes": 118784,
+        "unusedBytes": 4336
+      },
+      "sqlite_autoindex_notices_1": {
+        "bytes": 4096,
+        "unusedBytes": 3733
+      },
+      "sqlite_autoindex_sources_1": {
+        "bytes": 4096,
+        "unusedBytes": 3785
+      },
+      "sqlite_autoindex_tags_1": {
+        "bytes": 4096,
+        "unusedBytes": 3144
+      },
+      "sqlite_schema": {
+        "bytes": 4096,
+        "unusedBytes": 1387
+      },
+      "tags": {
+        "bytes": 12288,
+        "unusedBytes": 7635
+      }
+    },
+    "queries": {
+      "swiftForms": {
+        "sql": "SELECT e.rowid,f.text,e.rules,EXISTS(SELECT 1 FROM json_each(f.payload,'$.tags') WHERE value IN ('sk','ik','ok','rk','sK','iK','oK','rK')) FROM forms f JOIN entries e ON e.id=f.entry_id WHERE (f.normalized=? OR f.reading_key=?) AND (f.kind!='alias' OR NOT EXISTS(SELECT 1 FROM forms original WHERE original.entry_id=f.entry_id AND original.text=f.text AND original.reading=f.reading AND original.kind!='alias')) LIMIT 240",
+        "bindings": [
+          "\u304d\u3087\u3046",
+          "\u304d\u3087\u3046"
+        ],
+        "plan": [
+          "MULTI-INDEX OR",
+          "INDEX 1",
+          "SEARCH f USING INDEX form_lookup (normalized=?)",
+          "INDEX 2",
+          "SEARCH f USING INDEX reading_lookup (reading_key=?)",
+          "CORRELATED SCALAR SUBQUERY 2",
+          "SEARCH original USING COVERING INDEX sqlite_autoindex_forms_1 (entry_id=? AND text=? AND reading=?)",
+          "SEARCH e USING INDEX sqlite_autoindex_entries_1 (id=?)",
+          "CORRELATED SCALAR SUBQUERY 1",
+          "SCAN json_each VIRTUAL TABLE INDEX 3:"
+        ],
+        "medianMs": 0.473084,
+        "maxMs": 1.242917,
+        "samplesMs": [
+          1.242917,
+          0.501292,
+          0.479875,
+          0.477416,
+          0.473584,
+          0.476083,
+          0.470917,
+          0.471834,
+          0.472125,
+          0.47075,
+          0.470834,
+          0.472959,
+          0.473084,
+          0.471875,
+          0.471708,
+          0.472,
+          0.47125,
+          0.514417,
+          0.498541,
+          0.482542,
+          0.485
+        ]
+      },
+      "swiftPrefix": {
+        "sql": "SELECT e.rowid FROM forms f JOIN entries e ON e.id=f.entry_id WHERE f.normalized>=? AND f.normalized<? LIMIT 80",
+        "bindings": [
+          "\u98df",
+          "\u98df\udbff\udfff"
+        ],
+        "plan": [
+          "SEARCH f USING COVERING INDEX form_lookup (normalized>? AND normalized<?)",
+          "SEARCH e USING COVERING INDEX sqlite_autoindex_entries_1 (id=?)"
+        ],
+        "medianMs": 0.090458,
+        "maxMs": 0.195125,
+        "samplesMs": [
+          0.195125,
+          0.094583,
+          0.093042,
+          0.092708,
+          0.091792,
+          0.090375,
+          0.090958,
+          0.0905,
+          0.090875,
+          0.093792,
+          0.089917,
+          0.089792,
+          0.090042,
+          0.090292,
+          0.090458,
+          0.090417,
+          0.09025,
+          0.090083,
+          0.090167,
+          0.090375,
+          0.090792
+        ]
+      },
+      "swiftReverse": {
+        "sql": "SELECT e.rowid,e.id,r.sense_id,r.language,form_hint FROM reverse_keys r JOIN entries e ON e.id=r.entry_id WHERE r.id IN (SELECT rowid FROM reverse_search WHERE reverse_search MATCH ? ORDER BY rank LIMIT 240)",
+        "bindings": [
+          "\"nowadays\""
+        ],
+        "plan": [
+          "SEARCH r USING INTEGER PRIMARY KEY (rowid=?)",
+          "LIST SUBQUERY 1",
+          "SCAN reverse_search VIRTUAL TABLE INDEX 32:M1",
+          "CREATE BLOOM FILTER",
+          "SEARCH e USING COVERING INDEX sqlite_autoindex_entries_1 (id=?)"
+        ],
+        "medianMs": 0.439958,
+        "maxMs": 1.961083,
+        "samplesMs": [
+          1.961083,
+          0.494666,
+          0.457042,
+          0.451209,
+          0.440166,
+          0.437125,
+          0.437291,
+          0.453667,
+          0.443125,
+          0.441875,
+          0.44575,
+          0.439958,
+          0.446666,
+          0.434208,
+          0.434583,
+          0.436208,
+          0.434833,
+          0.434334,
+          0.43375,
+          0.433917,
+          0.434
+        ]
+      },
+      "swiftHeadwords": {
+        "sql": "SELECT payload FROM forms WHERE entry_id=? ORDER BY CASE kind WHEN 'headword' THEN 0 WHEN 'reading' THEN 1 ELSE 2 END,json_extract(payload,'$.common') DESC,COALESCE((SELECT json_extract(r.payload,'$.common') FROM forms r WHERE r.entry_id=forms.entry_id AND r.text=forms.reading AND r.kind='reading' LIMIT 1),0) DESC,text,reading",
+        "bindings": [
+          "jmdict:ja:1579110"
+        ],
+        "plan": [
+          "SEARCH forms USING INDEX sqlite_autoindex_forms_1 (entry_id=?)",
+          "CORRELATED SCALAR SUBQUERY 1",
+          "SEARCH r USING INDEX sqlite_autoindex_forms_1 (entry_id=? AND text=?)",
+          "USE TEMP B-TREE FOR ORDER BY"
+        ],
+        "medianMs": 0.042542,
+        "maxMs": 0.434708,
+        "samplesMs": [
+          0.434708,
+          0.049542,
+          0.044125,
+          0.042791,
+          0.042792,
+          0.042542,
+          0.041375,
+          0.04175,
+          0.042,
+          0.041375,
+          0.041334,
+          0.074416,
+          0.05375,
+          0.044958,
+          0.043709,
+          0.042792,
+          0.042,
+          0.041708,
+          0.042458,
+          0.042541,
+          0.042333
+        ]
+      },
+      "swiftPitch": {
+        "sql": "SELECT DISTINCT m.mode,m.payload FROM forms f JOIN metadata m ON m.term=f.text WHERE f.entry_id=? AND f.reading=?",
+        "bindings": [
+          "jmdict:ja:1579110",
+          "\u304d\u3087\u3046"
+        ],
+        "plan": [
+          "SEARCH f USING COVERING INDEX sqlite_autoindex_forms_1 (entry_id=?)",
+          "SEARCH m USING INDEX metadata_lookup (term=?)",
+          "USE TEMP B-TREE FOR DISTINCT"
+        ],
+        "medianMs": 0.027791,
+        "maxMs": 0.096542,
+        "samplesMs": [
+          0.096542,
+          0.033333,
+          0.03025,
+          0.029125,
+          0.027875,
+          0.02875,
+          0.027834,
+          0.028084,
+          0.027417,
+          0.027375,
+          0.0275,
+          0.027709,
+          0.026958,
+          0.027333,
+          0.027667,
+          0.027917,
+          0.027417,
+          0.027625,
+          0.027584,
+          0.027791,
+          0.0285
+        ]
+      }
+    }
+  },
+  "analyzeOnly": {
+    "prepareSeconds": 2.2180363750085235,
+    "reverseKeyPayloadBytes": {
+      "entryId": 158080503,
+      "senseId": 291233353,
+      "formHint": 6411824
+    },
+    "stats": true,
+    "dbstat": {
+      "about": {
+        "bytes": 4096,
+        "unusedBytes": 3943
+      },
+      "entries": {
+        "bytes": 59113472,
+        "unusedBytes": 422136
+      },
+      "form_lookup": {
+        "bytes": 109101056,
+        "unusedBytes": 711681
+      },
+      "forms": {
+        "bytes": 450965504,
+        "unusedBytes": 11281766
+      },
+      "kanji": {
+        "bytes": 3719168,
+        "unusedBytes": 211161
+      },
+      "metadata": {
+        "bytes": 120045568,
+        "unusedBytes": 1768151
+      },
+      "metadata_lookup": {
+        "bytes": 26365952,
+        "unusedBytes": 91491
+      },
+      "notices": {
+        "bytes": 1171456,
+        "unusedBytes": 13305
+      },
+      "reading_lookup": {
+        "bytes": 113115136,
+        "unusedBytes": 874976
+      },
+      "reverse_keys": {
+        "bytes": 522399744,
+        "unusedBytes": 11831690
+      },
+      "reverse_search_config": {
+        "bytes": 4096,
+        "unusedBytes": 4074
+      },
+      "reverse_search_data": {
+        "bytes": 86736896,
+        "unusedBytes": 919144
+      },
+      "reverse_search_docsize": {
+        "bytes": 33128448,
+        "unusedBytes": 77697
+      },
+      "reverse_search_idx": {
+        "bytes": 430080,
+        "unusedBytes": 50625
+      },
+      "sources": {
+        "bytes": 16384,
+        "unusedBytes": 5699
+      },
+      "spelling_lookup": {
+        "bytes": 144879616,
+        "unusedBytes": 1176016
+      },
+      "sqlite_autoindex_about_1": {
+        "bytes": 4096,
+        "unusedBytes": 4029
+      },
+      "sqlite_autoindex_entries_1": {
+        "bytes": 47128576,
+        "unusedBytes": 205080
+      },
+      "sqlite_autoindex_forms_1": {
+        "bytes": 164671488,
+        "unusedBytes": 1507659
+      },
+      "sqlite_autoindex_kanji_1": {
+        "bytes": 118784,
+        "unusedBytes": 4336
+      },
+      "sqlite_autoindex_notices_1": {
+        "bytes": 4096,
+        "unusedBytes": 3733
+      },
+      "sqlite_autoindex_sources_1": {
+        "bytes": 4096,
+        "unusedBytes": 3785
+      },
+      "sqlite_autoindex_tags_1": {
+        "bytes": 4096,
+        "unusedBytes": 3144
+      },
+      "sqlite_schema": {
+        "bytes": 4096,
+        "unusedBytes": 1306
+      },
+      "sqlite_stat1": {
+        "bytes": 4096,
+        "unusedBytes": 3412
+      },
+      "tags": {
+        "bytes": 12288,
+        "unusedBytes": 7635
+      }
+    },
+    "queries": {
+      "swiftForms": {
+        "sql": "SELECT e.rowid,f.text,e.rules,EXISTS(SELECT 1 FROM json_each(f.payload,'$.tags') WHERE value IN ('sk','ik','ok','rk','sK','iK','oK','rK')) FROM forms f JOIN entries e ON e.id=f.entry_id WHERE (f.normalized=? OR f.reading_key=?) AND (f.kind!='alias' OR NOT EXISTS(SELECT 1 FROM forms original WHERE original.entry_id=f.entry_id AND original.text=f.text AND original.reading=f.reading AND original.kind!='alias')) LIMIT 240",
+        "bindings": [
+          "\u304d\u3087\u3046",
+          "\u304d\u3087\u3046"
+        ],
+        "plan": [
+          "MULTI-INDEX OR",
+          "INDEX 1",
+          "SEARCH f USING INDEX form_lookup (normalized=?)",
+          "INDEX 2",
+          "SEARCH f USING INDEX reading_lookup (reading_key=?)",
+          "CORRELATED SCALAR SUBQUERY 2",
+          "SEARCH original USING COVERING INDEX sqlite_autoindex_forms_1 (entry_id=? AND text=? AND reading=?)",
+          "SEARCH e USING INDEX sqlite_autoindex_entries_1 (id=?)",
+          "CORRELATED SCALAR SUBQUERY 1",
+          "SCAN json_each VIRTUAL TABLE INDEX 3:"
+        ],
+        "medianMs": 0.468708,
+        "maxMs": 0.987167,
+        "samplesMs": [
+          0.987167,
+          0.499041,
+          0.482833,
+          0.477792,
+          0.475083,
+          0.468708,
+          0.465375,
+          0.476125,
+          0.4765,
+          0.461375,
+          0.459042,
+          0.46175,
+          0.457125,
+          0.455208,
+          0.456542,
+          0.461125,
+          0.456875,
+          0.456833,
+          0.601583,
+          0.49825,
+          0.47725
+        ]
+      },
+      "swiftPrefix": {
+        "sql": "SELECT e.rowid FROM forms f JOIN entries e ON e.id=f.entry_id WHERE f.normalized>=? AND f.normalized<? LIMIT 80",
+        "bindings": [
+          "\u98df",
+          "\u98df\udbff\udfff"
+        ],
+        "plan": [
+          "SEARCH f USING COVERING INDEX form_lookup (normalized>? AND normalized<?)",
+          "SEARCH e USING COVERING INDEX sqlite_autoindex_entries_1 (id=?)"
+        ],
+        "medianMs": 0.090125,
+        "maxMs": 0.202708,
+        "samplesMs": [
+          0.202708,
+          0.094125,
+          0.092,
+          0.089959,
+          0.088833,
+          0.087916,
+          0.087709,
+          0.087833,
+          0.089084,
+          0.090458,
+          0.0895,
+          0.0955,
+          0.101209,
+          0.08975,
+          0.101167,
+          0.094917,
+          0.090125,
+          0.089542,
+          0.090042,
+          0.124541,
+          0.100541
+        ]
+      },
+      "swiftReverse": {
+        "sql": "SELECT e.rowid,e.id,r.sense_id,r.language,form_hint FROM reverse_keys r JOIN entries e ON e.id=r.entry_id WHERE r.id IN (SELECT rowid FROM reverse_search WHERE reverse_search MATCH ? ORDER BY rank LIMIT 240)",
+        "bindings": [
+          "\"nowadays\""
+        ],
+        "plan": [
+          "SEARCH r USING INTEGER PRIMARY KEY (rowid=?)",
+          "LIST SUBQUERY 1",
+          "SCAN reverse_search VIRTUAL TABLE INDEX 32:M1",
+          "CREATE BLOOM FILTER",
+          "SEARCH e USING COVERING INDEX sqlite_autoindex_entries_1 (id=?)"
+        ],
+        "medianMs": 0.436875,
+        "maxMs": 1.09375,
+        "samplesMs": [
+          1.09375,
+          0.4805,
+          0.454167,
+          0.443792,
+          0.42375,
+          0.423458,
+          0.435041,
+          0.427208,
+          0.420541,
+          0.424916,
+          0.546958,
+          0.517917,
+          0.535042,
+          0.573334,
+          0.489166,
+          0.529916,
+          0.436875,
+          0.422709,
+          0.429958,
+          0.417875,
+          0.418042
+        ]
+      },
+      "swiftHeadwords": {
+        "sql": "SELECT payload FROM forms WHERE entry_id=? ORDER BY CASE kind WHEN 'headword' THEN 0 WHEN 'reading' THEN 1 ELSE 2 END,json_extract(payload,'$.common') DESC,COALESCE((SELECT json_extract(r.payload,'$.common') FROM forms r WHERE r.entry_id=forms.entry_id AND r.text=forms.reading AND r.kind='reading' LIMIT 1),0) DESC,text,reading",
+        "bindings": [
+          "jmdict:ja:1579110"
+        ],
+        "plan": [
+          "SEARCH forms USING INDEX sqlite_autoindex_forms_1 (entry_id=?)",
+          "CORRELATED SCALAR SUBQUERY 1",
+          "SEARCH r USING INDEX sqlite_autoindex_forms_1 (entry_id=? AND text=?)",
+          "USE TEMP B-TREE FOR ORDER BY"
+        ],
+        "medianMs": 0.041041,
+        "maxMs": 0.112458,
+        "samplesMs": [
+          0.112458,
+          0.046375,
+          0.043291,
+          0.043917,
+          0.042917,
+          0.043209,
+          0.043667,
+          0.042542,
+          0.042916,
+          0.042,
+          0.040875,
+          0.041041,
+          0.040375,
+          0.039542,
+          0.039333,
+          0.039459,
+          0.039709,
+          0.040084,
+          0.0405,
+          0.040291,
+          0.040667
+        ]
+      },
+      "swiftPitch": {
+        "sql": "SELECT DISTINCT m.mode,m.payload FROM forms f JOIN metadata m ON m.term=f.text WHERE f.entry_id=? AND f.reading=?",
+        "bindings": [
+          "jmdict:ja:1579110",
+          "\u304d\u3087\u3046"
+        ],
+        "plan": [
+          "SEARCH f USING COVERING INDEX sqlite_autoindex_forms_1 (entry_id=?)",
+          "SEARCH m USING INDEX metadata_lookup (term=?)",
+          "USE TEMP B-TREE FOR DISTINCT"
+        ],
+        "medianMs": 0.026875,
+        "maxMs": 0.086375,
+        "samplesMs": [
+          0.086375,
+          0.031083,
+          0.0285,
+          0.028042,
+          0.027291,
+          0.026959,
+          0.026875,
+          0.026917,
+          0.027417,
+          0.026,
+          0.026417,
+          0.026833,
+          0.027,
+          0.026083,
+          0.025917,
+          0.026625,
+          0.025708,
+          0.026333,
+          0.026916,
+          0.026459,
+          0.026791
+        ]
+      }
+    }
+  },
+  "narrowSpelling": {
+    "prepareSeconds": 4.166243499988923,
+    "reverseKeyPayloadBytes": {
+      "entryId": 158080503,
+      "senseId": 291233353,
+      "formHint": 6411824
+    },
+    "stats": true,
+    "dbstat": {
+      "about": {
+        "bytes": 4096,
+        "unusedBytes": 3943
+      },
+      "entries": {
+        "bytes": 59113472,
+        "unusedBytes": 422136
+      },
+      "form_lookup": {
+        "bytes": 109101056,
+        "unusedBytes": 711681
+      },
+      "forms": {
+        "bytes": 450965504,
+        "unusedBytes": 11281766
+      },
+      "kanji": {
+        "bytes": 3719168,
+        "unusedBytes": 211161
+      },
+      "metadata": {
+        "bytes": 120045568,
+        "unusedBytes": 1768151
+      },
+      "metadata_lookup": {
+        "bytes": 26365952,
+        "unusedBytes": 91491
+      },
+      "notices": {
+        "bytes": 1171456,
+        "unusedBytes": 13305
+      },
+      "reading_lookup": {
+        "bytes": 113115136,
+        "unusedBytes": 874976
+      },
+      "reverse_keys": {
+        "bytes": 522399744,
+        "unusedBytes": 11831690
+      },
+      "reverse_search_config": {
+        "bytes": 4096,
+        "unusedBytes": 4074
+      },
+      "reverse_search_data": {
+        "bytes": 86736896,
+        "unusedBytes": 919144
+      },
+      "reverse_search_docsize": {
+        "bytes": 33128448,
+        "unusedBytes": 77697
+      },
+      "reverse_search_idx": {
+        "bytes": 430080,
+        "unusedBytes": 50625
+      },
+      "sources": {
+        "bytes": 16384,
+        "unusedBytes": 5699
+      },
+      "spelling_lookup": {
+        "bytes": 50139136,
+        "unusedBytes": 146350
+      },
+      "sqlite_autoindex_about_1": {
+        "bytes": 4096,
+        "unusedBytes": 4029
+      },
+      "sqlite_autoindex_entries_1": {
+        "bytes": 47128576,
+        "unusedBytes": 205080
+      },
+      "sqlite_autoindex_forms_1": {
+        "bytes": 164671488,
+        "unusedBytes": 1507659
+      },
+      "sqlite_autoindex_kanji_1": {
+        "bytes": 118784,
+        "unusedBytes": 4336
+      },
+      "sqlite_autoindex_notices_1": {
+        "bytes": 4096,
+        "unusedBytes": 3733
+      },
+      "sqlite_autoindex_sources_1": {
+        "bytes": 4096,
+        "unusedBytes": 3785
+      },
+      "sqlite_autoindex_tags_1": {
+        "bytes": 4096,
+        "unusedBytes": 3144
+      },
+      "sqlite_schema": {
+        "bytes": 4096,
+        "unusedBytes": 1324
+      },
+      "sqlite_stat1": {
+        "bytes": 4096,
+        "unusedBytes": 3416
+      },
+      "tags": {
+        "bytes": 12288,
+        "unusedBytes": 7635
+      }
+    },
+    "queries": {
+      "swiftForms": {
+        "sql": "SELECT e.rowid,f.text,e.rules,EXISTS(SELECT 1 FROM json_each(f.payload,'$.tags') WHERE value IN ('sk','ik','ok','rk','sK','iK','oK','rK')) FROM forms f JOIN entries e ON e.id=f.entry_id WHERE (f.normalized=? OR f.reading_key=?) AND (f.kind!='alias' OR NOT EXISTS(SELECT 1 FROM forms original WHERE original.entry_id=f.entry_id AND original.text=f.text AND original.reading=f.reading AND original.kind!='alias')) LIMIT 240",
+        "bindings": [
+          "\u304d\u3087\u3046",
+          "\u304d\u3087\u3046"
+        ],
+        "plan": [
+          "MULTI-INDEX OR",
+          "INDEX 1",
+          "SEARCH f USING INDEX form_lookup (normalized=?)",
+          "INDEX 2",
+          "SEARCH f USING INDEX reading_lookup (reading_key=?)",
+          "CORRELATED SCALAR SUBQUERY 2",
+          "SEARCH original USING COVERING INDEX sqlite_autoindex_forms_1 (entry_id=? AND text=? AND reading=?)",
+          "SEARCH e USING INDEX sqlite_autoindex_entries_1 (id=?)",
+          "CORRELATED SCALAR SUBQUERY 1",
+          "SCAN json_each VIRTUAL TABLE INDEX 3:"
+        ],
+        "medianMs": 0.466166,
+        "maxMs": 0.920708,
+        "samplesMs": [
+          0.920708,
+          0.467916,
+          0.466166,
+          0.455834,
+          0.597,
+          0.605292,
+          0.521167,
+          0.49225,
+          0.486166,
+          0.521875,
+          0.484125,
+          0.456875,
+          0.454292,
+          0.454916,
+          0.466125,
+          0.453417,
+          0.452167,
+          0.460125,
+          0.4535,
+          0.453583,
+          0.5495
+        ]
+      },
+      "swiftPrefix": {
+        "sql": "SELECT e.rowid FROM forms f JOIN entries e ON e.id=f.entry_id WHERE f.normalized>=? AND f.normalized<? LIMIT 80",
+        "bindings": [
+          "\u98df",
+          "\u98df\udbff\udfff"
+        ],
+        "plan": [
+          "SEARCH f USING COVERING INDEX form_lookup (normalized>? AND normalized<?)",
+          "SEARCH e USING COVERING INDEX sqlite_autoindex_entries_1 (id=?)"
+        ],
+        "medianMs": 0.088958,
+        "maxMs": 0.189459,
+        "samplesMs": [
+          0.189459,
+          0.09025,
+          0.08925,
+          0.088833,
+          0.089125,
+          0.08825,
+          0.087708,
+          0.088209,
+          0.088583,
+          0.089042,
+          0.089208,
+          0.088167,
+          0.088958,
+          0.095125,
+          0.092125,
+          0.08825,
+          0.088542,
+          0.088458,
+          0.088167,
+          0.1205,
+          0.1355
+        ]
+      },
+      "swiftReverse": {
+        "sql": "SELECT e.rowid,e.id,r.sense_id,r.language,form_hint FROM reverse_keys r JOIN entries e ON e.id=r.entry_id WHERE r.id IN (SELECT rowid FROM reverse_search WHERE reverse_search MATCH ? ORDER BY rank LIMIT 240)",
+        "bindings": [
+          "\"nowadays\""
+        ],
+        "plan": [
+          "SEARCH r USING INTEGER PRIMARY KEY (rowid=?)",
+          "LIST SUBQUERY 1",
+          "SCAN reverse_search VIRTUAL TABLE INDEX 32:M1",
+          "CREATE BLOOM FILTER",
+          "SEARCH e USING COVERING INDEX sqlite_autoindex_entries_1 (id=?)"
+        ],
+        "medianMs": 0.417708,
+        "maxMs": 1.024208,
+        "samplesMs": [
+          1.024208,
+          0.445542,
+          0.427041,
+          0.428833,
+          0.419375,
+          0.417666,
+          0.417625,
+          0.423833,
+          0.417417,
+          0.415833,
+          0.424667,
+          0.41875,
+          0.416084,
+          0.415625,
+          0.41825,
+          0.416,
+          0.416125,
+          0.422417,
+          0.417542,
+          0.41525,
+          0.417708
+        ]
+      },
+      "swiftHeadwords": {
+        "sql": "SELECT payload FROM forms WHERE entry_id=? ORDER BY CASE kind WHEN 'headword' THEN 0 WHEN 'reading' THEN 1 ELSE 2 END,json_extract(payload,'$.common') DESC,COALESCE((SELECT json_extract(r.payload,'$.common') FROM forms r WHERE r.entry_id=forms.entry_id AND r.text=forms.reading AND r.kind='reading' LIMIT 1),0) DESC,text,reading",
+        "bindings": [
+          "jmdict:ja:1579110"
+        ],
+        "plan": [
+          "SEARCH forms USING INDEX sqlite_autoindex_forms_1 (entry_id=?)",
+          "CORRELATED SCALAR SUBQUERY 1",
+          "SEARCH r USING INDEX sqlite_autoindex_forms_1 (entry_id=? AND text=?)",
+          "USE TEMP B-TREE FOR ORDER BY"
+        ],
+        "medianMs": 0.042333,
+        "maxMs": 0.106125,
+        "samplesMs": [
+          0.106125,
+          0.044916,
+          0.042291,
+          0.041292,
+          0.082541,
+          0.056875,
+          0.045375,
+          0.043625,
+          0.0435,
+          0.042833,
+          0.042375,
+          0.042167,
+          0.042,
+          0.041666,
+          0.042333,
+          0.042333,
+          0.041959,
+          0.042,
+          0.042042,
+          0.041625,
+          0.0415
+        ]
+      },
+      "swiftPitch": {
+        "sql": "SELECT DISTINCT m.mode,m.payload FROM forms f JOIN metadata m ON m.term=f.text WHERE f.entry_id=? AND f.reading=?",
+        "bindings": [
+          "jmdict:ja:1579110",
+          "\u304d\u3087\u3046"
+        ],
+        "plan": [
+          "SEARCH f USING COVERING INDEX sqlite_autoindex_forms_1 (entry_id=?)",
+          "SEARCH m USING INDEX metadata_lookup (term=?)",
+          "USE TEMP B-TREE FOR DISTINCT"
+        ],
+        "medianMs": 0.028125,
+        "maxMs": 0.104917,
+        "samplesMs": [
+          0.104917,
+          0.034,
+          0.030917,
+          0.029042,
+          0.028666,
+          0.028125,
+          0.027584,
+          0.0275,
+          0.031875,
+          0.028458,
+          0.027709,
+          0.028125,
+          0.027875,
+          0.027625,
+          0.028375,
+          0.027958,
+          0.031,
+          0.02775,
+          0.028042,
+          0.027791,
+          0.027208
+        ]
+      }
+    }
+  },
+  "integrity": "ok"
+}

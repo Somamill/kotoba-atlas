@@ -202,6 +202,8 @@ class ContractTests(unittest.TestCase):
                         self.assertEqual(sense['restrictions']['work'], 'BLACK TORCH')
                         self.assertEqual(sense['kind'], 'factual-identification')
                     if package['role'] == 'core':
+                        stats = {row[0] for row in database.execute('SELECT idx FROM sqlite_stat1')}
+                        self.assertTrue({'form_lookup', 'spelling_lookup', 'reading_lookup'} <= stats)
                         ids = database.execute('SELECT DISTINCT entry_id FROM forms WHERE text IN (?,?)',
                                                ('隠密局', '公儀隠密局')).fetchall()
                         self.assertEqual(ids, [(record['id'],)])

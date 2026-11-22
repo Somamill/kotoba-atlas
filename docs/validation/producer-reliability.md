@@ -25,6 +25,21 @@ The benchmark verifies compressed and expanded sizes and SHA-256, and compares r
 
 `dbstat` accounts for B-tree and overflow pages by object. It excludes free pages and other file overhead. The SQL probes use dict. Swift's exact/reading, prefix, reverse, canonical form ordering and reading-scoped metadata statements and binding patterns. The 16-query Python reader workload retains original case, full result projections and matched-form context. The separate ANALYZE-only arm applies statistics to the baseline core after lookup parity checks, then reopens it for SQL measurement. Timings are host-specific warm medians. The benchmark records individual timings and query plans. Use repeated serial runs on an idle host for performance thresholds. [SQLite ANALYZE](https://sqlite.org/lang_analyze.html), [DBSTAT virtual table](https://sqlite.org/dbstat.html).
 
+## Full beta-2 core experiment
+
+The locked beta-2 core was expanded and checked from its published-format gzip. The scratch experiment ran in this order on the same file: baseline; `ANALYZE`; then `DROP INDEX spelling_lookup; CREATE INDEX spelling_lookup ON forms(text); ANALYZE;`. This measured B-tree bytes directly and kept free pages in the scratch file. The ordinary exporter starts with a fresh file.
+
+| Measurement | Baseline | Analyze only | Narrow spelling index |
+| --- | ---: | ---: | ---: |
+| Spelling index | 144,879,616 B | 144,879,616 B | 50,139,136 B |
+| Swift exact/reading, median | 0.473 ms | 0.469 ms | 0.466 ms |
+| Swift reverse, median | 0.440 ms | 0.437 ms | 0.418 ms |
+| Changed plans out of five probes | — | 0 | 0 |
+
+The spelling index used 94,740,480 fewer bytes, a 65.4% reduction. SQLite integrity passed. The timings are in the same range and establish no general lookup speedup. The separate bulk-copy prototype returned the same index bytes with variable timings; it established no reliable build-time gain.
+
+`dbstat` attributed 522,399,744 bytes to `reverse_keys` and 450,965,504 bytes to `forms`. Textual entry IDs account for 158,080,503 bytes and sense IDs for 291,233,353 bytes inside `reverse_keys`. The corresponding form hints account for 6,411,824 bytes. These fields remain directly queryable in schema 2. The full experiment includes planner output and all page allocations. [Raw beta-2 evidence](atlas-beta2-core-experiment.json).
+
 ## Consumer verification
 
 - dict. public main `fea82704`: 9 Swift contract tests with regenerated candidate bytes. Overlapping runtime branch `22ba0c76`: 14 passing tests including completed-package resumption, corrupt downloads and preserving history through interrupted activation.
